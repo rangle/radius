@@ -1,0 +1,7 @@
+{
+  "name": "ds-seed",
+  "version": "1.0.0",
+  "description": "Rangle Design System Seed Project",
+  "main": "index.js",
+  "license": "MIT"
+}

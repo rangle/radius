@@ -1,0 +1,9 @@
+{
+  "name": "y",
+  "version": "y",
+  "description": "Rangle Design System",
+  "main": "y",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["packages/*"]
+}
