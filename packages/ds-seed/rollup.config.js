@@ -1,13 +1,15 @@
 import typescript from "@rollup/plugin-typescript";
 import external from "rollup-plugin-peer-deps-external";
 
+import packageJSON from "./package.json";
 
 export default {
  input: './src/index.ts',
  output: [
      {
-         file: "build/index.cjs.js",
-         format: "cjs",
+         name: packageJSON.name,
+         file: "build/index.umd.js",
+         format: "umd",
          sourcemap: true
      },
      {
