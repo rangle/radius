@@ -7,7 +7,7 @@
 /coverage
 
 # production
-/build
+/packages/ds-seed/build
 
 # misc
 .DS_Store
