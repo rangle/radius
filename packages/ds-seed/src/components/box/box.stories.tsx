@@ -1,5 +1,5 @@
 import * as React from "react";
-import Box from "./box";
+import { Box } from "./box";
 
 export default {
   title: 'Box',
@@ -7,7 +7,7 @@ export default {
 };
 
 export const BoxStory = () => (
-  <Box color="#000" bg="tomato" mb={3} p={3}>
+  <Box color="powderblue" bg="salmon" mb={3} p={3}>
     This is a box
   </Box>
 );

@@ -3,12 +3,10 @@ import { compose, space, SpaceProps, color, ColorProps, typography, TypographyPr
 
 type BoxProps = ColorProps & SpaceProps & TypographyProps;
 
-const Box = styled('div')<BoxProps>(
+export const Box = styled('div')<BoxProps>(
   compose(
     space,
     color,
     typography,
   )
 );
-
-export default Box;
