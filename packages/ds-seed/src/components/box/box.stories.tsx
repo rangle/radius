@@ -7,7 +7,7 @@ export default {
 };
 
 export const BoxStory = () => (
-  <Box color="#000">
-    Tomato
+  <Box color="#000" bg="tomato" mb={3} p={3}>
+    This is a box
   </Box>
 );
