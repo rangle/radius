@@ -7,7 +7,7 @@ export default {
 };
 
 export const BoxStory = () => (
-  <Box color="powderblue" bg="salmon" mb={3} p={3}>
+  <Box variant="secondary">
     This is a box
   </Box>
 );
