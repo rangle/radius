@@ -1,30 +1,31 @@
-import styled from 'styled-components'
-import { compose, space, SpaceProps, color, ColorProps, typography, TypographyProps, variant } from 'styled-system'
+import styled from 'styled-components';
+import {
+  compose,
+  space,
+  layout,
+  flexbox,
+  border,
+  position,
+  color,
+  SpaceProps,
+  ColorProps,
+  LayoutProps,
+  FlexboxProps,
+  BorderProps,
+  PositionProps,
+} from 'styled-system';
 
-type BoxProps = ColorProps & SpaceProps & TypographyProps & { variant: "primary" | "secondary" };
+type BoxProps = SpaceProps &
+  ColorProps &
+  LayoutProps &
+  FlexboxProps &
+  BorderProps &
+  PositionProps;
 
-export const Box = styled('div')<BoxProps>(
-  variant({
-    variants: {
-      primary: {
-        color: 'white',
-        bg: 'salmon',
-        mb: 3,
-        p: 3,
-        fontSize: 3,
-      },
-      secondary: {
-        color: 'white',
-        bg: 'powderblue',
-        mb: 4,
-        p: 4,
-        fontSize: 4,
-      },
-    },
-  }),
-  compose(
-    space,
-    color,
-    typography,
-  )
+export const Box = styled.div<BoxProps>(
+  {
+    boxSizing: 'border-box',
+    minWidth: 0,
+  },
+  compose(space, color, layout, flexbox, border, position),
 );
