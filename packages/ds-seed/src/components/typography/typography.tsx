@@ -33,21 +33,19 @@ export const typographyFunctions = compose(
   flexbox,
   border,
   position,
-  typography,
+  typography
 );
 
 const headingVariant = variant({
   variants: {
     primary: {
-      color: 'white',
-      bg: 'salmon',
+      color: 'text',
       mb: 3,
       p: 3,
       fontSize: 3,
     },
     secondary: {
-      color: 'white',
-      bg: 'powderblue',
+      color: 'text',
       mb: 4,
       p: 4,
       fontSize: 4,
@@ -62,18 +60,20 @@ export const Heading = styled.h1<
   ${headingVariant}
 `;
 
+Heading.defaultProps = {
+  fontFamily: 'heading',
+};
+
 const textVariant = variant({
   variants: {
     primary: {
-      color: 'white',
-      bg: 'salmon',
+      color: 'text',
       mb: 3,
       p: 3,
       fontSize: 3,
     },
     secondary: {
-      color: 'white',
-      bg: 'powderblue',
+      color: 'text',
       mb: 4,
       p: 4,
       fontSize: 4,
@@ -85,3 +85,7 @@ export const Text = styled.p<TypeProps & { variant: 'primary' | 'secondary' }>`
   ${typographyFunctions}
   ${textVariant}
 `;
+
+Text.defaultProps = {
+  fontFamily: 'body',
+};
