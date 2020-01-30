@@ -9,11 +9,11 @@ export default {
 
 export const BoxStory = () => (
   <>
-    <Box mb={4}>
+    <Box bg="highlight" mb={4}>
       <Text variant="primary">This is a box</Text>
     </Box>
 
-    <Box>
+    <Box bg="highlight">
       <Text variant="secondary">This is a box</Text>
     </Box>
   </>

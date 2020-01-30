@@ -1,14 +1,25 @@
-  
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import { select } from '@storybook/addon-knobs';
 import theme from '../src/theme';
-import { Box } from '../src/components/box/box';
 
 const ThemeDecorator = storyFn => (
-  <ThemeProvider theme={theme}>
-    <>
-      {storyFn()}
-    </>
+  <ThemeProvider
+    theme={
+      theme[
+        select(
+          'Theme',
+          {
+            Light: 'light',
+            Dark: 'dark',
+          },
+          'light',
+          'DS_THEME',
+        )
+      ]
+    }
+  >
+    <>{storyFn()}</>
   </ThemeProvider>
 );
 

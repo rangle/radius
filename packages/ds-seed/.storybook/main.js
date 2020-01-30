@@ -1,6 +1,10 @@
 module.exports = {
   stories: ['../src/**/*.stories.(js|tsx)'],
-  addons: ['@storybook/addon-actions', '@storybook/addon-links'],
+  addons: [
+    '@storybook/addon-actions',
+    '@storybook/addon-links',
+    '@storybook/addon-knobs/register',
+  ],
 
   /**
    *   todo: once https://github.com/storybookjs/presets/pull/83 is merged in, we may no longer need

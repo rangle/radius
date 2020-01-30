@@ -9,6 +9,7 @@
     "@babel/core": "^7.8.3",
     "@rollup/plugin-typescript": "^2.1.0",
     "@storybook/addon-actions": "^5.3.8",
+    "@storybook/addon-knobs": "^5.3.9",
     "@storybook/addon-links": "^5.3.8",
     "@storybook/addons": "^5.3.8",
     "@storybook/react": "^5.3.8",
