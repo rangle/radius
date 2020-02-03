@@ -26,4 +26,12 @@
     yarn workspace ds-seed storybook
     ```
 
-    Your site is now running at `http://http://localhost:6006/`!
+    Your site is now running at `http://localhost:6006/`!
+
+1.  **Run Sample App (Created using CRA)**
+
+    ```sh
+    yarn workspace app start
+    ```
+
+    Your site is now running at `http://localhost:3000/`!
