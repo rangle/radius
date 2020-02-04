@@ -33,7 +33,7 @@ export const typographyFunctions = compose(
   flexbox,
   border,
   position,
-  typography,
+  typography
 );
 
 const headingVariant = variant({

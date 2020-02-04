@@ -1,41 +1,58 @@
 {
   "name": "ds-seed",
   "version": "1.0.0",
-  "description": "Rangle Design System Seed Project",
-  "main": "build/index.js",
   "license": "MIT",
-  "dependencies": {},
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "module": "dist/ds-seed.esm.js",
   "devDependencies": {
-    "@babel/core": "^7.8.3",
-    "@rollup/plugin-typescript": "^2.1.0",
-    "@storybook/addon-actions": "^5.3.8",
-    "@storybook/addon-knobs": "^5.3.9",
-    "@storybook/addon-links": "^5.3.8",
-    "@storybook/addons": "^5.3.8",
-    "@storybook/react": "^5.3.8",
+    "@babel/core": "^7.8.4",
+    "@storybook/addon-actions": "^5.3.10",
+    "@storybook/addon-knobs": "^5.3.10",
+    "@storybook/addon-links": "^5.3.10",
+    "@storybook/addons": "^5.3.10",
+    "@storybook/react": "^5.3.10",
+    "@types/jest": "^25.1.1",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
     "@types/styled-components": "^4.4.2",
-    "@types/styled-system": "^5.1.4",
+    "@types/styled-system": "^5.1.6",
     "babel-loader": "^8.0.6",
+    "husky": "^4.2.1",
     "react": "^16.12.0",
     "react-docgen-typescript-loader": "^3.6.0",
     "react-dom": "^16.12.0",
-    "rollup": "^1.29.1",
-    "rollup-plugin-peer-deps-external": "^2.2.0",
     "styled-components": "^5.0.0",
     "styled-system": "^5.1.4",
     "ts-loader": "^6.2.1",
+    "tsdx": "^0.12.3",
+    "tslib": "^1.10.0",
     "typescript": "^3.7.5"
-  },
-  "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "build": "rollup -c"
-  },
-  "peerDependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "styled-components": "^5.0.0"
   }
 }
