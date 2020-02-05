@@ -1,11 +1,11 @@
 import React from 'react';
-import { Box } from 'ds-seed';
+import { Box, Text } from 'ds-seed';
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <Box bg="highlight" mb={4}>
-        test
+        <Text variant="primary">This is a box</Text>
       </Box>
     </div>
   );
