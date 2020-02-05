@@ -4,9 +4,9 @@ import { Box } from 'ds-seed';
 const App: React.FC = () => {
   return (
     <div className="App">
-    <Box bg="highlight" mb={4}>
-      test
-    </Box>
+      <Box bg="highlight" mb={4}>
+        test
+      </Box>
     </div>
   );
 };
