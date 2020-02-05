@@ -1,9 +1,12 @@
 import React from 'react';
+import { Box } from 'ds-seed';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      This is the application seed for the design system efforts
+    <Box bg="highlight" mb={4}>
+      test
+    </Box>
     </div>
   );
 };
