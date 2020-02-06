@@ -1,0 +1,21 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import * as stories from './box.stories.tsx';
+import { Box } from './box';
+
+<Meta title="Box" component={Box} />
+
+# Box
+
+I can define a story with the function imported from CSF:
+
+<Story name="basic">{stories.basic()}</Story>
+
+And I can also embed arbitrary markdown & JSX in this file.
+
+<Story name="not basic" height="400px">
+  <Box bg="primary" pb={4} />
+</Story>
+
+## Some Props
+
+<Props of={Box} />

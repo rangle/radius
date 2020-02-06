@@ -9,6 +9,9 @@ module.exports = ({ config }) => {
           reportFiles: ['../src/**/*.stories.{ts|tsx}'],
         },
       },
+      {
+        loader: require.resolve('react-docgen-typescript-loader'),
+      },
     ],
   });
   config.resolve.extensions.push('.ts', '.tsx');

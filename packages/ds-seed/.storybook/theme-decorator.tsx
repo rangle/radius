@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { select } from '@storybook/addon-knobs';
 import theme from '../src/theme';
 
-const ThemeDecorator = storyFn => (
+const ThemeDecorator = (storyFn: any) => (
   <ThemeProvider
     theme={
       theme[
@@ -14,12 +14,12 @@ const ThemeDecorator = storyFn => (
             Dark: 'dark',
           },
           'light',
-          'DS_THEME',
+          'DS_THEME'
         )
       ]
     }
   >
-    <>{storyFn()}</>
+    {storyFn()}
   </ThemeProvider>
 );
 
