@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Box Basic 1`] = `
+Array [
+  <div
+    className="sc-AykKC ikBWyJ"
+  >
+    <p
+      className="sc-AykKE eTfmAo"
+      fontFamily="body"
+    >
+      This is a box
+    </p>
+  </div>,
+  <div
+    className="sc-AykKC ektJKb"
+  >
+    <p
+      className="sc-AykKE hkjDdQ"
+      fontFamily="body"
+    >
+      This is a box
+    </p>
+  </div>,
+]
+`;
