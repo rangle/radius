@@ -1,5 +1,5 @@
 {
-  "name": "ds-seed",
+  "name": "ds",
   "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -8,6 +8,7 @@
     "dist"
   ],
   "scripts": {
+    "postinstall": "yarn build",
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
@@ -35,7 +36,7 @@
       "^.+\\.(md|mdx)$": "<rootDir>/__mocks__/mdx-mock.js"
     }
   },
-  "module": "dist/ds-seed.esm.js",
+  "module": "dist/ds.esm.js",
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@storybook/addon-actions": "^5.3.10",

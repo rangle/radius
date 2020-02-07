@@ -23,7 +23,7 @@
 1.  **Run Storybook**
 
     ```sh
-    yarn workspace ds-seed storybook
+    yarn workspace ds storybook
     ```
 
     Your site is now running at `http://http://localhost:6006/`!

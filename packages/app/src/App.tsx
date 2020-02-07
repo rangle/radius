@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Text } from 'ds-seed';
+import { Box, Text } from 'ds';
 
 const App: React.FC = () => {
   return (
