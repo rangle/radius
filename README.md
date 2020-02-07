@@ -26,4 +26,14 @@
     yarn workspace ds storybook
     ```
 
-    Your site is now running at `http://http://localhost:6006/`!
+    Your site is now running at `http://localhost:6006/`!
+
+    Make sure your node version is >=13.2.0
+
+1. **Run Sample App (Created using CRA)**
+
+    ```sh
+    yarn workspace app start
+    ```
+
+    Your site is now running at `http://localhost:3000/`!
