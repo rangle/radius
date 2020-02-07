@@ -25,23 +25,19 @@ jobs:
             - yarn-packages-{{ checksum "yarn.lock" }}
 
       - run:
-          name: Install Dependencies
+          name: Install Dependencies & Build Component Library
           command: yarn install
 
       - save_cache:
           paths:
             - node_modules
             - packages/app/node_modules
-            - packages/ds-seed/node_modules
+            - packages/ds/node_modules
           key: yarn-packages-{{ checksum "yarn.lock" }}
 
       - run:
-          name: Build Component Library
-          command: yarn workspace ds-seed build
-
-      - run:
           name: Test Component Library
-          command: yarn workspace ds-seed test
+          command: yarn workspace ds test
 
       - run:
           name: Build Demo App
