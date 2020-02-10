@@ -29,3 +29,7 @@ export const Box = styled.div(
   },
   compose(space, color, layout, flexbox, border, position)
 ) as React.FC<BoxProps>;
+
+export const Grid = styled(Box)({
+  display: 'grid'
+});

@@ -1,0 +1,15 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import * as stories from './grid.stories.tsx';
+import { Grid } from './grid';
+
+<Meta title="Grid" component={Grid} />
+
+# Grid
+
+Grid creates a Grid container that exposes CSS Grid properties
+
+<Story name="grid">{stories.grid()}</Story>
+
+## Component Props
+
+<Props of={Grid} />

@@ -7,7 +7,7 @@ export default {
   component: Box,
 };
 
-export const basic = () => (
+export const box = () => (
   <>
     <Box bg="highlight" mb={4}>
       <Text variant="primary">This is a box</Text>
