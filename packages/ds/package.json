@@ -34,6 +34,11 @@
   "jest": {
     "moduleNameMapper": {
       "^.+\\.(md|mdx)$": "<rootDir>/__mocks__/mdx-mock.js"
+    },
+    "transform": {
+      ".(ts|tsx)": "ts-jest/dist",
+      "^.+\\.[tj]sx?$": "babel-jest",
+      "^.+\\.mdx?$": "@storybook/addon-docs/jest-transform-mdx"
     }
   },
   "module": "dist/ds.esm.js",
