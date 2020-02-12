@@ -10,7 +10,10 @@ Grid creates a Grid container that exposes CSS Grid properties
 
 <Preview withToolbar>
   <Story name="grid">
-    <Grid>
+    <Grid gridTemplateColumns='1fr 2fr' gridColumnGap={16}>
+      <Box bg="highlight" mb={4}>
+        <Text variant="primary">This is a grid box</Text>
+      </Box>
       <Box bg="highlight" mb={4}>
         <Text variant="primary">This is a grid box</Text>
       </Box>
