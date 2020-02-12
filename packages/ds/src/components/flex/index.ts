@@ -1,1 +1,1 @@
-import { Flex } from './flex';
+export { Flex } from './flex';

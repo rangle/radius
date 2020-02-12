@@ -4,7 +4,6 @@ import {
   space,
   layout,
   flexbox,
-  grid,
   border,
   position,
   color,
@@ -28,5 +27,5 @@ export const Box = styled.div(
     boxSizing: 'border-box',
     minWidth: 0,
   },
-  compose(space, color, layout, flexbox, border, position, grid)
+  compose(space, color, layout, flexbox, border, position)
 ) as React.FC<BoxProps>;
