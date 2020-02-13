@@ -16,7 +16,7 @@
     "prepare": "tsdx build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "CHROMATIC_APP_CODE=220jp3rkx8t chromatic"
+    "chromatic": "CHROMATIC_APP_CODE=220jp3rkx8t chromatic --exit-zero-on-changes"
   },
   "peerDependencies": {
     "react": ">=16"
