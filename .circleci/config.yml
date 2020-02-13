@@ -35,9 +35,9 @@ jobs:
             - packages/ds/node_modules
           key: yarn-packages-{{ checksum "yarn.lock" }}
 
-      - run:
-          name: Test Component Library
-          command: yarn workspace ds test
+      # - run:
+      #     name: Test Component Library
+      #     command: yarn workspace ds test
 
       - run:
           name: Build Demo App
