@@ -15,7 +15,7 @@ import {
   PositionProps,
 } from 'styled-system';
 
-type BoxProps = SpaceProps &
+export type BoxProps = SpaceProps &
   ColorProps &
   LayoutProps &
   FlexboxProps &
