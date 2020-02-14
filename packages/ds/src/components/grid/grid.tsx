@@ -1,8 +1,23 @@
 import styled from 'styled-components';
-import { grid, GridProps } from 'styled-system';
-import { Box, BoxProps } from '../box';
+import {
+  grid,
+  GridProps,
+  SpaceProps,
+  ColorProps,
+  LayoutProps,
+  FlexboxProps,
+  BorderProps,
+  PositionProps,
+} from 'styled-system';
+import { Box } from '../box';
 
-type GridComponentProps = BoxProps & GridProps;
+type GridComponentProps = SpaceProps &
+  ColorProps &
+  LayoutProps &
+  FlexboxProps &
+  BorderProps &
+  PositionProps &
+  GridProps;
 
 export const Grid = styled(Box)(
   {

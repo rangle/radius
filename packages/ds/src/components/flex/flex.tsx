@@ -1,7 +1,20 @@
 import styled from 'styled-components';
-import { Box, BoxProps } from '../box';
+import {
+  SpaceProps,
+  ColorProps,
+  LayoutProps,
+  FlexboxProps,
+  BorderProps,
+  PositionProps,
+} from 'styled-system';
+import { Box } from '../box';
 
-type FlexProps = BoxProps;
+type FlexProps = SpaceProps &
+  ColorProps &
+  LayoutProps &
+  FlexboxProps &
+  BorderProps &
+  PositionProps;
 
 export const Flex = styled(Box)({
   display: 'flex',
