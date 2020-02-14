@@ -25,8 +25,12 @@ jobs:
             - yarn-packages-{{ checksum "yarn.lock" }}
 
       - run:
-          name: Install Dependencies & Build Component Library
+          name: Install Dependencies
           command: yarn install
+
+      - run:
+          name: Build Component Library
+          command: yarn workspace ds build
 
       - save_cache:
           paths:
@@ -40,9 +44,9 @@ jobs:
           command: yarn workspace ds test
 
       - run:
-          name: Run Visual Tests
-          command: yarn workspace ds run chromatic
-
-      - run:
           name: Build Demo App
           command: yarn workspace app build
+
+      - run:
+          name: Run Visual Tests
+          command: yarn workspace ds run chromatic

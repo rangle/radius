@@ -8,7 +8,6 @@
     "dist"
   ],
   "scripts": {
-    "postinstall": "yarn build",
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
@@ -16,7 +15,7 @@
     "prepare": "tsdx build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "CHROMATIC_APP_CODE=220jp3rkx8t chromatic --exit-zero-on-changes"
+    "chromatic": "CHROMATIC_APP_CODE=$CHROMATIC_APP_CODE chromatic --exit-zero-on-changes"
   },
   "peerDependencies": {
     "react": ">=16"
