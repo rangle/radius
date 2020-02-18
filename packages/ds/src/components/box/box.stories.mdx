@@ -1,6 +1,7 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+
 import { Box } from './box';
-import { Text } from '../';
+import { Text } from '../typography';
 
 <Meta title="Box" component={Box} />
 
@@ -10,11 +11,13 @@ Building block of layouts. Creates a box-model context
 
 <Preview withToolbar>
   <Story name="box">
-    <Box bg="highlight" mb={4}>
-      <Text variant="primary">This is a box</Text>
-    </Box>
-    <Box bg="highlight">
-      <Text variant="secondary">This is a box</Text>
+    <Box>
+      <Box bg="highlight" mb={4}>
+        <Text variant="primary">This is a box</Text>
+      </Box>
+      <Box bg="highlight">
+        <Text variant="secondary">This is a box</Text>
+      </Box>
     </Box>
   </Story>
 </Preview>

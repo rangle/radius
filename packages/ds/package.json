@@ -34,6 +34,7 @@
   "module": "dist/ds.esm.js",
   "devDependencies": {
     "@babel/core": "^7.8.4",
+    "@storybook/addon-a11y": "^5.3.13",
     "@storybook/addon-actions": "^5.3.10",
     "@storybook/addon-docs": "^5.3.12",
     "@storybook/addon-knobs": "^5.3.10",
