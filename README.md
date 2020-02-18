@@ -20,9 +20,10 @@
     yarn
     ```
 
-1.  **Run Storybook**
+1.  **Build & Run Storybook**
 
     ```sh
+    yarn workspace ds build
     yarn workspace ds storybook
     ```
 
