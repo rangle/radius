@@ -36,34 +36,6 @@ export const typographyFunctions = compose(
   typography
 );
 
-const headingVariant = variant({
-  variants: {
-    primary: {
-      color: 'text',
-      mb: 3,
-      p: 3,
-      fontSize: 3,
-    },
-    secondary: {
-      color: 'text',
-      mb: 4,
-      p: 4,
-      fontSize: 4,
-    },
-  },
-});
-
-export const Heading = styled.h1<
-  TypeProps & { variant: 'primary' | 'secondary' }
->`
-  ${headingVariant}
-  ${typographyFunctions}
-`;
-
-Heading.defaultProps = {
-  fontFamily: 'heading',
-};
-
 const textVariant = variant({
   variants: {
     primary: {

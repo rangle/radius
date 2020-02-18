@@ -1,11 +1,21 @@
 export const fonts = {
-  body:
-    '"Helvetica Neue", Roboto, sans-serif',
+  body: '"Helvetica Neue", Roboto, sans-serif',
   heading: '"Roboto", sans-serif',
   monospace: 'Menlo, monospace',
 };
 
-export const fontSizes = ['3rem', '2.5rem', '2rem', '1.75rem', '1.5rem', '1.25rem', '1.125rem', '1rem', '0.75rem', '0.625rem'];
+export const fontSizes = [
+  '3rem',
+  '2.5rem',
+  '2rem',
+  '1.75rem',
+  '1.5rem',
+  '1.25rem',
+  '1.125rem',
+  '1rem',
+  '0.75rem',
+  '0.625rem',
+];
 
 export const fontWeights = {
   regular: 400,
