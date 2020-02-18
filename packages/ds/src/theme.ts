@@ -36,6 +36,8 @@ export const letterSpacings = {
 
 export const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
 
+export const breakpoints = ['40em', '56em', '64em'];
+
 export default {
   light: {
     space,
@@ -44,6 +46,7 @@ export default {
     fontWeights,
     lineHeights,
     letterSpacings,
+    breakpoints,
     colors: {
       text: '#000',
       background: '#fff',
@@ -59,6 +62,7 @@ export default {
     fontWeights,
     lineHeights,
     letterSpacings,
+    breakpoints,
     colors: {
       text: '#fff',
       background: '#060606',

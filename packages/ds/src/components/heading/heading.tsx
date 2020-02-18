@@ -31,23 +31,23 @@ const defaultHeadingStyles = {
 const headingVariant = variant({
   variants: {
     'extra-large': {
-      fontSize: 0,
+      fontSize: [2, 1, 0, 0],
       ...defaultHeadingStyles,
     },
     large: {
-      fontSize: 1,
+      fontSize: [3, 2, 1, 1],
       ...defaultHeadingStyles,
     },
     medium: {
-      fontSize: 2,
+      fontSize: [4, 3, 2, 2],
       ...defaultHeadingStyles,
     },
     small: {
-      fontSize: 3,
+      fontSize: [5, 4, 3, 3],
       ...defaultHeadingStyles,
     },
     'extra-small': {
-      fontSize: 4,
+      fontSize: [6, 5, 4, 4],
       ...defaultHeadingStyles,
     },
   },
