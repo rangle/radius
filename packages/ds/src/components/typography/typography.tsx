@@ -56,8 +56,8 @@ const headingVariant = variant({
 export const Heading = styled.h1<
   TypeProps & { variant: 'primary' | 'secondary' }
 >`
-  ${typographyFunctions}
   ${headingVariant}
+  ${typographyFunctions}
 `;
 
 Heading.defaultProps = {
@@ -82,8 +82,8 @@ const textVariant = variant({
 });
 
 export const Text = styled.p<TypeProps & { variant: 'primary' | 'secondary' }>`
-  ${typographyFunctions}
   ${textVariant}
+  ${typographyFunctions}
 `;
 
 Text.defaultProps = {
