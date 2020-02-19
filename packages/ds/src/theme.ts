@@ -35,12 +35,15 @@ export const letterSpacings = {
 };
 
 export const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
+export const sizes = [8, 16, 32, 64, 128, 256, 512, 768, 1024, 1536];
 
 export const breakpoints = ['40em', '56em', '64em'];
+
 
 export default {
   light: {
     space,
+    sizes,
     fonts,
     fontSizes,
     fontWeights,
@@ -57,6 +60,7 @@ export default {
   },
   dark: {
     space,
+    sizes,
     fonts,
     fontSizes,
     fontWeights,

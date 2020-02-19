@@ -11,20 +11,15 @@ import {
 } from 'styled-system';
 import { typographyFunctions } from '../typography';
 
-type HeadingProps = SpaceProps &
+type HeadingProps = {
+  variant: 'heading-1' | 'heading-2' | 'heading-3' | 'heading-4' | 'heading-5';
+} & SpaceProps &
   ColorProps &
   LayoutProps &
   FlexboxProps &
   BorderProps &
   PositionProps &
-  TypographyProps & {
-    variant:
-      | 'heading-1'
-      | 'heading-2'
-      | 'heading-3'
-      | 'heading-4'
-      | 'heading-5';
-  };
+  TypographyProps;
 
 const defaultHeadingStyles = {
   fontFamily: 'heading',
