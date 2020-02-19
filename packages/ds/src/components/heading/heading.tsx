@@ -18,7 +18,12 @@ type HeadingProps = SpaceProps &
   BorderProps &
   PositionProps &
   TypographyProps & {
-    variant: 'extra-large' | 'large' | 'medium' | 'small' | 'extra-small';
+    variant:
+      | 'heading-1'
+      | 'heading-2'
+      | 'heading-3'
+      | 'heading-4'
+      | 'heading-5';
   };
 
 const defaultHeadingStyles = {
@@ -30,23 +35,23 @@ const defaultHeadingStyles = {
 
 const headingVariant = variant({
   variants: {
-    'extra-large': {
+    'heading-1': {
       fontSize: [2, 1, 0, 0],
       ...defaultHeadingStyles,
     },
-    large: {
+    'heading-2': {
       fontSize: [3, 2, 1, 1],
       ...defaultHeadingStyles,
     },
-    medium: {
+    'heading-3': {
       fontSize: [4, 3, 2, 2],
       ...defaultHeadingStyles,
     },
-    small: {
+    'heading-4': {
       fontSize: [5, 4, 3, 3],
       ...defaultHeadingStyles,
     },
-    'extra-small': {
+    'heading-5': {
       fontSize: [6, 5, 4, 4],
       ...defaultHeadingStyles,
     },
