@@ -1,11 +1,21 @@
 export const fonts = {
-  body:
-    '"Helvetica Neue", Roboto, sans-serif',
+  body: '"Helvetica Neue", Roboto, sans-serif',
   heading: '"Roboto", sans-serif',
   monospace: 'Menlo, monospace',
 };
 
-export const fontSizes = ['3rem', '2.5rem', '2rem', '1.75rem', '1.5rem', '1.25rem', '1.125rem', '1rem', '0.75rem', '0.625rem'];
+export const fontSizes = [
+  '3rem',
+  '2.5rem',
+  '2rem',
+  '1.75rem',
+  '1.5rem',
+  '1.25rem',
+  '1.125rem',
+  '1rem',
+  '0.75rem',
+  '0.625rem',
+];
 
 export const fontWeights = {
   regular: 400,
@@ -26,6 +36,8 @@ export const letterSpacings = {
 
 export const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
 
+export const breakpoints = ['40em', '56em', '64em'];
+
 export default {
   light: {
     space,
@@ -34,6 +46,7 @@ export default {
     fontWeights,
     lineHeights,
     letterSpacings,
+    breakpoints,
     colors: {
       text: '#000',
       background: '#fff',
@@ -49,6 +62,7 @@ export default {
     fontWeights,
     lineHeights,
     letterSpacings,
+    breakpoints,
     colors: {
       text: '#fff',
       background: '#060606',

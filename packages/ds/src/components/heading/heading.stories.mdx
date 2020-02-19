@@ -1,0 +1,27 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { Heading } from './heading';
+import { Box, Text } from '../';
+
+<Meta title="Heading" component={Heading} />
+
+# Heading
+
+Primitive heading component, defaults to `<h1>`.
+
+<Preview withToolbar>
+  <Story name="heading">
+    <Box>
+      <Heading variant="heading-1">You know nothing, Jon Snow</Heading>
+      <Heading variant="heading-2">You know nothing, Jon Snow</Heading>
+      <Heading variant="heading-3">You know nothing, Jon Snow</Heading>
+      <Heading variant="heading-4">You know nothing, Jon Snow</Heading>
+      <Heading variant="heading-5">You know nothing, Jon Snow</Heading>
+    </Box>
+  </Story>
+</Preview>
+
+Use the `as` prop to set the correct HTML element independent from styling.
+
+## Component Props
+
+<Props of={Heading} />
