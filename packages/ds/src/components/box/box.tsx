@@ -22,10 +22,10 @@ export type BoxProps = SpaceProps &
   BorderProps &
   PositionProps;
 
-export const Box = styled.div(
+export const Box = styled.div<BoxProps>(
   {
     boxSizing: 'border-box',
     minWidth: 0,
   },
   compose(space, color, layout, flexbox, border, position)
-) as React.FC<BoxProps>;
+);

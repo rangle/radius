@@ -11,6 +11,18 @@ module.exports = ({ config }) => {
       },
       {
         loader: require.resolve('react-docgen-typescript-loader'),
+        options: {
+          propFilter: prop => {
+            if (prop.parent) {
+              return (
+                !prop.parent.fileName.includes('react') &&
+                !prop.parent.fileName.includes('styled-components')
+              );
+            }
+
+            return true;
+          },
+        },
       },
     ],
   });

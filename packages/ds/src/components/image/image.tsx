@@ -14,7 +14,7 @@ import {
   PositionProps,
 } from 'styled-system';
 
-type ImageComponentProps = { variant: 'default' | 'avatar' } & SpaceProps &
+export type ImageProps = { variant: 'default' | 'avatar' } & SpaceProps &
   LayoutProps &
   FlexboxProps &
   BorderProps &
@@ -31,10 +31,14 @@ const imageVariants = variant({
   },
 });
 
-export const Image = styled.img(
+export const Image = styled.img<ImageProps>(
+  {
+    maxWidth: '100%',
+    height: 'auto',
+  },
   compose(space, layout, flexbox, border, position),
   imageVariants
-) as React.FC<ImageComponentProps>;
+);
 
 Image.defaultProps = {
   variant: 'default',

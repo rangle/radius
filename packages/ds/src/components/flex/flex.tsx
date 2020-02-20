@@ -16,6 +16,6 @@ type FlexProps = SpaceProps &
   BorderProps &
   PositionProps;
 
-export const Flex = styled(Box)({
+export const Flex = styled(Box)<FlexProps>({
   display: 'flex',
-}) as React.FC<FlexProps>;
+});
