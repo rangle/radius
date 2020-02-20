@@ -24,7 +24,7 @@ type TypeProps = SpaceProps &
   FlexboxProps &
   BorderProps &
   PositionProps &
-  TypographyProps;
+  TypographyProps & { variant: 'body' | 'caption' | 'hint' | 'label' };
 
 export const typographyFunctions = compose(
   space,
@@ -36,27 +36,40 @@ export const typographyFunctions = compose(
   typography
 );
 
+const defaultextStyles = {
+  fontFamily: 'body',
+  fontWeight: 'regular',
+  lineHeight: 'copy',
+  color: 'text',
+};
+
 const textVariant = variant({
   variants: {
-    primary: {
-      color: 'text',
-      mb: 3,
-      p: 3,
-      fontSize: 3,
+    body: {
+      ...defaultextStyles,
+      fontSize: 7,
     },
-    secondary: {
-      color: 'text',
-      mb: 4,
-      p: 4,
-      fontSize: 4,
+    caption: {
+      ...defaultextStyles,
+      fontSize: 8,
+    },
+    hint: {
+      ...defaultextStyles,
+      fontSize: 9,
+    },
+    label: {
+      ...defaultextStyles,
+      fontFamily: 'heading',
+      fontSize: 8,
+      fontWeight: 'medium',
     },
   },
 });
 
-export const Text = styled.p<TypeProps & { variant: 'primary' | 'secondary' }>`
+export const Text = styled.p`
   ${textVariant}
   ${typographyFunctions}
-`;
+` as React.FC<TypeProps>;
 
 Text.defaultProps = {
   fontFamily: 'body',
