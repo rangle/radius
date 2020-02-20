@@ -2,7 +2,7 @@ import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 import { Box, Text } from '../';
 import { Flex } from './flex';
 
-<Meta title="Flex" component={Flex} />
+<Meta title="Primitives/Flex" component={Flex} />
 
 # Flex
 
@@ -10,7 +10,7 @@ Flex component helps you create flexbox layouts.
 
 <Preview withToolbar>
   <Story name="flex">
-    <Flex flexDirection='column' pb={4} pt={4}>
+    <Flex flexDirection="column" pb={4} pt={4}>
       <Box bg="highlight" mb={4}>
         <Text variant="body">This is a flex box item</Text>
       </Box>
@@ -24,4 +24,3 @@ Flex component helps you create flexbox layouts.
 ## Component Props
 
 <Props of={Flex} />
-
