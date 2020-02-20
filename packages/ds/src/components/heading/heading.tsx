@@ -53,10 +53,10 @@ const headingVariant = variant({
   },
 });
 
-export const Heading = styled.h1`
+export const Heading = styled.h1<HeadingProps>`
   ${headingVariant}
   ${typographyFunctions}
-` as React.FC<HeadingProps>;
+`;
 
 Heading.defaultProps = {
   fontFamily: 'heading',

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {
   grid,
-  GridProps,
+  GridProps as _GridProps,
   SpaceProps,
   ColorProps,
   LayoutProps,
@@ -11,17 +11,17 @@ import {
 } from 'styled-system';
 import { Box } from '../box';
 
-type GridComponentProps = SpaceProps &
+type GridProps = SpaceProps &
   ColorProps &
   LayoutProps &
   FlexboxProps &
   BorderProps &
   PositionProps &
-  GridProps;
+  _GridProps;
 
-export const Grid = styled(Box)(
+export const Grid = styled(Box)<GridProps>(
   {
     display: 'grid',
   },
   grid
-) as React.FC<GridComponentProps>;
+);
