@@ -1,0 +1,26 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { Box, Heading } from '../';
+import { Link } from './link';
+
+<Meta title="Link" component={Link} />
+
+# Link
+
+Primitive typographic component, defaults to `<a>`.
+
+<Preview withToolbar>
+  <Story name="link">
+    <Box>
+      <Text variant="body">You know nothing, Jon Snow</Text>
+      <Text variant="caption">You know nothing, Jon Snow</Text>
+      <Text variant="hint">You know nothing, Jon Snow</Text>
+      <Text variant="label">You know nothing, Jon Snow</Text>
+    </Box>
+  </Story>
+</Preview>
+
+Use the `as` prop to set the correct HTML element independent from styling.
+
+## Component Props
+
+<Props of={Link} />
