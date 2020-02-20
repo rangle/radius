@@ -18,13 +18,15 @@ import {
   TypographyProps,
 } from 'styled-system';
 
-type TypeProps = SpaceProps &
+type TypeProps = {
+  variant: 'body' | 'caption' | 'hint' | 'label';
+} & SpaceProps &
   ColorProps &
   LayoutProps &
   FlexboxProps &
   BorderProps &
   PositionProps &
-  TypographyProps & { variant: 'body' | 'caption' | 'hint' | 'label' };
+  TypographyProps;
 
 export const typographyFunctions = compose(
   space,
@@ -66,10 +68,10 @@ const textVariant = variant({
   },
 });
 
-export const Text = styled.p`
+export const Text = styled.p<TypeProps>`
   ${textVariant}
   ${typographyFunctions}
-` as React.FC<TypeProps>;
+`;
 
 Text.defaultProps = {
   fontFamily: 'body',
