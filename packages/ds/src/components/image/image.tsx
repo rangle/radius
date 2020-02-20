@@ -14,23 +14,20 @@ import {
   PositionProps,
 } from 'styled-system';
 
-type ImageComponentProps =
-  SpaceProps &
+type ImageComponentProps = { variant: 'default' | 'avatar' } & SpaceProps &
   LayoutProps &
   FlexboxProps &
   BorderProps &
-  PositionProps &
-  { variant: 'default' | 'avatar' };
+  PositionProps;
 
 const imageVariants = variant({
   variants: {
-    default: {
-    },
+    default: {},
     avatar: {
-      width: 48,
-      height: 48,
-      borderRadius: 999999
-    }
+      width: 3,
+      height: 3,
+      borderRadius: 999999,
+    },
   },
 });
 
@@ -38,3 +35,7 @@ export const Image = styled.img(
   compose(space, layout, flexbox, border, position),
   imageVariants
 ) as React.FC<ImageComponentProps>;
+
+Image.defaultProps = {
+  variant: 'default',
+};
