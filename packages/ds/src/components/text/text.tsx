@@ -18,7 +18,7 @@ import {
   TypographyProps,
 } from 'styled-system';
 
-type TypeProps = {
+type TextProps = {
   variant: 'body' | 'caption' | 'hint' | 'label';
 } & SpaceProps &
   ColorProps &
@@ -45,7 +45,7 @@ const defaultextStyles = {
   color: 'text',
 };
 
-const textVariant = variant({
+const textVariants = variant({
   variants: {
     body: {
       ...defaultextStyles,
@@ -68,8 +68,8 @@ const textVariant = variant({
   },
 });
 
-export const Text = styled.p<TypeProps>`
-  ${textVariant}
+export const Text = styled.p<TextProps>`
+  ${textVariants}
   ${typographyFunctions}
 `;
 
