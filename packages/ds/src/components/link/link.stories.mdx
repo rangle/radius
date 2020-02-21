@@ -1,8 +1,8 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
-import { Box, Heading } from '../';
+import { Flex } from '../';
 import { Link } from './link';
 
-<Meta title="Link" component={Link} />
+<Meta title="Components/Link" component={Link} />
 
 # Link
 
@@ -10,12 +10,13 @@ Primitive typographic component, defaults to `<a>`.
 
 <Preview withToolbar>
   <Story name="link">
-    <Box>
-      <Text variant="body">You know nothing, Jon Snow</Text>
-      <Text variant="caption">You know nothing, Jon Snow</Text>
-      <Text variant="hint">You know nothing, Jon Snow</Text>
-      <Text variant="label">You know nothing, Jon Snow</Text>
-    </Box>
+    <Flex flexDirection="column">
+      <Link variant="default">You know nothing, Jon Snow</Link>
+      <Link variant="inline">You know nothing, Jon Snow</Link>
+      <Link variant="nav1">You know nothing, Jon Snow</Link>
+      <Link variant="nav2">You know nothing, Jon Snow</Link>
+      <Link variant="nav3">You know nothing, Jon Snow</Link>
+    </Flex>
   </Story>
 </Preview>
 

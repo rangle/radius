@@ -1,42 +1,15 @@
 import styled from 'styled-components';
 import {
-  compose,
-  space,
-  layout,
-  flexbox,
-  border,
-  position,
-  color,
-  variant,
-  typography,
-  SpaceProps,
-  ColorProps,
-  LayoutProps,
-  FlexboxProps,
-  BorderProps,
-  PositionProps,
-  TypographyProps,
+  variant
 } from 'styled-system';
+import {
+  TypographyFunctionsProps,
+  typographyFunctions,
+} from '../typography-functions';
 
 type LinkProps = {
   variant: 'inline' | 'default' | 'nav-1' | 'nav-2' | 'nav-3';
-} & SpaceProps &
-  ColorProps &
-  LayoutProps &
-  FlexboxProps &
-  BorderProps &
-  PositionProps &
-  TypographyProps;
-
-export const linkFunctions = compose(
-  space,
-  color,
-  layout,
-  flexbox,
-  border,
-  position,
-  typography
-);
+} & TypographyFunctionsProps;
 
 const linkVariants = variant({
   variants: {
@@ -46,7 +19,7 @@ const linkVariants = variant({
       fontWeight: 'medium',
       lineHeight: 'copy',
       textDecoration: 'underline',
-      color: '--accent-colour',
+      color: 'accent',
     },
     inline: {
       fontFamily: 'body',
@@ -54,36 +27,40 @@ const linkVariants = variant({
       fontWeight: 'medium',
       lineHeight: 'copy',
       textDecoration: 'underline',
-      color: '--accent-colour',
+      color: 'accent',
     },
-    'nav-1': {
+    nav1: {
       fontFamily: 'heading',
       fontSize: 6,
       fontWeight: 'bold',
       lineHeight: 'copy',
       textDecoration: 'underline',
-      color: '--text-primary-colour',
+      color: 'textPrimary',
     },
-    'nav-2': {
+    nav2: {
       fontFamily: 'heading',
       fontSize: 7,
       fontWeight: 'bold',
       lineHeight: 'copy',
       textDecoration: 'underline',
-      color: '--text-primary-colour',
+      color: 'textPrimary',
     },
-    'nav-3': {
+    nav3: {
       fontFamily: 'heading',
       fontSize: 8,
       fontWeight: 'bold',
       lineHeight: 'copy',
       textDecoration: 'underline',
-      color: '--text-primary-colour',
+      color: 'textPrimary',
     },
   },
 });
 
 export const Link = styled.a<LinkProps>`
   ${linkVariants}
-  ${linkFunctions}
+  ${typographyFunctions}
 `;
+
+Link.defaultProps = {
+  variant: 'default',
+};

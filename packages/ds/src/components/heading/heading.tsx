@@ -49,5 +49,5 @@ export const Heading = styled.h1<HeadingProps>`
 `;
 
 Heading.defaultProps = {
-  fontFamily: 'heading',
+  variant: 'heading-1',
 };
