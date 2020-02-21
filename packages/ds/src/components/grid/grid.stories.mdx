@@ -2,7 +2,7 @@ import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 import { Grid } from './grid';
 import { Box, Text } from '../';
 
-<Meta title="Grid" component={Grid} />
+<Meta title="Primitives/Grid" component={Grid} />
 
 # Grid
 
@@ -10,7 +10,7 @@ Grid creates a Grid container that exposes CSS Grid properties
 
 <Preview withToolbar>
   <Story name="grid">
-    <Grid gridTemplateColumns='1fr 2fr' gridColumnGap={16}>
+    <Grid gridTemplateColumns="1fr 2fr" gridColumnGap={16}>
       <Box bg="highlight" mb={4}>
         <Text variant="body">This is a grid box</Text>
       </Box>
