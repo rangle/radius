@@ -39,7 +39,6 @@ export const sizes = [8, 16, 32, 64, 128, 256, 512, 768, 1024, 1536];
 
 export const breakpoints = ['40em', '56em', '64em'];
 
-
 export default {
   light: {
     space,

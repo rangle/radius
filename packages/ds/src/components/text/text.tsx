@@ -18,7 +18,9 @@ import {
   TypographyProps,
 } from 'styled-system';
 
-type TypeProps = SpaceProps &
+type TextProps = {
+  variant: 'body' | 'caption' | 'hint' | 'label';
+} & SpaceProps &
   ColorProps &
   LayoutProps &
   FlexboxProps &
@@ -36,25 +38,38 @@ export const typographyFunctions = compose(
   typography
 );
 
-const textVariant = variant({
+const defaultextStyles = {
+  fontFamily: 'body',
+  fontWeight: 'regular',
+  lineHeight: 'copy',
+  color: 'text',
+};
+
+const textVariants = variant({
   variants: {
-    primary: {
-      color: 'text',
-      mb: 3,
-      p: 3,
-      fontSize: 3,
+    body: {
+      ...defaultextStyles,
+      fontSize: 7,
     },
-    secondary: {
-      color: 'text',
-      mb: 4,
-      p: 4,
-      fontSize: 4,
+    caption: {
+      ...defaultextStyles,
+      fontSize: 8,
+    },
+    hint: {
+      ...defaultextStyles,
+      fontSize: 9,
+    },
+    label: {
+      ...defaultextStyles,
+      fontFamily: 'heading',
+      fontSize: 8,
+      fontWeight: 'medium',
     },
   },
 });
 
-export const Text = styled.p<TypeProps & { variant: 'primary' | 'secondary' }>`
-  ${textVariant}
+export const Text = styled.p<TextProps>`
+  ${textVariants}
   ${typographyFunctions}
 `;
 
