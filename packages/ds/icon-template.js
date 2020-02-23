@@ -20,13 +20,15 @@ function template(
       TypographyProps
     } from 'styled-system';
 
-    export type IconProps = SpaceProps &
-      ColorProps &
-      LayoutProps &
-      TypographyProps;
+    export type IconProps = SpaceProps & ColorProps & LayoutProps & TypographyProps;
 
-    const SvgComponent = forwardRef<SVGSVGElement, IconProps>(
-      (props: React.SVGProps<SVGSVGElement>, svgRef) => (
+    const SvgComponent = forwardRef<
+      SVGSVGElement,
+      React.SVGProps<SVGSVGElement> & {
+        title?: any;
+        titleId?: any;
+      }
+    >(({ title, titleId, ...props }, svgRef) => (
         ${jsx}
       )
     );

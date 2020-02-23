@@ -60,7 +60,7 @@ import { Icons } from 'ds';
 The icon generator script replaces the SVG `width` and `height` values by `1em` to make the SVG size inherit the font-size. Which, in turn, allows you to control the size of the icon using the `fontSize` prop.
 
 <Preview>
-  <Story name="sizing">
+  <Story name="sizing with font-size">
     <Flex alignItems="center">
       <Icons.Loader fontSize={0} mr={2} />
       <Icons.Loader fontSize={1} mr={2} />
@@ -71,6 +71,14 @@ The icon generator script replaces the SVG `width` and `height` values by `1em` 
       <Icons.Loader fontSize={6} mr={2} />
       <Icons.Loader fontSize={7} mr={2} />
     </Flex>
+  </Story>
+</Preview>
+
+However, you can still control the size of the icon using the `width` and `height` props.
+
+<Preview>
+  <Story name="sizing with layout props">
+    <Icons.Loader width={3} height={3} />
   </Story>
 </Preview>
 
@@ -116,10 +124,13 @@ When used for **decorative** purposes, ensure that it is ignored by screen reade
   </Story>
 </Preview>
 
-When used for **non-decorative** purposes, it must have a proper text alternative via `aria-label` for screen readers.
+When used for **non-decorative** purposes, it must have a proper alternative text set via `title` and `titleId` props.
 
 <Preview withSource={SourceState.OPEN}>
   <Story name="as non-decorative">
-    <Icons.Loader aria-label="waiting for content to load" />
+    <Icons.Loader
+      title="waiting for content to load"
+      titleId="loader-icon-story"
+    />
   </Story>
 </Preview>
