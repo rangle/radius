@@ -13,7 +13,7 @@ const linkVariants = variant({
   variants: {
     default: {
       fontFamily: 'body',
-      fontSize: 7,
+      fontSize: 2,
       fontWeight: 'medium',
       color: 'accent',
       lineHeight: 'copy',
@@ -35,7 +35,7 @@ const linkVariants = variant({
     },
     nav1: {
       fontFamily: 'heading',
-      fontSize: 6,
+      fontSize: 3,
       fontWeight: 'bold',
       color: 'textPrimary',
       lineHeight: 'copy',
@@ -49,7 +49,7 @@ const linkVariants = variant({
     },
     nav2: {
       fontFamily: 'heading',
-      fontSize: 7,
+      fontSize: 2,
       fontWeight: 'bold',
       color: 'textPrimary',
       lineHeight: 'copy',
@@ -63,7 +63,7 @@ const linkVariants = variant({
     },
     nav3: {
       fontFamily: 'heading',
-      fontSize: 8,
+      fontSize: 1,
       fontWeight: 'bold',
       color: 'textPrimary',
       lineHeight: 'copy',
