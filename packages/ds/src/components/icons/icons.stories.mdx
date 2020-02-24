@@ -1,10 +1,4 @@
-import {
-  Meta,
-  Story,
-  Props,
-  Preview,
-  SourceState,
-} from '@storybook/addon-docs/blocks';
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 import { Grid } from '../grid';
 import { Flex } from '../flex';
 import { Text } from '../text';
@@ -18,7 +12,7 @@ The build process is configured to transform SVGs into React components, using [
 
 The components support `space`, `color`, `layout` & `typography` styled-system props.
 
-<Preview withSource={SourceState.NONE}>
+<Preview withSource="none">
   <Story name="directory">
     <Grid
       gridTemplateColumns="repeat(auto-fill, minmax(min-content, 30%))"
@@ -31,7 +25,7 @@ The components support `space`, `color`, `layout` & `typography` styled-system p
       {Object.keys(Icons).map(name => {
         const Component = Icons[name];
         return (
-          <Flex alignItems="center">
+          <Flex key={name} alignItems="center">
             <Component fontSize={3} justifySelf="center" />
             <Text ml={2} fontSize={9} color="#666">
               {name}
@@ -51,7 +45,7 @@ As a compound `Icons` component
 import { Icons } from 'ds';
 ```
 
-<Preview withSource={SourceState.OPEN}>
+<Preview withSource="open">
   <Story name="usage">
     <Icons.CheckboxChecked />
   </Story>
@@ -118,19 +112,16 @@ Icons are visual elements that can either be purely decorative or act as shortha
 
 When used for **decorative** purposes, ensure that it is ignored by screen readers, by setting the `aria-hidden` attribute.
 
-<Preview withSource={SourceState.OPEN}>
+<Preview withSource="open">
   <Story name="as decorative">
     <Icons.RadioChecked aria-hidden />
   </Story>
 </Preview>
 
-When used for **non-decorative** purposes, it must have a proper alternative text set via `title` and `titleId` props.
+When used for **non-decorative** purposes, it must have a proper alternative text set via `title` props.
 
-<Preview withSource={SourceState.OPEN}>
+<Preview withSource="open">
   <Story name="as non-decorative">
-    <Icons.Loader
-      title="waiting for content to load"
-      titleId="loader-icon-story"
-    />
+    <Icons.Loader title="waiting for content to load" />
   </Story>
 </Preview>
