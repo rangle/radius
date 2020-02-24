@@ -14,26 +14,28 @@ const defaultextStyles = {
   fontWeight: 'regular',
   lineHeight: 'copy',
   color: 'text',
+  mt: 0,
+  mb: 3,
 };
 
 const textVariants = variant({
   variants: {
     body: {
       ...defaultextStyles,
-      fontSize: 7,
+      fontSize: 2,
     },
     caption: {
       ...defaultextStyles,
-      fontSize: 8,
+      fontSize: 1,
     },
     hint: {
       ...defaultextStyles,
-      fontSize: 9,
+      fontSize: 0,
     },
     label: {
       ...defaultextStyles,
       fontFamily: 'heading',
-      fontSize: 8,
+      fontSize: 1,
       fontWeight: 'medium',
     },
   },
