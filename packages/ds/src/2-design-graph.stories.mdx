@@ -57,7 +57,7 @@ Now, this component will have style props available to set foreground color, bac
 
 There are situations where you might want to support slight stylistic variations of components. For example, a button might have primary, secondary and transparent variants. Or typography variants similar to how text styles work in Sketch and Figma.
 
-[Styled System variants](https://styled-system.com/variants) allow you to apply a set of visual styles to a component using a single prop. These variants also Variants also map to your design tokens, defined in `theme.ts`.
+[Styled System variants](https://styled-system.com/variants) allow you to apply a set of visual styles to a component using a single prop. These variants also map to your design tokens, defined in `theme.ts`.
 
 <Flex alignItems="center">
   <Box as="pre" width="50%" my={0} mr={3}>
@@ -84,15 +84,15 @@ There are situations where you might want to support slight stylistic variations
     <code className="language-js">{`// Text variants
 const textVariants = variant({
   variants:{
-    lead: {
-      fontFamily: 'body',
-      fontWeight: 'regular',
-      lineHeight: 'copy',
-      fontSize: 3,
-    },
     body: {
       fontFamily: 'body',
       fontWeight: 'regular',
+      lineHeight: 'copy',
+      fontSize: 2,
+    },
+    caption: {
+      fontFamily: 'body',
+      fontWeight: 'medium',
       lineHeight: 'copy',
       fontSize: 2,
     },
@@ -110,8 +110,8 @@ const textVariants = variant({
 The Text component can now use the `variant` prop to switch between lead, body and label styles.
 
 ```js
-<Text variant="lead" />
-<Text variant="copy"  />
+<Text variant="body" />
+<Text variant="caption"  />
 <Text variant="label" as="span" />
 ```
 
