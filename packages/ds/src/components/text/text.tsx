@@ -1,42 +1,13 @@
 import styled from 'styled-components';
+import { variant } from 'styled-system';
 import {
-  compose,
-  space,
-  layout,
-  flexbox,
-  border,
-  position,
-  color,
-  variant,
-  typography,
-  SpaceProps,
-  ColorProps,
-  LayoutProps,
-  FlexboxProps,
-  BorderProps,
-  PositionProps,
-  TypographyProps,
-} from 'styled-system';
+  TypographyFunctionsProps,
+  typographyFunctions,
+} from '../typography-functions';
 
 type TextProps = {
   variant: 'body' | 'caption' | 'hint' | 'label';
-} & SpaceProps &
-  ColorProps &
-  LayoutProps &
-  FlexboxProps &
-  BorderProps &
-  PositionProps &
-  TypographyProps;
-
-export const typographyFunctions = compose(
-  space,
-  color,
-  layout,
-  flexbox,
-  border,
-  position,
-  typography
-);
+} & TypographyFunctionsProps;
 
 const defaultextStyles = {
   fontFamily: 'body',

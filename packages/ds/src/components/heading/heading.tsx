@@ -1,25 +1,13 @@
 import styled from 'styled-components';
+import { variant } from 'styled-system';
 import {
-  variant,
-  SpaceProps,
-  ColorProps,
-  LayoutProps,
-  FlexboxProps,
-  BorderProps,
-  PositionProps,
-  TypographyProps,
-} from 'styled-system';
-import { typographyFunctions } from '../';
+  TypographyFunctionsProps,
+  typographyFunctions,
+} from '../typography-functions';
 
 type HeadingProps = {
   variant: 'heading-1' | 'heading-2' | 'heading-3' | 'heading-4' | 'heading-5';
-} & SpaceProps &
-  ColorProps &
-  LayoutProps &
-  FlexboxProps &
-  BorderProps &
-  PositionProps &
-  TypographyProps;
+} & TypographyFunctionsProps;
 
 const defaultHeadingStyles = {
   fontFamily: 'heading',
