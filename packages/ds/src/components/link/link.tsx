@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import {
-  variant
-} from 'styled-system';
+import { variant } from 'styled-system';
 import {
   TypographyFunctionsProps,
   typographyFunctions,
@@ -17,41 +15,65 @@ const linkVariants = variant({
       fontFamily: 'body',
       fontSize: 7,
       fontWeight: 'medium',
+      color: 'accent',
       lineHeight: 'copy',
       textDecoration: 'underline',
-      color: 'accent',
+      ':hover': {
+        color: 'secondary',
+      },
     },
     inline: {
       fontFamily: 'body',
       fontSize: 'inherit',
       fontWeight: 'medium',
+      color: 'accent',
       lineHeight: 'copy',
       textDecoration: 'underline',
-      color: 'accent',
+      ':hover': {
+        color: 'secondary',
+      },
     },
     nav1: {
       fontFamily: 'heading',
       fontSize: 6,
       fontWeight: 'bold',
-      lineHeight: 'copy',
-      textDecoration: 'underline',
       color: 'textPrimary',
+      lineHeight: 'copy',
+      textDecoration: 'none',
+      ':hover': {
+        textDecoration: 'underline',
+      },
+      ':active': {
+        textDecoration: 'underline',
+      },
     },
     nav2: {
       fontFamily: 'heading',
       fontSize: 7,
       fontWeight: 'bold',
-      lineHeight: 'copy',
-      textDecoration: 'underline',
       color: 'textPrimary',
+      lineHeight: 'copy',
+      textDecoration: 'none',
+      ':hover': {
+        textDecoration: 'underline',
+      },
+      ':active': {
+        textDecoration: 'underline',
+      },
     },
     nav3: {
       fontFamily: 'heading',
       fontSize: 8,
       fontWeight: 'bold',
-      lineHeight: 'copy',
-      textDecoration: 'underline',
       color: 'textPrimary',
+      lineHeight: 'copy',
+      textDecoration: 'none',
+      ':hover': {
+        textDecoration: 'underline',
+      },
+      ':active': {
+        textDecoration: 'underline',
+      },
     },
   },
 });
