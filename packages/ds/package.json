@@ -15,6 +15,7 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "storybook": "start-storybook -p 6006",
+    "prebuild-storybook": "yarn icons",
     "build-storybook": "build-storybook",
     "chromatic": "CHROMATIC_APP_CODE=$CHROMATIC_APP_CODE chromatic --exit-zero-on-changes",
     "icons": "svgr --template ./icon-template.js --index-template ./icon-index-template.js --ext tsx --icon --filename-case 'kebab' --title-prop --no-prettier --ref -d ./src/components/icons ./src/components/icons"
