@@ -26,7 +26,7 @@ The components support `space`, `color`, `layout` & `typography` styled-system p
         const Component = Icons[name];
         return (
           <Flex key={name} alignItems="center">
-            <Component fontSize={3} justifySelf="center" />
+            <Component fontSize={3} justifySelf="center" aria-hidden />
             <Text ml={2} fontSize={9} color="#666">
               {name}
             </Text>
@@ -47,7 +47,7 @@ import { Icons } from 'ds';
 
 <Preview withSource="open">
   <Story name="usage">
-    <Icons.CheckboxChecked />
+    <Icons.CheckboxChecked title="checkbox checked" />
   </Story>
 </Preview>
 
@@ -56,14 +56,14 @@ The icon generator script replaces the SVG `width` and `height` values by `1em` 
 <Preview>
   <Story name="sizing with font-size">
     <Flex alignItems="center">
-      <Icons.Loader fontSize={0} mr={2} />
-      <Icons.Loader fontSize={1} mr={2} />
-      <Icons.Loader fontSize={2} mr={2} />
-      <Icons.Loader fontSize={3} mr={2} />
-      <Icons.Loader fontSize={4} mr={2} />
-      <Icons.Loader fontSize={5} mr={2} />
-      <Icons.Loader fontSize={6} mr={2} />
-      <Icons.Loader fontSize={7} mr={2} />
+      <Icons.Loader fontSize={0} mr={2} aria-hidden />
+      <Icons.Loader fontSize={1} mr={2} aria-hidden />
+      <Icons.Loader fontSize={2} mr={2} aria-hidden />
+      <Icons.Loader fontSize={3} mr={2} aria-hidden />
+      <Icons.Loader fontSize={4} mr={2} aria-hidden />
+      <Icons.Loader fontSize={5} mr={2} aria-hidden />
+      <Icons.Loader fontSize={6} mr={2} aria-hidden />
+      <Icons.Loader fontSize={7} mr={2} aria-hidden />
     </Flex>
   </Story>
 </Preview>
@@ -72,7 +72,7 @@ However, you can still control the size of the icon using the `width` and `heigh
 
 <Preview>
   <Story name="sizing with layout props">
-    <Icons.Loader width={3} height={3} />
+    <Icons.Loader width={3} height={3} aria-hidden />
   </Story>
 </Preview>
 
@@ -81,13 +81,13 @@ By using the fill or stroke as `currentColor` allows the icons to inherit the te
 <Preview>
   <Story name="color">
     <Flex alignItems="center">
-      <Icons.CheckboxChecked color="red" mr={2} />
-      <Icons.CheckboxChecked color="orange" mr={2} />
-      <Icons.CheckboxChecked color="gold" mr={2} />
-      <Icons.CheckboxChecked color="green" mr={2} />
-      <Icons.CheckboxChecked color="blue" mr={2} />
-      <Icons.CheckboxChecked color="indigo" mr={2} />
-      <Icons.CheckboxChecked color="violet" mr={2} />
+      <Icons.CheckboxChecked color="red" mr={2} aria-hidden />
+      <Icons.CheckboxChecked color="orange" mr={2} aria-hidden />
+      <Icons.CheckboxChecked color="gold" mr={2} aria-hidden />
+      <Icons.CheckboxChecked color="green" mr={2} aria-hidden />
+      <Icons.CheckboxChecked color="blue" mr={2} aria-hidden />
+      <Icons.CheckboxChecked color="indigo" mr={2} aria-hidden />
+      <Icons.CheckboxChecked color="violet" mr={2} aria-hidden />
     </Flex>
   </Story>
 </Preview>
