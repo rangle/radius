@@ -9,7 +9,7 @@ import {
 } from './theme';
 import { Flex, Box } from './components';
 
-<Meta title="Foundations/Variants" />
+<Meta title="Foundations/Design Graph" />
 
 # Design Graph
 
@@ -40,7 +40,7 @@ import { space, layout, color } from 'styled-system';
 export const Box = styled.div(space, color);
 ```
 
-Now, this component will have style props available to set foreground and background color and margin & padding value.
+Now, this component will have style props available to set foreground color, background color, margin and padding values.
 
 ```js
 /**
@@ -83,29 +83,31 @@ There are situations where you might want to support slight stylistic variations
   <Box as="pre" width="50%" my={0}>
     <code className="language-js">{`// Text variants
 const textVariants = variant({
-  lead: {
-    fontFamily: 'body',
-    fontWeight: 'regular',
-    lineHeight: 'copy',
-    fontSize: 3,
-  },
-  body: {
-    fontFamily: 'body',
-    fontWeight: 'regular',
-    lineHeight: 'copy',
-    fontSize: 2,
-  },
-  label: {
-    fontFamily: 'heading',
-    fontWeight: 'regular',
-    lineHeight: 'solid',
-    fontSize: 1,
-  },
+  variants:{
+    lead: {
+      fontFamily: 'body',
+      fontWeight: 'regular',
+      lineHeight: 'copy',
+      fontSize: 3,
+    },
+    body: {
+      fontFamily: 'body',
+      fontWeight: 'regular',
+      lineHeight: 'copy',
+      fontSize: 2,
+    },
+    label: {
+      fontFamily: 'heading',
+      fontWeight: 'regular',
+      lineHeight: 'solid',
+      fontSize: 1,
+    },
+  }
 })`}</code>
   </Box>
 </Flex>
 
-The Text component can now use the `variant` prop to change between lead, body and label styles.
+The Text component can now use the `variant` prop to switch between lead, body and label styles.
 
 ```js
 <Text variant="lead" />

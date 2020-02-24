@@ -14,28 +14,30 @@ const defaultHeadingStyles = {
   fontWeight: 'bold',
   lineHeight: 'title',
   color: 'text',
+  mt: 0,
+  mb: 3,
 };
 
 const headingVariant = variant({
   variants: {
     'heading-1': {
-      fontSize: [2, 1, 0, 0],
+      fontSize: [7, 8, 9, 9],
       ...defaultHeadingStyles,
     },
     'heading-2': {
-      fontSize: [3, 2, 1, 1],
+      fontSize: [6, 7, 8, 8],
       ...defaultHeadingStyles,
     },
     'heading-3': {
-      fontSize: [4, 3, 2, 2],
+      fontSize: [5, 6, 7, 7],
       ...defaultHeadingStyles,
     },
     'heading-4': {
-      fontSize: [5, 4, 3, 3],
+      fontSize: [4, 5, 6, 6],
       ...defaultHeadingStyles,
     },
     'heading-5': {
-      fontSize: [6, 5, 4, 4],
+      fontSize: [3, 4, 5, 5],
       ...defaultHeadingStyles,
     },
   },
