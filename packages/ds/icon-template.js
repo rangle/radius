@@ -6,7 +6,7 @@ function template(
   const typeScriptTpl = template.smart({ plugins: ['typescript'] });
 
   return typeScriptTpl.ast`
-    import React, { forwardRef } from 'react';
+    import React, { forwardRef, useState } from 'react';
     import styled from 'styled-components';
     import {
       compose,
@@ -19,18 +19,20 @@ function template(
       LayoutProps,
       TypographyProps
     } from 'styled-system';
+    import { uuid } from './uuid';
 
     export type IconProps = SpaceProps & ColorProps & LayoutProps & TypographyProps;
 
     const SvgComponent = forwardRef<
       SVGSVGElement,
-      React.SVGProps<SVGSVGElement> & {
-        title?: any;
-        titleId?: any;
+      React.SVGProps<SVGSVGElement> & { title?: any; }
+    >(({ title, ...props }, svgRef) => {
+        const [titleId] = useState(() => uuid());
+
+        return (
+          ${jsx}
+        )
       }
-    >(({ title, titleId, ...props }, svgRef) => (
-        ${jsx}
-      )
     );
 
     const ${componentName} = styled(SvgComponent)<IconProps>({
