@@ -5,16 +5,16 @@ export const fonts = {
 };
 
 export const fontSizes = [
-  '3rem',
-  '2.5rem',
-  '2rem',
-  '1.75rem',
-  '1.5rem',
-  '1.25rem',
-  '1.125rem',
-  '1rem',
-  '0.75rem',
   '0.625rem',
+  '0.75rem',
+  '1rem',
+  '1.125rem',
+  '1.25rem',
+  '1.5rem',
+  '1.75rem',
+  '2rem',
+  '2.5rem',
+  '3rem',
 ];
 
 export const fontWeights = {
