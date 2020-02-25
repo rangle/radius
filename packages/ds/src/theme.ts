@@ -50,11 +50,22 @@ export default {
     letterSpacings,
     breakpoints,
     colors: {
-      text: '#000',
-      background: '#fff',
-      primary: '#07c',
-      secondary: '#30c',
-      muted: '#f6f6f6',
+      primary: '#262626',
+      secondary: '#676767',
+      accent: '#2A748F',
+      muted: '#B7DCEA',
+      disabled: '#DEDEDE',
+      inverse: '#FFFFFF',
+      error: '#D0421B',
+      bg: {
+        primary: '#FFFFFF',
+        secondary: '#F1F1F1',
+      },
+      text: {
+        primary: '#262626',
+        secondary: '#676767',
+        placeholder: '#A5A5A5',
+      }
     },
   },
   dark: {
@@ -67,14 +78,22 @@ export default {
     letterSpacings,
     breakpoints,
     colors: {
-      text: '#fff',
-      background: '#060606',
-      primary: '#3cf',
-      secondary: '#e0f',
-      muted: '#191919',
-      highlight: '#29112c',
-      gray: '#999',
-      purple: '#c0f',
+      primary: '#FFFFFF',
+      secondary: '#F1F1F1',
+      accent: '#5696B2',
+      muted: '#2A748F',
+      disabled: '#676767',
+      inverse: '#262626',
+      error: '#FD6F47',
+      bg: {
+        primary: '#262626',
+        secondary: '#A5A5A5',
+      },
+      text: {
+        primary: '#FFFFFF',
+        secondary: '#F1F1F1',
+        placeholder: '#DEDEDE',
+      }
     },
   },
 };

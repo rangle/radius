@@ -1,0 +1,85 @@
+import {
+  Meta,
+  Subtitle,
+  ColorPalette,
+  ColorItem,
+} from '@storybook/addon-docs/blocks';
+import theme from './theme';
+
+<Meta title="Foundations/Color Tokens" />
+
+export const palette = colors => [
+  {
+    title: 'theme.colors.primary',
+    subtitle: 'Primary',
+    colors: [colors.primary],
+  },
+  {
+    title: 'theme.colors.secondary',
+    subtitle: 'Secondary',
+    colors: [colors.secondary],
+  },
+  { title: 'theme.colors.accent', subtitle: 'Accent', colors: [colors.accent] },
+  { title: 'theme.colors.muted', subtitle: 'Muted', colors: [colors.muted] },
+  {
+    title: 'theme.colors.disabled',
+    subtitle: 'Disabled',
+    colors: [colors.disabled],
+  },
+  {
+    title: 'theme.colors.inverse',
+    subtitle: 'Inverse',
+    colors: [colors.inverse],
+  },
+  { title: 'theme.colors.error', subtitle: 'Error', colors: [colors.error] },
+  {
+    title: 'theme.colors.bg.primary',
+    subtitle: 'Background — primary',
+    colors: [colors.bg.primary],
+  },
+  {
+    title: 'theme.colors.bg.secondary',
+    subtitle: 'Background — secondary',
+    colors: [colors.bg.secondary],
+  },
+  {
+    title: 'theme.colors.text.primary',
+    subtitle: 'Text — primary',
+    colors: [colors.text.primary],
+  },
+  {
+    title: 'theme.colors.text.secondary',
+    subtitle: 'Text — secondary',
+    colors: [colors.text.secondary],
+  },
+  {
+    title: 'theme.colors.text.placeholder',
+    subtitle: 'Text — placeholder',
+    colors: [colors.text.placeholder],
+  },
+];
+
+# Color Tokens
+
+<Subtitle>
+  Colors are designed to communicate actions, state and direction within the
+  interface. We provide light and dark color modes. However, the shape of the
+  colors object is same for each mode. This allows us to build components with a
+  consistent API.
+</Subtitle>
+
+### Light
+
+<ColorPalette>
+  {palette(theme.light.colors).map(colorItem => (
+    <ColorItem key={colorItem.title} {...colorItem} />
+  ))}
+</ColorPalette>
+
+### Dark
+
+<ColorPalette>
+  {palette(theme.dark.colors).map(colorItem => (
+    <ColorItem key={colorItem.title} {...colorItem} />
+  ))}
+</ColorPalette>
