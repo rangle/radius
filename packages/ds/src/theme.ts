@@ -65,7 +65,7 @@ export default {
         primary: '#262626',
         secondary: '#676767',
         placeholder: '#A5A5A5',
-      }
+      },
     },
   },
   dark: {
@@ -93,7 +93,7 @@ export default {
         primary: '#FFFFFF',
         secondary: '#F1F1F1',
         placeholder: '#DEDEDE',
-      }
+      },
     },
   },
 };

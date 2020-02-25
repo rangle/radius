@@ -47,5 +47,5 @@ export const Text = styled.p<TextProps>`
 `;
 
 Text.defaultProps = {
-  fontFamily: 'body',
+  variant: 'body',
 };
