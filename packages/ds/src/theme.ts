@@ -39,25 +39,6 @@ export const sizes = [8, 16, 32, 64, 128, 256, 512, 768, 1024, 1536];
 
 export const breakpoints = ['40em', '56em', '64em'];
 
-export const colorPalette = {
-  gray1: '#262626',
-  gray2: '#676767',
-  gray3: '#696969',
-  gray4: '#DEDEDE',
-  gray5: '#F1F1F1',
-  white: '#FFFFFF',
-  blue1: '#074C63',
-  blue2: '#2A748F',
-  blue3: '#5696B2',
-  blue4: '#93C4DB',
-  blue5: '#B7DCEA',
-  red1: '#D0421B',
-  red2: '#F25125',
-  red3: '#FD6F47',
-  red4: '#FEAA93',
-  red5: '#FFD2CD',
-};
-
 export default {
   light: {
     space,
@@ -84,7 +65,7 @@ export default {
         primary: '#262626',
         secondary: '#676767',
         placeholder: '#A5A5A5',
-      }
+      },
     },
   },
   dark: {
@@ -112,7 +93,7 @@ export default {
         primary: '#FFFFFF',
         secondary: '#F1F1F1',
         placeholder: '#DEDEDE',
-      }
+      },
     },
   },
 };

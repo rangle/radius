@@ -37,7 +37,7 @@ const linkVariants = variant({
       fontFamily: 'heading',
       fontSize: 3,
       fontWeight: 'bold',
-      color: 'textPrimary',
+      color: 'text.primary',
       lineHeight: 'copy',
       textDecoration: 'none',
       ':hover': {
@@ -51,7 +51,7 @@ const linkVariants = variant({
       fontFamily: 'heading',
       fontSize: 2,
       fontWeight: 'bold',
-      color: 'textPrimary',
+      color: 'text.primary',
       lineHeight: 'copy',
       textDecoration: 'none',
       ':hover': {
@@ -65,7 +65,7 @@ const linkVariants = variant({
       fontFamily: 'heading',
       fontSize: 1,
       fontWeight: 'bold',
-      color: 'textPrimary',
+      color: 'text.primary',
       lineHeight: 'copy',
       textDecoration: 'none',
       ':hover': {
