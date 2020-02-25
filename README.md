@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c05b0d40-0360-436e-9985-7d1ba3f9332c/deploy-status)](https://app.netlify.com/sites/rangle-ds/deploys)
 
-# Rangle Design System
+# Radius Design System Kit
 
 ### 🚀 Quick start
 
