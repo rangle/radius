@@ -5,7 +5,7 @@ import {
   typographyFunctions,
 } from '../typography-functions';
 
-type TextProps = {
+export type TextProps = {
   variant: 'body' | 'caption' | 'hint' | 'label';
 } & TypographyFunctionsProps;
 

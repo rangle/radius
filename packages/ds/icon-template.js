@@ -36,7 +36,8 @@ function template(
     );
 
     const ${componentName} = styled(SvgComponent)<IconProps>({
-        flex: 'none'
+        flex: 'none',
+        verticalAlign: 'middle',
       },
       compose(space, color, layout, typography)
     );

@@ -6,18 +6,20 @@ import {
   BorderProps,
   PositionProps,
 } from 'styled-system';
+import { StyledSystemProps } from '../../styled-system-props';
 import { Box } from '../box';
 
-interface AspectRatioProps
-  extends React.ComponentPropsWithoutRef<'div'>,
-    SpaceProps,
-    LayoutProps,
-    FlexboxProps,
-    BorderProps,
-    PositionProps {
-  /** The ratio to apply */
-  ratio: number;
-}
+type AspectRatioProps = StyledSystemProps<
+  'div',
+  {
+    /** The ratio to apply */
+    ratio: number;
+  } & SpaceProps &
+    LayoutProps &
+    FlexboxProps &
+    BorderProps &
+    PositionProps
+>;
 
 export const AspectRatio = forwardRef<HTMLDivElement, AspectRatioProps>(
   ({ ratio = 16 / 9, children, ...props }, ref) => (
