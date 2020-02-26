@@ -20,7 +20,7 @@ const userProfileData = {
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme.light}>
-      <div className="App">
+      <div className="App" style={{ backgroundColor: "black", height: "100vh"}}>
         <Box mb={4}>
           <Navigation navbarLinks={navbarLinks} userProfileData={userProfileData}/>
           <Text variant="body">This is body text</Text>
