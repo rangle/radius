@@ -1,9 +1,11 @@
 {
   "name": "y",
   "version": "y",
-  "description": "Rangle Design System",
+  "description": "Design system kit",
   "main": "y",
   "license": "MIT",
   "private": true,
-  "workspaces": ["packages/*"]
+  "workspaces": [
+    "packages/*"
+  ]
 }
