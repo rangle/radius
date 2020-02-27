@@ -13,7 +13,7 @@ const defaultextStyles = {
   fontFamily: 'body',
   fontWeight: 'regular',
   lineHeight: 'copy',
-  color: 'text',
+  color: 'text.primary',
   mt: 0,
   mb: 3,
 };

@@ -39,5 +39,5 @@ export const Spinner = ({
 Spinner.defaultProps = {
   block: true,
   title: 'Loading…',
-  color: 'text',
+  color: 'ui.primary',
 };
