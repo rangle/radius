@@ -1,9 +1,8 @@
 import React from 'react';
-import { Box, Text } from 'ds';
+import { Box, Text, theme } from 'ds';
 import { Navigation } from './Navigation';
 import userImg from './imgs/user.png';
 import { ThemeProvider } from 'styled-components';
-import theme from 'ds/src/theme';
 
 const navbarLinks = [
   { href: '#!', label: 'Home' },

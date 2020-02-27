@@ -4,26 +4,47 @@ import logo from './R2-logo.png';
 
 export const Navigation: React.FC<{navbarLinks: any, userProfileData: any }> = ({navbarLinks, userProfileData}) => {
   return (
-    <nav>
-      <Flex width="100%" height={3} justifyContent="space-between" alignItems="center" bg="white">
-        <Box flex={1} >
-          <Image src={logo} width={3} height={3} variant="default" />
-        </Box>
-        <Flex flex={2} justifyContent="space-around" alignItems="center">
-          <Flex flex={2} justifyContent="space-evenly">
-            {navbarLinks.map(({label, href}: any) => <Link key={label} href={href} variant="nav2" fontWeight="regular">{label}</Link>)}
-          </Flex>
-          <Flex flex={0.5} justifyContent="space-evenly" alignItems="center">
-            <Box>
-              <Image src={userProfileData.imageSource} width={2} height={2} variant="avatar"/>
-            </Box>
-            <Flex flexDirection="column" justifyContent="center">
-              <Text as="span" variant="body" fontWeight="bold" mb={1}>{userProfileData.username}</Text>
-              <Link variant="default" style={{ textDecoration: 'none'}}>Logout</Link>
-            </Flex>
-          </Flex>
+    <Box as="nav" bg="white" px={3} py={2}>
+      <Flex height={3} justifyContent="space-between" alignItems="center">
+        <Image
+          src={logo}
+          flex="none"
+          width={3}
+          height={3}
+          variant="default"
+          alt="Rnagle.io"
+        />
+        <Flex flex={1} />
+        {navbarLinks.map(({label, href}: any) => (
+          <Link
+            key={label}
+            href={href}
+            variant="nav2"
+            fontWeight="regular"
+            ml={3}>
+            {label}
+          </Link>
+        ))}
+        <Flex alignItems="center" ml={[3, 4]}>
+          <Image 
+            src={userProfileData.imageSource}
+            flex="none"
+            variant="avatar"
+            mr={3} 
+          />
+          <Box>
+            <Text variant="body" fontWeight="bold" mb={1}>
+              {userProfileData.username}
+            </Text>
+            <Link
+              variant="default"
+              display="inline-block"
+              style={{ textDecoration: 'none'}}>
+              Logout
+            </Link>
+          </Box>
         </Flex>
       </Flex>
-    </nav>
+    </Box>
   );
 };
