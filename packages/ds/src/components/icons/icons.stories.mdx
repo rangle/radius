@@ -26,8 +26,13 @@ The components support `space`, `color`, `layout` & `typography` styled-system p
         const Component = Icons[name];
         return (
           <Flex key={name} alignItems="center">
-            <Component fontSize={6} justifySelf="center" aria-hidden />
-            <Text ml={2} fontSize={1} mb={0} color="#666">
+            <Component
+              color="text.primary"
+              fontSize={6}
+              justifySelf="center"
+              aria-hidden
+            />
+            <Text ml={2} fontSize={1} mb={0} color="text.secondary">
               {name}
             </Text>
           </Flex>
@@ -47,7 +52,7 @@ import { Icons } from 'ds';
 
 <Preview withSource="open">
   <Story name="usage">
-    <Icons.CheckboxChecked title="checkbox checked" />
+    <Icons.CheckboxChecked title="checkbox checked" color="text.primary" />
   </Story>
 </Preview>
 
@@ -56,14 +61,14 @@ The icon generator script replaces the SVG `width` and `height` values by `1em` 
 <Preview>
   <Story name="sizing with font-size">
     <Flex alignItems="center">
-      <Icons.Loader fontSize={0} mr={2} aria-hidden />
-      <Icons.Loader fontSize={1} mr={2} aria-hidden />
-      <Icons.Loader fontSize={2} mr={2} aria-hidden />
-      <Icons.Loader fontSize={3} mr={2} aria-hidden />
-      <Icons.Loader fontSize={4} mr={2} aria-hidden />
-      <Icons.Loader fontSize={5} mr={2} aria-hidden />
-      <Icons.Loader fontSize={6} mr={2} aria-hidden />
-      <Icons.Loader fontSize={7} mr={2} aria-hidden />
+      <Icons.Loader fontSize={0} mr={2} color="text.primary" aria-hidden />
+      <Icons.Loader fontSize={1} mr={2} color="text.primary" aria-hidden />
+      <Icons.Loader fontSize={2} mr={2} color="text.primary" aria-hidden />
+      <Icons.Loader fontSize={3} mr={2} color="text.primary" aria-hidden />
+      <Icons.Loader fontSize={4} mr={2} color="text.primary" aria-hidden />
+      <Icons.Loader fontSize={5} mr={2} color="text.primary" aria-hidden />
+      <Icons.Loader fontSize={6} mr={2} color="text.primary" aria-hidden />
+      <Icons.Loader fontSize={7} mr={2} color="text.primary" aria-hidden />
     </Flex>
   </Story>
 </Preview>
@@ -72,7 +77,7 @@ However, you can still control the size of the icon using the `width` and `heigh
 
 <Preview>
   <Story name="sizing with layout props">
-    <Icons.Loader width={3} height={3} aria-hidden />
+    <Icons.Loader width={3} height={3} color="text.primary" aria-hidden />
   </Story>
 </Preview>
 
@@ -114,7 +119,7 @@ When used for **decorative** purposes, ensure that it is ignored by screen reade
 
 <Preview withSource="open">
   <Story name="as decorative">
-    <Icons.RadioChecked aria-hidden />
+    <Icons.RadioChecked color="text.primary" aria-hidden />
   </Story>
 </Preview>
 
@@ -122,6 +127,6 @@ When used for **non-decorative** purposes, it must have a proper alternative tex
 
 <Preview withSource="open">
   <Story name="as non-decorative">
-    <Icons.Loader title="waiting for content to load" />
+    <Icons.Loader color="text.primary" title="waiting for content to load" />
   </Story>
 </Preview>

@@ -16,7 +16,7 @@
     "prepare": "tsdx build",
     "storybook": "start-storybook -p 6006",
     "prebuild-storybook": "yarn icons",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook --docs",
     "chromatic": "CHROMATIC_APP_CODE=$CHROMATIC_APP_CODE chromatic --exit-zero-on-changes",
     "icons": "svgr --template ./icon-template.js --index-template ./icon-index-template.js --ext tsx --icon --filename-case 'kebab' --title-prop --no-prettier --ref -d ./src/components/icons ./src/components/icons"
   },
@@ -42,6 +42,7 @@
     "@storybook/addon-docs": "^5.3.13",
     "@storybook/addon-knobs": "^5.3.13",
     "@storybook/addon-links": "^5.3.13",
+    "@storybook/addon-viewport": "^5.3.14",
     "@storybook/addons": "^5.3.13",
     "@storybook/react": "^5.3.13",
     "@svgr/cli": "^5.1.0",
