@@ -53,7 +53,7 @@ export default {
       brand: {
         primary: '#012E86',
         secondary: '#0064D9',
-        accent: '#FDB447',
+        accent: '#DB7C00',
         muted: '#C6DAF7',
       },
       ui: {
