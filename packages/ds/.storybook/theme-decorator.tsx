@@ -13,8 +13,7 @@ const ThemeDecorator = (storyFn: any) => (
             Light: 'light',
             Dark: 'dark',
           },
-          'light',
-          'DS_THEME'
+          'light'
         )
       ]
     }
