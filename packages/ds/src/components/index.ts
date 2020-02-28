@@ -8,3 +8,4 @@ export * from './icons';
 export * from './image';
 export * from './spinner';
 export * from './text';
+export * from './link';

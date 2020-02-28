@@ -6,7 +6,7 @@ import {
 } from '../typography-functions';
 
 type LinkProps = {
-  variant: 'inline' | 'default' | 'nav-1' | 'nav-2' | 'nav-3';
+  variant: 'inline' | 'default' | 'nav1' | 'nav2' | 'nav3';
 } & TypographyFunctionsProps;
 
 const linkVariants = variant({
