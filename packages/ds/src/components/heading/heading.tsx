@@ -13,7 +13,7 @@ const defaultHeadingStyles = {
   fontFamily: 'heading',
   fontWeight: 'bold',
   lineHeight: 'title',
-  color: 'text',
+  color: 'text.primary',
   mt: 0,
   mb: 3,
 };
