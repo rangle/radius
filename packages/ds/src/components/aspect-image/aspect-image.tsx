@@ -1,12 +1,27 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import { Image, ImageProps } from '../image';
+import {
+  SpaceProps,
+  LayoutProps,
+  FlexboxProps,
+  BorderProps,
+  PositionProps,
+} from 'styled-system';
+import { StyledSystemProps } from '../../styled-system-props';
+import { Image } from '../image';
 import { AspectRatio } from '../aspect-ratio';
 
-interface CoverImageProps extends React.ComponentPropsWithRef<any>, ImageProps {
-  /** The ratio to apply */
-  ratio: number;
-}
+type CoverImageProps = StyledSystemProps<
+  'img',
+  {
+    /** The ratio to apply */
+    ratio: number;
+  } & SpaceProps &
+    LayoutProps &
+    FlexboxProps &
+    BorderProps &
+    PositionProps
+>;
 
 const CoverImage = styled(Image)<CoverImageProps>({
   objectFit: 'cover',
