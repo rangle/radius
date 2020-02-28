@@ -2,7 +2,17 @@ import React from 'react';
 import { Flex, Text, Link, Image, Box } from 'ds';
 import logo from './R2-logo.png';
 
-export const Navigation: React.FC<{navbarLinks: any, userProfileData: any }> = ({navbarLinks, userProfileData}) => {
+type linkObjectTypes = {
+  href: string,
+  label: string
+}
+
+type userProfileDataTypes = {
+  username: string,
+  imageSource: string
+}
+
+export const Navigation: React.FC<{navbarLinks: linkObjectTypes[], userProfileData: userProfileDataTypes }> = ({navbarLinks, userProfileData}) => {
   return (
     <Box as="nav" bg="white" px={3} py={2}>
       <Flex height={3} justifyContent="space-between" alignItems="center">
@@ -15,7 +25,7 @@ export const Navigation: React.FC<{navbarLinks: any, userProfileData: any }> = (
           alt="Rnagle.io"
         />
         <Flex flex={1} />
-        {navbarLinks.map(({label, href}: any) => (
+        {navbarLinks.map(({label, href}: linkObjectTypes) => (
           <Link
             key={label}
             href={href}
