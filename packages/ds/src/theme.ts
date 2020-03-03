@@ -59,15 +59,15 @@ export default {
       ui: {
         primary: '#262626',
         secondary: '#757575',
+        tertiary: '#F1F1F1',
+        quaternary: '#FFFFFF',
         disabled: '#DEDEDE',
         error: '#D0421B',
         success: '#138000',
       },
       bg: {
         1: '#FFFFFF',
-        2: '#FFFFFF',
-        3: '#F1F1F1',
-        disabled: '#DEDEDE',
+        2: '#F1F1F1',
       },
       text: {
         primary: '#262626',
@@ -98,6 +98,8 @@ export default {
       ui: {
         primary: '#FFFFFF',
         secondary: '#A1A1A1',
+        tertiary: '#3C3C3C',
+        quaternary: '#262626',
         disabled: '#242424',
         error: '#FF4D4D',
         success: '#1CBD00',
@@ -105,8 +107,6 @@ export default {
       bg: {
         1: '#111111',
         2: '#262626',
-        3: '#3C3C3C',
-        disabled: '#242424',
       },
       text: {
         primary: '#FFFFFF',
