@@ -1,32 +1,22 @@
 import React, { forwardRef } from 'react';
-import styled from 'styled-components';
-import {
-  SpaceProps,
-  LayoutProps,
-  FlexboxProps,
-  BorderProps,
-  PositionProps,
-} from 'styled-system';
-import { StyledSystemProps } from '../../styled-system-props';
-import { Image } from '../image';
+import styled, { StyledComponentProps } from 'styled-components';
+import { Image, ImageProps } from '../image';
 import { AspectRatio } from '../aspect-ratio';
 
-type CoverImageProps = StyledSystemProps<
-  'img',
-  {
-    /** The ratio to apply */
-    ratio: number;
-  } & SpaceProps &
-    LayoutProps &
-    FlexboxProps &
-    BorderProps &
-    PositionProps
->;
-
-const CoverImage = styled(Image)<CoverImageProps>({
+const CoverImage = styled(Image)<ImageProps>({
   objectFit: 'cover',
   objectPosition: 'center',
 });
+
+type CoverImageProps = StyledComponentProps<
+  'img',
+  any,
+  {
+    /** The ratio to apply */
+    ratio?: number;
+  } & ImageProps,
+  never
+>;
 
 export const AspectImage = forwardRef<HTMLImageElement, CoverImageProps>(
   ({ ratio, children, ...props }, ref) => (
@@ -37,5 +27,5 @@ export const AspectImage = forwardRef<HTMLImageElement, CoverImageProps>(
 );
 
 AspectImage.defaultProps = {
-  ratio: 16 / 9,
+  ratio: 1 / 1,
 };

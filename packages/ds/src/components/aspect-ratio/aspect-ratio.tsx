@@ -1,24 +1,15 @@
 import React, { forwardRef } from 'react';
-import {
-  SpaceProps,
-  LayoutProps,
-  FlexboxProps,
-  BorderProps,
-  PositionProps,
-} from 'styled-system';
-import { StyledSystemProps } from '../../styled-system-props';
-import { Box } from '../box';
+import { StyledComponentProps } from 'styled-components';
+import { Box, BoxProps } from '../box';
 
-type AspectRatioProps = StyledSystemProps<
+type AspectRatioProps = StyledComponentProps<
   'div',
+  any,
   {
     /** The ratio to apply */
-    ratio: number;
-  } & SpaceProps &
-    LayoutProps &
-    FlexboxProps &
-    BorderProps &
-    PositionProps
+    ratio?: number;
+  } & BoxProps,
+  never
 >;
 
 export const AspectRatio = forwardRef<HTMLDivElement, AspectRatioProps>(
@@ -33,5 +24,5 @@ export const AspectRatio = forwardRef<HTMLDivElement, AspectRatioProps>(
 );
 
 AspectRatio.defaultProps = {
-  ratio: 16 / 9,
+  ratio: 1 / 1,
 };

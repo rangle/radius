@@ -14,7 +14,7 @@ import {
   PositionProps,
 } from 'styled-system';
 
-export type ImageProps = { variant: 'default' | 'avatar' } & SpaceProps &
+export type ImageProps = { variant?: 'default' | 'avatar' } & SpaceProps &
   LayoutProps &
   FlexboxProps &
   BorderProps &
