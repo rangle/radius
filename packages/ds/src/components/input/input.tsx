@@ -80,12 +80,12 @@ const ContentArea = styled(Text)<
   }
 
   &:-moz-read-only {
-    background-color: ${props => props.theme.colors.bg[3]};
+    background-color: ${props => props.theme.colors.ui.tertiary};
     border-color: ${props => props.theme.colors.ui.secondary};
   }
 
   &:read-only {
-    background-color: ${props => props.theme.colors.bg[3]};
+    background-color: ${props => props.theme.colors.ui.tertiary};
     border-color: ${props => props.theme.colors.ui.secondary};
 
     &::placeholder {
@@ -97,8 +97,8 @@ const ContentArea = styled(Text)<
     -webkit-text-fill-color: currentColor; /* set text fill to current color for safari */
     opacity: 1; /* correct opacity on iOS */
     color: ${props => props.theme.colors.text.disabled};
-    background-color: ${props => props.theme.colors.bg.disabled};
-    border-color: ${props => props.theme.colors.bg.disabled};
+    background-color: ${props => props.theme.colors.ui.disabled};
+    border-color: ${props => props.theme.colors.ui.disabled};
 
     &::placeholder {
       color: ${props => props.theme.colors.text.disabled};
