@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import styled from 'styled-components';
+import styled, { StyledComponentProps } from 'styled-components';
 import {
   compose,
   space,
@@ -9,7 +9,6 @@ import {
   position,
   color,
 } from 'styled-system';
-import { StyledSystemProps } from '../../styled-system-props';
 import { Box, BoxProps } from '../box';
 import { Flex } from '../flex';
 import { TypographyFunctionsProps } from '../typography-functions';
@@ -22,25 +21,26 @@ const inputTokens = {
   x: 2, // padding x
 };
 
-type InputProps = StyledSystemProps<
+type InputProps = StyledComponentProps<
   'input',
+  any,
   {
     /** Icon or ‘Interactive Icon’ adornment to apply to the left of the content area */
     leftIcon?: JSX.Element;
     /** Icon or ‘Interactive Icon’ adornment to apply to the right of the content area */
     rightIcon?: JSX.Element;
     /** Does the input have a validation error */
-    error: Boolean;
-  } & TypographyFunctionsProps
+    error?: Boolean;
+  } & TypographyFunctionsProps,
+  never
 >;
 
 const ContentArea = styled(Text)<
-  TypographyFunctionsProps & {
+  {
     hasLeftIcon: Boolean;
     hasRightIcon: Boolean;
-    error: Boolean;
-    readonly: Boolean;
-  }
+    error?: Boolean;
+  } & TypographyFunctionsProps
 >`
   display: block;
   width: 100%;
@@ -110,7 +110,6 @@ const ContentArea = styled(Text)<
 `;
 
 ContentArea.defaultProps = {
-  variant: 'body',
   pt: inputTokens.y,
   pb: inputTokens.y,
   borderWidth: '1px',
@@ -166,6 +165,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       )}
       <ContentArea
         as="input"
+        variant="body"
         ref={ref}
         py={2}
         hasLeftIcon={!!leftIcon}
@@ -185,5 +185,4 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 Input.defaultProps = {
   error: false,
   type: 'text',
-  readOnly: false,
 };

@@ -1,21 +1,17 @@
 import React, { forwardRef } from 'react';
-import styled from 'styled-components';
-import { StyledSystemProps } from '../../styled-system-props';
-import { Text } from '../text';
+import styled, { StyledComponentProps } from 'styled-components';
 import { TypographyFunctionsProps } from '../typography-functions';
+import { Text } from '../text';
 import { Box } from '../box';
 
-type LabelProps = StyledSystemProps<
-  'label',
-  {
-    /** Apply the mandatory adornment */
-    required: boolean;
-    /** A custom adornment to apply */
-    adornment?: 'required' | string | JSX.Element;
-  } & TypographyFunctionsProps
->;
+type StyledLabelProps = {
+  /** Apply the mandatory adornment */
+  required?: boolean;
+  /** A custom adornment to apply */
+  adornment?: 'required' | string | JSX.Element;
+} & TypographyFunctionsProps;
 
-export const StyledLabel = styled(Text)<LabelProps>`
+const StyledLabel = styled(Text)<StyledLabelProps>`
   display: flex;
   width: 100%;
   align-items: center;
@@ -27,6 +23,13 @@ export const StyledLabel = styled(Text)<LabelProps>`
       color: ${props.theme.colors.brand.secondary};
     }`}
 `;
+
+export type LabelProps = StyledComponentProps<
+  'label',
+  any,
+  StyledLabelProps,
+  never
+>;
 
 export const Label = forwardRef<HTMLLabelElement, LabelProps>(
   ({ children, ...props }, ref) => (
