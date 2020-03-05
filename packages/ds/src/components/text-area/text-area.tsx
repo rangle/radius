@@ -9,7 +9,7 @@ import {
   position,
   color,
 } from 'styled-system';
-import { Box, BoxProps, Text } from '../';
+import { Box, Text } from '../';
 import { TypographyFunctionsProps } from '../typography-functions';
 import { focusRing } from '../shared-styles';
 
@@ -18,13 +18,13 @@ type TextAreaProps = StyledComponentProps<
   any,
   {
     placeholder?: string,
-    maxCharacters?: number
+    maxCharacters?: number | undefined,
     error?: Boolean;
-  } & BoxProps & TypographyFunctionsProps,
+  } & TypographyFunctionsProps,
   never
 >;
 
-const ContentArea = styled(Box)<BoxProps &
+const ContentArea = styled(Text)<
 {
   error?: Boolean;
 } & TypographyFunctionsProps
@@ -93,29 +93,41 @@ const ContentArea = styled(Box)<BoxProps &
 ContentArea.defaultProps = {
   borderWidth: '1px',
   borderStyle: 'solid',
-  borderColor: 'ui.secondary',
   borderRadius: 0,
-  color: 'text.primary',
   bg: 'ui.quaternary',
-  fontSize: 'body',
 }
 
 export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
-  ({maxCharacters, placeholder, disabled, ...props}, ref) => {
-    const [characterCount, setCharacterCount] = useState(0)
+  ({maxCharacters, placeholder, disabled, error, ...props}, ref) => {
+    const [characterCount, setCharacterCount] = useState(0);
+
     return (
-    <Box width={5}>
-      <ContentArea
-        as="textarea"
-        ref={ref}
-        placeholder={placeholder}
-        disabled={disabled}
-        onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setCharacterCount(e.target.value.length)}
-        {...props}
-      />
-      {maxCharacters ? <Text variant="hint" color="text.secondary" textAlign="right">{`${characterCount}/${maxCharacters}`}</Text> : null}
-    </Box>
-  )}
+      <Box width={5}>
+        <ContentArea
+          as="textarea"
+          variant="body"
+          mb={0}
+          ref={ref}
+          placeholder={placeholder}
+          disabled={disabled}
+          onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setCharacterCount(e.target.value.length)}
+          error={error || (maxCharacters && characterCount > maxCharacters) ? true : false}
+          {...props}
+        />
+        {maxCharacters ?
+          <Text
+            variant="hint"
+            pl={3}
+            width="100%"
+            color={error ? "text.error" : "text.secondary"}
+            textAlign="right"
+          >
+              {`${characterCount}/${maxCharacters}`}
+          </Text>
+          : null}
+      </Box>
+    )
+  }
 )
 
 TextArea.defaultProps = {
