@@ -9,7 +9,8 @@ import {
   position,
   color,
 } from 'styled-system';
-import { Box, Text } from '../';
+import { Box } from '../box';
+import { Text } from '../text';
 import { TypographyFunctionsProps } from '../typography-functions';
 import { focusRing } from '../shared-styles';
 
