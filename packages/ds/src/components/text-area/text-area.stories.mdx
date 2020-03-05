@@ -1,12 +1,58 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 import { TextArea } from './text-area';
 
-<Meta title="Components/TextArea" component={TextArea} />
+<Meta
+  title="Components/TextArea"
+  component={TextArea}
+  parameters={{
+    a11y: {
+      config: {
+        rules: [{ id: 'label', enabled: false }],
+      },
+    },
+  }}
+/>
 
 # Textarea
 
+Textarea component for forms
+
+#### Default
+
 <Preview withToolbar>
-  <Story name="TextArea">
-    <TextArea label="Writing a review" placeholder="Placeholder text" maxCharacters={100} />
+  <Story name="default">
+    <TextArea placeholder="Placeholder text" maxCharacters={100} />
   </Story>
 </Preview>
+
+#### Disabled
+
+<Preview withToolbar>
+  <Story name="disabled">
+    <TextArea placeholder="Placeholder text" maxCharacters={100} />
+  </Story>
+</Preview>
+
+#### Read Only
+
+<Preview withToolbar>
+  <Story name="read only">
+    <TextArea readOnly={true} placeholder="Placeholder text" maxCharacters={100} />
+  </Story>
+</Preview>
+
+#### Error
+
+<Preview withToolbar>
+  <Story name="error">
+    <TextArea
+      error={true}
+      placeholder="Placeholder text"
+      maxCharacters={100}
+    />
+  </Story>
+</Preview>
+
+## Component Props
+
+<Props of={TextArea} />
