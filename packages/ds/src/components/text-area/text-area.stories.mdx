@@ -1,5 +1,6 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 import { TextArea } from './text-area';
+import { Box } from '../box'
 
 <Meta
   title="Components/TextArea"
@@ -15,13 +16,22 @@ import { TextArea } from './text-area';
 
 # TextArea
 
-TextArea component for forms
+TextArea component for forms. Character count can be turn off by not setting `maxCharacters` prop.
 
 #### Default
 
 <Preview withToolbar>
   <Story name="default">
-    <TextArea placeholder="Placeholder text" maxCharacters={100} />
+    <Box>
+      <TextArea
+        placeholder="Tell us your thoughts"
+        maxCharacters={100} 
+      />
+      <TextArea
+        value="Very happy with the purchase" 
+        maxCharacters={100}
+      />
+    </Box>
   </Story>
 </Preview>
 
@@ -29,7 +39,19 @@ TextArea component for forms
 
 <Preview withToolbar>
   <Story name="disabled">
-    <TextArea placeholder="Placeholder text" maxCharacters={100} />
+    <Box>
+      <TextArea
+        disabled
+        value=""
+        placeholder="Tell us your thoughts"
+        maxCharacters={100} 
+      />
+      <TextArea 
+        disabled 
+        value="Very happy with the purchase"
+        maxCharacters={100}
+      />
+    </Box>
   </Story>
 </Preview>
 
@@ -37,7 +59,19 @@ TextArea component for forms
 
 <Preview withToolbar>
   <Story name="read only">
-    <TextArea readOnly={true} placeholder="Placeholder text" maxCharacters={100} />
+    <Box>
+      <TextArea
+        readOnly={true}
+        value=""
+        placeholder="Tell us your thoughts"
+        maxCharacters={100}
+      />
+      <TextArea
+        readOnly={true}
+        value="Very happy with the purchase"
+        maxCharacters={100}
+      />
+    </Box>
   </Story>
 </Preview>
 
@@ -45,11 +79,18 @@ TextArea component for forms
 
 <Preview withToolbar>
   <Story name="error">
-    <TextArea
-      error={true}
-      placeholder="Placeholder text"
-      maxCharacters={100}
-    />
+    <Box>
+      <TextArea
+        error={true}
+        placeholder="Tell us your thoughts"
+        maxCharacters={100}
+      />
+      <TextArea
+        error={true}
+        value="Very happy with the purchase"
+        maxCharacters={100}
+      />
+    </Box>
   </Story>
 </Preview>
 

@@ -68,7 +68,10 @@ const ContentArea = styled(Text)<
   }
 
   &:hover {
-    border-color: ${props => props.theme.colors.ui.primary};
+    border-color: ${props =>
+      props.error
+        ? props.theme.colors.ui.error
+        : props.theme.colors.ui.primary};
   }
 
   &:focus {

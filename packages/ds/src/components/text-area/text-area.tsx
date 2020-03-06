@@ -18,17 +18,17 @@ type TextAreaProps = StyledComponentProps<
   'textarea',
   any,
   {
-    placeholder?: string,
-    maxCharacters?: number | undefined,
+    placeholder?: string;
+    maxCharacters?: number | undefined;
     error?: Boolean;
   } & TypographyFunctionsProps,
   never
 >;
 
 const ContentArea = styled(Text)<
-{
-  error?: Boolean;
-} & TypographyFunctionsProps
+  {
+    error?: Boolean;
+  } & TypographyFunctionsProps
 >`
   display: block;
   appearance: none;
@@ -46,11 +46,14 @@ const ContentArea = styled(Text)<
   &::placeholder {
     color: ${props => props.theme.colors.text.secondary};
     font-size: ${props => props.theme.sizes[1]}px;
-    font-wight: normal;
+    font-weight: normal;
   }
 
   &:hover {
-    border-color: ${props => props.theme.colors.ui.primary};
+    border-color: ${props =>
+      props.error
+        ? props.theme.colors.ui.error
+        : props.theme.colors.ui.primary};
   }
 
   &:focus {
@@ -89,21 +92,49 @@ const ContentArea = styled(Text)<
   }
 
   ${compose(space, layout, flexbox, border, position, color)}
-`
+`;
 
 ContentArea.defaultProps = {
   borderWidth: '1px',
   borderStyle: 'solid',
   borderRadius: 0,
   bg: 'ui.quaternary',
-}
+};
+
+export const StyledText = styled(Text)<
+  {
+    error?: Boolean;
+  } & TypographyFunctionsProps
+>`
+  color: ${props =>
+    props.error
+      ? props.theme.colors.text.error
+      : props.theme.colors.text.secondary};
+`;
 
 export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
-  ({maxCharacters, placeholder, disabled, error, ...props}, ref) => {
+  (
+    {
+      maxCharacters,
+      placeholder,
+      disabled,
+      error,
+      mb,
+      mt,
+      mx,
+      my,
+      ml,
+      mr,
+      ...props
+    },
+    ref
+  ) => {
     const [characterCount, setCharacterCount] = useState(0);
+    const isError =
+      error || (maxCharacters && characterCount > maxCharacters) ? true : false;
 
     return (
-      <Box width={5}>
+      <Box width={5} mx={mx} my={my} mb={mb} mt={mt} ml={ml} mr={mr}>
         <ContentArea
           as="textarea"
           variant="body"
@@ -111,28 +142,30 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           ref={ref}
           placeholder={placeholder}
           disabled={disabled}
-          onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setCharacterCount(e.target.value.length)}
-          error={error || (maxCharacters && characterCount > maxCharacters) ? true : false}
+          onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+            setCharacterCount(e.target.value.length)
+          }
+          error={isError}
           {...props}
         />
-        {maxCharacters ?
+        {maxCharacters ? (
           <Text
             variant="hint"
             pl={3}
             width="100%"
-            color={error ? "text.error" : "text.secondary"}
+            color={isError ? 'text.error' : 'text.secondary'}
             textAlign="right"
           >
-              {`${characterCount}/${maxCharacters}`}
+            {`${characterCount}/${maxCharacters}`}
           </Text>
-          : null}
+        ) : null}
       </Box>
-    )
+    );
   }
-)
+);
 
 TextArea.defaultProps = {
   error: false,
-  placeholder: "",
-  maxCharacters: undefined
-}
+  placeholder: '',
+  maxCharacters: undefined,
+};
