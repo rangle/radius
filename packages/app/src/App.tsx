@@ -12,6 +12,7 @@ import {
   AspectImage,
   AspectRatio,
   Input,
+  TextArea,
   theme,
 } from 'ds';
 import { Navigation } from './Navigation';
@@ -112,7 +113,7 @@ const App: React.FC = () => {
             />
           </Box>
           <Box mb={3} p={3}>
-            <AspectImage ratio={16 / 9} src={userImg}></AspectImage>
+            <AspectImage ratio={16 / 9} src={userImg} />
           </Box>
           <Box mb={3} p={3}>
             <AspectRatio
@@ -134,6 +135,9 @@ const App: React.FC = () => {
               leftIcon={<Icons.Search aria-hidden />}
               rightIcon={<Icons.Close color="brand.primary" aria-hidden />}
             />
+          </Box>
+          <Box mb={3} p={3}>
+            <TextArea placeholder="Placeholder text" maxCharacters={100} />
           </Box>
         </Box>
       </div>
