@@ -17,7 +17,16 @@ function indexTemplate(files) {
     return `import { default as ${componentName} } from './${basename}';`;
   });
 
-  return `${importEntries.join('\n')}
+  return `    import {
+  SpaceProps,
+  ColorProps,
+  LayoutProps,
+  TypographyProps
+} from 'styled-system';
+
+${importEntries.join('\n')}
+
+export type IconProps = SpaceProps & ColorProps & LayoutProps & TypographyProps;
 
 export const Icons = {
   ${compoundExportEntries.join(',\n  ')}

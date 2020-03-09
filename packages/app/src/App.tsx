@@ -13,6 +13,7 @@ import {
   AspectRatio,
   Input,
   TextArea,
+  Checkbox,
   theme,
 } from 'ds';
 import { Navigation } from './Navigation';
@@ -138,6 +139,9 @@ const App: React.FC = () => {
           </Box>
           <Box mb={3} p={3}>
             <TextArea placeholder="Placeholder text" maxCharacters={100} />
+          </Box>
+          <Box mb={3} p={3}>
+            <Checkbox label="Option" />
           </Box>
         </Box>
       </div>
