@@ -7,7 +7,13 @@ import {
   lineHeights,
   letterSpacings,
 } from './theme';
-import { Flex, Box } from './components';
+import { Flex, Box, Image } from './components';
+
+import dgError from './imgs/dg-error.svg';
+import dgField from './imgs/dg-field.svg';
+import dgHint from './imgs/dg-hint.svg';
+import dgInput from './imgs/dg-input.svg';
+import dgLabel from './imgs/dg-label.svg';
 
 <Meta title="Foundations/Design Graph" />
 
@@ -114,6 +120,30 @@ The Text component can now use the `variant` prop to switch between lead, body a
 <Text variant="caption"  />
 <Text variant="label" as="span" />
 ```
+
+export const ExampleCard = props => (
+  <Image borderColor="#F1F1F1" borderWidth={1} borderStyle="solid" {...props} />
+);
+
+### Example
+
+<ExampleCard
+  src={dgField}
+  display="block"
+  mt={3}
+  mb={4}
+  mr="auto"
+  alt="Field component"
+/>
+
+The Field component is a composed of `<Input />`, `<Label />`, `<Text variant="hint" color="text.secondary" />` and `<Text variant="hint" color="text.error" />`. Which in-turn use a composition of design tokens and variants.
+
+<Flex mt={4} flexWrap="wrap" mb={4}>
+  <ExampleCard mr={3} mb={3} src={dgInput} alt="Input component" />
+  <ExampleCard mr={3} mb={3} src={dgLabel} alt="label component" />
+  <ExampleCard mr={3} src={dgHint} alt="Text component with hint styling" />
+  <ExampleCard src={dgError} alt="Text component with error styling" />
+</Flex>
 
 ## Further Reading
 
