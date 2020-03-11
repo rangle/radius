@@ -23,8 +23,9 @@ Form checkbox input component with a label wrapper
       const [value, setValue] = useState(true);
       return (
         <Box>
-          <Checkbox label="Option" />
+          <Checkbox mb={2} label="Option" />
           <Checkbox
+            mb={2}
             checked={value}
             value="option 1"
             onChange={e => {
@@ -46,8 +47,9 @@ Form checkbox input component with a label wrapper
       const [value, setValue] = useState(true);
       return (
         <Box>
-          <Checkbox disabled label="Option" />
+          <Checkbox mb={2} disabled label="Option" />
           <Checkbox
+            mb={2}
             disabled
             checked={value}
             value="option 1"
@@ -70,8 +72,9 @@ Form checkbox input component with a label wrapper
       const [value, setValue] = useState(true);
       return (
         <Box>
-          <Checkbox error label="Option" />
+          <Checkbox mb={2} error label="Option" />
           <Checkbox
+            mb={2}
             error
             checked={value}
             value="option 1"

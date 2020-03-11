@@ -82,8 +82,8 @@ export default {
       highlights: {
         primaryHighlight: darken(0.1, '#012E86'),
         primaryExtraHighlight: darken(0.2, '#012E86'),
-        bgHighlight: darken(0.1, '#FFFFFF')
-      }
+        bgHighlight: darken(0.1, '#FFFFFF'),
+      },
     },
   },
   dark: {
@@ -126,8 +126,8 @@ export default {
       highlights: {
         primaryHighlight: lighten(0.1, '#298DFF'),
         primaryExtraHighlight: lighten(0.2, '#298DFF'),
-        bgHighlight: lighten(0.1, '#111111')
-      }
+        bgHighlight: lighten(0.1, '#111111'),
+      },
     },
   },
 };

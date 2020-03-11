@@ -21,7 +21,7 @@ const inputTokens = {
   x: 2, // padding x
 };
 
-type InputProps = StyledComponentProps<
+export type InputProps = StyledComponentProps<
   'input',
   any,
   {

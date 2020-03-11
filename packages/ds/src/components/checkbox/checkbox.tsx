@@ -78,7 +78,7 @@ export type CheckboxProps = StyledComponentProps<
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   (
-    { children, label, disabled, error, mb = 2, mt, mx, my, ml, mr, ...props },
+    { children, label, disabled, error, mb, mt, mx, my, ml, mr, ...props },
     ref
   ) => (
     <Text

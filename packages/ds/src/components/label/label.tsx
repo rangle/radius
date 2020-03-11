@@ -24,6 +24,11 @@ const StyledLabel = styled(Text)<StyledLabelProps>`
     }`}
 `;
 
+StyledLabel.defaultProps = {
+  pl: 0,
+  pr: 0,
+};
+
 export type LabelProps = StyledComponentProps<
   'label',
   any,
@@ -38,7 +43,6 @@ export const Label = forwardRef<HTMLLabelElement, LabelProps>(
       variant="label"
       ref={ref}
       color="text.primary"
-      mb={2}
       {...props}
     >
       {children}
