@@ -15,8 +15,8 @@ import { space as spaceScale, sizes as sizeScale } from './theme';
     <Box>
       {spaceScale.map((v, idx) => (
         <Flex key={v + idx} mb={4} alignItems="center">
-          <Text variant="body" minWidth={4} mb={0}>
-            {idx} <Text as="span" variant="body" color="text.secondary" mb={0}>{`(${v}px)`}</Text>
+          <Text variant="body" minWidth={4}>
+            {idx} <Text as="span" variant="body" color="text.secondary">{`(${v}px)`}</Text>
           </Text>
           <Box bg="text.primary" height={2} style={{ width: v }} />
         </Flex>
@@ -36,8 +36,8 @@ import { space as spaceScale, sizes as sizeScale } from './theme';
     <Box>
       {sizeScale.map((v, idx) => (
         <Flex key={v + idx} mb={4} alignItems="center">
-          <Text variant="body" minWidth={4} mb={0}>
-            {idx} <Text as="span" variant="body" color="text.secondary" mb={0}>{`(${v}px)`}</Text>
+          <Text variant="body" minWidth={4}>
+            {idx} <Text as="span" variant="body" color="text.secondary">{`(${v}px)`}</Text>
           </Text>
           <Box bg="text.primary" height={2} style={{ width: v }} />
         </Flex>
@@ -56,36 +56,28 @@ import { space as spaceScale, sizes as sizeScale } from './theme';
   <Story name="breakpoints">
     <Box>
       <Flex alignItems="baseline" mb={4}>
-        <Text variant="label" color="text.secondary" minWidth={4} mb={0} mr={3}>
+        <Text variant="label" color="text.secondary" minWidth={4} mr={3}>
           Small Breakpoint
         </Text>
-        <Heading variant="heading-5" mb={0}>
-          &lt; 40em
-        </Heading>
+        <Heading variant="heading-5">&lt; 40em</Heading>
       </Flex>
       <Flex alignItems="baseline" mb={4}>
-        <Text variant="label" color="text.secondary" minWidth={4} mb={0} mr={3}>
+        <Text variant="label" color="text.secondary" minWidth={4} mr={3}>
           Medium Breakpoint
         </Text>
-        <Heading variant="heading-5" mb={0}>
-          40em - 56em
-        </Heading>
+        <Heading variant="heading-5">40em - 56em</Heading>
       </Flex>
       <Flex alignItems="baseline" mb={4}>
-        <Text variant="label" color="text.secondary" minWidth={4} mb={0} mr={3}>
+        <Text variant="label" color="text.secondary" minWidth={4} mr={3}>
           Large Breakpoint
         </Text>
-        <Heading variant="heading-5" mb={0}>
-          56em - 64em
-        </Heading>
+        <Heading variant="heading-5">56em - 64em</Heading>
       </Flex>
       <Flex alignItems="baseline">
-        <Text variant="label" color="text.secondary" minWidth={4} mb={0} mr={3}>
+        <Text variant="label" color="text.secondary" minWidth={4} mr={3}>
           Extra Large Breakpoint
         </Text>
-        <Heading variant="heading-5" mb={0}>
-          64em+
-        </Heading>
+        <Heading variant="heading-5">64em+</Heading>
       </Flex>
     </Box>
   </Story>

@@ -15,7 +15,7 @@ const defaultextStyles = {
   lineHeight: 'copy',
   color: 'text.primary',
   mt: 0,
-  mb: 3,
+  mb: 0,
 };
 
 const textVariants = variant({
