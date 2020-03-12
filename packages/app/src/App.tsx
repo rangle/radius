@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Box,
+  Button,
   Text,
   Spinner,
   Heading,
@@ -93,6 +94,11 @@ const App: React.FC = () => {
               Field Label
             </Label>
           </Box>
+          <Flex mb={3} p={3} flexDirection="row">
+            <Button variant="primary">Lets get some</Button>
+            <Button variant="secondary">Buttons</Button>
+            <Button variant="transparent">Up in here</Button>
+          </Flex>
           <Box mb={3} p={3}>
             <Image variant="default" src={userImg} maxWidth={600} mr={2} />
             <Image variant="avatar" src={userImg} />

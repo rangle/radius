@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import styled from 'styled-components';
+import styled, { StyledComponentProps } from 'styled-components';
 import {
   border,
   compose,
@@ -14,9 +14,11 @@ import {
   PositionProps,
   SpaceProps
 } from 'styled-system';
-import { Box, BoxProps, Flex, Spinner } from '../.';
+import { Box, BoxProps } from '../box';
+import { Flex } from '../flex';
+import { Spinner } from '../spinner';
 
-export type ButtonProps =
+export type StyledButtonProps =
   SpaceProps &
   LayoutProps &
   FlexboxProps &
@@ -32,9 +34,10 @@ export type ButtonProps =
 
 const defaultButtonStyles = {
   position: 'relative',
-  fontFamily: 'heading',
+  fontFamily: 'body',
   fontSize: 2,
-  lineHeight: 'title',
+  fontWeight: 'regular',
+  lineHeight: 'copy',
   borderRadius: 0,
   borderWidth: 2,
   borderStyle: 'solid',
@@ -44,7 +47,9 @@ const defaultButtonStyles = {
   '-webkit-appearance': 'button',
   '-moz-appearance': 'button',
   '&:focus': {
-    outline: 'none',
+    outline: '1px solid',
+    outlineOffset: '1px',
+    outlineColor: 'brand.accent'
   }
 };
 
@@ -66,8 +71,8 @@ const buttonVariants = variant({
       },
       '&:disabled': {
         color: 'text.disabled',
-        backgroundColor: 'bg.disabled',
-        borderColor: 'bg.disabled'
+        backgroundColor: 'ui.disabled',
+        borderColor: 'ui.disabled'
       }
     },
     secondary: {
@@ -87,7 +92,7 @@ const buttonVariants = variant({
       '&:disabled': {
         color: 'text.disabled',
         backgroundColor: 'bg.1',
-        borderColor: 'bg.disabled',
+        borderColor: 'ui.disabled',
       },
     },
     transparent: {
@@ -106,8 +111,8 @@ const buttonVariants = variant({
       },
       '&:disabled': {
         color: 'text.disabled',
-        backgroundColor: 'bg.disabled',
-        borderColor: 'bg.disabled'
+        backgroundColor: 'ui.disabled',
+        borderColor: 'ui.disabled'
       }
     }
   },
@@ -129,9 +134,21 @@ const StyledButton = styled.button<ButtonProps>(
   buttonVariants
 );
 
+
+export type ButtonProps = StyledComponentProps<
+  'button',
+  any,
+  StyledButtonProps,
+  never
+>;
+
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { mb, mt, mx, my, ml, mr, leftIcon, rightIcon, disabled, loading, children, ...props },
+    {
+      leftIcon, rightIcon, disabled, loading, children,
+      mb, mt, mx, my, ml, mr,
+      ...props
+    },
     ref
   ) => (
       <StyledButton
@@ -145,7 +162,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         mb={mb}
         mt={mt}
         ml={ml}
-        mr={mr}        
+        mr={mr}
       >
         <Flex
           alignItems="center"
