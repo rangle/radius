@@ -1,0 +1,91 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { Button } from './button';
+import { Heading } from '../heading';
+import { Box, Icons, Flex } from '../';
+
+<Meta title="Components/Button" component={Button} />
+
+# Basic button component
+
+Creates a button component.
+
+### Primary
+<Preview withToolbar>
+  <Story name="primary">
+    <Box>
+      <Flex>
+        <Button variant="primary">Primary</Button>
+        <Button variant="primary" disabled>Disabled</Button>
+        <Button variant="primary" loading>Loading</Button>
+      </Flex>
+      <Flex>
+        <Button variant="primary">Flexible Width</Button>
+        <Button variant="primary" width={200}>Fixed Width</Button>
+      </Flex>
+      <Flex>
+        <Button variant="primary" leftIcon={<Icons.Visibility aria-hidden />}>Left Icon</Button>
+        <Button variant="primary" rightIcon={<Icons.Visibility aria-hidden />}>Right Icon</Button>
+        <Button variant="primary"
+          leftIcon={<Icons.Info aria-hidden />}
+          rightIcon={<Icons.Info aria-hidden />}
+        >Both Icons</Button>
+      </Flex>
+    </Box>
+  </Story>
+</Preview>
+
+
+### Secondary
+<Preview withToolbar>
+  <Story name="secondary">
+    <Box>
+      <Flex>
+        <Button variant="secondary">Secondary</Button>
+        <Button variant="secondary" disabled>Disabled</Button>
+        <Button variant="secondary" loading>Loading</Button>
+      </Flex>
+      <Flex>
+        <Button variant="secondary">Flexible Width</Button>
+        <Button variant="secondary" width={200}>Fixed Width</Button>
+      </Flex>
+      <Flex>
+        <Button variant="secondary" leftIcon={<Icons.Visibility aria-hidden />}>Left Icon</Button>
+        <Button variant="secondary" rightIcon={<Icons.Search aria-hidden />}>Right Icon</Button>
+        <Button variant="secondary"
+          leftIcon={<Icons.Info aria-hidden />}
+          rightIcon={<Icons.Info aria-hidden />}
+        >Both Icons</Button>
+      </Flex>
+    </Box>
+  </Story>
+</Preview>
+
+### Transparent
+<Preview withToolbar>
+  <Story name="transparent">
+    <Box>
+      <Flex>
+        <Button variant="transparent">Transparent</Button>
+        <Button variant="transparent" disabled>Disabled</Button>
+        <Button variant="transparent" loading>Loading</Button>
+      </Flex>
+      <Flex>
+        <Button variant="transparent">Flexible Width</Button>
+        <Button variant="transparent" width={200}>Fixed Width</Button>
+      </Flex>
+      <Flex>
+        <Button variant="transparent" leftIcon={<Icons.Visibility aria-hidden />}>Left Icon</Button>
+        <Button variant="transparent" rightIcon={<Icons.Search aria-hidden />}>Right Icon</Button>
+        <Button variant="transparent"
+          leftIcon={<Icons.Info aria-hidden />}
+          rightIcon={<Icons.Info aria-hidden />}
+        >Both Icons</Button>
+      </Flex>
+    </Box>
+  </Story>
+</Preview>
+
+
+## Component Props
+
+<Props of={Button} />

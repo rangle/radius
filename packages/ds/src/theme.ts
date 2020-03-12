@@ -1,3 +1,5 @@
+import { lighten, darken } from 'polished';
+
 export const fonts = {
   body: '"Helvetica Neue", Roboto, sans-serif',
   heading: '"Roboto", sans-serif',
@@ -77,6 +79,11 @@ export default {
         error: '#D0421B',
         success: '#138000',
       },
+      highlights: {
+        primaryHighlight: darken(0.1, '#012E86'),
+        primaryExtraHighlight: darken(0.2, '#012E86'),
+        bgHighlight: darken(0.1, '#FFFFFF')
+      }
     },
   },
   dark: {
@@ -116,6 +123,11 @@ export default {
         error: '#FF4D4D',
         success: '#1CBD00',
       },
+      highlights: {
+        primaryHighlight: lighten(0.1, '#298DFF'),
+        primaryExtraHighlight: lighten(0.2, '#298DFF'),
+        bgHighlight: lighten(0.1, '#111111')
+      }
     },
   },
 };
