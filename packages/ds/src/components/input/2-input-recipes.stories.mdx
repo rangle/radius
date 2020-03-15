@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import {
   Meta,
   Subtitle,
@@ -6,11 +6,11 @@ import {
   Props,
   Preview,
 } from '@storybook/addon-docs/blocks';
-import { Box, Icons } from '../';
+import { Box, Icons, Button } from '../';
 import { Input } from './input';
 
 <Meta
-  title="Recipes/Input"
+  title="Components/Input/Recipes"
   component={Input}
   parameters={{
     a11y: {
@@ -36,23 +36,15 @@ import { Input } from './input';
 
 ### Search Field
 
-export function Search() {
-  const [query, setQuery] = useState(null);
-  return (
-    <Input
-      placeholder="Search"
-      value={query}
-      onChange={e => setQuery(e.target.value)}
-      leftIcon={<Icons.Search />}
-      rightIcon={query && <Icons.Close color="brand.primary" />}
-    />
-  );
-}
-
 <Preview>
   <Story name="search field">
     {() => {
-      const [query, setQuery] = useState(null);
+      const [query, setQuery] = useState('');
+      const searchInput = useRef(null);
+      function handleClear() {
+        setQuery('');
+        searchInput.current.focus();
+      }
       return (
         <Input
           placeholder="Search"
@@ -60,7 +52,11 @@ export function Search() {
           onChange={e => setQuery(e.target.value)}
           leftIcon={<Icons.Search aria-hidden />}
           rightIcon={
-            query && <Icons.Close title="clear" color="brand.primary" />
+            query && (
+              <Button variant="transparent" p={0} onClick={handleClear}>
+                <Icons.Close title="clear" color="brand.primary" />
+              </Button>
+            )
           }
         />
       );
@@ -77,13 +73,12 @@ export function Search() {
         type="email"
         placeholder="Email address"
         value="email@domain.com"
-        aria-invalid="false"
         rightIcon={<Icons.CheckCircle aria-hidden color="ui.success" />}
         mb={3}
       />
       <Input
         placeholder="Email address"
-        aria-invalid="true"
+        error
         rightIcon={<Icons.Error aria-hidden color="ui.error" />}
       />
     </Box>

@@ -21,6 +21,7 @@ type TextAreaProps = StyledComponentProps<
     placeholder?: string;
     maxCharacters?: number | undefined;
     error?: Boolean;
+    value?: String;
   } & TypographyFunctionsProps,
   never
 >;
@@ -30,6 +31,7 @@ const ContentArea = styled(Text)<
     error?: Boolean;
   } & TypographyFunctionsProps
 >`
+  box-sizing: border-box;
   display: block;
   appearance: none;
   -webkit-appearance: none;
@@ -129,12 +131,14 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     },
     ref
   ) => {
-    const [characterCount, setCharacterCount] = useState(0);
+    const [characterCount, setCharacterCount] = useState(
+      props.value ? props.value.length : 0
+    );
     const isError =
       error || (maxCharacters && characterCount > maxCharacters) ? true : false;
 
     return (
-      <Box width={5} mx={mx} my={my} mb={mb} mt={mt} ml={ml} mr={mr}>
+      <Box mx={mx} my={my} mb={mb} mt={mt} ml={ml} mr={mr}>
         <ContentArea
           as="textarea"
           variant="body"
@@ -146,12 +150,12 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
             setCharacterCount(e.target.value.length)
           }
           error={isError}
+          aria-invalid={isError ? 'true' : 'false'}
           {...props}
         />
         {maxCharacters ? (
           <Text
             variant="hint"
-            pl={3}
             width="100%"
             color={isError ? 'text.error' : 'text.secondary'}
             textAlign="right"

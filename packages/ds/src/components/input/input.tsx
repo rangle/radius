@@ -21,7 +21,7 @@ const inputTokens = {
   x: 2, // padding x
 };
 
-type InputProps = StyledComponentProps<
+export type InputProps = StyledComponentProps<
   'input',
   any,
   {
@@ -45,7 +45,6 @@ const ContentArea = styled(Text)<
   display: block;
   width: 100%;
   appearance: none;
-  -webkit-appearance: none;
 
   padding-left: ${props =>
     props.hasLeftIcon
@@ -119,7 +118,7 @@ ContentArea.defaultProps = {
   borderStyle: 'solid',
   borderRadius: 0,
   color: 'text.primary',
-  bg: 'bg.2',
+  bg: 'ui.quaternary',
   mb: 0,
 };
 
@@ -174,6 +173,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         hasLeftIcon={!!leftIcon}
         hasRightIcon={!!rightIcon}
         disabled={disabled}
+        aria-invalid={props.error ? 'true' : 'false'}
         {...props}
       />
       {rightIcon && (

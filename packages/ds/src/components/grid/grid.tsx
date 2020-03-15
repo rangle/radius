@@ -11,7 +11,7 @@ import {
 } from 'styled-system';
 import { Box } from '../box';
 
-type GridProps = SpaceProps &
+export type GridProps = SpaceProps &
   ColorProps &
   LayoutProps &
   FlexboxProps &

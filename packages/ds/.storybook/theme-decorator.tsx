@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { theme, Box, Text } from '../src';
+import { theme, Box } from '../src';
 
 const ThemeDecorator = (storyFn: any) => (
   <>

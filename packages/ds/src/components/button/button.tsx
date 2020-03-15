@@ -12,22 +12,21 @@ import {
   FlexboxProps,
   LayoutProps,
   PositionProps,
-  SpaceProps
+  SpaceProps,
 } from 'styled-system';
 import { Box, BoxProps } from '../box';
 import { Flex } from '../flex';
 import { Spinner } from '../spinner';
+import { focusRing } from '../shared-styles';
 
-export type StyledButtonProps =
-  SpaceProps &
+export type StyledButtonProps = SpaceProps &
   LayoutProps &
   FlexboxProps &
   BorderProps &
-  PositionProps &
-  {
+  PositionProps & {
     leftIcon?: JSX.Element;
     rightIcon?: JSX.Element;
-    loading?: boolean;
+    isLoading?: boolean;
     disabled?: boolean;
     variant?: 'primary' | 'secondary' | 'transparent';
   };
@@ -42,15 +41,10 @@ const defaultButtonStyles = {
   borderWidth: 2,
   borderStyle: 'solid',
   padding: 3,
-  mx: 2,
-  mb: 3,
-  '-webkit-appearance': 'button',
-  '-moz-appearance': 'button',
-  '&:focus': {
-    outline: '1px solid',
-    outlineOffset: '1px',
-    outlineColor: 'brand.accent'
-  }
+  ml: 0,
+  mr: 0,
+  mb: 0,
+  appearance: 'none',
 };
 
 const buttonVariants = variant({
@@ -61,19 +55,19 @@ const buttonVariants = variant({
       color: 'text.inverse',
       borderColor: 'transparent',
       ' svg': {
-        color: 'text.inverse'
+        color: 'text.inverse',
       },
       '&:hover': {
-        backgroundColor: 'highlights.primaryHighlight'
+        backgroundColor: 'highlights.primaryHighlight',
       },
-      '&:active': {
-        backgroundColor: 'highlights.primaryExtraHighlight'
+      '&:active, &:focus': {
+        backgroundColor: 'highlights.primaryExtraHighlight',
       },
       '&:disabled': {
         color: 'text.disabled',
         backgroundColor: 'ui.disabled',
-        borderColor: 'ui.disabled'
-      }
+        borderColor: 'ui.disabled',
+      },
     },
     secondary: {
       ...defaultButtonStyles,
@@ -81,13 +75,13 @@ const buttonVariants = variant({
       color: 'brand.primary',
       borderColor: 'brand.primary',
       ' svg': {
-        color: 'brand.primary'
+        color: 'brand.primary',
       },
       '&:hover': {
-        borderColor: 'highlights.primaryHighlight'
+        borderColor: 'highlights.primaryHighlight',
       },
-      '&:active': {
-        borderColor: 'highlights.primaryExtraHighlight'
+      '&:active, &:focus': {
+        borderColor: 'highlights.primaryExtraHighlight',
       },
       '&:disabled': {
         color: 'text.disabled',
@@ -101,20 +95,20 @@ const buttonVariants = variant({
       color: 'brand.primary',
       borderColor: 'transparent',
       ' svg': {
-        color: 'brand.primary'
+        color: 'brand.primary',
       },
       '&:hover': {
-        backgroundColor: 'highlights.bgHighlight'
+        backgroundColor: 'highlights.bgHighlight',
       },
-      '&:active': {
-        backgroundColor: 'highlights.bgHighlight'
+      '&:active, &:focus': {
+        backgroundColor: 'highlights.bgHighlight',
       },
       '&:disabled': {
         color: 'text.disabled',
         backgroundColor: 'ui.disabled',
-        borderColor: 'ui.disabled'
-      }
-    }
+        borderColor: 'ui.disabled',
+      },
+    },
   },
 });
 
@@ -129,11 +123,14 @@ const ButtonIcon = styled(Box)<BoxProps & { disabled?: boolean }>`
   }
 `;
 
-const StyledButton = styled.button<ButtonProps>(
-  compose(space, layout, flexbox, border, position),
-  buttonVariants
-);
+const StyledButton = styled.button<ButtonProps>`
+  ${buttonVariants}
+  ${compose(space, layout, flexbox, border, position)}
 
+  &:focus {
+    ${focusRing}
+  }
+`;
 
 export type ButtonProps = StyledComponentProps<
   'button',
@@ -145,48 +142,70 @@ export type ButtonProps = StyledComponentProps<
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
-      leftIcon, rightIcon, disabled, loading, children,
-      mb, mt, mx, my, ml, mr,
+      leftIcon,
+      rightIcon,
+      disabled,
+      isLoading,
+      children,
+      mb,
+      mt,
+      mx,
+      my,
+      ml,
+      mr,
       ...props
     },
     ref
   ) => (
-      <StyledButton
-        ref={ref}
-        py={2}
-        disabled={disabled}
-        loading={loading}
-        {...props}
-        mx={mx}
-        my={my}
-        mb={mb}
-        mt={mt}
-        ml={ml}
-        mr={mr}
-      >
-        <Flex
+    <StyledButton
+      ref={ref}
+      py={2}
+      disabled={disabled}
+      isLoading={isLoading}
+      {...props}
+      mx={mx}
+      my={my}
+      mb={mb}
+      mt={mt}
+      ml={ml}
+      mr={mr}
+      {...(isLoading ? { 'aria-label': 'loading' } : {})}
+    >
+      {isLoading && (
+        <Spinner
+          display="flex"
           alignItems="center"
           justifyContent="center"
           position="absolute"
-          width="100%"
-          left="0"
-        >
-          { loading && ( <Spinner size={4}/> ) }
-        </Flex>
-        <Flex
-          alignItems="center"
-          position="relative"
-          justifyContent="center"
-          opacity={loading ? 0: 1}
-        >
-          { leftIcon && ( <ButtonIcon disabled={disabled} mr={2}> {leftIcon} </ButtonIcon> )}
-          { children }
-          { rightIcon && ( <ButtonIcon disabled={disabled} ml={2}> {rightIcon} </ButtonIcon> )}
-        </Flex>
-      </StyledButton>
+          top={0}
+          right={0}
+          bottom={0}
+          left={0}
+          size={4}
+        />
+      )}
+      <Flex
+        alignItems="center"
+        position="relative"
+        justifyContent="center"
+        opacity={isLoading ? 0 : 1}
+      >
+        {leftIcon && (
+          <ButtonIcon disabled={disabled} mr={2}>
+            {leftIcon}
+          </ButtonIcon>
+        )}
+        {children}
+        {rightIcon && (
+          <ButtonIcon disabled={disabled} ml={2}>
+            {rightIcon}
+          </ButtonIcon>
+        )}
+      </Flex>
+    </StyledButton>
   )
 );
 
 Button.defaultProps = {
-  variant: 'primary'
+  variant: 'primary',
 };
