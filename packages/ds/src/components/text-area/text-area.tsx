@@ -150,6 +150,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
             setCharacterCount(e.target.value.length)
           }
           error={isError}
+          aria-invalid={isError ? 'true' : 'false'}
           {...props}
         />
         {maxCharacters ? (

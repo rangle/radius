@@ -46,9 +46,11 @@ export const Label = forwardRef<HTMLLabelElement, LabelProps>(
       {...props}
     >
       {children}
-      <Box display="inherit" color="text.secondary" ml={1}>
-        {props.adornment}
-      </Box>
+      {props.adornment && (
+        <Box display="inline" color="text.secondary" ml={1}>
+          {props.adornment}
+        </Box>
+      )}
     </StyledLabel>
   )
 );

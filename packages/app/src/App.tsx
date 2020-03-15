@@ -15,6 +15,7 @@ import {
   Input,
   TextArea,
   Checkbox,
+  FormControl,
   theme,
 } from 'ds';
 import { Navigation } from './Navigation';
@@ -148,6 +149,42 @@ const App: React.FC = () => {
           </Box>
           <Box mb={3} p={3}>
             <Checkbox label="Option" />
+          </Box>
+          <Box mb={3}>
+            <FormControl.Field>
+              <Label htmlFor="zip-code" required>
+                Zip Code
+              </Label>
+              <Input
+                id="zip-code"
+                placeholder="Zip Code"
+                aria-describedby="zip-code-helper-text zip-code-error-text"
+                error
+                rightIcon={<Icons.Error aria-hidden color="ui.error" />}
+              />
+              <FormControl.Hint id="zip-code-helper-text">
+                5 Digits
+              </FormControl.Hint>
+              <FormControl.Error id="zip-code-error-text">
+                Please enter a ZIP code
+              </FormControl.Error>
+            </FormControl.Field>
+          </Box>
+          <Box mb={3}>
+            <FormControl.FieldSet>
+              <Label htmlFor="terms" required>
+                Terms and Conditions
+              </Label>
+              <Checkbox
+                id="terms"
+                aria-describedby="terms-error-text"
+                label="I agree to the terms and conditions."
+                error
+              />
+              <FormControl.Error id="terms-error-text">
+                Please agree to the terms and conditions
+              </FormControl.Error>
+            </FormControl.FieldSet>
           </Box>
         </Box>
       </div>

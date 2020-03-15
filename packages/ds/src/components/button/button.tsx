@@ -60,7 +60,7 @@ const buttonVariants = variant({
       '&:hover': {
         backgroundColor: 'highlights.primaryHighlight',
       },
-      '&:active': {
+      '&:active, &:focus': {
         backgroundColor: 'highlights.primaryExtraHighlight',
       },
       '&:disabled': {
@@ -80,7 +80,7 @@ const buttonVariants = variant({
       '&:hover': {
         borderColor: 'highlights.primaryHighlight',
       },
-      '&:active': {
+      '&:active, &:focus': {
         borderColor: 'highlights.primaryExtraHighlight',
       },
       '&:disabled': {
@@ -100,7 +100,7 @@ const buttonVariants = variant({
       '&:hover': {
         backgroundColor: 'highlights.bgHighlight',
       },
-      '&:active': {
+      '&:active, &:focus': {
         backgroundColor: 'highlights.bgHighlight',
       },
       '&:disabled': {

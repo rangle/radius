@@ -21,7 +21,6 @@ import { FormControl } from './';
           id="zip-code"
           placeholder="Zip Code"
           value="20905"
-          aria-invalid="false"
           rightIcon={<Icons.CheckCircle aria-hidden color="ui.success" />}
         />
         <FormControl.Hint id="helper-text">5 Digits</FormControl.Hint>
@@ -34,7 +33,6 @@ import { FormControl } from './';
           id="zip-code-2"
           placeholder="Zip Code"
           aria-describedby="helper-text-2 error-text-2"
-          aria-invalid="true"
           error
           rightIcon={<Icons.Error aria-hidden color="ui.error" />}
         />
@@ -169,6 +167,7 @@ import { FormControl } from './';
         />
         <Checkbox
           id="pizza-toppings"
+          disabled
           aria-describedby="topping-price"
           label="Salami"
         />
@@ -202,7 +201,7 @@ import { FormControl } from './';
         </FormControl.Hint>
       </FormControl.FieldSet>
       <FormControl.FieldSet>
-        <Label as="legend" htmlFor="terms" required>
+        <Label htmlFor="terms" required>
           Terms and Conditions
         </Label>
         <Checkbox
