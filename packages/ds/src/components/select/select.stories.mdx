@@ -1,0 +1,34 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { Select } from './select';
+
+<Meta 
+  title="Components/Select"
+  component={Select}
+  parameters={{
+    a11y: {
+      config: {
+        rules: [{ id: 'label', enabled: false }],
+      },
+    },
+  }}
+/>
+
+# Select
+
+Select component
+
+#### Default
+
+<Preview withToolbar>
+  <Story name="default">
+    <Select>
+      <option>Pina Colada</option>
+      <option selected>Margarita</option>
+      <option>Mojito</option>
+    </Select>
+  </Story>
+</Preview>
+
+## Component Props
+
+<Props of={Select} />
