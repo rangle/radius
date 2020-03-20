@@ -78,22 +78,10 @@ const ContentArea = styled(Text)<
   &:focus {
     ${focusRing}
 
+    border-color: ${props => props.theme.colors.ui.primary};
+
     &::placeholder {
       color: transparent;
-    }
-  }
-
-  &:-moz-read-only {
-    background-color: ${props => props.theme.colors.ui.tertiary};
-    border-color: ${props => props.theme.colors.ui.secondary};
-  }
-
-  &:read-only {
-    background-color: ${props => props.theme.colors.ui.tertiary};
-    border-color: ${props => props.theme.colors.ui.secondary};
-
-    &::placeholder {
-      color: ${props => props.theme.colors.text.secondary};
     }
   }
 
@@ -120,7 +108,7 @@ ContentArea.defaultProps = {
   borderStyle: 'solid',
   borderRadius: 0,
   color: 'text.primary',
-  bg: 'bg[1]',
+  bg: 'bg.primary',
   mb: 0,
 };
 
@@ -144,8 +132,6 @@ const RightIcon = styled(Box)<BoxProps & { disabled?: boolean, readOnly?: boolea
     display: block;
     font-size: ${props => props.theme.fontSizes[4]};
     ${props => props.disabled && { color: props.theme.colors.text.disabled }};
-    ${props => props.readOnly && { color: props.theme.colors.text.secondary }};
-    ${props => props.error && { color: props.theme.colors.ui.error }};
   }
 `;
 
@@ -185,7 +171,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
         {rightIcon}
       </RightIcon>
     )}
-      <RightIcon right={selectTokens.x} disabled={disabled}>
+      <RightIcon right={selectTokens.x} disabled={disabled} style={{pointerEvents: 'none'}}>
         <Icons.ExpandMore color="text.primary" aria-hidden />
       </RightIcon>
     </Flex>
