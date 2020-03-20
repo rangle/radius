@@ -1,4 +1,5 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { Box, Icons } from '../';
 import { Select } from './select';
 
 <Meta 
@@ -15,17 +16,155 @@ import { Select } from './select';
 
 # Select
 
-Select component
+Form select component
 
 #### Default
 
 <Preview withToolbar>
   <Story name="default">
-    <Select>
-      <option>Pina Colada</option>
-      <option selected>Margarita</option>
-      <option>Mojito</option>
-    </Select>
+    <Box>
+      <Select
+        defaultValue="Margarita"
+        mb={4}
+      >
+        <option>Pina Colada</option>
+        <option>Margarita</option>
+        <option>Mojito</option>
+      </Select>
+      <Select
+        defaultValue="Margarita"
+        leftIcon={<Icons.Search color="text.primary" aria-hidden />}
+        mb={4}
+      >
+        <option>Pina Colada</option>
+        <option>Margarita</option>
+        <option>Mojito</option>
+      </Select>
+      <Select
+        defaultValue="Margarita"
+        rightIcon={<Icons.Info color="text.primary" aria-hidden />}
+        mb={4}
+      >
+        <option>Pina Colada</option>
+        <option>Margarita</option>
+        <option>Mojito</option>
+      </Select>
+      <Select
+        defaultValue="Margarita"
+        leftIcon={<Icons.Search color="text.primary" aria-hidden />}
+        rightIcon={<Icons.Info color="text.primary" aria-hidden />}
+        mb={4}
+      >
+        <option>Pina Colada</option>
+        <option>Margarita</option>
+        <option>Mojito</option>
+      </Select>
+    </Box>
+  </Story>
+</Preview>
+
+#### Disabled
+
+<Preview withToolbar>
+  <Story name="disabled">
+    <Box>
+      <Select
+        disabled
+        defaultValue="Margarita"
+        mb={4}
+      >
+        <option>Pina Colada</option>
+        <option>Margarita</option>
+        <option>Mojito</option>
+      </Select>
+      <Select
+        disabled
+        defaultValue="Margarita"
+        leftIcon={<Icons.Search aria-hidden />}
+        mb={4}
+      >
+        <option>Pina Colada</option>
+        <option>Margarita</option>
+        <option>Mojito</option>
+      </Select>
+    </Box>
+  </Story>
+</Preview>
+
+#### Read Only
+
+<Preview withToolbar>
+  <Story name="read only">
+    <Box>
+      <Select
+        readOnly={true}
+        defaultValue="Margarita"
+        mb={4}
+      >
+        <option>Pina Colada</option>
+        <option>Margarita</option>
+        <option>Mojito</option>
+      </Select>
+      <Select
+        readOnly={true}
+        defaultValue="Margarita"
+        leftIcon={<Icons.Search color="text.primary" aria-hidden />}
+        mb={4}
+      >
+        <option>Pina Colada</option>
+        <option>Margarita</option>
+        <option>Mojito</option>
+      </Select>
+    </Box>
+  </Story>
+</Preview>
+
+#### Error
+
+<Preview withToolbar>
+  <Story name="error">
+    <Box>
+      <Select
+        error={true}
+        defaultValue="Margarita"
+        mb={4}
+      >
+        <option>Pina Colada</option>
+        <option>Margarita</option>
+        <option>Mojito</option>
+      </Select>
+      <Select
+        error
+        defaultValue="Margarita"
+        leftIcon={<Icons.Search color="text.primary" aria-hidden />}
+        mb={4}
+      >
+        <option>Pina Colada</option>
+        <option>Margarita</option>
+        <option>Mojito</option>
+      </Select>
+      <Select
+        error
+        defaultValue="Margarita"
+        rightIcon={<Icons.Info color="text.primary" aria-hidden />}
+        mb={4}
+      >
+        <option>Pina Colada</option>
+        <option>Margarita</option>
+        <option>Mojito</option>
+      </Select>
+      <Select
+        error
+        defaultValue="Margarita"
+        leftIcon={<Icons.Search color="text.primary" aria-hidden />}
+        rightIcon={<Icons.Info color="text.primary" aria-hidden />}
+        mb={4}
+      >
+        <option>Pina Colada</option>
+        <option>Margarita</option>
+        <option>Mojito</option>
+      </Select>
+    </Box>
   </Story>
 </Preview>
 
