@@ -189,7 +189,7 @@ const App: React.FC = () => {
           </Box>
           <Box mb={3} p={3} width={8}>
             <FormControl.FieldSet mb={3}>
-              <Label htmlFor="lcoation" required>
+              <Label htmlFor="location" required>
                 Location
               </Label>
               <Select
