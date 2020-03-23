@@ -68,8 +68,8 @@ export default {
         success: '#138000',
       },
       bg: {
-        1: '#FFFFFF',
-        2: '#F1F1F1',
+        primary: '#FFFFFF',
+        secondary: '#F1F1F1',
       },
       text: {
         primary: '#262626',
@@ -112,8 +112,8 @@ export default {
         success: '#1CBD00',
       },
       bg: {
-        1: '#111111',
-        2: '#262626',
+        primary: '#111111',
+        secondary: '#262626',
       },
       text: {
         primary: '#FFFFFF',

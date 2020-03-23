@@ -16,6 +16,7 @@ import {
   TextArea,
   Checkbox,
   FormControl,
+  Select,
   theme,
 } from 'ds';
 import { Navigation } from './Navigation';
@@ -150,7 +151,7 @@ const App: React.FC = () => {
           <Box mb={3} p={3}>
             <Checkbox label="Option" />
           </Box>
-          <Box mb={3}>
+          <Box mb={3} p={3}>
             <FormControl.Field>
               <Label htmlFor="zip-code" required>
                 Zip Code
@@ -170,7 +171,7 @@ const App: React.FC = () => {
               </FormControl.Error>
             </FormControl.Field>
           </Box>
-          <Box mb={3}>
+          <Box mb={3} p={3}>
             <FormControl.FieldSet>
               <Label htmlFor="terms" required>
                 Terms and Conditions
@@ -184,6 +185,36 @@ const App: React.FC = () => {
               <FormControl.Error id="terms-error-text">
                 Please agree to the terms and conditions
               </FormControl.Error>
+            </FormControl.FieldSet>
+          </Box>
+          <Box mb={3} p={3} width={8}>
+            <FormControl.FieldSet mb={3}>
+              <Label htmlFor="location" required>
+                Location
+              </Label>
+              <Select
+                defaultValue="Select a city"
+                name="city"
+              >
+                <option>Select a city</option>
+                <option>Toronto</option>
+                <option>Istanbul</option>
+                <option>Amsterdam</option>
+              </Select>
+            </FormControl.FieldSet>
+            <FormControl.FieldSet>
+              <Label htmlFor="lcoation" required>
+                Location
+              </Label>
+              <Select
+                defaultValue="Select a city"
+                leftIcon={<Icons.Place color="text.primary" aria-hidden />}
+              >
+                <option>Select a city</option>
+                <option>Toronto</option>
+                <option>Istanbul</option>
+                <option>Amsterdam</option>
+              </Select>
             </FormControl.FieldSet>
           </Box>
         </Box>

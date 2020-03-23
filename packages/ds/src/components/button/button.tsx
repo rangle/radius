@@ -71,7 +71,7 @@ const buttonVariants = variant({
     },
     secondary: {
       ...defaultButtonStyles,
-      bg: 'bg.1',
+      bg: 'bg.primary',
       color: 'brand.primary',
       borderColor: 'brand.primary',
       ' svg': {
@@ -85,7 +85,7 @@ const buttonVariants = variant({
       },
       '&:disabled': {
         color: 'text.disabled',
-        backgroundColor: 'bg.1',
+        backgroundColor: 'bg.primary',
         borderColor: 'ui.disabled',
       },
     },
