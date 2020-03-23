@@ -5,12 +5,12 @@ import { theme, Box } from '../src';
 const ThemeDecorator = (storyFn: any) => (
   <>
     <ThemeProvider theme={theme.light}>
-      <Box bg="bg.1" px={4} py={5} width="100%" height="100%" mb={4}>
+      <Box bg="bg.primary" px={4} py={5} width="100%" height="100%" mb={4}>
         {storyFn()}
       </Box>
     </ThemeProvider>
     <ThemeProvider theme={theme.dark}>
-      <Box bg="bg.1" px={4} py={5} width="100%" height="100%">
+      <Box bg="bg.primary" px={4} py={5} width="100%" height="100%">
         {storyFn()}
       </Box>
     </ThemeProvider>
