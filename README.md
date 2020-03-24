@@ -10,7 +10,8 @@ The Radius is an opinionated assemblage of open-source tools and libraries that 
 [Chromatic](https://www.chromaticqa.com/library?appId=5e44874935df3b0022b9d890)
 
 
-Are you using Radius? We would love to hear about how you are using Radius or any feedback or feature requests.   Drop us an email at varun@rangle.io
+#### Are you using Radius? 
+We would love to hear about how you are using Radius or any feedback or feature requests. Drop us an email at [varun@rangle.io](mailto:varun@rangle.io)
 
 ### 🚀 Quick start
 
