@@ -125,7 +125,9 @@ const LeftIcon = styled(Box)<BoxProps & { disabled?: boolean }>`
   }
 `;
 
-const RightIcon = styled(Box)<BoxProps & { disabled?: boolean, readOnly?: boolean, error?: boolean }>`
+const RightIcon = styled(Box)<
+  BoxProps & { disabled?: boolean; readOnly?: boolean; error?: boolean }
+>`
   position: absolute;
 
   svg {
@@ -150,28 +152,32 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
       ml={ml}
       mr={mr}
     >
-    {leftIcon && (
-      <LeftIcon left={selectTokens.x} disabled={disabled}>
-        {leftIcon}
-      </LeftIcon>
-    )}
-    <ContentArea
-      as="select"
-      variant="body"
-      ref={ref}
-      py={2}
-      hasLeftIcon={!!leftIcon}
-      hasRightIcon={!!rightIcon}
-      disabled={disabled}
-      aria-invalid={props.error ? 'true' : 'false'}
-      {...props}
-    />
-    {rightIcon && (
-      <RightIcon right={selectTokens.iconRightOffset} disabled={disabled}>
-        {rightIcon}
-      </RightIcon>
-    )}
-      <RightIcon right={selectTokens.x} disabled={disabled} style={{pointerEvents: 'none'}}>
+      {leftIcon && (
+        <LeftIcon left={selectTokens.x} disabled={disabled}>
+          {leftIcon}
+        </LeftIcon>
+      )}
+      <ContentArea
+        as="select"
+        variant="body"
+        ref={ref}
+        py={2}
+        hasLeftIcon={!!leftIcon}
+        hasRightIcon={!!rightIcon}
+        disabled={disabled}
+        aria-invalid={props.error ? 'true' : 'false'}
+        {...props}
+      />
+      {rightIcon && (
+        <RightIcon right={selectTokens.iconRightOffset} disabled={disabled}>
+          {rightIcon}
+        </RightIcon>
+      )}
+      <RightIcon
+        right={selectTokens.x}
+        disabled={disabled}
+        style={{ pointerEvents: 'none' }}
+      >
         <Icons.ExpandMore color="text.primary" aria-hidden />
       </RightIcon>
     </Flex>
