@@ -40,6 +40,10 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
 
       - run:
+          name: Lint Component Library
+          command: yarn workspace ds lint
+
+      - run:
           name: Test Component Library
           command: yarn workspace ds test
 
