@@ -1,8 +1,8 @@
 import { lighten, darken } from 'polished';
 
 export const fonts = {
-  body: '"Helvetica Neue", Roboto, sans-serif',
-  heading: '"Roboto", sans-serif',
+  body: '"Arial", Roboto, sans-serif',
+  heading: '"Arial", sans-serif',
   monospace: 'Menlo, monospace',
 };
 
@@ -20,8 +20,8 @@ export const fontSizes = [
 ];
 
 export const fontWeights = {
-  regular: 400,
-  medium: 500,
+  // regular: 400,
+  // medium: 500,
   bold: 700,
 };
 
@@ -29,6 +29,7 @@ export const lineHeights = {
   solid: 1,
   title: 1.25,
   copy: 1.5,
+  heading: 1.625,
 };
 
 export const letterSpacings = {
@@ -53,35 +54,37 @@ export default {
     breakpoints,
     colors: {
       brand: {
-        primary: '#012E86',
-        secondary: '#0064D9',
-        accent: '#DB7C00',
-        muted: '#C6DAF7',
+        primary: '#FBCE07', // yellow
+        secondary: '#DD1D21', // red
+        accent: '#404040',
+        // muted: '#C6DAF7',
       },
       ui: {
-        primary: '#262626',
+        primary: '#404040',
         secondary: '#757575',
-        tertiary: '#F1F1F1',
-        quaternary: '#FFFFFF',
+        tertiary: '#D9D9D9',
+        quaternary: '#CFCFCF',
         disabled: '#DEDEDE',
-        error: '#D0421B',
-        success: '#138000',
+        error: '#DD1D21',
+        success: '#2FA569',
       },
       bg: {
         primary: '#FFFFFF',
-        secondary: '#F1F1F1',
+        secondary: '#F7F7F7',
       },
       text: {
-        primary: '#262626',
-        secondary: '#757575',
+        primary: '#404040',
+        secondary: '#FFFFFF',
         disabled: '#9C9C9C',
-        inverse: '#FFFFFF',
-        error: '#D0421B',
-        success: '#138000',
+        inverse: '#404040',
+        error: '#DD1D21',
+        success: '#2FA569',
       },
       highlights: {
-        primaryHighlight: darken(0.1, '#012E86'),
-        primaryExtraHighlight: darken(0.2, '#012E86'),
+        primaryHighlight: '#404040',
+        // primaryHighlight: darken(0.1, '#FBCE07'),
+        primaryExtraHighlight: '#404040',
+        // primaryExtraHighlight: darken(0.2, '#DD1D21'),
         bgHighlight: darken(0.1, '#FFFFFF'),
       },
     },
@@ -97,10 +100,10 @@ export default {
     breakpoints,
     colors: {
       brand: {
-        primary: '#298DFF',
-        secondary: '#7CAEE8',
+        primary: '#FBCE07', // yellow
+        secondary: '#DD1D21', // red
         accent: '#FDB447',
-        muted: '#B7CBEA',
+        // muted: '#B7CBEA',
       },
       ui: {
         primary: '#FFFFFF',
@@ -116,16 +119,17 @@ export default {
         secondary: '#262626',
       },
       text: {
-        primary: '#FFFFFF',
-        secondary: '#A1A1A1',
+        primary: '#404040',
+        secondary: '#FFFFFF',
         disabled: '#525252',
-        inverse: '#262626',
+        inverse: '#FFFFFF',
         error: '#FF4D4D',
         success: '#1CBD00',
       },
       highlights: {
-        primaryHighlight: lighten(0.1, '#298DFF'),
-        primaryExtraHighlight: lighten(0.2, '#298DFF'),
+        // primaryHighlight: '#404040',
+        primaryHighlight: lighten(0.15, '#FBCE07'),
+        primaryExtraHighlight: lighten(0.25, '#298DFF'),
         bgHighlight: lighten(0.1, '#111111'),
       },
     },

@@ -59,9 +59,14 @@ const buttonVariants = variant({
       },
       '&:hover': {
         backgroundColor: 'highlights.primaryHighlight',
+        color: 'text.secondary',
+        ' svg': {
+          color: 'text.secondary',
+        },
       },
       '&:active, &:focus': {
         backgroundColor: 'highlights.primaryExtraHighlight',
+        color: 'text.secondary',
       },
       '&:disabled': {
         color: 'text.disabled',
@@ -71,14 +76,18 @@ const buttonVariants = variant({
     },
     secondary: {
       ...defaultButtonStyles,
-      bg: 'bg.primary',
-      color: 'brand.primary',
-      borderColor: 'brand.primary',
+      bg: 'bg.secondary',
+      color: 'brand.accent',
+      borderColor: 'brand.accent',
       ' svg': {
-        color: 'brand.primary',
+        color: 'brand.accent',
       },
       '&:hover': {
         borderColor: 'highlights.primaryHighlight',
+        color: 'brand.secondary',
+        ' svg': {
+          color: 'brand.secondary',
+        },
       },
       '&:active, &:focus': {
         borderColor: 'highlights.primaryExtraHighlight',
@@ -92,13 +101,14 @@ const buttonVariants = variant({
     transparent: {
       ...defaultButtonStyles,
       bg: 'transparent',
-      color: 'brand.primary',
+      color: 'brand.accent',
       borderColor: 'transparent',
       ' svg': {
-        color: 'brand.primary',
+        color: 'brand.accent',
       },
       '&:hover': {
         backgroundColor: 'highlights.bgHighlight',
+        color: 'secondary',
       },
       '&:active, &:focus': {
         backgroundColor: 'highlights.bgHighlight',
