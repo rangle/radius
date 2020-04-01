@@ -41,12 +41,10 @@ const ContentArea = styled(Text)<
   padding: ${(props: any) => props.theme.space[2]}px;
 
   border-color: ${(props: any) =>
-    props.error
-      ? props.theme.colors.ui.error
-      : props.theme.colors.ui.secondary};
+    props.error ? props.theme.colors.ui.error : props.theme.colors.text.theme};
 
   &::placeholder {
-    color: ${props => props.theme.colors.text.secondary};
+    color: ${props => props.theme.colors.ui.secondary};
     font-size: ${props => props.theme.sizes[1]}px;
     font-weight: normal;
   }
@@ -55,11 +53,13 @@ const ContentArea = styled(Text)<
     border-color: ${props =>
       props.error
         ? props.theme.colors.ui.error
-        : props.theme.colors.ui.primary};
+        : props.theme.colors.ui.secondary};
   }
 
   &:focus {
     ${focusRing}
+
+    border-color: ${props => props.theme.colors.ui.secondary};
 
     &::placeholder {
       color: transparent;
@@ -76,7 +76,7 @@ const ContentArea = styled(Text)<
     border-color: ${props => props.theme.colors.ui.secondary};
 
     &::placeholder {
-      color: ${props => props.theme.colors.text.secondary};
+      color: ${props => props.theme.colors.ui.secondary};
     }
   }
 
@@ -100,7 +100,7 @@ ContentArea.defaultProps = {
   borderWidth: '1px',
   borderStyle: 'solid',
   borderRadius: 0,
-  bg: 'ui.quaternary',
+  bg: 'bg.primary',
 };
 
 export const StyledText = styled(Text)<
@@ -111,7 +111,7 @@ export const StyledText = styled(Text)<
   color: ${props =>
     props.error
       ? props.theme.colors.text.error
-      : props.theme.colors.text.secondary};
+      : props.theme.colors.text.primary};
 `;
 
 export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
@@ -157,7 +157,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           <Text
             variant="hint"
             width="100%"
-            color={isError ? 'text.error' : 'text.secondary'}
+            color={isError ? 'text.error' : 'text.primary'}
             textAlign="right"
           >
             {`${characterCount}/${maxCharacters}`}

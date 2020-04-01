@@ -7,9 +7,7 @@ import { focusRing } from '../shared-styles';
 
 const checkboxIconStyles = css<{ error?: Boolean }>`
   color: ${props =>
-    props.error
-      ? props.theme.colors.ui.error
-      : props.theme.colors.ui.secondary};
+    props.error ? props.theme.colors.ui.error : props.theme.colors.text.theme};
 
   font-size: ${props => props.theme.fontSizes[4]}px;
   margin-right: ${props => props.theme.space[1]}px;
@@ -18,14 +16,14 @@ const checkboxIconStyles = css<{ error?: Boolean }>`
     color: ${props =>
       props.error
         ? props.theme.colors.ui.error
-        : props.theme.colors.ui.primary};
+        : props.theme.colors.ui.outline};
   }
 
   input:focus ~ & {
     color: ${props =>
       props.error
         ? props.theme.colors.ui.error
-        : props.theme.colors.ui.primary};
+        : props.theme.colors.ui.outline};
     ${focusRing}
   }
 
@@ -38,7 +36,7 @@ const checkboxIconStyles = css<{ error?: Boolean }>`
     color: ${props =>
       props.error
         ? props.theme.colors.ui.error
-        : props.theme.colors.ui.primary};
+        : props.theme.colors.brand.primary};
   }
 `;
 
@@ -86,7 +84,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       variant="body"
       display="flex"
       alignItems="center"
-      color={disabled ? 'text.disabled' : 'text.primary'}
+      color={disabled ? 'text.disabled' : 'text.theme'}
       mx={mx}
       my={my}
       mb={mb}

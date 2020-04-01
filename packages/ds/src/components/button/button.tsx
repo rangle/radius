@@ -52,21 +52,24 @@ const buttonVariants = variant({
     primary: {
       ...defaultButtonStyles,
       bg: 'brand.primary',
-      color: 'text.inverse',
+      color: 'text.primary',
       borderColor: 'transparent',
       ' svg': {
-        color: 'text.inverse',
+        color: 'text.primary',
       },
       '&:hover': {
-        backgroundColor: 'highlights.primaryHighlight',
-        color: 'text.secondary',
+        bg: 'brand.accent',
+        color: 'brand.primary',
         ' svg': {
-          color: 'text.secondary',
+          color: 'brand.primary',
         },
       },
       '&:active, &:focus': {
         backgroundColor: 'highlights.primaryExtraHighlight',
-        color: 'text.secondary',
+        color: 'brand.primary',
+        ' svg': {
+          color: 'brand.primary',
+        },
       },
       '&:disabled': {
         color: 'text.disabled',
@@ -76,21 +79,29 @@ const buttonVariants = variant({
     },
     secondary: {
       ...defaultButtonStyles,
-      bg: 'bg.secondary',
-      color: 'brand.accent',
-      borderColor: 'brand.accent',
+      bg: 'brand.secondary',
+      color: 'text.secondary',
+      borderColor: 'transparent',
       ' svg': {
-        color: 'brand.accent',
+        color: 'text.secondary',
       },
       '&:hover': {
-        borderColor: 'highlights.primaryHighlight',
+        borderColor: 'brand.secondary',
+        bg: 'transparent',
         color: 'brand.secondary',
         ' svg': {
           color: 'brand.secondary',
         },
       },
       '&:active, &:focus': {
-        borderColor: 'highlights.primaryExtraHighlight',
+        // borderColor: 'brand.secondary',
+        // outlineColor: 'red',
+        bg: 'highlights.secondaryExtraHighlight',
+        // borderColor: 'highlights.primaryExtraHighlight',
+        color: 'brand.secondary',
+        ' svg': {
+          color: 'brand.secondary',
+        },
       },
       '&:disabled': {
         color: 'text.disabled',
@@ -101,14 +112,13 @@ const buttonVariants = variant({
     transparent: {
       ...defaultButtonStyles,
       bg: 'transparent',
-      color: 'brand.accent',
+      color: 'text.primary',
       borderColor: 'transparent',
       ' svg': {
-        color: 'brand.accent',
+        color: 'text.primary',
       },
       '&:hover': {
         backgroundColor: 'highlights.bgHighlight',
-        color: 'secondary',
       },
       '&:active, &:focus': {
         backgroundColor: 'highlights.bgHighlight',

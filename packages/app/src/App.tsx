@@ -118,7 +118,7 @@ const App: React.FC = () => {
             <Icons.CheckboxChecked
               title="checkbox checked"
               fontSize={4}
-              color="brand.pmuted"
+              color="brand.muted"
             />
           </Box>
           <Box mb={3} p={3}>

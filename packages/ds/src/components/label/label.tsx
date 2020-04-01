@@ -42,12 +42,12 @@ export const Label = forwardRef<HTMLLabelElement, LabelProps>(
       as="label"
       variant="label"
       ref={ref}
-      color="text.primary"
+      color="text.theme"
       {...props}
     >
       {children}
       {props.adornment && (
-        <Box display="inline" color="text.secondary" ml={1}>
+        <Box display="inline" color="ui.secondary" ml={1}>
           {props.adornment}
         </Box>
       )}

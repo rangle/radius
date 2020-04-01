@@ -58,23 +58,23 @@ const ContentArea = styled(Text)<
       : props.theme.space[inputTokens.x]}px;
 
   border-color: ${props =>
-    props.error
-      ? props.theme.colors.ui.error
-      : props.theme.colors.ui.secondary};
+    props.error ? props.theme.colors.ui.error : props.theme.colors.text.theme};
 
   &::placeholder {
-    color: ${props => props.theme.colors.text.secondary};
+    color: ${props => props.theme.colors.ui.secondary};
   }
 
   &:hover {
     border-color: ${props =>
       props.error
         ? props.theme.colors.ui.error
-        : props.theme.colors.ui.primary};
+        : props.theme.colors.ui.secondary};
   }
 
   &:focus {
     ${focusRing}
+
+    border-color: ${props => props.theme.colors.ui.secondary};
 
     &::placeholder {
       color: transparent;
@@ -82,16 +82,16 @@ const ContentArea = styled(Text)<
   }
 
   &:-moz-read-only {
-    background-color: ${props => props.theme.colors.ui.tertiary};
-    border-color: ${props => props.theme.colors.ui.secondary};
+    background-color: ${props => props.theme.colors.bg.secondary};
+    border-color: ${props => props.theme.colors.ui.primary};
   }
 
   &:read-only {
-    background-color: ${props => props.theme.colors.ui.tertiary};
-    border-color: ${props => props.theme.colors.ui.secondary};
+    background-color: ${props => props.theme.colors.bg.secondary};
+    border-color: ${props => props.theme.colors.ui.primary};
 
     &::placeholder {
-      color: ${props => props.theme.colors.text.secondary};
+      color: ${props => props.theme.colors.ui.secondary};
     }
   }
 
@@ -117,8 +117,8 @@ ContentArea.defaultProps = {
   borderWidth: '1px',
   borderStyle: 'solid',
   borderRadius: 0,
-  color: 'text.primary',
-  bg: 'ui.quaternary',
+  color: 'text.theme',
+  bg: 'bg.primary',
   mb: 0,
 };
 
@@ -131,7 +131,7 @@ const LeftIcon = styled(Box)<BoxProps & { disabled?: boolean }>`
     color: ${props =>
       props.disabled
         ? props.theme.colors.text.disabled
-        : props.theme.colors.text.primary};
+        : props.theme.colors.text.theme};
   }
 `;
 
@@ -141,7 +141,10 @@ const RightIcon = styled(Box)<BoxProps & { disabled?: boolean }>`
   svg {
     display: block;
     font-size: ${props => props.theme.fontSizes[4]};
-    ${props => props.disabled && { color: props.theme.colors.text.disabled }};
+    color: ${props =>
+      props.disabled
+        ? props.theme.colors.text.disabled
+        : props.theme.colors.text.theme};
   }
 `;
 

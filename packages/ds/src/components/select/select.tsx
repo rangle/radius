@@ -60,9 +60,7 @@ const ContentArea = styled(Text)<
       : props.theme.space[selectTokens.x]}px;
 
   border-color: ${props =>
-    props.error
-      ? props.theme.colors.ui.error
-      : props.theme.colors.ui.secondary};
+    props.error ? props.theme.colors.ui.error : props.theme.colors.text.theme};
 
   &::placeholder {
     color: ${props => props.theme.colors.text.secondary};
@@ -72,13 +70,13 @@ const ContentArea = styled(Text)<
     border-color: ${props =>
       props.error
         ? props.theme.colors.ui.error
-        : props.theme.colors.ui.primary};
+        : props.theme.colors.ui.secondary};
   }
 
   &:focus {
     ${focusRing}
 
-    border-color: ${props => props.theme.colors.ui.primary};
+    border-color: ${props => props.theme.colors.ui.secondary};
 
     &::placeholder {
       color: transparent;
@@ -107,7 +105,7 @@ ContentArea.defaultProps = {
   borderWidth: '1px',
   borderStyle: 'solid',
   borderRadius: 0,
-  color: 'text.primary',
+  color: 'text.theme',
   bg: 'bg.primary',
   mb: 0,
 };
@@ -121,7 +119,7 @@ const LeftIcon = styled(Box)<BoxProps & { disabled?: boolean }>`
     color: ${props =>
       props.disabled
         ? props.theme.colors.text.disabled
-        : props.theme.colors.text.primary};
+        : props.theme.colors.text.theme};
   }
 `;
 
@@ -133,7 +131,10 @@ const RightIcon = styled(Box)<
   svg {
     display: block;
     font-size: ${props => props.theme.fontSizes[4]};
-    ${props => props.disabled && { color: props.theme.colors.text.disabled }};
+    color: ${props =>
+      props.disabled
+        ? props.theme.colors.text.disabled
+        : props.theme.colors.text.theme};
   }
 `;
 
@@ -178,7 +179,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
         disabled={disabled}
         style={{ pointerEvents: 'none' }}
       >
-        <Icons.ExpandMore color="text.primary" aria-hidden />
+        <Icons.ExpandMore color="text.theme" aria-hidden />
       </RightIcon>
     </Flex>
   )
