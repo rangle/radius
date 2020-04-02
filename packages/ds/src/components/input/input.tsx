@@ -58,7 +58,7 @@ const ContentArea = styled(Text)<
       : props.theme.space[inputTokens.x]}px;
 
   border-color: ${props =>
-    props.error ? props.theme.colors.ui.error : props.theme.colors.text.theme};
+    props.error ? props.theme.colors.ui.error : props.theme.colors.ui.tertiary};
 
   &::placeholder {
     color: ${props => props.theme.colors.ui.secondary};
@@ -141,10 +141,7 @@ const RightIcon = styled(Box)<BoxProps & { disabled?: boolean }>`
   svg {
     display: block;
     font-size: ${props => props.theme.fontSizes[4]};
-    color: ${props =>
-      props.disabled
-        ? props.theme.colors.text.disabled
-        : props.theme.colors.text.theme};
+    color: ${props => (props.disabled ? props.theme.colors.text.disabled : '')};
   }
 `;
 

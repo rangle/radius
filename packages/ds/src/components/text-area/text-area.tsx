@@ -41,7 +41,7 @@ const ContentArea = styled(Text)<
   padding: ${(props: any) => props.theme.space[2]}px;
 
   border-color: ${(props: any) =>
-    props.error ? props.theme.colors.ui.error : props.theme.colors.text.theme};
+    props.error ? props.theme.colors.ui.error : props.theme.colors.ui.tertiary};
 
   &::placeholder {
     color: ${props => props.theme.colors.ui.secondary};

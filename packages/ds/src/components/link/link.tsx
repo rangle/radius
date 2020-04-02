@@ -4,6 +4,7 @@ import {
   TypographyFunctionsProps,
   typographyFunctions,
 } from '../typography-functions';
+import { color } from 'styled-system';
 
 type LinkProps = {
   variant: 'inline' | 'default' | 'nav1' | 'nav2' | 'nav3';
@@ -95,21 +96,10 @@ const linkVariants = variant({
       lineHeight: 'copy',
       textDecoration: 'none',
       position: 'relative',
-      ':after': {
-        content: '',
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        background: 'orange',
-        transition: 'height 0.3s ease',
-        height: 0,
-        width: '100%',
-      },
       ':hover': {
         color: 'blue',
-        '&:after': {
-          height: '5px',
-        },
+        borderBottom: '3px solid yellow',
+        borderColor: 'brand.primary',
       },
     },
   },
