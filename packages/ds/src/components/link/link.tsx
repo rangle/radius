@@ -4,7 +4,6 @@ import {
   TypographyFunctionsProps,
   typographyFunctions,
 } from '../typography-functions';
-import { color } from 'styled-system';
 
 type LinkProps = {
   variant: 'inline' | 'default' | 'nav1' | 'nav2' | 'nav3';
