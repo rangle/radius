@@ -83,12 +83,12 @@ const ContentArea = styled(Text)<
 
   &:-moz-read-only {
     background-color: ${props => props.theme.colors.bg.secondary};
-    border-color: ${props => props.theme.colors.ui.primary};
+    border-color: ${props => props.theme.colors.ui.tertiary};
   }
 
   &:read-only {
     background-color: ${props => props.theme.colors.bg.secondary};
-    border-color: ${props => props.theme.colors.ui.primary};
+    border-color: ${props => props.theme.colors.ui.tertiary};
 
     &::placeholder {
       color: ${props => props.theme.colors.ui.secondary};

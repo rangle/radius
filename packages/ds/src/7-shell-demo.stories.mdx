@@ -13,14 +13,8 @@ import logoImg from './imgs/Shell_logo.svg';
 <Subtitle>Radius applied for Shell</Subtitle>
 
 export const NavBar = () => {
-  const styles = {
-    color: 'blue',
-    'hover': {
-      color: 'red',
-    },
-  };
   return (
-    <Box as="nav" bg="bg.primary" px={3} py={2} mb={4}>
+    <Box as="nav" bg="bg.primary" py={2} mb={3}>
       <Flex flexDirection="row" height={3} justifyContent="space-between" alignItems="center">
         <Image 
           flex="none"
@@ -32,35 +26,34 @@ export const NavBar = () => {
             fontWeight="regular"
             variant="shellNav"
             ml={3}
-            // style={styles}
             >
             Inside Energy
           </Link>
           <Link
             href='/'
             fontWeight="regular"
-            variant="nav3"
+            variant="shellNav"
             ml={3}>
             About Us
           </Link>
           <Link
             href='/'
             fontWeight="regular"
-            variant="nav3"
+            variant="shellNav"
             ml={3}>
             Investors
           </Link>
           <Link
             href='/'
             fontWeight="regular"
-            variant="nav3"
+            variant="shellNav"
             ml={3}>
             Media
           </Link>
           <Link
             href='/'
             fontWeight="regular"
-            variant="nav3"
+            variant="shellNav"
             ml={3}>
             Shell Global
           </Link>
@@ -104,10 +97,11 @@ export const FormExample = () => {
 }
 
 <ThemeProvider theme={theme.light}>
-  <div>
+  <Box my={5}>
     <NavBar />
-    <Flex flexDirection="row" mb={5}>
-      <Box mr={5} flex="none" width="50%">
+    <Box borderBottom="1px solid #D9D9D9" mb={3}></Box>
+    <Flex flexDirection="row" pt={5} mb={3}>
+      <Box pr={4} flex="none" width="50%">
         <Heading variant="heading-4" mb={3}>
           Shell Design System
         </Heading>
@@ -127,12 +121,12 @@ export const FormExample = () => {
         </Button>
         <Text variant="caption">Shell copyright 2020</Text>
       </Box>
-      <Box mr={3} flex="none" width="50%">
+      <Box flex="none" width="50%">
         <AspectImage ratio={3 / 2} src={sampleImg} />
       </Box>
     </Flex>
     <Flex flexDirection="row" mb={4}>
-      <Box mr={5} flex="none" width="50%">
+      <Box pr={4} flex="none" width="50%">
         <Box bg="bg.secondary" p={4} mb={4}>
           <Flex alignItems="center" mb={4}>
             <Button variant="primary" mr={3}>
@@ -182,7 +176,7 @@ export const FormExample = () => {
           </FormControl.FieldSet>
         </Box>
       </Box>
-      <Box mr={3} flex="none" width="50%">
+      <Box flex="none" width="50%">
         <Box bg="bg.secondary" mb={4} p={4}>
           <FormControl.Field mb={4}>
             <Label htmlFor="zip-code" required>
@@ -235,5 +229,5 @@ export const FormExample = () => {
         </Box>
       </Box>
     </Flex>
-  </div>
+  </Box>
 </ThemeProvider>

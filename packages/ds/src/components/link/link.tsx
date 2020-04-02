@@ -96,8 +96,8 @@ const linkVariants = variant({
       lineHeight: 'copy',
       textDecoration: 'none',
       position: 'relative',
+      paddingBottom: 1,
       ':hover': {
-        color: 'blue',
         borderBottom: '3px solid yellow',
         borderColor: 'brand.primary',
       },
