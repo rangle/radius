@@ -1,0 +1,225 @@
+import { useState, useRef } from 'react';
+import { Meta, Subtitle, Preview, Story } from '@storybook/addon-docs/blocks';
+import { ThemeProvider } from 'styled-components';
+import { Box, Flex, Text, Heading, Icons, Button, TextArea, Label, Input, FormControl, Checkbox, AspectImage, Image, Link } from './components';
+import theme from './theme';
+import sampleImg from './imgs/img.png';
+import logoImg from './imgs/Shell_logo.svg';
+
+<Meta title="Shell" />
+
+# Shell
+
+<Subtitle>Radius applied for Shell</Subtitle>
+
+export const NavBar = () => {
+  const styles = {
+    color: 'blue',
+    'hover': {
+      color: 'red',
+    },
+  };
+  return (
+    <Box as="nav" bg="bg.primary" px={3} py={2} mb={4}>
+      <Flex flexDirection="row" height={3} justifyContent="space-between" alignItems="center">
+        <Image 
+          flex="none"
+          width={3}
+          src={logoImg}/>
+        <Flex>
+          <Link
+            href='/'
+            fontWeight="regular"
+            variant="shellNav"
+            ml={3}
+            // style={styles}
+            >
+            Inside Energy
+          </Link>
+          <Link
+            href='/'
+            fontWeight="regular"
+            variant="nav3"
+            ml={3}>
+            About Us
+          </Link>
+          <Link
+            href='/'
+            fontWeight="regular"
+            variant="nav3"
+            ml={3}>
+            Investors
+          </Link>
+          <Link
+            href='/'
+            fontWeight="regular"
+            variant="nav3"
+            ml={3}>
+            Media
+          </Link>
+          <Link
+            href='/'
+            fontWeight="regular"
+            variant="nav3"
+            ml={3}>
+            Shell Global
+          </Link>
+        </Flex>
+      </Flex>
+    </Box>
+  )
+}
+
+export const FormExample = () => {
+  const [query, setQuery] = useState('');
+  const searchInput = useRef(null);
+  function handleClear() {
+    setQuery('');
+    searchInput.current.focus();
+  }
+  return (
+    <FormControl.Field>
+      <Label htmlFor="search">Find a Location</Label>
+      <Input
+        id="search"
+        ref={searchInput}
+        aria-describedby="helper-text"
+        placeholder="Search"
+        value={query}
+        onChange={e => setQuery(e.target.value)}
+        leftIcon={<Icons.Search aria-hidden />}
+        rightIcon={
+          query && (
+            <Button variant="transparent" p={0} onClick={handleClear}>
+              <Icons.Close title="clear" color="brand.primary" />
+            </Button>
+          )
+        }
+      />
+      <FormControl.Hint id="helper-text">
+        Search by city, address, or postal code
+      </FormControl.Hint>
+    </FormControl.Field>
+  )
+}
+
+<ThemeProvider theme={theme.light}>
+  <div>
+    <NavBar />
+    <Box mb={6}>
+      <FormExample/>
+    </Box>
+    <Flex flexDirection="row" mb={5}>
+      <Box mr={5} flex="none" width="50%">
+        <Heading variant="heading-4" mb={3}>
+          Shell Design System
+        </Heading>
+        <Text variant="body" mb={4}>
+          Shell is a global group of energy and petrochemical companies
+          with an average of 86,000 employees in more than 70 countries.
+          Shell uses advanced technologies and take an innovative
+          approach to help build a sustainable energy future.
+        </Text>
+        <Button
+          variant="primary"
+          mr={3}
+          mb={2}
+          rightIcon={<Icons.Visibility aria-hidden />}
+        >
+          Learn more
+        </Button>
+        <Text variant="caption">Shell copyright 2020</Text>
+      </Box>
+      <Box mr={3} flex="none" width="50%">
+        <AspectImage ratio={3 / 2} src={sampleImg} />
+      </Box>
+    </Flex>
+    <Flex flexDirection="row" mb={4}>
+      <Box mr={5} flex="none" width="50%">
+        <Box bg="bg.secondary" p={4} mb={4}>
+          <Flex alignItems="center" mb={4}>
+            <Button variant="primary" mr={3}>
+              Primary
+            </Button>
+            <Button
+              variant="primary"
+              leftIcon={<Icons.Visibility aria-hidden />}
+              mr={3}
+            >
+              Left Icon
+            </Button>
+            <Button variant="primary" isLoading>
+              Loading
+            </Button>
+          </Flex>
+          <Flex alignItems="center">
+            <Button variant="secondary" mr={3}>
+              Secondary
+            </Button>
+            <Button
+              variant="secondary"
+              mr={3}
+              leftIcon={<Icons.Visibility aria-hidden />}
+            >
+              Left Icon
+            </Button>
+            <Button variant="secondary" isLoading>
+              Loading
+            </Button>
+          </Flex>
+        </Box>
+        <Box bg="bg.secondary" p={4}>
+          <FormControl.FieldSet mb={4}>
+            <Label as="legend" htmlFor="pizza-toppings" required>
+              Pizza Toppings
+            </Label>
+            <Checkbox
+              id="pizza-toppings"
+              aria-describedby="topping-price"
+              label="Ezzo Pepperoni"
+            />
+            <Checkbox
+              id="pizza-toppings"
+              aria-describedby="topping-price"
+              label="Chorizo"
+            />
+            <Checkbox
+              id="pizza-toppings"
+              disabled
+              aria-describedby="topping-price"
+              label="Salami"
+            />
+            <Checkbox
+              id="terms"
+              aria-describedby="error-text"
+              label="I agree to the terms and conditions."
+              error
+            />
+            <FormControl.Error id="error-text">
+              Please agree to the terms and conditions
+            </FormControl.Error>
+          </FormControl.FieldSet>
+        </Box>
+      </Box>
+      <Box mr={3} flex="none" width="50%" bg="bg.secondary" p={4} mb={4}>
+        <TextArea placeholder="Placeholder text..." maxCharacters={100} />
+        <TextArea
+          value="Typed in text looks like this."
+          maxCharacters={100}
+        />
+        <TextArea
+          error
+          aria-invalid="true"
+          placeholder="Placeholder text..."
+          maxCharacters={100}
+        />
+        <TextArea
+          error
+          aria-invalid="true"
+          value="Text area with error"
+          maxCharacters={100}
+        />
+      </Box>
+    </Flex>
+  </div>
+</ThemeProvider>

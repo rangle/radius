@@ -57,7 +57,7 @@ export default {
         primary: '#FBCE07', // yellow
         secondary: '#DD1D21', // red
         accent: '#404040',
-        // muted: '#C6DAF7',
+        muted: '#C6DAF7',
       },
       ui: {
         primary: '#404040',

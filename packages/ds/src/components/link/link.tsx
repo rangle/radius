@@ -87,6 +87,31 @@ const linkVariants = variant({
         color: 'ui.secondary',
       },
     },
+    shellNav: {
+      fontFamily: 'heading',
+      fontSize: 1,
+      fontWeight: 'bold',
+      color: 'ui.primary',
+      lineHeight: 'copy',
+      textDecoration: 'none',
+      position: 'relative',
+      ':after': {
+        content: '',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        background: 'orange',
+        transition: 'height 0.3s ease',
+        height: 0,
+        width: '100%',
+      },
+      ':hover': {
+        color: 'blue',
+        '&:after': {
+          height: '5px',
+        },
+      },
+    },
   },
 });
 
