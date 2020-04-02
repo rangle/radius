@@ -20,8 +20,8 @@ export const fontSizes = [
 ];
 
 export const fontWeights = {
-  // regular: 400,
-  // medium: 500,
+  regular: 400,
+  medium: 600,
   bold: 700,
 };
 
@@ -75,9 +75,9 @@ export default {
       },
       text: {
         primary: '#404040',
-        secondary: '#FFFFFF',
+        secondary: '#404040',
         disabled: '#9C9C9C',
-        inverse: '#404040', //can we remove this?
+        inverse: '#fff',
         theme: '#404040',
         error: '#DD1D21',
         success: '#2FA569',

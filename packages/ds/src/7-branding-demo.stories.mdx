@@ -1,0 +1,227 @@
+import { useState, useRef } from 'react';
+import { Meta, Subtitle, Preview, Story } from '@storybook/addon-docs/blocks';
+import { ThemeProvider } from 'styled-components';
+import {
+  Box,
+  Flex,
+  Text,
+  Heading,
+  Icons,
+  Button,
+  TextArea,
+  Label,
+  Input,
+  FormControl,
+  Checkbox,
+  AspectImage,
+  Image,
+  Link,
+  Select,
+} from './components';
+import theme from './theme';
+import logoImg from './imgs/Shell_logo.svg';
+import aboutShell from './imgs/about-shell-retail-header.webp';
+
+<Meta title="Branding Demo" />
+
+# Shell
+
+<Subtitle>Shell branding applied to Radius</Subtitle>
+
+export const NavBar = () => {
+  return (
+    <Flex as="nav" bg="bg.primary" mb={3} alignItems="flex-end">
+      <Image
+        flex="none"
+        height={2}
+        mr={3}
+        alt="Home - Shell Global"
+        src={logoImg}
+      />
+      <Flex
+        flex="1 1 auto"
+        borderBottomWidth="1px"
+        borderBottomStyle="solid"
+        borderBottomColor="ui.quaternary"
+      >
+        <Link variant="nav1" href="/" ml="auto">
+          Inside Energy
+        </Link>
+        <Link variant="nav1" href="/">About Us</Link>
+        <Link variant="nav1" href="/">Investors</Link>
+        <Link variant="nav1" href="/">Media</Link>
+        <Link variant="nav1" href="/">Shell Global</Link>
+      </Flex>
+    </Flex>
+  );
+};
+
+export const FormExample = () => {
+  const [query, setQuery] = useState('Houston');
+  const searchInput = useRef(null);
+  function handleClear() {
+    setQuery('');
+    searchInput.current.focus();
+  }
+  return (
+    <FormControl.Field mb={4}>
+      <Label htmlFor="search">Find a Location</Label>
+      <Input
+        id="search"
+        ref={searchInput}
+        aria-describedby="helper-text"
+        placeholder="Search"
+        value={query}
+        onChange={e => setQuery(e.target.value)}
+        leftIcon={<Icons.Search aria-hidden />}
+        rightIcon={
+          query && (
+            <Button variant="transparent" p={0} onClick={handleClear}>
+              <Icons.Close title="clear" color="brand.primary" />
+            </Button>
+          )
+        }
+      />
+      <FormControl.Hint id="helper-text">
+        Search by city, address, or postal code
+      </FormControl.Hint>
+    </FormControl.Field>
+  );
+};
+
+<ThemeProvider theme={theme.light}>
+  <Box my={5}>
+    <NavBar />
+    <Flex flexDirection={['column', 'column', 'row']} alignItems="flex-start" my={5}>
+      <Box pr={4} flex="none" width={['100%', '100%', '50%']} order={[1, 1, 0]}>
+        <Heading variant="heading-4" mb={3}>
+          Becoming a Shell Licensee
+        </Heading>
+        <Text variant="body" mb={3}>
+          Every Shell Retail Licensee benefits from a unique combination of our global brand strength, winning fuels technology, convenience retail leadership, tailored operational support and trusted licensing experience.
+        </Text>
+        <Text variant="body" mb={3}>
+          Our proven expertise in mobility retailing means you have an expert by your side, every step of the way. We’ll offer all the support you need to help grow a new franchise operation from the ground up or convert your existing retail network to the Shell brand. It’s the reason 85% of our licensees are “very satisfied” and 90% would recommend Shell as a business partner<sup>1</sup>.
+        </Text>
+        <Button rightIcon={<Icons.Info aria-hidden />} variant="secondary" py={3} px={[3, 3, 4]} mb={2}>
+          Learn more here
+        </Button>
+        <Text variant="caption" fontStyle="italic"><sup>1</sup>Shell Voice of Licensee survey, July 2018</Text>
+      </Box>
+      <Box flex="1 1 auto" mb={[3, 3, 0]}>
+        <Image alt="" src={aboutShell} width="100%" />
+      </Box>
+    </Flex>
+    <Flex flexDirection="row" my={5}>
+      <Box pr={4} flex="none" width="50%">
+        <Box bg="bg.secondary" p={4} mb={4}>
+          <Flex alignItems="center" mb={4}>
+            <Button variant="primary" mr={3}>
+              Primary
+            </Button>
+            <Button
+              variant="primary"
+              leftIcon={<Icons.CheckboxChecked aria-hidden />}
+              mr={3}
+            >
+              Left Icon
+            </Button>
+            <Button variant="primary" isLoading>
+              Loading
+            </Button>
+          </Flex>
+          <Flex alignItems="center">
+            <Button variant="secondary" mr={3}>
+              Secondary
+            </Button>
+            <Button
+              variant="secondary"
+              mr={3}
+              leftIcon={<Icons.Place aria-hidden />}
+            >
+              Left Icon
+            </Button>
+            <Button variant="secondary" isLoading>
+              Loading
+            </Button>
+          </Flex>
+        </Box>
+        <Box mb={4} bg="bg.secondary" p={4}>
+          <FormExample />
+          <FormControl.FieldSet>
+            <Label htmlFor="city" required>
+              City
+            </Label>
+            <Select id="city" defaultValue="Select a city" rightIcon={<Icons.Info color="text.primary" aria-hidden />}>
+              <option>Select a city</option>
+              <option>Toronto</option>
+              <option>Istanbul</option>
+              <option>Amsterdam</option>
+            </Select>
+          </FormControl.FieldSet>
+        </Box>
+        <Box bg="bg.secondary" p={4}>
+          <FormControl.FieldSet>
+            <Label htmlFor="terms" required>
+              Terms and Conditions
+            </Label>
+            <Checkbox id="terms" aria-describedby="error-text" label="I agree to the terms and conditions." error />
+            <FormControl.Error id="error-text">
+              Please agree to the terms and conditions
+            </FormControl.Error>
+          </FormControl.FieldSet>
+        </Box>
+      </Box>
+      <Box flex="none" width="50%">
+        <Box bg="bg.secondary" mb={4} p={4}>
+          <FormControl.Field mb={4}>
+            <Label htmlFor="zip-code" required>
+              Zip Code
+            </Label>
+            <Input
+              aria-describedby="helper-text"
+              id="zip-code"
+              placeholder="Zip Code"
+              value="20905"
+              rightIcon={<Icons.CheckCircle aria-hidden color="ui.success" />}
+            />
+            <FormControl.Hint id="helper-text">5 Digits</FormControl.Hint>
+          </FormControl.Field>
+          <FormControl.Field>
+            <Label htmlFor="zip-code-2" required>
+              Zip Code
+            </Label>
+            <Input
+              id="zip-code-2"
+              placeholder="Zip Code"
+              aria-describedby="helper-text-2 error-text-2"
+              error
+              rightIcon={<Icons.Error aria-hidden color="ui.error" />}
+            />
+            <FormControl.Hint id="helper-text-2">5 Digits</FormControl.Hint>
+            <FormControl.Error id="error-text-2">
+              Please enter a ZIP code
+            </FormControl.Error>
+          </FormControl.Field>
+        </Box>
+        <Box bg="bg.secondary" mb={4} p={4}>
+          <FormControl.Field mb={4}>
+            <Label htmlFor="review" required>
+              Feedback
+            </Label>
+            <TextArea id="feedback" value="" placeholder="Tell us your thoughts" maxCharacters={100} />
+          </FormControl.Field>
+          <FormControl.Field>
+            <Label htmlFor="feedback-3" required>
+              Feedback
+            </Label>
+            <TextArea id="feedback-3" value="Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet" aria-describedby="error-text" placeholder="Tell us your thoughts" maxCharacters={100} error />
+            <FormControl.Error id="error-text">
+              Please enter a maximum of 100 characters.
+            </FormControl.Error>
+          </FormControl.Field>
+        </Box>
+      </Box>
+    </Flex>
+  </Box>
+</ThemeProvider>

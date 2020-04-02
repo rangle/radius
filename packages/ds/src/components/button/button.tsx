@@ -80,10 +80,10 @@ const buttonVariants = variant({
     secondary: {
       ...defaultButtonStyles,
       bg: 'brand.secondary',
-      color: 'text.secondary',
+      color: 'text.inverse',
       borderColor: 'transparent',
       ' svg': {
-        color: 'text.secondary',
+        color: 'text.inverse',
       },
       '&:hover': {
         borderColor: 'brand.secondary',
