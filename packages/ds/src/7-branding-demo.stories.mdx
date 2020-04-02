@@ -112,8 +112,8 @@ export const FormExample = () => {
         <Image alt="" src={aboutShell} width="100%" />
       </Box>
     </Flex>
-    <Flex flexDirection="row" my={5}>
-      <Box pr={4} flex="none" width="50%">
+    <Flex flexDirection={['column', 'column', 'row']} my={5}>
+      <Box pr={4} flex="none" width={['100%', '100%', '50%']}>
         <Box bg="bg.secondary" p={4} mb={4}>
           <Flex alignItems="center" mb={4}>
             <Button variant="primary" mr={3}>
@@ -172,7 +172,7 @@ export const FormExample = () => {
           </FormControl.FieldSet>
         </Box>
       </Box>
-      <Box flex="none" width="50%">
+      <Box flex="none" width={['100%', '100%', '50%']}>
         <Box bg="bg.secondary" mb={4} p={4}>
           <FormControl.Field mb={4}>
             <Label htmlFor="zip-code" required>
