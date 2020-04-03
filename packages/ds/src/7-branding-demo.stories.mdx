@@ -30,7 +30,15 @@ import aboutShell from './imgs/about-shell-retail-header.webp';
 
 export const NavBar = () => {
   return (
-    <Flex as="nav" bg="bg.primary" mb={3} alignItems="flex-end">
+    <Flex
+      as="nav"
+      bg="bg.primary"
+      alignItems="flex-end"
+      mb={3}
+      py={[2, 2, 0]}
+      borderBottomWidth={['3px', '3px', 0]}
+      borderBottomStyle="solid"
+      borderBottomColor="brand.primary">
       <Image
         flex="none"
         height={2}
@@ -38,20 +46,47 @@ export const NavBar = () => {
         alt="Home - Shell Global"
         src={logoImg}
       />
-      <Flex
-        flex="1 1 auto"
-        borderBottomWidth="1px"
-        borderBottomStyle="solid"
-        borderBottomColor="ui.quaternary"
-      >
-        <Link variant="nav1" href="/" ml="auto">
-          Inside Energy
-        </Link>
-        <Link variant="nav1" href="/">About Us</Link>
-        <Link variant="nav1" href="/">Investors</Link>
-        <Link variant="nav1" href="/">Media</Link>
-        <Link variant="nav1" href="/">Shell Global</Link>
-      </Flex>
+      <Box flex="1 1 auto" display={['none', 'none', 'block']}>
+        <Flex
+          borderBottomWidth="1px"
+          borderBottomStyle="solid"
+          borderBottomColor="ui.quaternary"
+        >
+          <Link variant="nav1" href="/" ml="auto">
+            Inside Energy
+          </Link>
+          <Link variant="nav1" href="/">About Us</Link>
+          <Link variant="nav1" href="/">Investors</Link>
+          <Link variant="nav1" href="/">Media</Link>
+          <Link variant="nav1" href="/">Shell Global</Link>
+        </Flex>
+      </Box>
+      <Button
+        ml="auto"
+        mt={-2}
+        mb={-11}
+        variant="transparent"
+        display={['flex', 'flex', 'none']}
+        borderLeftColor="ui.tertiary"
+        borderLeftWidth="1px"
+        borderBottomWidth="3px"
+        borderBottomColor="ui.primary">
+        <Icons.Search title="clear" fontSize={4} color="ui.primary" />
+      </Button>
+      <Button
+        mt={-2}
+        mb={-11}
+        ml="-1px"
+        variant="transparent"
+        display={['flex', 'flex', 'none']}
+        borderLeftColor="ui.tertiary"
+        borderLeftWidth="1px"
+        borderRightColor="ui.tertiary"
+        borderRightWidth="1px"
+        borderBottomWidth="3px"
+        borderBottomColor="ui.primary">
+        <img src="https://icon.now.sh/menu/20/404040" />
+      </Button>
     </Flex>
   );
 };
@@ -113,35 +148,37 @@ export const FormExample = () => {
       </Box>
     </Flex>
     <Flex flexDirection={['column', 'column', 'row']} my={5}>
-      <Box pr={4} flex="none" width={['100%', '100%', '50%']}>
+      <Box mr={[0, 0, 4]} flex="none" width={['100%', '100%', '50%']}>
         <Box bg="bg.secondary" p={4} mb={4}>
-          <Flex alignItems="center" mb={4}>
-            <Button variant="primary" mr={3}>
+          <Flex alignItems="center" flexWrap="wrap">
+            <Button variant="primary" mr={3} mb={3}>
               Primary
             </Button>
             <Button
               variant="primary"
               leftIcon={<Icons.CheckboxChecked aria-hidden />}
               mr={3}
+              mb={3}
             >
               Left Icon
             </Button>
-            <Button variant="primary" isLoading>
+            <Button variant="primary" mb={3} isLoading>
               Loading
             </Button>
           </Flex>
-          <Flex alignItems="center">
-            <Button variant="secondary" mr={3}>
+          <Flex alignItems="center" flexWrap="wrap">
+            <Button variant="secondary" mr={3} mb={3}>
               Secondary
             </Button>
             <Button
               variant="secondary"
               mr={3}
+              mb={3}
               leftIcon={<Icons.Place aria-hidden />}
             >
               Left Icon
             </Button>
-            <Button variant="secondary" isLoading>
+            <Button variant="secondary" mb={3} isLoading>
               Loading
             </Button>
           </Flex>
@@ -160,7 +197,7 @@ export const FormExample = () => {
             </Select>
           </FormControl.FieldSet>
         </Box>
-        <Box bg="bg.secondary" p={4}>
+        <Box bg="bg.secondary" p={4} mb={4}>
           <FormControl.FieldSet>
             <Label htmlFor="terms" required>
               Terms and Conditions
@@ -215,7 +252,7 @@ export const FormExample = () => {
             <Label htmlFor="feedback-3" required>
               Feedback
             </Label>
-            <TextArea id="feedback-3" value="Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet" aria-describedby="error-text" placeholder="Tell us your thoughts" maxCharacters={100} error />
+            <TextArea id="feedback-3" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non accumsan lacus. Nullam ornare ipsum eget nisi gravida aliquet. Suspendisse vehicula tortor et nunc ullamcorper, ut molestie ipsum semper." aria-describedby="error-text" placeholder="Tell us your thoughts" maxCharacters={100} error />
             <FormControl.Error id="error-text">
               Please enter a maximum of 100 characters.
             </FormControl.Error>
