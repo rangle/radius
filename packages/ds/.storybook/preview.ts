@@ -3,6 +3,11 @@ import ThemeDecorator from './theme-decorator';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withA11y } from '@storybook/addon-a11y';
 
+// @ts-ignore
+window.STORYBOOK_GA_ID = 'UA-22315045-19';
+// @ts-ignore
+window.STORYBOOK_REACT_GA_OPTIONS = {}
+
 addDecorator(ThemeDecorator);
 addDecorator(withKnobs);
 addDecorator(withA11y);
