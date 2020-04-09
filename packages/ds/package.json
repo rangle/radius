@@ -18,7 +18,9 @@
     "prebuild-storybook": "yarn icons",
     "build-storybook": "build-storybook --docs",
     "chromatic": "CHROMATIC_APP_CODE=$CHROMATIC_APP_CODE chromatic --exit-zero-on-changes",
-    "icons": "svgr --template ./icon-template.js --index-template ./icon-index-template.js --ext tsx --icon --filename-case 'kebab' --title-prop --no-prettier --ref -d ./src/components/icons ./src/components/icons"
+    "icons": "svgr --template ./icon-template.js --index-template ./icon-index-template.js --ext tsx --icon --filename-case 'kebab' --title-prop --no-prettier --ref -d ./src/components/icons ./src/components/icons",
+    "dsm-storybook:publish": "dsm-storybook publish",
+    "dsm-storybook:preview": "dsm-storybook preview"
   },
   "peerDependencies": {
     "polished": ">=3.4.4",
@@ -71,5 +73,9 @@
     "tsdx": "^0.12.3",
     "tslib": "^1.10.0",
     "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "@invisionapp/dsm-storybook": "^0.0.128",
+    "@storybook/addon-options": "^5.3.18"
   }
 }
