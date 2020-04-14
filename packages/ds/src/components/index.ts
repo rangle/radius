@@ -13,6 +13,7 @@ export * from './label';
 export * from './input';
 export * from './text-area';
 export * from './checkbox';
+export * from './radio';
 export * from './button';
 export * from './form-control';
 export * from './select';
