@@ -13,10 +13,7 @@ export const FieldSet = styled(Grid).attrs({
 
 FieldSet.defaultProps = {
   border: 0,
-  pt: 0,
-  pr: 0,
-  pb: 0,
-  pl: 0,
+  p: 0,
   ml: 0,
   mr: 0,
 };

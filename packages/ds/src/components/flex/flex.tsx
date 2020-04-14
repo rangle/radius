@@ -9,7 +9,7 @@ import {
 } from 'styled-system';
 import { Box } from '../box';
 
-type FlexProps = SpaceProps &
+export type FlexProps = SpaceProps &
   ColorProps &
   LayoutProps &
   FlexboxProps &

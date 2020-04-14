@@ -17,7 +17,9 @@ import {
   Checkbox,
   FormControl,
   Select,
-  theme,
+  Radio,
+  Stack,
+  theme
 } from 'ds';
 import { Navigation } from './Navigation';
 import userImg from './imgs/user.png';
@@ -27,12 +29,12 @@ const navbarLinks = [
   { href: '#!', label: 'Home' },
   { href: '#!', label: 'Portfolios' },
   { href: '#!', label: 'Dashboard' },
-  { href: '#!', label: 'Teams' },
+  { href: '#!', label: 'Teams' }
 ];
 
 const userProfileData = {
   username: 'Rangle',
-  imageSource: userImg,
+  imageSource: userImg
 };
 
 const App: React.FC = () => {
@@ -192,10 +194,7 @@ const App: React.FC = () => {
               <Label htmlFor="location" required>
                 Location
               </Label>
-              <Select
-                defaultValue="Select a city"
-                name="city"
-              >
+              <Select defaultValue="Select a city" name="city">
                 <option>Select a city</option>
                 <option>Toronto</option>
                 <option>Istanbul</option>
@@ -217,6 +216,23 @@ const App: React.FC = () => {
               </Select>
             </FormControl.FieldSet>
           </Box>
+          <FormControl.FieldSet mb={3} p={3}>
+            <Label as="legend" htmlFor="my-input">
+              Legend
+            </Label>
+            <Radio name="my-input" label="Lorem ipsum dolor sit amet" />
+            <Radio name="my-input" label="Lorem ipsum dolor sit amet" />
+            <Radio name="my-input" label="Lorem ipsum dolor sit amet" />
+            <Radio name="my-input" label="Lorem ipsum dolor sit amet" />
+            <FormControl.Hint id="helper-text">Hint text</FormControl.Hint>
+            <FormControl.Error id="error-text">Error text</FormControl.Error>
+          </FormControl.FieldSet>
+          <Stack mx={3} mb={3} p={3} bg="bg.secondary" space={[4, 5, 6]}>
+            <Box bg="ui.primary" width={3} height={3} />
+            <Box bg="ui.primary" width={3} height={3} />
+            <Box bg="ui.primary" width={3} height={3} />
+            <Box bg="ui.primary" width={3} height={3} />
+          </Stack>
         </Box>
       </div>
     </ThemeProvider>
