@@ -1,5 +1,5 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
-import { Label, Checkbox, Select } from '../';
+import { Label, Checkbox, Radio } from '../';
 import { FormControl } from './';
 
 <Meta
@@ -26,10 +26,10 @@ For more info, see [WAI specifications](https://www.w3.org/WAI/tutorials/forms/)
   <Label as="legend" htmlFor="my-input">
     Legend
   </Label>
-  <Checkbox label="Lorem ipsum dolor sit amet" />
-  <Checkbox label="Lorem ipsum dolor sit amet" />
-  <Checkbox label="Lorem ipsum dolor sit amet" />
-  <Checkbox label="Lorem ipsum dolor sit amet" />
+  <Checkbox name="my-input" label="Lorem ipsum dolor sit amet" />
+  <Checkbox name="my-input" label="Lorem ipsum dolor sit amet" />
+  <Checkbox name="my-input" label="Lorem ipsum dolor sit amet" />
+  <Checkbox name="my-input" label="Lorem ipsum dolor sit amet" />
   <FormControl.Hint id="helper-text">Hint text</FormControl.Hint>
   <FormControl.Error id="error-text">Error text</FormControl.Error>
 </FormControl.FieldSet>
@@ -39,51 +39,39 @@ For more info, see [WAI specifications](https://www.w3.org/WAI/tutorials/forms/)
 
 <Preview>
   <Story name="checkbox">
-    <FormControl.FieldSet>
-      <Label as="legend" htmlFor="my-input">
-        Legend
-      </Label>
-      <Checkbox label="Lorem ipsum dolor sit amet" />
-      <Checkbox label="Lorem ipsum dolor sit amet" />
-      <Checkbox label="Lorem ipsum dolor sit amet" />
-      <Checkbox label="Lorem ipsum dolor sit amet" />
-      <FormControl.Hint id="helper-text">Hint text</FormControl.Hint>
-      <FormControl.Error id="error-text">Error text</FormControl.Error>
-    </FormControl.FieldSet>
+    {({ id }) => (
+      <FormControl.FieldSet pl={3} pr={3}>
+        <Label as="legend" htmlFor={id('my-input')}>
+          Legend
+        </Label>
+        <Checkbox name={id('my-input')} label="Lorem ipsum dolor sit amet" />
+        <Checkbox name={id('my-input')} label="Lorem ipsum dolor sit amet" />
+        <Checkbox name={id('my-input')} label="Lorem ipsum dolor sit amet" />
+        <Checkbox name={id('my-input')} label="Lorem ipsum dolor sit amet" />
+        <FormControl.Hint id={id('helper-text')}>Hint text</FormControl.Hint>
+        <FormControl.Error id={id('error-text')}>Error text</FormControl.Error>
+      </FormControl.FieldSet>
+    )}
   </Story>
 </Preview>
 
-#### With Select
+#### With Radio
 
 <Preview>
-  <Story name="select">
-    <FormControl.FieldSet>
-      <Label as="legend" htmlFor="my-input">
-        Legend
-      </Label>
-      <Select label="Lorem ipsum dolor sit amet" name="city" mb={3}>
-        <option>Select a city</option>
-        <option>Toronto</option>
-        <option>Istanbul</option>
-      </Select>
-      <Select label="Lorem ipsum dolor sit amet" name="city" mb={3}>
-        <option>Select a city</option>
-        <option>Toronto</option>
-        <option>Istanbul</option>
-      </Select>
-      <Select label="Lorem ipsum dolor sit amet" name="city" mb={3}>
-        <option>Select a city</option>
-        <option>Toronto</option>
-        <option>Istanbul</option>
-      </Select>
-      <Select label="Lorem ipsum dolor sit amet" name="city" mb={3}>
-        <option>Select a city</option>
-        <option>Toronto</option>
-        <option>Istanbul</option>
-      </Select>
-      <FormControl.Hint id="helper-text">Hint text</FormControl.Hint>
-      <FormControl.Error id="error-text">Error text</FormControl.Error>
-    </FormControl.FieldSet>
+  <Story name="radio">
+    {({ id }) => (
+      <FormControl.FieldSet>
+        <Label as="legend" htmlFor={id('my-input')}>
+          Legend
+        </Label>
+        <Radio name={id('my-input')} label="Lorem ipsum dolor sit amet" />
+        <Radio name={id('my-input')} label="Lorem ipsum dolor sit amet" />
+        <Radio name={id('my-input')} label="Lorem ipsum dolor sit amet" />
+        <Radio name={id('my-input')} label="Lorem ipsum dolor sit amet" />
+        <FormControl.Hint id={id('helper-text')}>Hint text</FormControl.Hint>
+        <FormControl.Error id={id('error-text')}>Error text</FormControl.Error>
+      </FormControl.FieldSet>
+    )}
   </Story>
 </Preview>
 

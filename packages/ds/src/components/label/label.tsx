@@ -9,6 +9,8 @@ type StyledLabelProps = {
   required?: boolean;
   /** A custom adornment to apply */
   adornment?: 'required' | string | JSX.Element;
+  /** HTML element to render */
+  as?: 'label' | 'legend';
 } & TypographyFunctionsProps;
 
 const StyledLabel = styled(Text)<StyledLabelProps>`
@@ -37,9 +39,9 @@ export type LabelProps = StyledComponentProps<
 >;
 
 export const Label = forwardRef<HTMLLabelElement, LabelProps>(
-  ({ children, ...props }, ref) => (
+  ({ children, as, ...props }, ref) => (
     <StyledLabel
-      as="label"
+      as={as}
       variant="label"
       ref={ref}
       color="text.primary"
@@ -47,7 +49,12 @@ export const Label = forwardRef<HTMLLabelElement, LabelProps>(
     >
       {children}
       {props.adornment && (
-        <Box display="inline" color="text.secondary" ml={1}>
+        <Box
+          display="inline-flex"
+          alignItems="center"
+          color="text.secondary"
+          ml={1}
+        >
           {props.adornment}
         </Box>
       )}
@@ -57,4 +64,5 @@ export const Label = forwardRef<HTMLLabelElement, LabelProps>(
 
 Label.defaultProps = {
   required: false,
+  as: 'label',
 };
