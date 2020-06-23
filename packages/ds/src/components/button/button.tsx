@@ -169,7 +169,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       mt={mt}
       ml={ml}
       mr={mr}
-      {...(isLoading ? { 'aria-label': 'loading' } : {})}
     >
       {isLoading && (
         <Spinner
