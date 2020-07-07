@@ -11,7 +11,7 @@ The Radius is an opinionated assemblage of open-source tools and libraries that 
 
 
 #### Are you using Radius? 
-We would love to hear about how you are using Radius or any feedback or feature requests. Drop us an email at [varun@rangle.io](mailto:varun@rangle.io)
+We would love to hear about how you are using Radius or any feedback or feature requests. Open an [issue](https://github.com/rangle/radius/issues/new).
 
 ### 🚀 Quick start
 
