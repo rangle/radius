@@ -27,7 +27,7 @@ function template(
       SVGSVGElement,
       React.SVGProps<SVGSVGElement> & { title?: any; }
     >(({ title, ...props }, svgRef) => {
-        const [titleId] = useState(() => uuid());
+        const [titleId] = useState(() => (title? uuid(): undefined));
 
         return (
           ${jsx}
