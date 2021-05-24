@@ -21,11 +21,11 @@
     "icons": "svgr --template ./icon-template.js --index-template ./icon-index-template.js --ext tsx --icon --filename-case 'kebab' --title-prop --no-prettier --ref -d ./src/components/icons ./src/components/icons"
   },
   "peerDependencies": {
+    "@styled-system/css": ">=5",
     "polished": ">=3.4.4",
     "react": ">=16",
     "styled-components": ">=5",
-    "styled-system": ">=5",
-    "@styled-system/css": ">=5"
+    "styled-system": ">=5"
   },
   "husky": {
     "hooks": {
@@ -55,7 +55,7 @@
     "@types/jest": "^25.1.1",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
-    "@types/styled-components": "^4.4.2",
+    "@types/styled-components": "5.1.7",
     "@types/styled-system": "^5.1.6",
     "babel-loader": "8.0.6",
     "camelcase": "^5.3.1",
