@@ -1,0 +1,278 @@
+import { useState, useRef } from 'react';
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import {
+  Box,
+  Icons,
+  Label,
+  Input,
+  Checkbox,
+  Button,
+  TextArea,
+  Radio,
+  Select,
+} from '../';
+import { FormControl } from './';
+
+<Meta title="Components/Forms/FormControl/Recipes" />
+
+# FormControl Recipes
+
+### Validation
+
+<Preview>
+  <Story name="validation">
+    {({id}) => (
+      <Box>
+        <FormControl.Field mb={4}>
+          <Label htmlFor={id('zip-code')} required>
+            Zip Code
+          </Label>
+          <Input
+            aria-describedby={id('helper-text-1')}
+            id={id('zip-code')}
+            placeholder="Zip Code"
+            value="20905"
+            rightIcon={<Icons.CheckCircle aria-hidden color="ui.success" />}
+          />
+          <FormControl.Hint id={id('helper-text-1')}>5 Digits</FormControl.Hint>
+        </FormControl.Field>
+        <FormControl.Field>
+          <Label htmlFor={id('zip-code-2')} required>
+            Zip Code
+          </Label>
+          <Input
+            id={id('zip-code-2')}
+            placeholder="Zip Code"
+            aria-describedby={`${id('helper-text-2')} ${id('error-text-2')}`}
+            error
+            rightIcon={<Icons.Error aria-hidden color="ui.error" />}
+          />
+          <FormControl.Hint id={id('helper-text-2')}>5 Digits</FormControl.Hint>
+          <FormControl.Error id={id('error-text-2')}>
+            Please enter a ZIP code
+          </FormControl.Error>
+        </FormControl.Field>
+      </Box>
+    )}
+  </Story>
+</Preview>
+
+### Optional Field
+
+<Preview>
+  <Story name="optional">
+    {({id}) => (
+      <Box>
+        <FormControl.Field mb={4}>
+          <Label htmlFor={id('optional')} adornment="(optional)">
+            Phone number
+          </Label>
+          <Input id={id('optional')} placeholder="Phone number" />
+        </FormControl.Field>
+      </Box>
+    )}
+  </Story>
+</Preview>
+
+### Location Search
+
+<Preview>
+  <Story name="location search">
+    {({ id }) => {
+      const [query, setQuery] = useState('');
+      const searchInput = useRef(null);
+      function handleClear() {
+        setQuery('');
+        searchInput.current.focus();
+      }
+      return (
+        <FormControl.Field>
+          <Label htmlFor={id('search')}>Find a Location</Label>
+          <Input
+            id={id('search')}
+            ref={searchInput}
+            aria-describedby={id('helper-text-3')}
+            placeholder="Search"
+            value={query}
+            onChange={e => setQuery(e.target.value)}
+            leftIcon={<Icons.Search aria-hidden />}
+            rightIcon={
+              query && (
+                <Button variant="transparent" p={0} onClick={handleClear}>
+                  <Icons.Close title="clear" color="brand.primary" />
+                </Button>
+              )
+            }
+          />
+          <FormControl.Hint id={id('helper-text-3')}>
+            Search by city, address, or postal code
+          </FormControl.Hint>
+        </FormControl.Field>
+      );
+    }}
+  </Story>
+</Preview>
+
+### TextArea
+
+<Preview>
+  <Story name="textarea">
+    {({ id }) => (
+      <Box>
+        <FormControl.Field mb={4}>
+          <Label htmlFor={id('review-1')} required>
+            Review
+          </Label>
+          <TextArea
+            id={id('review-1')}
+            value=""
+            placeholder="Tell us your thoughts"
+            maxCharacters={100}
+          />
+        </FormControl.Field>
+        <FormControl.Field mb={4}>
+          <Label htmlFor={id('review-2')} required>
+            Review
+          </Label>
+          <TextArea
+            id={id('review-2')}
+            value="I love these t-shirts! I bought four - they're just great basics."
+            placeholder="Tell us your thoughts"
+            maxCharacters={100}
+          />
+        </FormControl.Field>
+        <FormControl.Field>
+          <Label htmlFor={id('review-3')} required>
+            Review
+          </Label>
+          <TextArea
+            id={id('review-3')}
+            value="I love these t-shirts! I bought four - they're just great basics to have to wear with anything. My only issue is that they run small. I wear a 12-14 and normally fit in a L."
+            aria-describedby={id('error-text-review-3')}
+            placeholder="Tell us your thoughts"
+            maxCharacters={100}
+            error
+          />
+          <FormControl.Error id={id('error-text-review-3')}>
+            Please enter a maximum of 100 characters.
+          </FormControl.Error>
+        </FormControl.Field>
+      </Box>
+    )}
+  </Story>
+</Preview>
+
+### Checkbox
+
+<Preview>
+  <Story name="checkbox">
+    {({ id }) => (
+      <Box>
+        <FormControl.FieldSet mb={4}>
+          <Label as="legend" htmlFor={id('pizza-toppings')} required>
+            Pizza Toppings
+          </Label>
+          <Checkbox
+            name={id('pizza-topping')}
+            aria-describedby={id('topping-price')}
+            label="Ezzo Pepperoni"
+          />
+          <Checkbox
+            name={id('pizza-topping')}
+            aria-describedby={id('topping-price')}
+            label="Chorizo"
+          />
+          <Checkbox
+            name={id('pizza-topping')}
+            disabled
+            aria-describedby={id('topping-price')}
+            label="Salami"
+          />
+          <Checkbox
+            name={id('pizza-topping')}
+            aria-describedby={id('topping-price')}
+            label="Fior De Latte"
+          />
+          <Checkbox
+            name={id('pizza-topping')}
+            aria-describedby={id('topping-price')}
+            label="Asiago"
+          />
+          <Checkbox
+            name={id('pizza-topping')}
+            aria-describedby={id('topping-price')}
+            label="Smoled Mozzarella"
+          />
+          <Checkbox
+            name={id('pizza-topping')}
+            aria-describedby={id('topping-price')}
+            label="Arugula"
+          />
+          <Checkbox
+            name={id('pizza-topping')}
+            aria-describedby={id('topping-price')}
+            label="Pineapple"
+          />
+          <FormControl.Hint id={id('topping-price')}>
+            $0.75 per topping
+          </FormControl.Hint>
+        </FormControl.FieldSet>
+        <FormControl.FieldSet>
+          <Label htmlFor={id('terms')} required>
+            Terms and Conditions
+          </Label>
+          <Checkbox
+            id={id('term')}
+            aria-describedby={id('terms-error-text')}
+            label="I agree to the terms and conditions."
+            error
+          />
+          <FormControl.Error id={id('terms-error-text')}>
+            Please agree to the terms and conditions
+          </FormControl.Error>
+        </FormControl.FieldSet>
+      </Box>
+    )}
+  </Story>
+</Preview>
+
+### Radio
+
+<Preview>
+  <Story name="radio">
+    {({ id }) => (
+      <Box>
+        <FormControl.FieldSet mb={4}>
+          <Label as="legend" htmlFor={id('rating')} adornment="(optional)">
+            I would recommend this service to others
+          </Label>
+          <Radio name={id('rating')} label="Strongly Agree" />
+          <Radio name={id('rating')} label="Agree" />
+          <Radio name={id('rating')} label="Neutral" />
+          <Radio name={id('rating')} label="Disagree" />
+          <Radio name={id('rating')} label="Strongly Disagree" />
+        </FormControl.FieldSet>
+        <FormControl.FieldSet>
+          <Label htmlFor={id('employed')} required>
+            Are you currently employed full-time?
+          </Label>
+          <Radio
+            name={id('employed')}
+            aria-describedby={id('employed-error-text')}
+            label="Yes"
+            error
+          />
+          <Radio
+            name={id('employed')}
+            aria-describedby={id('employed-error-text')}
+            label="No"
+            error
+          />
+          <FormControl.Error id={id('employed-error-text')}>
+            Please select an answer
+          </FormControl.Error>
+        </FormControl.FieldSet>
+      </Box>
+    )}
+  </Story>
+</Preview>

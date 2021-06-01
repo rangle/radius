@@ -1,0 +1,189 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { Button } from './button';
+import { Heading } from '../heading';
+import { Box, Icons, Flex } from '../';
+
+<Meta title="Components/Button" component={Button} />
+
+# Basic button component
+
+Primitive button component with primary, secondary & transparent variants
+
+### Primary
+
+<Preview withToolbar>
+  <Story name="primary">
+    <Box>
+      <Flex mb={3}>
+        <Button variant="primary" mr={3}>
+          Primary
+        </Button>
+        <Button variant="primary" mr={3} disabled>
+          Disabled
+        </Button>
+        <Button variant="primary" isLoading>
+          Loading
+        </Button>
+      </Flex>
+      <Flex mb={3}>
+        <Button variant="primary" mr={3}>
+          Flexible Width
+        </Button>
+        <Button variant="primary" width={200}>
+          Fixed Width
+        </Button>
+      </Flex>
+      <Flex mb={3}>
+        <Button
+          variant="primary"
+          leftIcon={<Icons.Visibility aria-hidden />}
+          mr={3}>
+          Left Icon
+        </Button>
+        <Button
+          variant="primary"
+          mr={3}
+          rightIcon={<Icons.Visibility aria-hidden />}>
+          Right Icon
+        </Button>
+        <Button
+          variant="primary"
+          leftIcon={<Icons.Info aria-hidden />}
+          rightIcon={<Icons.Info aria-hidden />}>
+          Both Icons
+        </Button>
+      </Flex>
+    </Box>
+  </Story>
+</Preview>
+
+### Secondary
+
+<Preview withToolbar>
+  <Story name="secondary">
+    <Box>
+      <Flex mb={3}>
+        <Button variant="secondary" mr={3}>Secondary</Button>
+        <Button variant="secondary" mr={3} disabled>
+          Disabled
+        </Button>
+        <Button variant="secondary" isLoading>
+          Loading
+        </Button>
+      </Flex>
+      <Flex mb={3}>
+        <Button variant="secondary" mr={3}>
+          Flexible Width
+        </Button>
+        <Button variant="secondary" width={200}>
+          Fixed Width
+        </Button>
+      </Flex>
+      <Flex mb={3}>
+        <Button
+          variant="secondary"
+          mr={3}
+          leftIcon={<Icons.Visibility aria-hidden />}>
+          Left Icon
+        </Button>
+        <Button
+          variant="secondary"
+          mr={3}
+          rightIcon={<Icons.Search aria-hidden />}>
+          Right Icon
+        </Button>
+        <Button
+          variant="secondary"
+          leftIcon={<Icons.Info aria-hidden />}
+          rightIcon={<Icons.Info aria-hidden />}>
+          Both Icons
+        </Button>
+      </Flex>
+    </Box>
+  </Story>
+</Preview>
+
+### Transparent
+
+<Preview withToolbar>
+  <Story name="transparent">
+    <Box>
+      <Flex mb={3}>
+        <Button variant="transparent" mr={3}>
+          Transparent
+        </Button>
+        <Button variant="transparent" mr={3} disabled>
+          Disabled
+        </Button>
+        <Button variant="transparent" isLoading>
+          Loading
+        </Button>
+      </Flex>
+      <Flex mb={3}>
+        <Button variant="transparent" mr={3}>
+          Flexible Width
+        </Button>
+        <Button variant="transparent" width={200}>
+          Fixed Width
+        </Button>
+      </Flex>
+      <Flex mb={3}>
+        <Button
+          variant="transparent"
+          mr={3}
+          leftIcon={<Icons.Visibility aria-hidden />}>
+          Left Icon
+        </Button>
+        <Button
+          variant="transparent"
+          mr={3}
+          rightIcon={<Icons.Search aria-hidden />}>
+          Right Icon
+        </Button>
+        <Button
+          variant="transparent"
+          leftIcon={<Icons.Info aria-hidden />}
+          rightIcon={<Icons.Info aria-hidden />}>
+          Both Icons
+        </Button>
+      </Flex>
+    </Box>
+  </Story>
+</Preview>
+
+### Accessibility
+
+You may provide labelling alternatives for use with assistive-technologies (AT) using wai-aria attributes.
+Below is a table of commonly used `aria-attributes` for labelling elements.
+
+Click the attribute in the table below for more information.
+
+<Box mb={4}>
+  <Flex flexDirection="column">
+
+Attribute | Description
+--- | ---
+<nobr>[**`aria-label`**](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-label)</nobr> | Provide an accessible name for situations when there is no visible label due to a chosen design approach or layout but the context and visual appearance of the control make its purpose clear.
+<nobr>[**`aria-labelledby`**](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-labelledby)</nobr> | Associate an element with text that is visible elsewhere on the page by using an ID reference value that matches the ID attribute of the labeling element.
+<nobr>[**`aria-describedby`**](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-describedby)</nobr> | Provide programmatically determined, descriptive information about a user interface element.
+
+#### Code Examples 
+
+```jsx
+<Button aria-label="Open the Modal">Open</Button>
+
+<span id='close-label'>Close the Modal</span>
+<Button aria-labelledby="close-label"><img src="./x-btn.png" /></Button>
+
+<Button aria-describedby="desc-label-1, desc-label-2">OK</Button>
+<span id='desc-label-1'>You acknowledge this notice.</span>
+<span id='desc-label-2'>Close the Modal</span>
+```
+
+
+  </Flex>
+</Box>
+
+## Component Props
+
+<Props of={Button} />

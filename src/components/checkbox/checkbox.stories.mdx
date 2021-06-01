@@ -1,0 +1,94 @@
+import {
+  Meta,
+  Subtitle,
+  Story,
+  Props,
+  Preview,
+} from '@storybook/addon-docs/blocks';
+import { useState } from 'react';
+import { Box } from '../';
+import { Checkbox } from './checkbox';
+
+<Meta title="Components/Forms/Checkbox" component={Checkbox} />
+
+# Checkbox
+
+Form checkbox input component with a label wrapper
+
+#### Default
+
+<Preview>
+  <Story name="default">
+    {() => {
+      const [value, setValue] = useState(true);
+      return (
+        <Box>
+          <Checkbox mb={2} label="Option" />
+          <Checkbox
+            mb={2}
+            checked={value}
+            value="option 1"
+            onChange={e => {
+              setValue(e.target.checked);
+            }}
+            label="Option"
+          />
+        </Box>
+      );
+    }}
+  </Story>
+</Preview>
+
+#### Disabled
+
+<Preview>
+  <Story name="disabled">
+    {() => {
+      const [value, setValue] = useState(true);
+      return (
+        <Box>
+          <Checkbox mb={2} disabled label="Option" />
+          <Checkbox
+            mb={2}
+            disabled
+            checked={value}
+            value="option 1"
+            onChange={e => {
+              setValue(e.target.checked);
+            }}
+            label="Option"
+          />
+        </Box>
+      );
+    }}
+  </Story>
+</Preview>
+
+#### Error
+
+<Preview>
+  <Story name="error">
+    {() => {
+      const [value, setValue] = useState(true);
+      return (
+        <Box>
+          <Checkbox mb={2} error label="Option" />
+          <Checkbox
+            mb={2}
+            error
+            checked={value}
+            value="option 1"
+            onChange={e => {
+              setValue(e.target.checked);
+            }}
+            label="Option"
+          />
+        </Box>
+      );
+    }}
+  </Story>
+</Preview>
+
+## Component Props
+
+<Props of={Checkbox} />

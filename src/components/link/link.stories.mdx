@@ -1,0 +1,52 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { Flex, Text } from '../';
+import { Link } from './link';
+
+<Meta title="Components/Link" component={Link} />
+
+export const Variant = props => (
+  <Text
+    variant="hint"
+    fontSize={1}
+    color="text.secondary"
+    width={4}
+    mr={0}
+    my={0}
+    {...props}
+  />
+);
+
+# Link
+
+Link component, defaults to `<a>`. Use the `as` prop to set the correct HTML element independent from styling.
+
+<Preview withToolbar>
+  <Story name="link">
+    <Flex flexDirection="column">
+      <Flex alignItems="baseline" mb={3}>
+        <Variant>default</Variant>
+        <Link href='#!' variant="default">You know nothing, Jon Snow</Link>
+      </Flex>
+      <Flex alignItems="baseline" mb={3}>
+        <Variant>inline</Variant>
+        <Link href='#!' variant="inline">You know nothing, Jon Snow</Link>
+      </Flex>
+      <Flex alignItems="baseline" mb={3}>
+        <Variant>Navigation 01</Variant>
+        <Link href='#!' variant="nav1">You know nothing, Jon Snow</Link>
+      </Flex>
+      <Flex alignItems="baseline" mb={3}>
+        <Variant>Navigation 02</Variant>
+        <Link href='#!' variant="nav2">You know nothing, Jon Snow</Link>
+      </Flex>
+      <Flex alignItems="baseline" mb={3}>
+        <Variant>Navigation 03</Variant>
+        <Link href='#!' variant="nav3">You know nothing, Jon Snow</Link>
+      </Flex>
+    </Flex>
+  </Story>
+</Preview>
+
+## Component Props
+
+<Props of={Link} />

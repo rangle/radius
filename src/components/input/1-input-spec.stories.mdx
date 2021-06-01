@@ -1,0 +1,166 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { Box, Icons } from '../';
+import { Input } from './input';
+
+<Meta
+  title="Components/Forms/Input/Spec"
+  component={Input}
+  parameters={{
+    a11y: {
+      config: {
+        rules: [{ id: 'label', enabled: false }],
+      },
+    },
+  }}
+/>
+
+# Input
+
+Form input component
+
+#### Default
+
+<Preview withToolbar>
+  <Story name="default">
+    <Box>
+      <Input placeholder="Placeholder Text" mb={4} />
+      <Input
+        placeholder="Placeholder Text"
+        leftIcon={<Icons.Search aria-hidden />}
+        mb={4}
+      />
+      <Input
+        placeholder="Placeholder Text"
+        rightIcon={<Icons.Close color="brand.primary" aria-hidden />}
+        mb={4}
+      />
+      <Input
+        placeholder="Placeholder Text"
+        leftIcon={<Icons.Search aria-hidden />}
+        rightIcon={<Icons.Close color="brand.primary" aria-hidden />}
+        mb={4}
+      />
+      <Input
+        value="Inputted text"
+        leftIcon={<Icons.Search aria-hidden />}
+        rightIcon={<Icons.Close color="brand.primary" aria-hidden />}
+        mb={4}
+      />
+    </Box>
+  </Story>
+</Preview>
+
+#### Disabled
+
+<Preview withToolbar>
+  <Story name="disabled">
+    <Box>
+      <Input disabled placeholder="Placeholder Text" mb={4} />
+      <Input
+        disabled
+        placeholder="Placeholder Text"
+        leftIcon={<Icons.Search aria-hidden />}
+        mb={4}
+      />
+      <Input
+        disabled
+        placeholder="Placeholder Text"
+        rightIcon={<Icons.Close color="brand.primary" aria-hidden />}
+        mb={4}
+      />
+      <Input
+        disabled
+        placeholder="Placeholder Text"
+        leftIcon={<Icons.Search aria-hidden />}
+        rightIcon={<Icons.Close color="brand.primary" aria-hidden />}
+        mb={4}
+      />
+      <Input
+        disabled
+        value="Inputted text"
+        leftIcon={<Icons.Search aria-hidden />}
+        rightIcon={<Icons.Close color="brand.primary" aria-hidden />}
+      />
+    </Box>
+  </Story>
+</Preview>
+
+#### Read Only
+
+<Preview withToolbar>
+  <Story name="read only">
+    <Box>
+      <Input readOnly={true} value="" placeholder="Placeholder Text" mb={4} />
+      <Input
+        readOnly={true}
+        value=""
+        placeholder="Placeholder Text"
+        leftIcon={<Icons.Search aria-hidden />}
+        mb={4}
+      />
+      <Input
+        readOnly={true}
+        value=""
+        placeholder="Placeholder Text"
+        rightIcon={<Icons.Close color="brand.primary" aria-hidden />}
+        mb={4}
+      />
+      <Input
+        readOnly={true}
+        value=""
+        placeholder="Placeholder Text"
+        leftIcon={<Icons.Search aria-hidden />}
+        rightIcon={<Icons.Close color="brand.primary" aria-hidden />}
+        mb={4}
+      />
+      <Input
+        readOnly={true}
+        value="Inputted text"
+        leftIcon={<Icons.Search aria-hidden />}
+        rightIcon={<Icons.Close color="brand.primary" aria-hidden />}
+      />
+    </Box>
+  </Story>
+</Preview>
+
+#### Error
+
+<Preview withToolbar>
+  <Story name="error">
+    <Box>
+      <Input error value="" placeholder="Placeholder Text" mb={4} />
+      <Input
+        error
+        value=""
+        placeholder="Placeholder Text"
+        leftIcon={<Icons.Search aria-hidden />}
+        mb={4}
+      />
+      <Input
+        error
+        value=""
+        placeholder="Placeholder Text"
+        rightIcon={<Icons.Close color="brand.primary" aria-hidden />}
+        mb={4}
+      />
+      <Input
+        error
+        value=""
+        placeholder="Placeholder Text"
+        leftIcon={<Icons.Search aria-hidden />}
+        rightIcon={<Icons.Close color="brand.primary" aria-hidden />}
+        mb={4}
+      />
+      <Input
+        error
+        value="Inputted text"
+        leftIcon={<Icons.Search aria-hidden />}
+        rightIcon={<Icons.Close color="brand.primary" aria-hidden />}
+      />
+    </Box>
+  </Story>
+</Preview>
+
+## Component Props
+
+<Props of={Input} />

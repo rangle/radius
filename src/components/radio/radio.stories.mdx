@@ -1,0 +1,117 @@
+import {
+  Meta,
+  Subtitle,
+  Props,
+  Story,
+  Preview,
+} from '@storybook/addon-docs/blocks';
+import { useState } from 'react';
+import { Box } from '../';
+import { Radio } from './radio';
+
+<Meta title="Components/Forms/Radio" component={Radio} />
+
+# Radio
+
+Form Radio input component with a label wrapper
+
+#### Default
+
+<Preview>
+  <Story name="default">
+    {({ id }) => {
+      const [value, setValue] = useState('option1');
+      return (
+        <Box>
+          <Radio
+            mb={2}
+            name={id('rd-default')}
+            label="Option 1"
+            value="option1"
+            checked={value === 'option1'}
+            onChange={e => {
+              setValue(e.target.value);
+            }}
+          />
+          <Radio
+            name={id('rd-default')}
+            label="Option 2"
+            value="option2"
+            checked={value === 'option2'}
+            onChange={e => {
+              setValue(e.target.value);
+            }}
+          />
+        </Box>
+      );
+    }}
+  </Story>
+</Preview>
+
+#### Disabled
+
+<Preview>
+  <Story name="disabled">
+    {({ id }) => {
+      const [value, setValue] = useState(true);
+      return (
+        <Box>
+          <Radio
+            name={id('rd-disabled')}
+            mb={2}
+            label="Option 1"
+            value="option1"
+            disabled
+          />
+          <Radio
+            name={id('rd-disabled')}
+            mb={2}
+            label="Option 2"
+            value="option2"
+            disabled
+            checked={value}
+            onChange={e => {
+              setValue(e.target.checked);
+            }}
+          />
+        </Box>
+      );
+    }}
+  </Story>
+</Preview>
+
+#### Error
+
+<Preview>
+  <Story name="error">
+    {({ id }) => {
+      const [value, setValue] = useState(true);
+      return (
+        <Box>
+          <Radio
+            name={id('rd-error')}
+            mb={2}
+            label="Option 1"
+            value="option1"
+            error
+          />
+          <Radio
+            name={id('rd-error')}
+            mb={2}
+            label="Option 2"
+            value="option2"
+            error
+            checked={value}
+            onChange={e => {
+              setValue(e.target.checked);
+            }}
+          />
+        </Box>
+      );
+    }}
+  </Story>
+</Preview>
+
+## Component Props
+
+<Props of={Radio} />

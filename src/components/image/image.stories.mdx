@@ -1,0 +1,27 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { Image } from './image';
+import sampleImg from '../../imgs/img.png';
+import userImg from '../../imgs/user.png';
+import heartsTriangles from '../../imgs/hearts_triangles.png';
+
+<Meta title="Components/Image" component={Image} />
+
+# Image
+
+Image creates an image with two variants, `default` or `avatar`.
+
+<Preview withToolbar>
+  <Story name="default">
+    <Image src={sampleImg} maxWidth={600} />
+  </Story>
+</Preview>
+
+<Preview withToolbar>
+  <Story name="avatar">
+    <Image src={userImg} variant="avatar" />
+  </Story>
+</Preview>
+
+## Component Props
+
+<Props of={Image} />

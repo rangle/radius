@@ -1,0 +1,104 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { Box, Text, Icons, Label, Input, TextArea, Select } from '../';
+import { FormControl } from './';
+
+<Meta
+  title="Components/Forms/FormControl/Field"
+  component={FormControl.Field}
+/>
+
+# Field
+
+Form field component, an extension of the `Grid` component, that groups a label, an input, help and error messaged.
+
+### Providing Instructions
+
+For simple use cases, providing instructions within labels may be sufficient For more complex scenarios you can provide instructions outside of labels using `aria-describedby`. This allows more flexible positioning and design, but sometimes it can be missed.
+
+For more info, see [WAI specifications](https://www.w3.org/WAI/tutorials/forms/) for forms
+
+```jsx
+<FormControl.Field>
+  <Label htmlFor="my-input" required>
+    Label text
+  </Label>
+  <Input
+    id="my-input"
+    placeholder="Placeholder Text"
+    aria-describedby="helper-text error-text"
+  />
+  <FormControl.Hint id="helper-text">Hint text</FormControl.Hint>
+  <FormControl.Error id="error-text">Error text</FormControl.Error>
+</FormControl.Field>
+```
+
+#### With Input
+
+<Preview>
+  <Story name="input">
+    {({ id }) => (
+      <FormControl.Field>
+        <Label htmlFor={id('my-input')} required>
+          Label text
+        </Label>
+        <Input
+          placeholder="Placeholder Text"
+          id={id('my-input')}
+          aria-describedby={`${id('helper-text')} ${id('error-text')}`}
+        />
+        <FormControl.Hint id={id('helper-text')}>Hint text</FormControl.Hint>
+        <FormControl.Error id={id('error-text')}>Error text</FormControl.Error>
+      </FormControl.Field>
+    )}
+  </Story>
+</Preview>
+
+#### With TextArea
+
+<Preview>
+  <Story name="textarea">
+   { ({ id }) => (
+     <FormControl.Field>
+      <Label htmlFor={id('my-textarea')} required>
+        Label text
+      </Label>
+      <TextArea
+        placeholder="Tell us your thoughts"
+        maxCharacters={100}
+        id={id('my-textarea')}
+        aria-describedby={`${id('helper-text')} ${id('error-text')}`}
+      />
+      <FormControl.Hint id={id('helper-text')}>Hint text</FormControl.Hint>
+      <FormControl.Error id={id('error-text')}>Error text</FormControl.Error>
+    </FormControl.Field>
+    )}
+  </Story>
+</Preview>
+
+#### With Select
+
+<Preview>
+  <Story name="select">
+    {({ id }) => (
+      <FormControl.Field>
+        <Label htmlFor={id('my-input')}>
+          Legend
+        </Label>
+        <Select
+          id={id('my-input')}
+          label="Lorem ipsum dolor sit amet"
+          aria-describedby={`${id('helper-text')} ${id('error-text')}`}>
+          <option>Select a city</option>
+          <option>Toronto</option>
+          <option>Istanbul</option>
+        </Select>
+        <FormControl.Hint id={id('helper-text')}>Hint text</FormControl.Hint>
+        <FormControl.Error id={id('error-text')}>Error text</FormControl.Error>
+      </FormControl.Field>
+    )}
+  </Story>
+</Preview>
+
+## Component Props
+
+<Props of={FormControl.Field} />

@@ -1,0 +1,80 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { Label, Checkbox, Radio } from '../';
+import { FormControl } from './';
+
+<Meta
+  title="Components/Forms/FormControl/FieldSet"
+  component={FormControl.FieldSet}
+/>
+
+# FieldSet
+
+Form fieldset component, an extension of the `Grid` component, that groups a legend with radios or checkboxes and help & error messages.
+
+Grouping related form controls makes forms more understandable for all users, as related controls are easier to identify. It also makes it easier for people to focus on smaller and more manageable groups rather than try to grasp the entire form at once.
+
+The `<FormControl.FieldSet>` component provides a container for related form controls, and the `<Label as="legend">` component acts as a heading to identify the group.
+
+### Providing Instructions
+
+For simple use cases, providing instructions within labels may be sufficient. For more complex scenarios you can provide instructions outside of labels using `aria-describedby`. This allows more flexible positioning and design, but sometimes it can be missed.
+
+For more info, see [WAI specifications](https://www.w3.org/WAI/tutorials/forms/) for forms
+
+```jsx
+<FormControl.FieldSet>
+  <Label as="legend" htmlFor="my-input">
+    Legend
+  </Label>
+  <Checkbox name="my-input" label="Lorem ipsum dolor sit amet" />
+  <Checkbox name="my-input" label="Lorem ipsum dolor sit amet" />
+  <Checkbox name="my-input" label="Lorem ipsum dolor sit amet" />
+  <Checkbox name="my-input" label="Lorem ipsum dolor sit amet" />
+  <FormControl.Hint id="helper-text">Hint text</FormControl.Hint>
+  <FormControl.Error id="error-text">Error text</FormControl.Error>
+</FormControl.FieldSet>
+```
+
+#### With Checkbox
+
+<Preview>
+  <Story name="checkbox">
+    {({ id }) => (
+      <FormControl.FieldSet pl={3} pr={3}>
+        <Label as="legend" htmlFor={id('my-input')}>
+          Legend
+        </Label>
+        <Checkbox name={id('my-input')} label="Lorem ipsum dolor sit amet" />
+        <Checkbox name={id('my-input')} label="Lorem ipsum dolor sit amet" />
+        <Checkbox name={id('my-input')} label="Lorem ipsum dolor sit amet" />
+        <Checkbox name={id('my-input')} label="Lorem ipsum dolor sit amet" />
+        <FormControl.Hint id={id('helper-text')}>Hint text</FormControl.Hint>
+        <FormControl.Error id={id('error-text')}>Error text</FormControl.Error>
+      </FormControl.FieldSet>
+    )}
+  </Story>
+</Preview>
+
+#### With Radio
+
+<Preview>
+  <Story name="radio">
+    {({ id }) => (
+      <FormControl.FieldSet>
+        <Label as="legend" htmlFor={id('my-input')}>
+          Legend
+        </Label>
+        <Radio name={id('my-input')} label="Lorem ipsum dolor sit amet" />
+        <Radio name={id('my-input')} label="Lorem ipsum dolor sit amet" />
+        <Radio name={id('my-input')} label="Lorem ipsum dolor sit amet" />
+        <Radio name={id('my-input')} label="Lorem ipsum dolor sit amet" />
+        <FormControl.Hint id={id('helper-text')}>Hint text</FormControl.Hint>
+        <FormControl.Error id={id('error-text')}>Error text</FormControl.Error>
+      </FormControl.FieldSet>
+    )}
+  </Story>
+</Preview>
+
+## Component Props
+
+<Props of={FormControl.FieldSet} />

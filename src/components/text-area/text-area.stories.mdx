@@ -1,0 +1,95 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { TextArea } from './text-area';
+import { Box } from '../box';
+
+<Meta
+  title="Components/Forms/TextArea"
+  component={TextArea}
+  parameters={{
+    a11y: {
+      config: {
+        rules: [{ id: 'label', enabled: false }],
+      },
+    },
+  }}
+/>
+
+# TextArea
+
+TextArea component for forms. Character count can be turn off by not setting `maxCharacters` prop.
+
+#### Default
+
+<Preview withToolbar>
+  <Story name="default">
+    <Box>
+      <TextArea placeholder="Tell us your thoughts" maxCharacters={100} />
+      <TextArea value="Very happy with the purchase" maxCharacters={100} />
+    </Box>
+  </Story>
+</Preview>
+
+#### Disabled
+
+<Preview withToolbar>
+  <Story name="disabled">
+    <Box>
+      <TextArea
+        disabled
+        value=""
+        placeholder="Tell us your thoughts"
+        maxCharacters={100}
+      />
+      <TextArea
+        disabled
+        value="Very happy with the purchase"
+        maxCharacters={100}
+      />
+    </Box>
+  </Story>
+</Preview>
+
+#### Read Only
+
+<Preview withToolbar>
+  <Story name="read only">
+    <Box>
+      <TextArea
+        readOnly={true}
+        value=""
+        placeholder="Tell us your thoughts"
+        maxCharacters={100}
+      />
+      <TextArea
+        readOnly={true}
+        value="Very happy with the purchase"
+        maxCharacters={100}
+      />
+    </Box>
+  </Story>
+</Preview>
+
+#### Error
+
+<Preview withToolbar>
+  <Story name="error">
+    <Box>
+      <TextArea
+        error
+        aria-invalid="true"
+        placeholder="Tell us your thoughts"
+        maxCharacters={100}
+      />
+      <TextArea
+        error
+        aria-invalid="true"
+        value="Very happy with the purchase"
+        maxCharacters={100}
+      />
+    </Box>
+  </Story>
+</Preview>
+
+## Component Props
+
+<Props of={TextArea} />

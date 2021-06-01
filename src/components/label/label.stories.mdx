@@ -1,0 +1,49 @@
+import { Meta, Subtitle, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { Box, Text, Icons } from '../';
+import { Label } from './label';
+
+<Meta title="Components/Forms/Label" component={Label} />
+
+# Label
+
+Form label component, an extension of the `Text` component.
+
+#### Default
+
+<Preview>
+  <Story name="default">
+    <Label>Field Label</Label>
+  </Story>
+</Preview>
+
+#### Mandatory adornment
+
+<Preview>
+  <Story name="mandatory">
+    <Label required>Field Label</Label>
+  </Story>
+</Preview>
+
+
+#### Text adornment
+
+<Preview>
+  <Story name="text adornment">
+    <>
+      <Label adornment="(optional)" mb={4}>Field Label</Label> <br/>
+      <Label adornment="(more info)" required>Field Label</Label>
+    </>
+  </Story>
+</Preview>
+
+#### Flexible adornment
+
+<Preview>
+  <Story name="flexible adornment">
+    <Label adornment={<Icons.Info color="brand.primary" fontSize={2} />}>Field Label</Label>
+  </Story>
+</Preview>
+
+## Component Props
+
+<Props of={Label} />

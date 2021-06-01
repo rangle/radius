@@ -1,0 +1,28 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { AspectRatio } from './aspect-ratio';
+import { Heading } from '../heading';
+
+<Meta title="Components/AspectRatio" component={AspectRatio} />
+
+# AspectRatio
+
+Extension of the `Box` component that maintains content within a desired ratio.
+
+<Preview withToolbar>
+  <Story name="AspectRatio">
+    <AspectRatio
+      ratio={16/9}
+      bg="brand.primary"
+      p={3}
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+    >
+      <Heading variant="heading-1" color="brand.muted">Aspect Ratio</Heading>
+    </AspectRatio>
+  </Story>
+</Preview>
+
+## Component Props
+
+<Props of={AspectRatio} />

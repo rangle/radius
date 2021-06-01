@@ -1,0 +1,118 @@
+import { useState, useRef } from 'react';
+import {
+  Meta,
+  Subtitle,
+  Story,
+  Props,
+  Preview,
+} from '@storybook/addon-docs/blocks';
+import { Box, Icons, Button } from '../';
+import { Input } from './input';
+
+<Meta
+  title="Components/Forms/Input/Recipes"
+  component={Input}
+  parameters={{
+    a11y: {
+      config: {
+        rules: [{ id: 'label', enabled: false }],
+      },
+    },
+  }}
+/>
+
+# Input Recipes
+
+### General Input
+
+<Preview>
+  <Story name="general input">
+    <Box>
+      <Input placeholder="Enter first name" mb={3} />
+      <Input placeholder="Enter first name" value="David" />
+    </Box>
+  </Story>
+</Preview>
+
+### Search Field
+
+<Preview>
+  <Story name="search field">
+    {() => {
+      const [query, setQuery] = useState('');
+      const searchInput = useRef(null);
+      function handleClear() {
+        setQuery('');
+        searchInput.current.focus();
+      }
+      return (
+        <Input
+          placeholder="Search"
+          value={query}
+          onChange={e => setQuery(e.target.value)}
+          leftIcon={<Icons.Search aria-hidden />}
+          rightIcon={
+            query && (
+              <Button variant="transparent" p={0} onClick={handleClear}>
+                <Icons.Close title="clear" color="brand.primary" />
+              </Button>
+            )
+          }
+        />
+      );
+    }}
+  </Story>
+</Preview>
+
+### Inline Validation
+
+<Preview>
+  <Story name="inline validation">
+    <Box>
+      <Input
+        type="email"
+        placeholder="Email address"
+        value="email@domain.com"
+        rightIcon={<Icons.CheckCircle aria-hidden color="ui.success" />}
+        mb={3}
+      />
+      <Input
+        placeholder="Email address"
+        error
+        rightIcon={<Icons.Error aria-hidden color="ui.error" />}
+      />
+    </Box>
+  </Story>
+</Preview>
+
+### Visibility Toggle
+
+<Preview>
+  <Story name="visibility toggle">
+    {() => {
+      const [visibility, setVisibility] = useState(false);
+      return (
+        <Input
+          type={visibility ? 'password' : 'text'}
+          value="password"
+          rightIcon={
+            visibility ? (
+              <Icons.Visibility
+                title="toggle visibility"
+                onClick={() => setVisibility(false)}
+                color="brand.primary"
+              />
+            ) : (
+              <Icons.VisibilityOff
+                title="toggle visibility"
+                onClick={() => setVisibility(true)}
+                color="brand.primary"
+              />
+            )
+          }
+          mb={3}
+        />
+      );
+    }}
+  </Story>
+</Preview>

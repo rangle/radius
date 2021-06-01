@@ -1,0 +1,73 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { Spinner } from './spinner';
+import { Flex } from '../flex';
+import { Text } from '../text';
+
+<Meta title="Components/Spinner" component={Spinner} />
+
+# Spinner
+
+Spinning SVG loading indicator
+
+<Preview withToolbar>
+  <Story name="default">
+    <Spinner />
+  </Story>
+</Preview>
+
+Control size using the `size` prop, which maps to `theme.fontSizes`
+
+<Preview>
+  <Story name="sizing">
+    <Flex alignItems="center">
+      <Spinner size={0} mr={2} />
+      <Spinner size={1} mr={2} />
+      <Spinner size={2} mr={2} />
+      <Spinner size={3} mr={2} />
+      <Spinner size={4} mr={2} />
+      <Spinner size={5} mr={2} />
+      <Spinner size={6} mr={2} />
+      <Spinner size={7} mr={2} />
+      <Spinner size={8} mr={2} />
+      <Spinner size={9} />
+    </Flex>
+  </Story>
+</Preview>
+
+Control color using the `color` prop
+
+<Preview>
+  <Story name="color">
+    <Spinner
+      color="brand.primary"
+      p={4}
+      bg="brand.muted"
+      block={false}
+      size={3}
+    />
+  </Story>
+</Preview>
+
+### Inline
+
+<Preview withSource="open">
+  <Story name="inline">
+    <Text>
+      this is an inline <Spinner block={false} /> spinner
+    </Text>
+  </Story>
+</Preview>
+
+### Block
+
+<Preview withSource="open">
+  <Story name="block">
+    <Text>
+      this is a block <Spinner block p={3} /> spinner (default)
+    </Text>
+  </Story>
+</Preview>
+
+## Component Props
+
+<Props of={Spinner} />
