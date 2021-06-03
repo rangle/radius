@@ -1,0 +1,30 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { Box, Text } from '../';
+import { Flex } from './flex';
+
+<Meta title="Components/Flex" component={Flex} />
+
+# Flex
+
+Flex component helps you create flexbox layouts.
+
+<Preview withToolbar>
+  <Story name="flex">
+    <Flex flexDirection="column" pb={4} pt={4}>
+      <Box bg="text.primary" p={3} mb={4}>
+        <Text variant="body" color="text.inverse">
+          This is a flex box item
+        </Text>
+      </Box>
+      <Box bg="text.primary" p={3}>
+        <Text variant="body" color="text.inverse">
+          This is a flex box item
+        </Text>
+      </Box>
+    </Flex>
+  </Story>
+</Preview>
+
+## Component Props
+
+<Props of={Flex} />
