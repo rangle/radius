@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components Default 1`] = `
+Array [
+  <div
+    className="sc-gtsrHT fXweZe"
+    height="100%"
+    width="100%"
+  >
+    <div>
+      hello component
+    </div>
+  </div>,
+  <div
+    className="sc-gtsrHT GyRoS"
+    height="100%"
+    width="100%"
+  >
+    <div>
+      hello component
+    </div>
+  </div>,
+]
+`;
