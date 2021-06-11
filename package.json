@@ -58,7 +58,9 @@
     "@storybook/addon-info": "^5.3.21",
     "@storybook/addon-knobs": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
+    "@storybook/addon-storysource": "^6.2.9",
     "@storybook/addons": "^6.2.9",
+    "@storybook/builder-webpack5": "^6.2.9",
     "@storybook/react": "^6.2.9",
     "@styled-system/css": "^5.1.5",
     "@testing-library/react": "^11.2.7",
@@ -67,6 +69,8 @@
     "@types/styled-components": "^5.1.9",
     "@types/styled-system": "^5.1.11",
     "babel-loader": "^8.2.2",
+    "dotenv-webpack": "^7.0.3",
+    "html-webpack-plugin": "^5.3.1",
     "husky": "^6.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -76,6 +80,11 @@
     "styled-system": "^5.1.5",
     "tsdx": "^0.14.1",
     "tslib": "^2.2.0",
-    "typescript": "4.2.2"
+    "typescript": "4.2.2",
+    "webpack": "^5.38.1"
+  },
+  "browser": {
+    "crypto": false,
+    "stream": false
   }
 }

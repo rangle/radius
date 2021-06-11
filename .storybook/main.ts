@@ -1,4 +1,18 @@
 module.exports = {
+  webpackFinal: async (config, { configType }) => {
+    // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
+    // You can change the configuration based on that.
+    // 'PRODUCTION' is used when building the static version of storybook.
+
+    config.resolve.alias['crypto'] = "crypto-browserify";
+    config.resolve.alias['stream'] = "stream-browserify";
+
+    // Return the altered config
+    return config;
+  },
+  core: {
+    builder: "webpack5",
+  },
   stories: ['../src/**/*.stories.(js|tsx|mdx)'],
   addons: [
     '@storybook/addon-links',
@@ -7,19 +21,9 @@ module.exports = {
     '@storybook/addon-knobs/register',
     '@storybook/addon-a11y',
     '@storybook/addon-viewport/register',
+    '@storybook/addon-storysource'
   ],
   typescript: {
     check: true,
-    // reactDocgen: 'none',
   }
 };
-
-// module.exports = {
-//   stories: ['../src/**/*.stories.@(ts|tsx|js|jsx|mdx)'],
-//   addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-docs'],
-//   // https://storybook.js.org/docs/react/configure/typescript#mainjs-configuration
-//   typescript: {
-//     check: true, // type-check stories during Storybook build
-//     reactDocgen: 'none' // disable react docgen typescript https://github.com/styleguidist/react-docgen-typescript/issues/356
-//   }
-// };
