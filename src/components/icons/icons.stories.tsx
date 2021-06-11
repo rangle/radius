@@ -32,7 +32,7 @@ export const Directory = () => (
     p={3}
     justifyContent="center"
   >
-    {Object.keys(Icons).map(name => {
+    {Object.keys(Icons).map((name: string) => {
       const Component = Icons[name];
       return (
         <Flex key={name} alignItems="center">
@@ -42,7 +42,7 @@ export const Directory = () => (
             justifySelf="center"
             aria-hidden
           />
-          <Text ml={2} fontSize={1} color="text.secondary">
+          <Text variant="body" ml={2} fontSize={1} color="text.secondary">
             {name}
           </Text>
         </Flex>

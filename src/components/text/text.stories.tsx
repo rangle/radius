@@ -38,20 +38,19 @@ Basic.args = { children: 'Label' };
 export const Variants = () => (
   <Box>
     <Flex alignItems="baseline" mb={3}>
-      <Variant>body</Variant>{' '}
-      <Text variant="body">You know nothing, Jon Snow</Text>{' '}
+      <Variant>body</Variant>
+      <Text variant="body">You know nothing, Jon Snow</Text>
     </Flex>
     <Flex alignItems="baseline" mb={3}>
-      <Variant>caption</Variant>{' '}
-      <Text variant="caption">You know nothing, Jon Snow</Text>{' '}
+      <Variant>caption</Variant>
     </Flex>
     <Flex alignItems="baseline" mb={3}>
-      <Variant>hint</Variant>{' '}
-      <Text variant="hint">You know nothing, Jon Snow</Text>{' '}
+      <Variant>hint</Variant>
+      <Text variant="hint">You know nothing, Jon Snow</Text>
     </Flex>
     <Flex alignItems="baseline" mb={3}>
-      <Variant>label</Variant>{' '}
-      <Text variant="label">You know nothing, Jon Snow</Text>{' '}
+      <Variant>label</Variant>
+      <Text variant="label">You know nothing, Jon Snow</Text>
     </Flex>
   </Box>
 )

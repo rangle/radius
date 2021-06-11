@@ -3,8 +3,7 @@ import React from 'react';
 import { Description, Props, Title } from '@storybook/addon-docs/blocks';
 
 import { Spinner } from './spinner';
-import { Flex } from '../flex';
-import { Text } from '../text';
+import { Text, Flex } from '../';
 
 export default {
   title: 'Components/Spinner',
@@ -41,6 +40,6 @@ export const Sizing = () => (
 
 export const Color = () => <Spinner color="brand.primary" p={4} bg="brand.muted" block={false} size={3}/>
 
-export const Inline = () => <Text>this is an inline <Spinner block={false} /> spinner</Text>
+export const Inline = () => <Text variant="body">this is an inline <Spinner block={false} /> spinner</Text>
 
-export const Block = () => <Text>this is a block <Spinner block p={3} /> spinner (default)</Text>
+export const Block = () => <Text variant="body">this is a block <Spinner block p={3} /> spinner (default)</Text>

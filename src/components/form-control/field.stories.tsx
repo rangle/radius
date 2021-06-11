@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Description, Props, Title } from '@storybook/addon-docs/blocks';
 
-import { Label, Input, TextArea, Select } from '..';
+import { Label, Input, TextArea, Select } from '../';
 import { FormControl } from '.';
 
 export default {
@@ -54,7 +54,7 @@ export const WithSelect = () => (
       Legend
     </Label>
     <Select
-      label="Lorem ipsum dolor sit amet"
+      defaultValue="Lorem ipsum dolor sit amet"
       >
       <option>Select a city</option>
       <option>Toronto</option>

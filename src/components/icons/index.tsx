@@ -23,7 +23,7 @@ import { default as VisibilityOff } from './visibility-off';
 
 export type IconProps = SpaceProps & ColorProps & LayoutProps & TypographyProps;
 
-export const Icons = {
+export const Icons: any = {
   CheckCircle,
   CheckboxBlank,
   CheckboxChecked,
