@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Description, Props, Title } from '@storybook/addon-docs/blocks';
+// import { Description, Props, Title } from '@storybook/addon-docs/blocks';
 
 import { Box } from './box';
 import { Text } from '..';
@@ -9,15 +9,15 @@ export default {
   title: 'Components/Box',
   component: Box,
   parameters: {
-    docs: {
-      page: () => (
-        <>
-          <Title />
-          <Description>Building block of layouts. Creates a box-model context</Description>
-          <Props of={Box} />
-        </>
-      ),
-    },
+    // docs: {
+    //   page: () => (
+    //     <>
+    //       <Title />
+    //       <Description>Building block of layouts. Creates a box-model context</Description>
+    //       <Props of={Box} />
+    //     </>
+    //   ),
+    // },
   },
 };
 

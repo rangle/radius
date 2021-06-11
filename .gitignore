@@ -4,6 +4,7 @@
 .pnp.js
 **/*.cache/
 /dist
+/storybook-static
 
 # testing
 /coverage

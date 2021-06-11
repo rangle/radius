@@ -62,6 +62,7 @@
     "@storybook/addons": "^6.2.9",
     "@storybook/builder-webpack5": "^6.2.9",
     "@storybook/react": "^6.2.9",
+    "@storybook/testing-react": "0.0.17",
     "@styled-system/css": "^5.1.5",
     "@testing-library/react": "^11.2.7",
     "@types/react": "^17.0.8",
