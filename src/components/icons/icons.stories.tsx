@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Props, Description, Title } from '@storybook/addon-docs/blocks';
 
-import { Icons  } from './';
-import { Grid, Flex, Text } from '../';
+import { Icons } from './';
+import { Flex, Text } from '../';
 
 export default {
   title: 'Components/Icons',
@@ -24,14 +24,7 @@ export default {
 };
 
 export const Directory = () => (
-  <Grid
-    gridTemplateColumns="repeat(auto-fill, minmax(min-content, 30%))"
-    gridAutoRows="4rem"
-    gridAutoFlow="dense"
-    gridGap={3}
-    p={3}
-    justifyContent="center"
-  >
+  <>
     {Object.keys(Icons).map((name: string) => {
       const Component = Icons[name];
       return (
@@ -48,7 +41,7 @@ export const Directory = () => (
         </Flex>
       );
     })}
-  </Grid>
+  </>
 );
 
 // The components support `space`, `color`, `layout` & `typography` styled-system props.
