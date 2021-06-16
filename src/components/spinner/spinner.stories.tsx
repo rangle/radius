@@ -38,7 +38,7 @@ export const Sizing = () => (
   </Flex>
 )
 
-export const Color = () => <Spinner color="brand.primary" p={4} bg="brand.muted" block={false} size={3}/>
+export const Color = () => <Spinner color="brand.primary" p={4} bg="brand.muted" block={false} size={3} />
 
 export const Inline = () => <Text variant="body">this is an inline <Spinner block={false} /> spinner</Text>
 

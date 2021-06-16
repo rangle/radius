@@ -3,6 +3,7 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',
+    '!src/**/*.stories.{ts,tsx}',
     '!**/node_modules/**',
     '!**/vendor/**'
   ],

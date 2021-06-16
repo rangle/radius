@@ -112,7 +112,7 @@ const buttonVariants = variant({
   },
 });
 
-const ButtonIcon = styled(Box)<BoxProps & { disabled?: boolean }>`
+const ButtonIcon = styled(Box) <BoxProps & { disabled?: boolean }>`
   display: inline-block;
   width: ${props => props.theme.fontSizes[4]};
   height: ${props => props.theme.fontSizes[4]};

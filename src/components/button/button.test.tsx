@@ -25,7 +25,6 @@ describe('Button', () => {
   it('renders loading button', () => {
     const title = 'title';
     const rendered = renderWithTheme(<Button variant="primary" mr={3} isLoading={true}>{title}</Button>)
-
     rendered.getAllByText(title)
     rendered.getAllByText('Loading…')
   });
@@ -33,12 +32,8 @@ describe('Button', () => {
   it('renders icon button', () => {
     const title = 'title';
     const rendered = renderWithTheme(<Button variant="primary" leftIcon={<Icons.Info aria-hidden />} rightIcon={<Icons.Info aria-hidden />}>{title}</Button>)
-
     rendered.getAllByText(title)
   });
-
-  
-
 });
 
 
