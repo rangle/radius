@@ -1,0 +1,688 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Button All 1`] = `
+Array [
+  <div
+    className="sc-bdnxRM lijThL"
+    height="100%"
+    width="100%"
+  >
+    <div
+      className="sc-bdnxRM dakrUh"
+    >
+      <div
+        className="sc-bdnxRM sc-gtsrHT dRLJX cBCTDO"
+      >
+        <button
+          className="sc-fFSPTT hIxaIJ"
+        >
+          <div
+            className="sc-bdnxRM sc-gtsrHT NthFQ cBCTDO"
+            opacity={1}
+          >
+            Primary
+          </div>
+        </button>
+        <button
+          className="sc-fFSPTT hIxaIJ"
+          disabled={true}
+        >
+          <div
+            className="sc-bdnxRM sc-gtsrHT NthFQ cBCTDO"
+            opacity={1}
+          >
+            Disabled
+          </div>
+        </button>
+        <button
+          className="sc-fFSPTT euRHZk"
+        >
+          <div
+            className="sc-bdnxRM bikvQh"
+            display="flex"
+          >
+            <svg
+              aria-labelledby="icon-1"
+              className="sc-jrsJWt sc-hBMUJo ecxrAg fegNxg"
+              color="ui.primary"
+              fill="none"
+              fontSize={4}
+              height="1em"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title
+                id="icon-1"
+              >
+                Loading…
+              </title>
+              <path
+                d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"
+              />
+            </svg>
+          </div>
+          <div
+            className="sc-bdnxRM sc-gtsrHT dwfNOx cBCTDO"
+            opacity={0}
+          >
+            Loading
+          </div>
+        </button>
+      </div>
+      <div
+        className="sc-bdnxRM sc-gtsrHT dRLJX cBCTDO"
+      >
+        <button
+          className="sc-fFSPTT hIxaIJ"
+        >
+          <div
+            className="sc-bdnxRM sc-gtsrHT NthFQ cBCTDO"
+            opacity={1}
+          >
+            Flexible Width
+          </div>
+        </button>
+        <button
+          className="sc-fFSPTT kcdOoZ"
+          width={200}
+        >
+          <div
+            className="sc-bdnxRM sc-gtsrHT NthFQ cBCTDO"
+            opacity={1}
+          >
+            Fixed Width
+          </div>
+        </button>
+      </div>
+      <div
+        className="sc-bdnxRM sc-gtsrHT dRLJX cBCTDO"
+      >
+        <button
+          className="sc-fFSPTT hIxaIJ"
+        >
+          <div
+            className="sc-bdnxRM sc-gtsrHT NthFQ cBCTDO"
+            opacity={1}
+          >
+            <div
+              className="sc-bdnxRM sc-fnVZcZ kCIOjz cmwte"
+            >
+              <svg
+                aria-hidden={true}
+                className="sc-bqGGPW bKlwGl"
+                fill="currentcolor"
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                />
+              </svg>
+            </div>
+            Left Icon
+          </div>
+        </button>
+        <button
+          className="sc-fFSPTT hIxaIJ"
+        >
+          <div
+            className="sc-bdnxRM sc-gtsrHT NthFQ cBCTDO"
+            opacity={1}
+          >
+            Right Icon
+            <div
+              className="sc-bdnxRM sc-fnVZcZ hYVbOg cmwte"
+            >
+              <svg
+                aria-hidden={true}
+                className="sc-bqGGPW bKlwGl"
+                fill="currentcolor"
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                />
+              </svg>
+            </div>
+          </div>
+        </button>
+        <button
+          className="sc-fFSPTT euRHZk"
+        >
+          <div
+            className="sc-bdnxRM sc-gtsrHT NthFQ cBCTDO"
+            opacity={1}
+          >
+            <div
+              className="sc-bdnxRM sc-fnVZcZ kCIOjz cmwte"
+            >
+              <svg
+                aria-hidden={true}
+                className="sc-pNWdM dgvlYN"
+                fill="currentcolor"
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                />
+              </svg>
+            </div>
+            Both Icons
+            <div
+              className="sc-bdnxRM sc-fnVZcZ hYVbOg cmwte"
+            >
+              <svg
+                aria-hidden={true}
+                className="sc-pNWdM dgvlYN"
+                fill="currentcolor"
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                />
+              </svg>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="sc-bdnxRM gZpTvH"
+    height="100%"
+    width="100%"
+  >
+    <div
+      className="sc-bdnxRM dakrUh"
+    >
+      <div
+        className="sc-bdnxRM sc-gtsrHT dRLJX cBCTDO"
+      >
+        <button
+          className="sc-fFSPTT keNMtc"
+        >
+          <div
+            className="sc-bdnxRM sc-gtsrHT NthFQ cBCTDO"
+            opacity={1}
+          >
+            Primary
+          </div>
+        </button>
+        <button
+          className="sc-fFSPTT keNMtc"
+          disabled={true}
+        >
+          <div
+            className="sc-bdnxRM sc-gtsrHT NthFQ cBCTDO"
+            opacity={1}
+          >
+            Disabled
+          </div>
+        </button>
+        <button
+          className="sc-fFSPTT fbcVTV"
+        >
+          <div
+            className="sc-bdnxRM bikvQh"
+            display="flex"
+          >
+            <svg
+              aria-labelledby="icon-2"
+              className="sc-jrsJWt sc-hBMUJo elfpKA fegNxg"
+              color="ui.primary"
+              fill="none"
+              fontSize={4}
+              height="1em"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title
+                id="icon-2"
+              >
+                Loading…
+              </title>
+              <path
+                d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"
+              />
+            </svg>
+          </div>
+          <div
+            className="sc-bdnxRM sc-gtsrHT dwfNOx cBCTDO"
+            opacity={0}
+          >
+            Loading
+          </div>
+        </button>
+      </div>
+      <div
+        className="sc-bdnxRM sc-gtsrHT dRLJX cBCTDO"
+      >
+        <button
+          className="sc-fFSPTT keNMtc"
+        >
+          <div
+            className="sc-bdnxRM sc-gtsrHT NthFQ cBCTDO"
+            opacity={1}
+          >
+            Flexible Width
+          </div>
+        </button>
+        <button
+          className="sc-fFSPTT gErczk"
+          width={200}
+        >
+          <div
+            className="sc-bdnxRM sc-gtsrHT NthFQ cBCTDO"
+            opacity={1}
+          >
+            Fixed Width
+          </div>
+        </button>
+      </div>
+      <div
+        className="sc-bdnxRM sc-gtsrHT dRLJX cBCTDO"
+      >
+        <button
+          className="sc-fFSPTT keNMtc"
+        >
+          <div
+            className="sc-bdnxRM sc-gtsrHT NthFQ cBCTDO"
+            opacity={1}
+          >
+            <div
+              className="sc-bdnxRM sc-fnVZcZ kCIOjz cmwte"
+            >
+              <svg
+                aria-hidden={true}
+                className="sc-bqGGPW bKlwGl"
+                fill="currentcolor"
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                />
+              </svg>
+            </div>
+            Left Icon
+          </div>
+        </button>
+        <button
+          className="sc-fFSPTT keNMtc"
+        >
+          <div
+            className="sc-bdnxRM sc-gtsrHT NthFQ cBCTDO"
+            opacity={1}
+          >
+            Right Icon
+            <div
+              className="sc-bdnxRM sc-fnVZcZ hYVbOg cmwte"
+            >
+              <svg
+                aria-hidden={true}
+                className="sc-bqGGPW bKlwGl"
+                fill="currentcolor"
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                />
+              </svg>
+            </div>
+          </div>
+        </button>
+        <button
+          className="sc-fFSPTT fbcVTV"
+        >
+          <div
+            className="sc-bdnxRM sc-gtsrHT NthFQ cBCTDO"
+            opacity={1}
+          >
+            <div
+              className="sc-bdnxRM sc-fnVZcZ kCIOjz cmwte"
+            >
+              <svg
+                aria-hidden={true}
+                className="sc-pNWdM dgvlYN"
+                fill="currentcolor"
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                />
+              </svg>
+            </div>
+            Both Icons
+            <div
+              className="sc-bdnxRM sc-fnVZcZ hYVbOg cmwte"
+            >
+              <svg
+                aria-hidden={true}
+                className="sc-pNWdM dgvlYN"
+                fill="currentcolor"
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                />
+              </svg>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Button Basic 1`] = `
+Array [
+  <div
+    className="sc-bdnxRM lijThL"
+    height="100%"
+    width="100%"
+  >
+    <button
+      className="sc-fFSPTT euRHZk"
+    >
+      <div
+        className="sc-bdnxRM sc-gtsrHT NthFQ cBCTDO"
+        opacity={1}
+      >
+        Label
+      </div>
+    </button>
+  </div>,
+  <div
+    className="sc-bdnxRM gZpTvH"
+    height="100%"
+    width="100%"
+  >
+    <button
+      className="sc-fFSPTT fbcVTV"
+    >
+      <div
+        className="sc-bdnxRM sc-gtsrHT NthFQ cBCTDO"
+        opacity={1}
+      >
+        Label
+      </div>
+    </button>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Flex Basic 1`] = `
+Array [
+  <div
+    className="sc-bdnxRM lijThL"
+    height="100%"
+    width="100%"
+  >
+    <div
+      className="sc-bdnxRM sc-gtsrHT jGwYjV cBCTDO"
+    >
+      <div
+        className="sc-bdnxRM dYSPdW"
+      >
+        <p
+          className="sc-bkbkJK cCMSkz"
+          color="text.inverse"
+        >
+          This is a flex box item
+        </p>
+      </div>
+      <div
+        className="sc-bdnxRM ihsOYa"
+      >
+        <p
+          className="sc-bkbkJK cCMSkz"
+          color="text.inverse"
+        >
+          This is a flex box item
+        </p>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="sc-bdnxRM gZpTvH"
+    height="100%"
+    width="100%"
+  >
+    <div
+      className="sc-bdnxRM sc-gtsrHT jGwYjV cBCTDO"
+    >
+      <div
+        className="sc-bdnxRM iAefve"
+      >
+        <p
+          className="sc-bkbkJK jSkmUj"
+          color="text.inverse"
+        >
+          This is a flex box item
+        </p>
+      </div>
+      <div
+        className="sc-bdnxRM fplPBG"
+      >
+        <p
+          className="sc-bkbkJK jSkmUj"
+          color="text.inverse"
+        >
+          This is a flex box item
+        </p>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Text Basic 1`] = `
+Array [
+  <div
+    className="sc-bdnxRM lijThL"
+    height="100%"
+    width="100%"
+  >
+    <p
+      className="sc-bkbkJK bteCzQ"
+    >
+      Label
+    </p>
+  </div>,
+  <div
+    className="sc-bdnxRM gZpTvH"
+    height="100%"
+    width="100%"
+  >
+    <p
+      className="sc-bkbkJK USguk"
+    >
+      Label
+    </p>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Text Variants 1`] = `
+Array [
+  <div
+    className="sc-bdnxRM lijThL"
+    height="100%"
+    width="100%"
+  >
+    <div
+      className="sc-bdnxRM dakrUh"
+    >
+      <div
+        className="sc-bdnxRM sc-gtsrHT hOgQJL cBCTDO"
+      >
+        <p
+          className="sc-bkbkJK eASyAG"
+          color="text.secondary"
+          fontSize={1}
+          width={3}
+        >
+          body
+        </p>
+        <p
+          className="sc-bkbkJK bteCzQ"
+        >
+          You know nothing, Jon Snow
+        </p>
+      </div>
+      <div
+        className="sc-bdnxRM sc-gtsrHT hOgQJL cBCTDO"
+      >
+        <p
+          className="sc-bkbkJK eASyAG"
+          color="text.secondary"
+          fontSize={1}
+          width={3}
+        >
+          caption
+        </p>
+      </div>
+      <div
+        className="sc-bdnxRM sc-gtsrHT hOgQJL cBCTDO"
+      >
+        <p
+          className="sc-bkbkJK eASyAG"
+          color="text.secondary"
+          fontSize={1}
+          width={3}
+        >
+          hint
+        </p>
+        <p
+          className="sc-bkbkJK cEECzm"
+        >
+          You know nothing, Jon Snow
+        </p>
+      </div>
+      <div
+        className="sc-bdnxRM sc-gtsrHT hOgQJL cBCTDO"
+      >
+        <p
+          className="sc-bkbkJK eASyAG"
+          color="text.secondary"
+          fontSize={1}
+          width={3}
+        >
+          label
+        </p>
+        <p
+          className="sc-bkbkJK bYHRXe"
+        >
+          You know nothing, Jon Snow
+        </p>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="sc-bdnxRM gZpTvH"
+    height="100%"
+    width="100%"
+  >
+    <div
+      className="sc-bdnxRM dakrUh"
+    >
+      <div
+        className="sc-bdnxRM sc-gtsrHT hOgQJL cBCTDO"
+      >
+        <p
+          className="sc-bkbkJK bcdHZY"
+          color="text.secondary"
+          fontSize={1}
+          width={3}
+        >
+          body
+        </p>
+        <p
+          className="sc-bkbkJK USguk"
+        >
+          You know nothing, Jon Snow
+        </p>
+      </div>
+      <div
+        className="sc-bdnxRM sc-gtsrHT hOgQJL cBCTDO"
+      >
+        <p
+          className="sc-bkbkJK bcdHZY"
+          color="text.secondary"
+          fontSize={1}
+          width={3}
+        >
+          caption
+        </p>
+      </div>
+      <div
+        className="sc-bdnxRM sc-gtsrHT hOgQJL cBCTDO"
+      >
+        <p
+          className="sc-bkbkJK bcdHZY"
+          color="text.secondary"
+          fontSize={1}
+          width={3}
+        >
+          hint
+        </p>
+        <p
+          className="sc-bkbkJK krMPHG"
+        >
+          You know nothing, Jon Snow
+        </p>
+      </div>
+      <div
+        className="sc-bdnxRM sc-gtsrHT hOgQJL cBCTDO"
+      >
+        <p
+          className="sc-bkbkJK bcdHZY"
+          color="text.secondary"
+          fontSize={1}
+          width={3}
+        >
+          label
+        </p>
+        <p
+          className="sc-bkbkJK cbwTAu"
+        >
+          You know nothing, Jon Snow
+        </p>
+      </div>
+    </div>
+  </div>,
+]
+`;

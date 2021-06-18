@@ -6,12 +6,12 @@ const ThemeDecorator = (storyFn: any) => (
   <>
     <ThemeProvider theme={theme.light}>
       <Box bg="bg.primary" px={4} py={5} width="100%" height="100%" mb={4}>
-        {storyFn({ id: id => 'light-' + id })}
+        {storyFn({ id: (id: any) => 'light-' + id })}
       </Box>
     </ThemeProvider>
     <ThemeProvider theme={theme.dark}>
       <Box bg="bg.primary" px={4} py={5} width="100%" height="100%">
-        {storyFn({ id: id => 'dark-' + id })}
+        {storyFn({ id: (id: any) => 'dark-' + id })}
       </Box>
     </ThemeProvider>
   </>

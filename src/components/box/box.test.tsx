@@ -1,15 +1,19 @@
 import React from 'react';
 import { render } from '@testing-library/react'
 
-import { composeStories } from '@storybook/testing-react';
+import { ThemeProvider } from 'styled-components';
 
-import * as stories from './box.stories';
+import * as theme from '../../theme';
+import { Box } from './box';
 
-const { Primary } = composeStories(stories);
+const renderWithTheme = (element: React.ReactElement) => render(<ThemeProvider theme={theme.default.light}>{element}</ThemeProvider>);
+
 
 describe('Box', () => {
   it('renders primary variant', () => {
-    const rendered = render(<Primary />)
+    const rendered = renderWithTheme(<Box>
+      <p>This is a box</p>
+    </Box>)
     rendered.getByText('This is a box');
   });
 });
