@@ -88,5 +88,8 @@
   "browser": {
     "crypto": false,
     "stream": false
+  },
+  "dependencies": {
+    "@storybook/addon-storyshots-puppeteer": "^6.3.3"
   }
 }

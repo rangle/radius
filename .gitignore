@@ -5,6 +5,8 @@
 **/*.cache/
 /dist
 /storybook-static
+/.storybook/__image_snapshots__
+/.storybook/__snapshots__
 
 # testing
 /coverage
