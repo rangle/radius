@@ -1,7 +1,3 @@
-import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
-import { Box, Flex, Text, Heading } from './components';
-import { space as spaceScale, sizes as sizeScale } from './theme';
-
 <Meta title="Foundations/Other Tokens" />
 
 # Space Tokens
@@ -10,6 +6,7 @@ import { space as spaceScale, sizes as sizeScale } from './theme';
 >
 > — [Theme Specification - space](https://styled-system.com/theme-specification#space)
 
+```js
 <Preview withSource="none">
   <Story name="space">
     <Box>
@@ -24,6 +21,7 @@ import { space as spaceScale, sizes as sizeScale } from './theme';
     </Box>
   </Story>
 </Preview>
+```
 
 # Size Tokens
 
@@ -31,6 +29,7 @@ import { space as spaceScale, sizes as sizeScale } from './theme';
 >
 > — [Theme Specification - sizes](https://styled-system.com/table#layout)
 
+```js
 <Preview withSource="none">
   <Story name="size">
     <Box>
@@ -45,6 +44,7 @@ import { space as spaceScale, sizes as sizeScale } from './theme';
     </Box>
   </Story>
 </Preview>
+```
 
 # Breakpoints
 
@@ -52,6 +52,7 @@ import { space as spaceScale, sizes as sizeScale } from './theme';
 >
 > — [Theme Specification - breakpoints](https://styled-system.com/theme-specification/#breakpoints)
 
+```js
 <Preview withSource="none">
   <Story name="breakpoints">
     <Box>
@@ -82,6 +83,7 @@ import { space as spaceScale, sizes as sizeScale } from './theme';
     </Box>
   </Story>
 </Preview>
+```
 
 For example, using a margin value of `[ 2, 3, 4 ]` creates styles with multiple mobile-first min-width media queries.
 
