@@ -13,12 +13,12 @@ module.exports = {
   core: {
     builder: "webpack5",
   },
-  stories: ['../src/**/*.stories.(js|tsx|mdx)'],
+  stories: ['../src/**/*.stories.@(js|tsx|mdx)'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-docs',
     '@storybook/addon-essentials',
-    '@storybook/addon-knobs/register',
+    '@storybook/addon-controls',
     '@storybook/addon-a11y',
     '@storybook/addon-viewport/register',
     '@storybook/addon-storysource'
