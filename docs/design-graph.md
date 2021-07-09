@@ -1,28 +1,6 @@
-import { Meta, Subtitle, Source } from '@storybook/addon-docs/blocks';
-import { PropsTable } from '@storybook/components';
-import {
-  fonts,
-  fontSizes,
-  fontWeights,
-  lineHeights,
-  letterSpacings,
-} from './theme';
-import { Flex, Box, Image } from './components';
-
-import dgError from './imgs/dg-error.svg';
-import dgField from './imgs/dg-field.svg';
-import dgHint from './imgs/dg-hint.svg';
-import dgInput from './imgs/dg-input.svg';
-import dgLabel from './imgs/dg-label.svg';
-
-<Meta title="Foundations/Design Graph" />
-
 # Design Graph
 
-<Subtitle>
-  The Design Graph is a constraint-based system for organizing styles in UI
-  design. It consists of three parts: design tokens, theme and variants.
-</Subtitle>
+##### The Design Graph is a constraint-based system for organizing styles in UI design. It consists of three parts: design tokens, theme and variants.
 
 ### Design Tokens
 
@@ -64,10 +42,8 @@ Now, this component will have style props available to set foreground color, bac
 There are situations where you might want to support slight stylistic variations of components. For example, a button might have primary, secondary and transparent variants. Or typography variants similar to how text styles work in Sketch and Figma.
 
 [Styled System variants](https://styled-system.com/variants) allow you to apply a set of visual styles to a component using a single prop. These variants also map to your design tokens, defined in `theme.ts`.
-
-<Flex alignItems="center">
-  <Box as="pre" width="50%" my={0} mr={3}>
-    <code className="language-js">{`// Design tokens in theme.ts
+```js
+// Design tokens in theme.ts
 {
   fonts: {
     body: '"Helvetica Neue", sans-serif',
@@ -84,10 +60,10 @@ There are situations where you might want to support slight stylistic variations
     copy: 1.5,
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48]
-}`}</code>
-  </Box>
-  <Box as="pre" width="50%" my={0}>
-    <code className="language-js">{`// Text variants
+}
+```
+```js
+// Text variants
 const textVariants = variant({
   variants:{
     body: {
@@ -109,9 +85,8 @@ const textVariants = variant({
       fontSize: 1,
     },
   }
-})`}</code>
-  </Box>
-</Flex>
+})
+```
 
 The Text component can now use the `variant` prop to switch between lead, body and label styles.
 
@@ -121,29 +96,16 @@ The Text component can now use the `variant` prop to switch between lead, body a
 <Text variant="label" as="span" />
 ```
 
-export const ExampleCard = props => (
-  <Image borderColor="#F1F1F1" borderWidth={1} borderStyle="solid" {...props} />
-);
-
 ### Example
 
-<ExampleCard
-  src={dgField}
-  display="block"
-  mt={3}
-  mb={4}
-  mr="auto"
-  alt="Field component"
-/>
+<img src="../src/imgs/dg-field.svg" />
 
 The Field component is a composed of `<Input />`, `<Label />`, `<Text variant="hint" color="text.secondary" />` and `<Text variant="hint" color="text.error" />`. Which in-turn use a composition of design tokens and variants.
 
-<Flex mt={4} flexWrap="wrap" mb={4}>
-  <ExampleCard mr={3} mb={3} src={dgInput} alt="Input component" />
-  <ExampleCard mr={3} mb={3} src={dgLabel} alt="label component" />
-  <ExampleCard mr={3} src={dgHint} alt="Text component with hint styling" />
-  <ExampleCard src={dgError} alt="Text component with error styling" />
-</Flex>
+<img src="../src/imgs/dg-input.svg" />
+<img src="../src/imgs/dg-label.svg" />
+<img src="../src/imgs/dg-hint.svg" />
+<img src="../src/imgs/dg-error.svg" />
 
 ## Further Reading
 
