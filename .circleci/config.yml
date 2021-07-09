@@ -20,37 +20,41 @@ jobs:
       - checkout
 
       # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
+      # - restore_cache:
+      #     keys:
+      #       - yarn-packages-{{ checksum "yarn.lock" }}
 
       - run:
           name: Install Dependencies
-          command: yarn install
+          command: npm install
 
       - run:
           name: Build Component Library
-          command: yarn workspace ds build
-
-      - save_cache:
-          paths:
-            - node_modules
-            - packages/app/node_modules
-            - packages/ds/node_modules
-          key: yarn-packages-{{ checksum "yarn.lock" }}
+          command: npm run build
 
       - run:
-          name: Lint Component Library
-          command: yarn workspace ds lint
+          name: Build Storybook
+          command: npm run build-storybook
+
+      # - save_cache:
+      #     paths:
+      #       - node_modules
+      #       - packages/app/node_modules
+      #       - packages/ds/node_modules
+      #     key: yarn-packages-{{ checksum "yarn.lock" }}
+
+      # - run:
+      #     name: Lint Component Library
+      #     command: yarn workspace ds lint
 
       - run:
           name: Test Component Library
-          command: yarn workspace ds test
+          command: npm run test
 
-      - run:
-          name: Build Demo App
-          command: yarn workspace app build
+      # - run:
+      #     name: Build Demo App
+      #     command: yarn workspace app build
 
-      - run:
-          name: Run Visual Tests
-          command: yarn workspace ds run chromatic
+      # - run:
+      #     name: Run Visual Tests
+      #     command: yarn workspace ds run chromatic
