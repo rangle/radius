@@ -1,11 +1,6 @@
-<Meta title="Foundations/Design Graph" />
-
 # Design Graph
 
-<Subtitle>
-  The Design Graph is a constraint-based system for organizing styles in UI
-  design. It consists of three parts: design tokens, theme and variants.
-</Subtitle>
+##### The Design Graph is a constraint-based system for organizing styles in UI design. It consists of three parts: design tokens, theme and variants.
 
 ### Design Tokens
 
