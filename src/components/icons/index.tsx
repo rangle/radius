@@ -1,8 +1,8 @@
-    import {
+import {
   SpaceProps,
   ColorProps,
   LayoutProps,
-  TypographyProps
+  TypographyProps,
 } from 'styled-system';
 
 import { default as CheckCircle } from './check-circle';
@@ -23,7 +23,7 @@ import { default as VisibilityOff } from './visibility-off';
 
 export type IconProps = SpaceProps & ColorProps & LayoutProps & TypographyProps;
 
-export const Icons: any = {
+export const Icons = {
   CheckCircle,
   CheckboxBlank,
   CheckboxChecked,
@@ -38,5 +38,5 @@ export const Icons: any = {
   RadioUnchecked,
   Search,
   Visibility,
-  VisibilityOff
+  VisibilityOff,
 };
