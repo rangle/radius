@@ -4,6 +4,7 @@ import {
   LayoutProps,
   TypographyProps,
 } from 'styled-system';
+import { Compact } from '../../utils/common.utils';
 
 import { default as CheckCircle } from './check-circle';
 import { default as CheckboxBlank } from './checkbox-blank';
@@ -21,7 +22,9 @@ import { default as Search } from './search';
 import { default as Visibility } from './visibility';
 import { default as VisibilityOff } from './visibility-off';
 
-export type IconProps = SpaceProps & ColorProps & LayoutProps & TypographyProps;
+export type IconProps = Compact<
+  SpaceProps & ColorProps & LayoutProps & TypographyProps
+>;
 
 export const Icons = {
   CheckCircle,

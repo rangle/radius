@@ -23,6 +23,12 @@ export const uuid = () => {
   return `icon-${lastId}`;
 };
 
+/**
+ * Creates a React Icon Functional Component.
+ * Takes an SVG Path and returns a complete Icon component
+ * @param Path React Functional Component returning an SVG Path Element
+ * @returns React Functional Component representing the icon
+ */
 export const createSvgIcon = (Path: React.FC) => {
   const SvgComponent = forwardRef<
     SVGSVGElement,
