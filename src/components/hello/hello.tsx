@@ -10,6 +10,6 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
 /**
  * A custom Thing component. Neat!
  */
-export const Hello: FC<Props> = ({ children }) => {
-  return <div>{children || `hello component`}</div>;
+export const Hello: FC<Props> = ({ children, ...props }) => {
+  return <div {...props}>{children || `hello component`}</div>;
 };
