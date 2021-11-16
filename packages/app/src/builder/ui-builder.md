@@ -25,3 +25,10 @@ for the layouts — allowing selection of nested components.
 Recursive structure of the system allows building arbitrary compositions of the components:
 Layout controls contain controls for other components, which might be in turn layouts.
 UI builder would store top level controls in the local state, and render the top component with the given controls.
+
+------------------
+# Ideas for future
+
+One of the things that would be nice to have is to have a hover state on the tree of components. 
+This could be achieved using `useReducer` and the `mouseEnter` and `mouseLeave` events, setting a state of `hover`.
+The way that would work is we could take the absolute position of the component and place an transparent overlay over it.

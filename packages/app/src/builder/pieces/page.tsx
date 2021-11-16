@@ -2,32 +2,19 @@ import { componentDef, ControlState } from "../types";
 import React from "react";
 import { RenderPiece } from "../util/render_piece";
 import { Box, Stack, Icons, Heading } from "ds";
-import { Enum } from "../controls/enum";
 import { Gallery } from "./gallery";
 import { createControl } from "../util/create_control";
 import { remove } from "../util/remove";
+import { theme} from "ds";
 
-enum Axis {
-    vertical = "vertical",
-    horizontal = "horizontal",
-}
-
-type StackProps = { items: ControlState[]; axis: Axis };
-const defaultProps: StackProps = {
-    axis: Axis.vertical,
+// just a page layout that is not supposed to be used in Radius but has its uses for my demo
+type PageProps = { items: ControlState[]; };
+const defaultProps: PageProps = {
     items: [],
 };
 
-const Controls = ({values, onChange}: {values: StackProps; onChange: (val: StackProps) => void}): JSX.Element => (
+const Controls = ({values, onChange}: {values: PageProps; onChange: (val: PageProps) => void}): JSX.Element => (
     <Stack axis="vertical">
-        <Heading variant="heading-5">Controls</Heading>
-        <Enum
-            value={values.axis}
-            label="Axis"
-            options={Axis}
-            onChange={(axis) => onChange({ ...values, axis })}
-        />
-
         <Heading variant="heading-5">New</Heading>
         <Gallery
             onSelect={(item) => onChange({...values, items: [...values.items, createControl(item)], })}/>
@@ -46,10 +33,10 @@ const Controls = ({values, onChange}: {values: StackProps; onChange: (val: Stack
     </Stack>
 );
 
-export const StackBuilder = componentDef({
-    label: "Stack",
-    render: ({ items, axis }: StackProps) => (
-        <Stack axis={axis}>
+export const PageBuilder = componentDef({
+    label: "Page",
+    render: ({ items }: PageProps) => (
+        <Stack axis="vertical" style={{backgroundColor: `${theme.light.colors.bg}`, margin: "32px auto", padding: "16px", maxWidth: "1000px"}}>
             {items.map((t, i) => (
                 <RenderPiece key={i} {...t} />
             ))}

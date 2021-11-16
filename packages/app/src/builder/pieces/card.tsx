@@ -1,33 +1,19 @@
 import { componentDef, ControlState } from "../types";
 import React from "react";
 import { RenderPiece } from "../util/render_piece";
-import { Box, Stack, Icons, Heading } from "ds";
-import { Enum } from "../controls/enum";
+import {Box, Stack, Icons, Heading, theme} from "ds";
 import { Gallery } from "./gallery";
 import { createControl } from "../util/create_control";
 import { remove } from "../util/remove";
 
-enum Axis {
-    vertical = "vertical",
-    horizontal = "horizontal",
-}
-
-type StackProps = { items: ControlState[]; axis: Axis };
-const defaultProps: StackProps = {
-    axis: Axis.vertical,
+// just a simple card that is not supposed to be used in Radius but has its uses for my demo
+type CardProps = { items: ControlState[]; };
+const defaultProps: CardProps = {
     items: [],
 };
 
-const Controls = ({values, onChange}: {values: StackProps; onChange: (val: StackProps) => void}): JSX.Element => (
+const Controls = ({values, onChange}: {values: CardProps; onChange: (val: CardProps) => void}): JSX.Element => (
     <Stack axis="vertical">
-        <Heading variant="heading-5">Controls</Heading>
-        <Enum
-            value={values.axis}
-            label="Axis"
-            options={Axis}
-            onChange={(axis) => onChange({ ...values, axis })}
-        />
-
         <Heading variant="heading-5">New</Heading>
         <Gallery
             onSelect={(item) => onChange({...values, items: [...values.items, createControl(item)], })}/>
@@ -46,10 +32,10 @@ const Controls = ({values, onChange}: {values: StackProps; onChange: (val: Stack
     </Stack>
 );
 
-export const StackBuilder = componentDef({
-    label: "Stack",
-    render: ({ items, axis }: StackProps) => (
-        <Stack axis={axis}>
+export const CardBuilder = componentDef({
+    label: "Card",
+    render: ({ items }: CardProps) => (
+        <Stack axis="vertical" style={{backgroundColor: `${theme.light.colors.bg.secondary}`, padding: "32px"}}>
             {items.map((t, i) => (
                 <RenderPiece key={i} {...t} />
             ))}

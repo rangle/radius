@@ -7,8 +7,10 @@ import { Gallery } from "./gallery";
 
 export const RootBuilder = componentDef<{ content: ControlState }>({
     label: "UI Builder",
-    render: ({ content }) => <RenderPiece { ...content }/>,
-    controls: ({ onChange }) => <Gallery onSelect={ content => onChange({ content: createControl(content) }) }/>,
+    render: ({ content }) => <RenderPiece {...content} />,
+    controls: ({ onChange }) => (
+        <Gallery onSelect={(content) => onChange({ content: createControl(content) }) } />
+    ),
     initialState: { content: createControl(PlaceholderBuilder) },
     describeContents: ({ content }) => content,
 });

@@ -72,7 +72,7 @@ const CheckboxIcon = (props: any) => (
 export type CheckboxProps = StyledComponentProps<
   'input',
   any,
-  { label: string; error?: Boolean } & BoxProps,
+  { label: string; error?: boolean } & BoxProps,
   never
 >;
 
