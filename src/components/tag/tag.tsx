@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 export interface DsTagProps {
   type: 'primary' | 'secondary' | 'error' | 'success' | 'alert';
