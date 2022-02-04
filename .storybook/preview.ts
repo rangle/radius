@@ -1,11 +1,30 @@
-import { addDecorator, addParameters } from '@storybook/react';
-import ThemeDecorator from './theme-decorator';
-// import { withKnobs } from '@storybook/addon-knobs';
-// import { withA11y } from '@storybook/addon-a11y';
+import { addParameters } from '@storybook/react';
+import '../src/styles/index.css';
 
-addDecorator(ThemeDecorator);
-// addDecorator(withKnobs);
-// addDecorator(withA11y);
+const tokenContext = require.context(
+  '!!raw-loader!../src/styles/',
+  true,
+  /.\.(css|less|scss|svg)$/
+);
+
+const tokenFiles = tokenContext.keys().map(function (filename) {
+  return { filename: filename, content: tokenContext(filename).default };
+});
+
+export const parameters = {
+  viewMode: 'docs',
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+  },
+  docs: { inlineStories: true },
+  designToken: {
+    files: tokenFiles
+  }
+}
 
 addParameters({
   options: {

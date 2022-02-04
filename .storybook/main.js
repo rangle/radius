@@ -13,15 +13,15 @@ module.exports = {
   core: {
     builder: "webpack5",
   },
+  staticDirs: ['../src/imgs'],
   stories: ['../src/**/*.stories.@(js|tsx|mdx)'],
   addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-docs',
-    '@storybook/addon-essentials',
-    '@storybook/addon-controls',
-    '@storybook/addon-a11y',
-    '@storybook/addon-viewport/register',
-    '@storybook/addon-storysource'
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-a11y",
+    "@storybook/addon-storysource",
+    "storybook-design-token",
+    "@geometricpanda/storybook-addon-badges"
   ],
   typescript: {
     check: true,

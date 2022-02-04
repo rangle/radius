@@ -1,0 +1,12 @@
+:root {
+  /**
+  * @tokens Shadow
+  * @presenter Shadow
+  */
+  --ds-shadow-0: 0 0 1px rgba(38, 38, 38, 0.05);
+  --ds-shadow-20: 0 0 1px rgba(38, 38, 38, 0.05), 0 1px 3px rgba(38, 38, 38, 0.1);
+  --ds-shadow-40: 0 0 1px rgba(38, 38, 38, 0.05), 0 2px 4px rgba(38, 38, 38, 0.1);
+  --ds-shadow-60: 0 0 1px rgba(38, 38, 38, 0.05), 0 4px 8px rgba(38, 38, 38, 0.1);
+  --ds-shadow-80: 0 0 1px rgba(38, 38, 38, 0.05), 0 8px 16px rgba(38, 38, 38, 0.1);
+  --ds-shadow-100: 0 0 1px rgba(38, 38, 38, 0.05), 0 16px 24px rgba(38, 38, 38, 0.1);
+}

@@ -1,133 +1,79 @@
-import { lighten, darken } from 'polished';
-
-export const fonts = {
-  body: '"Helvetica Neue", Roboto, sans-serif',
-  heading: '"Roboto", sans-serif',
-  monospace: 'Menlo, monospace',
-};
-
-export const fontSizes = [
-  '0.625rem',
-  '0.75rem',
-  '1rem',
-  '1.125rem',
-  '1.25rem',
-  '1.5rem',
-  '1.75rem',
-  '2rem',
-  '2.5rem',
-  '3rem',
-];
-
-export const fontWeights = {
-  regular: 400,
-  medium: 500,
-  bold: 700,
-};
-
-export const lineHeights = {
-  solid: 1,
-  title: 1.25,
-  copy: 1.5,
-};
-
-export const letterSpacings = {
-  default: 'normal',
-  tracked: '0.04em',
-};
-
-export const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
-export const sizes = [8, 16, 32, 64, 128, 256, 512, 768, 1024, 1536];
-
-export const breakpoints = ['40em', '56em', '64em'];
-
-export default {
-  light: {
-    space,
-    sizes,
-    fonts,
-    fontSizes,
-    fontWeights,
-    lineHeights,
-    letterSpacings,
-    breakpoints,
-    colors: {
-      brand: {
-        primary: '#012E86',
-        secondary: '#0064D9',
-        accent: '#DB7C00',
-        muted: '#C6DAF7',
-      },
-      ui: {
-        primary: '#262626',
-        secondary: '#757575',
-        tertiary: '#F1F1F1',
-        quaternary: '#FFFFFF',
-        disabled: '#DEDEDE',
-        error: '#D0421B',
-        success: '#138000',
-      },
-      bg: {
-        primary: '#FFFFFF',
-        secondary: '#F1F1F1',
-      },
-      text: {
-        primary: '#262626',
-        secondary: '#757575',
-        disabled: '#9C9C9C',
-        inverse: '#FFFFFF',
-        error: '#D0421B',
-        success: '#138000',
-      },
-      highlights: {
-        primaryHighlight: darken(0.1, '#012E86'),
-        primaryExtraHighlight: darken(0.2, '#012E86'),
-        bgHighlight: darken(0.1, '#FFFFFF'),
-      },
-    },
+export const theme = {
+  borders: {
+    radiusSmall: 'var(--ds-border-radius-s)',
+    radiusMedium: 'var(--ds-border-radius-m)',
+    radiusLarge: 'var(--ds-border-radius-l)',
   },
-  dark: {
-    space,
-    sizes,
-    fonts,
-    fontSizes,
-    fontWeights,
-    lineHeights,
-    letterSpacings,
-    breakpoints,
-    colors: {
-      brand: {
-        primary: '#298DFF',
-        secondary: '#7CAEE8',
-        accent: '#FDB447',
-        muted: '#B7CBEA',
-      },
-      ui: {
-        primary: '#FFFFFF',
-        secondary: '#A1A1A1',
-        tertiary: '#3C3C3C',
-        quaternary: '#262626',
-        disabled: '#242424',
-        error: '#FF4D4D',
-        success: '#1CBD00',
-      },
-      bg: {
-        primary: '#111111',
-        secondary: '#262626',
-      },
-      text: {
-        primary: '#FFFFFF',
-        secondary: '#A1A1A1',
-        disabled: '#525252',
-        inverse: '#262626',
-        error: '#FF4D4D',
-        success: '#1CBD00',
-      },
-      highlights: {
-        primaryHighlight: lighten(0.1, '#298DFF'),
-        primaryExtraHighlight: lighten(0.2, '#298DFF'),
-        bgHighlight: lighten(0.1, '#111111'),
-      },
-    },
+  dropShadow: {
+    shadow0: 'var(--ds-shadow-0)',
+    shadow20: 'var(--ds-shadow-20)',
+    shadow40: 'var(--ds-shadow-40)',
+    shadow60: 'var(--ds-shadow-60)',
+    shadow80: 'var(--ds-shadow-80)',
+    shadow100: 'var(--ds-shadow-100)',
   },
+  spacing: {
+    space1: 'var(--ds-space-1)',
+    space2: 'var(--ds-space-2)',
+    space3: 'var(--ds-space-3)',
+    space4: 'var(--ds-space-4)',
+    space5: 'var(--ds-space-5)',
+    space6: 'var(--ds-space-6)',
+    space7: 'var(--ds-space-7)',
+    space8: 'var(--ds-space-8)',
+    space9: 'var(--ds-space-9)',
+    space10: 'var(--ds-space-10)',
+    space11: 'var(--ds-space-11)',
+    space12: 'var(--ds-space-12)',
+  },
+  typography: {
+    scale_xs: 'var(--ds-typography-scale-xs)',
+    scale_s: 'var(--ds-typography-scale-s)',
+    scale_m: 'var(--ds-typography-scale-m)',
+    scale_l: 'var(--ds-typography-scale-l)',
+    scale_xl: 'var(--ds-typography-scale-xl)',
+    scale_2xl: 'var(--ds-typography-scale-2xl)',
+    scale_3xl: 'var(--ds-typography-scale-3xl)',
+    scale_4xl: 'var(--ds-typography-scale-4xl)',
+    scale_5xl: 'var(--ds-typography-scale-5xl)',
+  },
+  colors: {
+    brand: {
+      primaryMain: 'var(--ds-color-brand-primary-main)',
+      primaryLight: 'var(--ds-color-brand-primary-light)',
+      primaryDark: 'var(--ds-color-brand-primary-dark)',
+      primaryDarker: 'var(--ds-color-brand-primary-darker)',
+      secondaryMain: 'var(--ds-color-brand-secondary-main)',
+      secondaryLight: 'var(--ds-color-brand-secondary-light)',
+      secondaryDark: 'var(--ds-color-brand-secondary-dark)',
+      secondaryDarker: 'var(--ds-color-brand-secondary-darker)',
+    },
+    ui: {
+      primary: 'var(--ds-color--ui-primary)',
+      secondary: 'var(--ds-color--ui-secondary)',
+      tertiary: 'var(--ds-color--ui-tertiary)',
+      quaternary: 'var(--ds-color--ui-quaternary)',
+      disabled: 'var(--ds-color--ui-disabled)',
+      errorDefault: 'var(--ds-color--ui-error-default)',
+      errorLight: 'var(--ds-color--ui-error-light)',
+      errorDark: 'var(--ds-color--ui-error-dark)',
+      successDefault: 'var(--ds-color--ui-success-default)',
+      successLight: 'var(--ds-color--ui-success-light)',
+      successDark: 'var(--ds-color--ui-success-dark)',
+      alertDefault: 'var(--ds-color--ui-alert-default)',
+      alertLight: 'var(--ds-color--ui-alert-light)',
+      alertDark: 'var(--ds-color--ui-alert-dark)',
+      background1: 'var(--ds-color--ui-background-1)',
+      background2: 'var(--ds-color--ui-background-2)',
+    },
+    text: {
+      primary: 'var(--ds-color--text-primary)',
+      secondary: 'var(--ds-color--text-secondary)',
+      disabled: 'var(--ds-color--text-disabled)',
+      inverse: 'var(--ds-color--text-inverse)',
+      error: 'var(--ds-color--text-error)',
+      success: 'var(--ds-color--text-success)',
+      link: 'var(--ds-color--text-link)',
+    }
+  }
 };
