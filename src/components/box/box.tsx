@@ -1,7 +1,11 @@
 import React from 'react';
 import styles from "./box.module.scss";
 
-const DsBox = ({ children }: any) => {
+export type DsBoxProps = {
+  children: JSX.Element | string;
+};
+
+const DsBox = ({ children }: DsBoxProps) => {
   return <div className={styles.box}>
     {children}
   </div>
