@@ -1,48 +1,19 @@
-import styled from '@emotion/styled';
+import React from 'react';
+import styles from "./button.module.scss";
 
-import { theme } from '../../theme'
+const selector = 'ds-button';
 
 export type DsButtonProps = {
+  label: string;
+  disabled?: boolean;
   size: 'small' | 'medium' | 'large';
   variant: 'primary' | 'secondary' | 'chevron' | 'icon';
 }
 
-const COLOR: any = {
-  primary: theme.colors.text.inverse,
-  secondary: theme.colors.ui.primary,
+const DsButton = (props: DsButtonProps) => {
+  const classesArray = `${selector},${selector}--${props.variant || 'primary'},${selector}--${props.size || 'medium'}`.split(',');
+  const classNames = classesArray.map(n => styles[n]).toString().replace(/,/g, ' ');
+  return <button className={classNames} disabled={props.disabled}>{props.label}</button>
 };
-
-const BG_COLOR: any = {
-  primary: theme.colors.ui.primary,
-  secondary: theme.colors.text.inverse,
-};
-
-const DsButton = styled.button<DsButtonProps>`
-  border-style: none;
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  vertical-align: middle;
-  padding-top: ${theme.spacing.space2};
-  padding-bottom: ${theme.spacing.space2};
-  padding-left: ${theme.spacing.space7};
-  padding-right: ${theme.spacing.space7};
-  border-radius: ${theme.borders.radiusMedium};
-  background-color: ${props => BG_COLOR[props.variant]};
-  color: ${props => COLOR[props.variant]};
-  :hover {
-    color: ${theme.colors.text.inverse};
-    background-color: ${theme.colors.brand.primaryMain};
-  }
-  :active,
-  :focus {
-    color: ${theme.colors.text.inverse};
-    background-color: ${theme.colors.brand.primaryDark};
-  }
-  :disabled {
-    background-color: ${theme.colors.ui.disabled};
-    color: ${theme.colors.text.inverse};
-  }
-`;
 
 export default DsButton;

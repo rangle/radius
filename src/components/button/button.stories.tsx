@@ -11,16 +11,23 @@ const Template: Story<DsButtonProps> = (args) => <DsButton {...args}>Hello Butto
 
 export const Primary = Template.bind({});
 Primary.args = {
-  variant: 'primary'
+  variant: 'primary',
+  size: 'medium',
+  label: 'Primary Button'
 };
 
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  variant: 'secondary'
+  variant: 'secondary',
+  size: 'medium',
+  label: 'Secondary Button'
 };
 
-export const Disabled: Story<DsButtonProps> = (args) => <DsButton disabled {...args}>Hello Button</DsButton>;
-Secondary.args = {
-  variant: 'primary'
+export const Disabled: Story<DsButtonProps> = (args) => <DsButton {...args}>Hello Button</DsButton>;
+Disabled.args = {
+  variant: 'primary',
+  disabled: true,
+  size: 'medium',
+  label: 'Primary Disabled Button'
 };
