@@ -108,8 +108,8 @@ const Editor = () => {
     <br/>
     <br/>
     <div>
-      {VALUES.map((data, index) => {
-        return <EditorRow type={TYPE} variable={data.variable} value={data.value} key={index} />
+      {VALUES.map((data) => {
+        return <EditorRow type={TYPE} variable={data.variable} value={data.value} key={data.variable} />
       })}
     </div>
   </div>;
