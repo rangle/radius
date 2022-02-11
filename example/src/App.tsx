@@ -1,9 +1,15 @@
 import * as React from 'react';
-import DsButton from '../../src/components/button/button';
 
 import Editor from './components/movies/Editor/Editor';
 import Movies from './components/movies/Movies';
 import { Movie } from './models/Movie';
+
+import DsButton from '../../src/components/button/button';
+import { changeTheme } from '../../src'
+
+import * as THEME_DEFAULT from './themes/default.json';
+import * as THEME_ONE from './themes/theme1.json';
+import * as THEME_TWO from './themes/theme2.json';
 
 const MOVIES: Movie[] = [{
   image: 'https://tailwindcss.com/_next/static/media/prognosis-negative.a3c55fb717747ce6804f7375a2147a76.jpg',
@@ -34,96 +40,21 @@ const MOVIES: Movie[] = [{
   cast: 'Idris Elba, John Cena, Thandiwe Newton'
 }];
 
-const THEME_DEFAULT = [{
-  variable: '--ds-color--ui-primary',
-  value: '#262626'
-}, {
-  variable: '--ds-color--text-inverse',
-  value: '#FFFFFF'
-}, {
-  variable: '--ds-color--text-primary',
-  value: '#262626'
-}, {
-  variable: '--ds-color--ui-background-1',
-  value: '#dee2e6'
-}, {
-  variable: '--ds-color--ui-background-2',
-  value: '#ced4da'
-}, {
-  variable: '--ds-color-brand-secondary-main',
-  value: '#262626'
-}, {
-  variable: '--ds-border-radius-m',
-  value: '8px'
-}];
-
-const THEME_1 = [{
-  variable: '--ds-color--ui-primary',
-  value: '#e63946'
-}, {
-  variable: '--ds-color--text-inverse',
-  value: '#f1faee'
-}, {
-  variable: '--ds-color--text-primary',
-  value: '#457b9d'
-}, {
-  variable: '--ds-color--ui-background-1',
-  value: '#f1faee'
-}, {
-  variable: '--ds-color--ui-background-2',
-  value: '#a8dadc'
-}, {
-  variable: '--ds-color-brand-secondary-main',
-  value: '#0466c8'
-}, {
-  variable: '--ds-border-radius-m',
-  value: '25px'
-}];
-
-
-const THEME_2 = [{
-  variable: '--ds-color--ui-primary',
-  value: '#a9005b'
-}, {
-  variable: '--ds-color-brand-primary-main',
-  value: '#a9005b'
-}, {
-  variable: '--ds-color--text-inverse',
-  value: '#ffaffb'
-}, {
-  variable: '--ds-color--text-primary',
-  value: '#a9005b'
-}, {
-  variable: '--ds-color--ui-background-1',
-  value: '#acf8cb'
-}, {
-  variable: '--ds-color--ui-background-2',
-  value: '#ffaffb'
-}, {
-  variable: '--ds-color-brand-secondary-main',
-  value: '#acf8cb'
-}, {
-  variable: '--ds-border-radius-m',
-  value: '0px'
-}];
-
 const App = () => {
   const onThemeClick = (index: number) => {
     let tokens = THEME_DEFAULT;
     if (index === 1) {
-      tokens = THEME_1;
+      tokens = THEME_ONE;
     } else if (index === 2) {
-      tokens = THEME_2;
+      tokens = THEME_TWO;
     }
-    tokens.forEach((token) => {
-      document.documentElement.style
-        .setProperty(token.variable, token.value);
-    })
+
+    changeTheme(tokens);
   };
 
   return (
     <>
-      <div style={{display: 'flex'}}>
+      <div style={{ display: 'flex' }}>
         <DsButton onClick={() => onThemeClick(0)} label='Reset Theme One' />
         &nbsp;&nbsp;
         <DsButton onClick={() => onThemeClick(1)} label='Apply Theme One' />

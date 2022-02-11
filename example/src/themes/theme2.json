@@ -1,0 +1,9 @@
+{
+  "--ds-color--ui-primary": "#a9005b",
+  "--ds-color--text-inverse": "#ffaffb",
+  "-ds-color--text-primary": "#a9005b",
+  "--ds-color--ui-background-1": "#acf8cb",
+  "--ds-color--ui-background-2": "#ffaffb",
+  "-ds-color-brand-secondary-main": "#acf8cb",
+  "--ds-border-radius-m": "0px"
+}
