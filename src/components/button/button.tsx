@@ -8,7 +8,7 @@ export interface DsButtonProps {
   disabled?: boolean;
   size?: 'small' | 'medium' | 'large';
   variant?: 'primary' | 'secondary' | 'chevron' | 'icon';
-  onClick: any;
+  onClick?: any;
 }
 
 const DsButton = (props: DsButtonProps) => {
