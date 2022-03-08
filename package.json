@@ -40,7 +40,8 @@
   "name": "radius",
   "author": "Sumit Arora",
   "module": "dist/radius.esm.js",
-  "size-limit": [{
+  "size-limit": [
+    {
       "path": "dist/radius.cjs.production.min.js",
       "limit": "10 KB"
     },
@@ -81,11 +82,12 @@
     "dotenv-webpack": "^7.0.3",
     "html-webpack-plugin": "^5.3.1",
     "husky": "^6.0.0",
-    "postcss": "8.4.6",
+    "postcss": "^8.4.8",
     "postcss-modules": "4.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
+    "rollup-plugin-postcss": "^4.0.2",
     "sass": "1.49.7",
     "sass-loader": "12.4.0",
     "size-limit": "^5.0.1",
