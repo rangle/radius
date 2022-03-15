@@ -1,3 +1,14 @@
+# What is here? # 
+* Webpack 5 + bable
+* React 17 + React Dom
+  * 3 component examples, box, button, tag
+* Emotion 11, with emotion styled + react
+* Jest 27
+  * Some basic unit testing of the components
+* Husky
+* Storyboard
+* Chromatic
+
 # Radius Design System Kit
 
 The Radius is an opinionated assemblage of open-source tools and libraries that allow you to accelerate your design system. The choice of tools, their composition, and a set of foundational components guides you on how to build a constraint-based system.

@@ -23,6 +23,7 @@ const DsButton = styled.button<DsButtonProps>`
   cursor: pointer;
   display: flex;
   vertical-align: middle;
+  font-family: ${theme.typography.font_family};
   padding-top: ${theme.spacing.space2};
   padding-bottom: ${theme.spacing.space2};
   padding-left: ${theme.spacing.space7};

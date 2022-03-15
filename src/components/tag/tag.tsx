@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { theme } from '../../theme'
 
 export interface DsTagProps {
   type: 'primary' | 'secondary' | 'error' | 'success' | 'alert';
@@ -69,6 +70,7 @@ const DsTag = styled.div<DsTagProps>`
   border-style: solid;
   border-width: 1px;
   font-size: 11px;
+  font-family: ${theme.typography.font_family_secondary};
   border-color: transparent;
   background-color: ${props => getColor(props, COLOR_TYPE.background_color)};
   border-color: ${props => getColor(props, COLOR_TYPE.border_color)};
