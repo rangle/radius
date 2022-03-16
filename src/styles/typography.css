@@ -1,4 +1,13 @@
 :root {
+
+  /** 
+  * @tokens Font Families
+  * @presenter FontFamily
+  **/
+  --ds-typography-primary: 'Roboto';
+  --ds-typography-secondary: 'Indie Flower';
+
+
   /**
   * @tokens Font Sizes
   * @presenter FontSize

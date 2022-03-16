@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from '../../theme'
 
 export interface DsTagProps {
   type: 'primary' | 'secondary' | 'error' | 'success' | 'alert';
@@ -63,13 +64,14 @@ const getColor = (props: DsTagProps, colorType: COLOR_TYPE = COLOR_TYPE.backgrou
 const DsTag = styled.div<DsTagProps>`
   height: fit-content;
   display: inline-block;
-  padding: 0 var(--ds-space-2);
+  padding: var(--ds-space-1) var(--ds-space-2);
   white-space: nowrap;
   border-radius: var(--ds-border-radius-m);
   border-style: solid;
   border-width: 1px;
   font-size: 11px;
   border-color: transparent;
+  font-family: ${theme.typography.font_family_secondary};
   background-color: ${props => getColor(props, COLOR_TYPE.background_color)};
   border-color: ${props => getColor(props, COLOR_TYPE.border_color)};
   color: ${props => getColor(props, COLOR_TYPE.color)};

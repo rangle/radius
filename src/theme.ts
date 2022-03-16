@@ -36,6 +36,8 @@ export const theme = {
     scale_3xl: 'var(--ds-typography-scale-3xl)',
     scale_4xl: 'var(--ds-typography-scale-4xl)',
     scale_5xl: 'var(--ds-typography-scale-5xl)',
+    font_family: 'var(--ds-typography-primary)',
+    font_family_secondary: 'var(--ds-typography-secondary)'
   },
   colors: {
     brand: {
