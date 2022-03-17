@@ -1,11 +1,11 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { Story,ComponentMeta } from '@storybook/react';
 import DsButton, { DsButtonProps } from './button';
 
 export default {
   component: DsButton,
-  title: 'Components/Button',
-} as Meta;
+  title: 'Components/Button'
+} as ComponentMeta<typeof DsButton>;
 
 const Template: Story<DsButtonProps> = (args) => <DsButton {...args}>Hello Button</DsButton>;
 
