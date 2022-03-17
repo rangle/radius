@@ -33,5 +33,5 @@ export default create({
 
   brandTitle: 'Radius',
   brandUrl: 'https://rangle.io/radius',
-  brandImage: 'radius_logo_inverted.png',
+  brandImage: 'imgs/radius_logo_inverted.png',
 });

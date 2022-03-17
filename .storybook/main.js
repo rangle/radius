@@ -13,7 +13,7 @@ module.exports = {
   core: {
     builder: "webpack5",
   },
-  staticDirs: ['../src/imgs'],
+  staticDirs: ['../src/assets',],
   stories: ['../src/**/*.stories.@(js|tsx|mdx)'],
   addons: [
     "@storybook/addon-links",
