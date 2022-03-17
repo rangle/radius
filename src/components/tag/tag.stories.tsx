@@ -1,11 +1,25 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { Story, ComponentMeta } from '@storybook/react';
 import DsTag, { DsTagProps } from './tag';
 
 export default {
   component: DsTag,
   title: 'Components/Tag',
-} as Meta;
+  argTypes:{
+    type:{
+      name: "type",
+      type: { name: 'string', required: false },
+      defaultValue:'primary',
+      description: 'demo description',
+      control:{
+        type:'select'
+      }
+    }
+  },
+  // args:{
+  //   type:'secondary'
+  // }
+} as ComponentMeta<typeof DsTag>;
 
 const Template: Story<DsTagProps> = (args) => <DsTag {...args}>Tag</DsTag>;
 
