@@ -7,18 +7,31 @@ export default {
   title: 'Components/Tag',
   argTypes:{
     type:{
-      name: "type",
+      name: "Type",
       type: { name: 'string', required: false },
-      defaultValue:'primary',
-      description: 'demo description',
+      defaultValue: {summary:'primary'},
+      description: 'Controls the style state, error, success, alert',
+      options: [ 'primary', 'secondary', 'error', 'success', 'alert'],
       control:{
         type:'select'
       }
+    },
+    variant:{
+      name: "Variant",
+      type: { name: 'string', required: false },
+      defaultValue: {summary:'solid'},
+      description: 'Options for different styles',
+      options: [ 'solid', 'outline'],
+      control:{
+        type:'radio'
+      }
     }
   },
-  // args:{
-  //   type:'secondary'
-  // }
+  args:{
+    type: 'primary',
+    variant: 'solid'
+
+  }
 } as ComponentMeta<typeof DsTag>;
 
 const Template: Story<DsTagProps> = (args) => <DsTag {...args}>Tag</DsTag>;
