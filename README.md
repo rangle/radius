@@ -1,6 +1,6 @@
 # Radius - React & Emotion #
 This repo is one of a few starter design systems that has been created for Radius an assemblage of open-source tools and libraries that allow you to accelerate your design system.
-In collaboration with this repository it is suggested to use the design token generator that is available through Radius script CLI, this will generate a folder of css variables (design tokens). To use the token generator use the suggested starter kit for [Figma](https://www.figma.com/file/RqENxZWAzGiEWM7COch1Sc/Radius-Design-Kit).
+In collaboration with this repository it is suggested to use the design token generator that is available through Radius script CLI. This will generate a folder of CSS variables (design tokens). To use the token generator use the suggested starter kit for [Figma](https://www.figma.com/file/RqENxZWAzGiEWM7COch1Sc/Radius-Design-Kit).
 
 ## Features ## 
 * Webpack 5 + bable
