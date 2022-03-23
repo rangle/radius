@@ -2,25 +2,21 @@
 This repo is one of a few starter design systems that has been created for Radius an assemblage of open-source tools and libraries that allow you to accelerate your design system.
 In collaboration with this repository it is suggested to use the design token generator that is available through Radius script CLI. This will generate a folder of CSS variables (design tokens). To use the token generator use the suggested starter kit for [Figma](https://www.figma.com/file/RqENxZWAzGiEWM7COch1Sc/Radius-Design-Kit).
 
-## Features ## 
-* Webpack 5 + bable
-* React 17 + React Dom
-  * 3 component examples, box, button, tag
-* Emotion 11, with emotion styled + react
-* Jest 27
-  * Some basic unit testing of the components
-* Husky
-* Storyboard
-* Chromatic
+## Features ##
+This starter repository for Radius uses:
+- Webpack 5 + bable
+- React 17 + React Dom
+  - 3 component examples, box, button, tag
+- Emotion 11, with emotion styled + react
+- Jest 27
+  - Some basic unit testing of the components
+- Husky
+- Storyboard
+- Chromatic
 
 ### Are you using Radius?
 
 We would love to hear about how you are using Radius or any feedback or feature requests. Open an [issue](https://github.com/rangle/radius/issues/new).
-
-### 🚀 Quick start
-
-To get started you can just clone the repository or install and run the CLI `npx radius-script` and select react > emotion.
-____
 
 # TSDX React w/ Storybook User Guide
 
