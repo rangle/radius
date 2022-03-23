@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Description, Props, Title } from '@storybook/addon-docs/blocks';
 
-import { DsBox } from './box';
+import {DsBox} from './box';
 
 export default {
   title: 'Components/Box',
