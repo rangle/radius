@@ -1,49 +1,65 @@
-import React from 'react';
-import { Story,ComponentMeta } from '@storybook/react';
-import DsButton, { DsButtonProps } from './button';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import DsButton from './button';
 
 export default {
   component: DsButton,
   title: 'Components/Button',
-  argTypes:{
-    variant:{
-      name: "Variant",
+  argTypes: {
+    variant: {
+      name: 'Variant',
       type: { name: 'string', required: false },
-      defaultValue: {summary:'primary'},
       description: 'Options for different styles',
-      options: [ 'primary', 'secondary'],
-      control:{
-        type:'radio'
-      }
+      options: ['primary', 'secondary', 'disabled'],
+      control: {
+        type: 'radio',
+      },
     },
-    disabled:{
-      name: "Disabled",
+    size: {
+      name: 'Size',
+      type: { name: 'string', required: true },
+      description: 'Options for sizes',
+      options: ['small', 'medium', 'large'],
+      control: 'radio',
+    },
+    disabled: {
+      type: { name: 'string', required: false },
+      name: 'Disabled',
       description: 'The button is no longer active',
-      defaultValue: {summary:false},
-      control:{
-        type:'boolean'
-      }
-    }
+      control: {
+        type: 'toggle',
+      },
+    },
   },
-  args:{
-    variant:'primary',
-    disabled: false
-  }  
+  args: {
+    variant: 'primary',
+    size: 'small',
+    disabled: false,
+  },
 } as ComponentMeta<typeof DsButton>;
 
-const Template: Story<DsButtonProps> = (args) => <DsButton {...args}>Hello Button</DsButton>;
+const Template: ComponentStory<typeof DsButton> = (args) => (
+  <DsButton {...args}>Hello Button</DsButton>
+);
+
+Template.args = {
+  ...Template.args,
+};
 
 export const Primary = Template.bind({});
 Primary.args = {
+  variant: 'primary',
+  disabled: false,
 };
-
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  variant: 'secondary'
+  variant: 'secondary',
+  disabled: false,
 };
 
-export const Disabled: Story<DsButtonProps> = (args) => <DsButton disabled {...args}>Hello Button</DsButton>;
-Secondary.args = {
-  variant: 'primary'
+export const Disabled: ComponentStory<typeof DsButton> = Template.bind({});
+Disabled.args = {
+  variant: 'primary',
+  size: 'large',
+  disabled: true,
 };

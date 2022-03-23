@@ -13,7 +13,10 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
-  staticDirs: ['../src/assets'],
+  staticDirs: [
+    { from: '../src/assets/fonts/ubuntu', to: '/static/media' },
+    { from: '../src/assets/imgs', to: '/' },
+  ],
   stories: ['../src/**/*.stories.@(js|tsx|mdx)'],
   addons: [
     '@storybook/addon-links',
@@ -27,4 +30,5 @@ module.exports = {
   typescript: {
     check: true,
   },
+  framework: '@storybook/react',
 };

@@ -1,91 +1,90 @@
-import React from 'react';
-import { Story, ComponentMeta } from '@storybook/react';
-import DsTag, { DsTagProps } from './tag';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import DsTag from './tag';
 
 export default {
   component: DsTag,
   title: 'Components/Tag',
-  argTypes:{
-    type:{
-      name: "Type",
+  argTypes: {
+    type: {
+      name: 'Type',
       type: { name: 'string', required: false },
-      defaultValue: {summary:'primary'},
+      defaultValue: { summary: 'primary' },
       description: 'Controls the style state, error, success, alert',
-      options: [ 'primary', 'secondary', 'error', 'success', 'alert'],
-      control:{
-        type:'select'
-      }
+      options: ['primary', 'secondary', 'error', 'success', 'alert'],
+      control: {
+        type: 'select',
+      },
     },
-    variant:{
-      name: "Variant",
+    variant: {
+      name: 'Variant',
       type: { name: 'string', required: false },
-      defaultValue: {summary:'solid'},
+      defaultValue: { summary: 'solid' },
       description: 'Options for different styles',
-      options: [ 'solid', 'outline'],
-      control:{
-        type:'radio'
-      }
-    }
+      options: ['solid', 'outline'],
+      control: {
+        type: 'radio',
+      },
+    },
   },
-  args:{
+  args: {
     type: 'primary',
-    variant: 'solid'
-
-  }
+    variant: 'solid',
+    disabled: false,
+  },
 } as ComponentMeta<typeof DsTag>;
 
-const Template: Story<DsTagProps> = (args) => <DsTag {...args}>Tag</DsTag>;
+const Template: ComponentStory<typeof DsTag> = (args) => (
+  <DsTag {...args}>Tag</DsTag>
+);
 
 export const PrimarySolid = Template.bind({});
 PrimarySolid.args = {};
 
 export const SecondarySolid = Template.bind({});
 SecondarySolid.args = {
-  type: 'secondary'
+  type: 'secondary',
 };
 
 export const ErrorSolid = Template.bind({});
 ErrorSolid.args = {
-  type: 'error'
+  type: 'error',
 };
 
 export const SuccessSolid = Template.bind({});
 SuccessSolid.args = {
-  type: 'success'
+  type: 'success',
 };
 
 export const AlertSolid = Template.bind({});
 AlertSolid.args = {
-  type: 'alert'
+  type: 'alert',
 };
-
 
 export const PrimaryOutline = Template.bind({});
 PrimaryOutline.args = {
-  variant: 'outline'
+  variant: 'outline',
 };
-
 
 export const SecondaryOutline = Template.bind({});
 SecondaryOutline.args = {
   type: 'secondary',
-  variant: 'outline'
+  variant: 'outline',
 };
 
 export const ErrorOutline = Template.bind({});
 ErrorOutline.args = {
   type: 'error',
-  variant: 'outline'
+  variant: 'outline',
 };
 
 export const SuccessOutline = Template.bind({});
 SuccessOutline.args = {
   type: 'success',
-  variant: 'outline'
+  variant: 'outline',
 };
 
 export const AlertOutline = Template.bind({});
 AlertOutline.args = {
   type: 'alert',
-  variant: 'outline'
+  variant: 'outline',
 };

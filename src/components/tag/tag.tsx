@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { theme } from '../../theme';
 
 // Define the options for but tags
 export interface DsTagProps {
@@ -70,7 +71,7 @@ const getColor = (
 };
 
 // Create the styled element
-const DsTag = styled.div<DsTagProps>`
+export const DsTag = styled.div<DsTagProps>`
   height: fit-content;
   display: inline-block;
   padding: 0 ${theme.spacing.space2};

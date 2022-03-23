@@ -17,7 +17,9 @@ In collaboration with this repository it is suggested to use the design token ge
 
 ## Features
 
-- Webpack 5 + bable
+This starter repository for Radius uses:
+
+- Webpack 5 + babel
 - React 17 + React Dom
   - 3 component examples, box, button, tag
 - Emotion 11, with emotion styled + react
@@ -31,11 +33,17 @@ In collaboration with this repository it is suggested to use the design token ge
 
 We would love to hear about how you are using Radius or any feedback or feature requests. Open an [issue](https://github.com/rangle/radius/issues/new).
 
+<<<<<<< HEAD
+
 ### 🚀 Quick start
 
 To get started you can just clone the repository or install and run the CLI `npx radius-script` and select react > emotion.
 
 ---
+
+=======
+
+> > > > > > > 09eebe2 (edit the read me a bit)
 
 # TSDX React w/ Storybook User Guide
 
