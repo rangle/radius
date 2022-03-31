@@ -2,11 +2,13 @@ import styled from '@emotion/styled';
 
 import { theme } from '../../theme'
 
+// Define the options for but button
 export type DsButtonProps = {
   size: 'small' | 'medium' | 'large';
   variant: 'primary' | 'secondary' | 'chevron' | 'icon';
 }
 
+// create options for color and background based off theme
 const COLOR: any = {
   primary: theme.colors.text.inverse,
   secondary: theme.colors.ui.primary,
@@ -17,12 +19,14 @@ const BG_COLOR: any = {
   secondary: theme.colors.text.inverse,
 };
 
+// Create the styled element
 const DsButton = styled.button<DsButtonProps>`
   border-style: none;
   position: relative;
   cursor: pointer;
   display: flex;
   vertical-align: middle;
+  font-family: ${theme.typography.font_family};
   padding-top: ${theme.spacing.space2};
   padding-bottom: ${theme.spacing.space2};
   padding-left: ${theme.spacing.space7};

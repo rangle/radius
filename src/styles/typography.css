@@ -1,4 +1,13 @@
 :root {
+
+  /** 
+  * @tokens Font Families
+  * @presenter FontFamily
+  **/
+  --ds-typography-primary: 'Roboto';
+  --ds-typography-secondary: 'Ubuntu Regular';
+  --ds-typography-secondary-bold: 'Ubuntu Bold';
+
   /**
   * @tokens Font Sizes
   * @presenter FontSize
