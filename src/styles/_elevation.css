@@ -1,0 +1,11 @@
+:root {
+  /**
+  * @tokens Shadow
+  * @presenter Shadow
+  */
+  --elevation-100: 0px 16px 24px rgba(48, 49, 51, 0.10), 0px 0px 1px rgba(48, 49, 51, 0.05);
+  --elevation-80: 0px 8px 16px rgba(48, 49, 51, 0.10), 0px 0px 1px rgba(48, 49, 51, 0.05);
+  --elevation-60: 0px 4px 8px rgba(48, 49, 51, 0.10), 0px 0px 1px rgba(48, 49, 51, 0.05);
+  --elevation-40: 0px 2px 4px rgba(48, 49, 51, 0.10), 0px 0px 1px rgba(48, 49, 51, 0.05);
+  --elevation-20: 0px 1px 3px rgba(48, 49, 51, 0.10), 0px 0px 1px rgba(48, 49, 51, 0.05);
+}

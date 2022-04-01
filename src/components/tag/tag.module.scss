@@ -1,61 +1,61 @@
 .ds-tag {
   height: fit-content;
   display: inline-block;
-  padding: 0 var(--ds-space-2);
+  padding: var(--space-1) var(--space-2);
   white-space: nowrap;
-  border-radius: var(--ds-border-radius-m);
+  border-radius: var(--border-radius-m);
   border-style: solid;
   border-width: 1px;
   font-size: 11px;
   border-color: transparent;
   &--primary {
     &--solid {
-      background-color: var(--ds-color--ui-primary);
-      color: var(--ds-color--text-inverse);
+      background-color: var(--colour-ui-primary);
+      color: var(--colour-text-inverse);
     }
     &--outline {
-      border-color: var(--ds-color--ui-primary);
-      color: var(--ds-color--ui-primary);
+      border-color: var(--colour-ui-primary);
+      color: var(--colour-ui-primary);
     }
   }
   &--secondary {
     &--solid {
-      background-color: var(--ds-color-brand-primary-main);
-      color: var(--ds-color--text-inverse);
+      background-color: var(--colour-brand-primary-main);
+      color: var(--colour-text-inverse);
     }
     &--outline {
-      border-color: var(--ds-color-brand-primary-main);
-      color: var(--ds-color-brand-primary-main);
+      border-color: var(--colour-brand-primary-main);
+      color: var(--colour-brand-primary-main);
     }
   }
   &--error {
     &--solid {
-      background-color: var(--ds-color--ui-error-default);
-      color: var(--ds-color--text-inverse);
+      background-color: var(--colour-ui-error);
+      color: var(--colour-text-inverse);
     }
     &--outline {
-      border-color: var(--ds-color--ui-error-default);
-      color: var(--ds-color--ui-error-default);
+      border-color: var(--colour-ui-error);
+      color: var(--colour-ui-error);
     }
   }
   &--success {
     &--solid {
-      background-color: var(--ds-color--ui-success-default);
-      color: var(--ds-color--text-inverse);
+      background-color: var(--colour-ui-success);
+      color: var(--colour-text-inverse);
     }
     &--outline {
-      border-color: var(--ds-color--ui-success-default);
-      color: var(--ds-color--ui-success-default);
+      border-color: var(--colour-ui-success);
+      color: var(--colour-ui-success);
     }
   }
   &--alert {
     &--solid {
-      background-color: var(--ds-color--ui-alert-default);
-      color: var(--ds-color--text-inverse);
+      background-color: var(--colour-ui-alert);
+      color: var(--colour-text-inverse);
     }
     &--outline {
-      border-color: var(--ds-color--ui-alert-default);
-      color: var(--ds-color--ui-alert-default);
+      border-color: var(--colour-ui-alert);
+      color: var(--colour-ui-alert);
     }
   }
 }

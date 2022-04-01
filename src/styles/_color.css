@@ -1,0 +1,37 @@
+:root {
+  /**
+  * @tokens Colors
+  * @presenter Color
+  */
+  --colour-text-success: #138000;
+  --colour-text-link: #0366d6;
+  --colour-text-error: #d0421b;
+  --colour-text-inverse: #ffffff;
+  --colour-text-disabled: #9c9c9c;
+  --colour-text-secondary: #757575;
+  --colour-text-primary: #262626;
+  --colour-background-2: #f1f1f1;
+  --colour-background-1: #ffffff;
+  --colour-ui-alert: #b16400;
+  --colour-ui-alert: #db7c00;
+  --colour-ui-alert: #bc40e8;
+  --colour-ui-success: #105e03;
+  --colour-ui-success: #138000;
+  --colour-ui-success: #34af1f;
+  --colour-ui-error: #ab1010;
+  --colour-ui-error: #d60000;
+  --colour-ui-error: #ed1a1a;
+  --colour-ui-disabled: #dedede;
+  --colour-ui-quaternary: #ffffff;
+  --colour-ui-tertiary: #ededed;
+  --colour-ui-secondary: #828181;
+  --colour-ui-primary: #262626;
+  --colour-brand-secondary-darker: #0e0e0e;
+  --colour-brand-secondary-dark: #1a1919;
+  --colour-brand-secondary-main: #262626;
+  --colour-brand-secondary-light: #3e3e3e;
+  --colour-brand-primary-darker: #a3331a;
+  --colour-brand-primary-dark: #b73b20;
+  --colour-brand-primary-main: #d44527;
+  --colour-brand-primary-light: #ea5435;
+}
