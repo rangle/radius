@@ -1,6 +1,6 @@
 .container {
   width: max-content;
-  background-color: var(--ds-color--ui-background-2);
+  background-color: var(--ds-color-ui-background-2);
   border-radius: var(--ds-border-radius-m);
   border: 1px solid;
   border-color: var(--ds-color-brand-secondary-main);

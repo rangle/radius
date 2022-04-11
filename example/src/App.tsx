@@ -7,6 +7,8 @@ import { Movie } from './models/Movie';
 import DsButton from '../../src/components/button/button';
 import { changeTheme } from '../../src'
 
+import styles from './App.module.css';
+
 import * as THEME_DEFAULT from './themes/default.json';
 import * as THEME_ONE from './themes/theme1.json';
 import * as THEME_TWO from './themes/theme2.json';
@@ -54,7 +56,7 @@ const App = () => {
 
   return (
     <>
-      <div style={{ display: 'flex' }}>
+      <div className={styles.container}>
         <DsButton onClick={() => onThemeClick(0)} label='Reset Theme One' />
         &nbsp;&nbsp;
         <DsButton onClick={() => onThemeClick(1)} label='Apply Theme One' />

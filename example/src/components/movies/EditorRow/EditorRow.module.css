@@ -3,5 +3,5 @@
   justify-content: space-between;
   padding-bottom: var(--ds-space-2);
   margin-bottom: var(--ds-space-2);
-  border-bottom: 1px solid var(--ds-color--ui-primary);
+  border-bottom: 1px solid var(--ds-color-ui-primary);
 }
