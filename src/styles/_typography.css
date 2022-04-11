@@ -1,38 +1,50 @@
-:root {
-  /**
+      :root {
+       /**
   * @tokens Font Sizes
   * @presenter FontSize
   */
-  --ds-typography-scale-5xl: 3rem;
-  --ds-typography-scale-4xl: 2.5rem;
-  --ds-typography-scale-3xl: 2rem;
-  --ds-typography-scale-2xl: 1.75rem;
-  --ds-typography-scale-xl: 1.5rem;
-  --ds-typography-scale-l: 1.25rem;
-  --ds-typography-scale-m: 1rem;
-  --ds-typography-scale-s: 0.75rem;
-  --ds-typography-scale-xs: 0.625rem;
-
-  /**
+       --ds-font-scale-xs: 10px;
+       --ds-font-scale-s: 12px;
+       --ds-font-scale-m: 16px;
+       --ds-font-scale-l: 20px;
+       --ds-font-scale-xl: 24px;
+       --ds-font-scale-2xl: 28px;
+       --ds-font-scale-3xl: 32px;
+       --ds-font-scale-4xl: 40px;
+       --ds-font-scale-5xl: 48px;
+       /**
   * @tokens Font Weights
   * @presenter FontWeight
   */
-  --ds-typography-weight-regular: normal;
-  --ds-typography-weight-medium: lighter;
-  --ds-typography-weight-bold: bolder;
-
-  /**
+       --ds-font-weight-roboto-bold: 700;
+       --ds-font-weight-roboto-medium: 500;
+       --ds-font-weight-roboto-regular: 400;
+       /**
   * @tokens Letter Spacings
   * @presenter LetterSpacing
   */
-  --ds-typography-letter-spacing-default: normal;
-  --ds-typography-letter-spacing-tracked: 0.25rem;
-
-  /**
+       --ds-letter-spacing-4: 0.04em;
+       --ds-letter-spacing-0: 0em;
+       /**
   * @tokens Line Heights
   * @presenter LineHeight
   */
-  --ds-typography-line-height-100: 100%;
-  --ds-typography-line-height-125: 125%;
-  --ds-typography-line-height-150: 150%;
-}
+       --ds-line-height-150: 150%;
+       --ds-line-height-125: 125%;
+       --ds-line-height-100: 100%;
+     }
+     /* typography tokens for l (1440px) */
+     
+     @media screen and (min-width: 1440px) {
+        :root {}
+     }
+     /* typography tokens for m (768px) */
+     
+     @media screen and (min-width: 768px) {
+        :root {}
+     }
+     /* typography tokens for s (364px) */
+     
+     @media screen and (min-width: 364px) {
+        :root {}
+     }

@@ -4,102 +4,102 @@
   cursor: pointer;
   display: flex;
   vertical-align: middle;
-  padding-top: var(--space-2);
-  padding-bottom: var(--space-2);
-  padding-left: var(--space-7);
-  padding-right: var(--space-7);
-  border-radius: var(--border-radius-m);
+  padding-top: var(--ds-space-2);
+  padding-bottom: var(--ds-space-2);
+  padding-left: var(--ds-space-7);
+  padding-right: var(--ds-space-7);
+  border-radius: var(--ds-border-radius-m);
   &--primary {
-    background-color: var(--colour-ui-primary);
-    color: var(--colour-text-inverse);
+    background-color: var(--ds-color-ui-primary);
+    color: var(--ds-color-text-inverse);
     svg {
-      color: var(--colour-text-inverse);
+      color: var(--ds-color-text-inverse);
     }
     &:hover {
-      background-color: var(--colour-brand-primary-main);
+      background-color: var(--ds-color-brand-primary-main);
     }
     &:active,
     &:focus {
-      background-color: var(--colour-brand-primary-dark);
+      background-color: var(--ds-color-brand-primary-dark);
     }
     &:disabled {
-      background-color: var(--colour-ui-disabled);
-      color: var(--colour-text-inverse);
+      background-color: var(--ds-color-ui-disabled);
+      color: var(--ds-color-text-inverse);
     }
   }
   &--secondary {
-    background-color: var(--colour-text-inverse);
-    border-color: var(--colour-ui-primary);
-    color: var(--colour-ui-primary);
+    background-color: var(--ds-color-text-inverse);
+    border-color: var(--ds-color-ui-primary);
+    color: var(--ds-color-ui-primary);
     svg {
-      color: var(--colour-ui-primary);
+      color: var(--ds-color-ui-primary);
     }
     &:hover {
-      color: var(--colour-text-inverse);
-      background-color: var(--colour-brand-primary-main);
+      color: var(--ds-color-text-inverse);
+      background-color: var(--ds-color-brand-primary-main);
     }
     &:active,
     &:focus {
-      color: var(--colour-text-inverse);
-      background-color: var(--colour-brand-primary-dark);
+      color: var(--ds-color-text-inverse);
+      background-color: var(--ds-color-brand-primary-dark);
     }
     &:disabled {
-      background-color: var(--colour-ui-disabled);
-      color: var(--colour-text-inverse);
+      background-color: var(--ds-color-ui-disabled);
+      color: var(--ds-color-text-inverse);
     }
   }
   &--chevron {
     background-color: transparent;
     border-color: transparent;
-    color: var(--colour-ui-primary);
+    color: var(--ds-color-ui-primary);
     svg {
-      color: var(--colour-ui-primary);
+      color: var(--ds-color-ui-primary);
     }
     &:hover {
-      color: var(--colour-brand-primary-main);
+      color: var(--ds-color-brand-primary-main);
     }
     &:active,
     &:focus {
-      color: var(--colour-brand-primary-dark);
+      color: var(--ds-color-brand-primary-dark);
     }
     &:disabled {
-      color: var(--colour-ui-disabled);
+      color: var(--ds-color-ui-disabled);
     }
   }
   &--icon {
-    background-color: var(--colour-ui-primary);
+    background-color: var(--ds-color-ui-primary);
     border-color: transparent;
-    color: var(--colour-text-inverse);
-    padding-top: var(--space-3);
-    padding-bottom: var(--space-3);
-    padding-left: var(--space-3);
-    padding-right: var(--space-3);
+    color: var(--ds-color-text-inverse);
+    padding-top: var(--ds-space-3);
+    padding-bottom: var(--ds-space-3);
+    padding-left: var(--ds-space-3);
+    padding-right: var(--ds-space-3);
     svg {
-      color: var(--colour-text-inverse);
+      color: var(--ds-color-text-inverse);
     }
     &:hover {
-      background-color: var(--colour-brand-primary-main);
+      background-color: var(--ds-color-brand-primary-main);
     }
     &:active,
     &:focus {
-      background-color: var(--colour-brand-primary-dark);
+      background-color: var(--ds-color-brand-primary-dark);
     }
     &:disabled {
-      background-color: var(--colour-ui-disabled);
-      color: var(--colour-text-inverse);
+      background-color: var(--ds-color-ui-disabled);
+      color: var(--ds-color-text-inverse);
     }
   }
   &--small {
-    font-size: var(--typography-scale-s);
-    padding-left: var(--space-5);
-    padding-right: var(--space-5);
+    font-size: var(--ds-typography-scale-s);
+    padding-left: var(--ds-space-5);
+    padding-right: var(--ds-space-5);
   }
   &--medium {
-    font-size: var(--typography-scale-m);
+    font-size: var(--ds-typography-scale-m);
   }
   &--large {
-    font-size: var(--typography-scale-l);
-    padding-left: var(--space-9);
-    padding-right: var(--space-9);
+    font-size: var(--ds-typography-scale-l);
+    padding-left: var(--ds-space-9);
+    padding-right: var(--ds-space-9);
   }
 }

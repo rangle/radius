@@ -3,16 +3,16 @@
   * @tokens Spacing
   * @presenter Spacing
   */
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-5: 20px;
-  --space-6: 24px;
-  --space-7: 32px;
-  --space-8: 40px;
-  --space-9: 48px;
-  --space-10: 64px;
-  --space-11: 96px;
-  --space-12: 128px;
+--ds-space-1: 0.25rem;
+--ds-space-2: 0.5rem;
+--ds-space-3: 0.75rem;
+--ds-space-4: 1rem;
+--ds-space-5: 1.25rem;
+--ds-space-6: 1.5rem;
+--ds-space-7: 2rem;
+--ds-space-8: 2.5rem;
+--ds-space-9: 3rem;
+--ds-space-10: 4rem;
+--ds-space-11: 6rem;
+--ds-space-12: 8rem;
 }
