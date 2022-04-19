@@ -11,6 +11,8 @@
     "node": ">=10"
   },
   "scripts": {
+    "postinstall": "npm install --prefix demo",
+    "demo": "npm --prefix demo run start",
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
@@ -39,8 +41,7 @@
   "name": "radius",
   "author": "Sumit Arora",
   "module": "dist/radius.esm.js",
-  "size-limit": [
-    {
+  "size-limit": [{
       "path": "dist/radius.cjs.production.min.js",
       "limit": "10 KB"
     },
