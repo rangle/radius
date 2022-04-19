@@ -5,9 +5,9 @@
 **/*.cache/
 /dist
 /storybook-static
-/example/dist
-/example/.parcel-cache
-/example/node_modules
+/demo/dist
+/demo/.parcel-cache
+/demo/node_modules
 
 # testing
 /coverage
