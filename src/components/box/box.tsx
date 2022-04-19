@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
-export const DsBox = styled.div(
+const DsBox = styled.div(
   {
     boxSizing: 'border-box',
     minWidth: 0,
   },
 );
+
+export default DsBox;

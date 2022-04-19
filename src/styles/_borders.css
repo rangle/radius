@@ -1,0 +1,9 @@
+:root {
+  /**
+  * @tokens Border Radius
+  * @presenter BorderRadius
+  */
+  --ds-border-radius-s: 4px;
+  --ds-border-radius-m: 8px;
+  --ds-border-radius-l: 16px;
+}

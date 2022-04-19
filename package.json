@@ -11,16 +11,20 @@
     "node": ">=10"
   },
   "scripts": {
+    "postinstall": "npm install --prefix demo",
+    "demo": "npm --prefix demo run start",
     "start": "tsdx watch",
-    "build": "tsdx build",
+    "build": "npm run build:lib && npm run build:demo && npm run build:storybook",
+    "build:lib": "tsdx build",
+    "build:demo": "npm run build --prefix demo",
+    "build:storybook": "build-storybook",
     "test": "tsdx test --passWithNoTests",
     "test:watch": "tsdx test --passWithNoTests --watch",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook -p 6006"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -39,8 +43,7 @@
   "name": "radius",
   "author": "Sumit Arora",
   "module": "dist/radius.esm.js",
-  "size-limit": [
-    {
+  "size-limit": [{
       "path": "dist/radius.cjs.production.min.js",
       "limit": "10 KB"
     },

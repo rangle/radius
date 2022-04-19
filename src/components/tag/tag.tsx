@@ -16,24 +16,24 @@ enum COLOR_TYPE {
 
 const COLORS: KEY_VALUE_VALUE = {};
 COLORS[COLOR_TYPE.color] = {
-  primary_solid: 'var(--ds-color--text-inverse)',
-  secondary_solid: 'var(--ds-color--text-inverse)',
-  error_solid: 'var(--ds-color--text-inverse)',
-  success_solid: 'var(--ds-color--text-inverse)',
-  alert_solid: 'var(--ds-color--text-inverse)',
-  primary_outline: 'var(--ds-color--ui-primary)',
+  primary_solid: 'var(--ds-color-text-inverse)',
+  secondary_solid: 'var(--ds-color-text-inverse)',
+  error_solid: 'var(--ds-color-text-inverse)',
+  success_solid: 'var(--ds-color-text-inverse)',
+  alert_solid: 'var(--ds-color-text-inverse)',
+  primary_outline: 'var(--ds-color-ui-primary)',
   secondary_outline: 'var(--ds-color-brand-primary-main)',
-  error_outline: 'var(--ds-color--ui-error-default)',
-  success_outline: 'var(--ds-color--ui-success-default)',
-  alert_outline: 'var(--ds-color--ui-alert-default)',
+  error_outline: 'var(--ds-color-ui-error-default)',
+  success_outline: 'var(--ds-color-ui-success-default)',
+  alert_outline: 'var(--ds-color-ui-alert-default)',
 };
 
 COLORS[COLOR_TYPE.background_color] = {
-  primary_solid: 'var(--ds-color--ui-primary)',
+  primary_solid: 'var(--ds-color-ui-primary)',
   secondary_solid: 'var(--ds-color-brand-primary-main)',
-  error_solid: 'var(--ds-color--ui-error-default)',
-  success_solid: 'var(--ds-color--ui-success-default)',
-  alert_solid: 'var(--ds-color--ui-alert-default)',
+  error_solid: 'var(--ds-color-ui-error-default)',
+  success_solid: 'var(--ds-color-ui-success-default)',
+  alert_solid: 'var(--ds-color-ui-alert-default)',
   primary_outline: 'none',
   secondary_outline: 'none',
   error_outline: 'none',
@@ -47,11 +47,11 @@ COLORS[COLOR_TYPE.border_color] = {
   error_solid: 'none',
   success_solid: 'none',
   alert_solid: 'none',
-  primary_outline: 'var(--ds-color--ui-primary)',
+  primary_outline: 'var(--ds-color-ui-primary)',
   secondary_outline: 'var(--ds-color-brand-primary-main)',
-  error_outline: 'var(--ds-color--ui-error-default)',
-  success_outline: 'var(--ds-color--ui-success-default)',
-  alert_outline: 'var(--ds-color--ui-alert-default)',
+  error_outline: 'var(--ds-color-ui-error-default)',
+  success_outline: 'var(--ds-color-ui-success-default)',
+  alert_outline: 'var(--ds-color-ui-alert-default)',
 };
 
 const getColor = (props: DsTagProps, colorType: COLOR_TYPE = COLOR_TYPE.background_color) => {

@@ -1,0 +1,56 @@
+/* default grid tokens */
+
+:root {
+  --ds-grid-margin-l: 154px;
+  --ds-grid-margin-desktop: 154px;
+  --ds-grid-margin-l: 154px;
+  --ds-grid-margin-desktop: 154px;
+}
+
+
+/* grid tokens for l (1440px) */
+
+@media screen and (min-width: 1440px) {
+   :root {
+    --ds-grid-margin-l: 154px;
+    --ds-grid-margin-desktop: 154px;
+    --ds-grid-margin-l: 154px;
+    --ds-grid-margin-desktop: 154px;
+  }
+}
+
+
+/* grid tokens for m (768px) */
+
+@media screen and (min-width: 768px) {
+   :root {
+    --ds-grid-margin-l: 154px;
+    --ds-grid-margin-desktop: 154px;
+    --ds-grid-margin-l: 154px;
+    --ds-grid-margin-desktop: 154px;
+    --ds-grid-margin-m: 34px;
+    --ds-grid-margin-tablet: 34px;
+    --ds-grid-margin-m: 32px;
+    --ds-grid-margin-tablet: 32px;
+  }
+}
+
+
+/* grid tokens for s (364px) */
+
+@media screen and (min-width: 364px) {
+   :root {
+    --ds-grid-margin-l: 154px;
+    --ds-grid-margin-desktop: 154px;
+    --ds-grid-margin-l: 154px;
+    --ds-grid-margin-desktop: 154px;
+    --ds-grid-margin-m: 34px;
+    --ds-grid-margin-tablet: 34px;
+    --ds-grid-margin-m: 32px;
+    --ds-grid-margin-tablet: 32px;
+    --ds-grid-margin-s: 28px;
+    --ds-grid-margin-mobile: 28px;
+    --ds-grid-margin-s: 28px;
+    --ds-grid-margin-mobile: 28px;
+  }
+}
