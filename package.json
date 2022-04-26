@@ -1,5 +1,5 @@
 {
-  "version": "0.11.0",
+  "version": "0.12.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -24,6 +24,8 @@
     "node": ">=10"
   },
   "scripts": {
+    "postinstall": "npm install --prefix demo",
+    "demo": "npm --prefix demo run start",
     "start": "tsdx watch",
     "build": "npm run build:lib && npm run build:demo && npm run build:storybook",
     "build:lib": "tsdx build",
@@ -35,7 +37,8 @@
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "prepare": "npm run rollup"
   },
   "peerDependencies": {
     "react": ">=16"

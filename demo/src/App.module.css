@@ -1,0 +1,4 @@
+.container {
+  display: flex;
+  padding: var(--ds-space-4);
+}
