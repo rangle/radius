@@ -1,18 +1,29 @@
 {
-  "version": "0.1.0",
+  "version": "0.11.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./button": "./dist/button.js",
+    "./tag": "./dist/tag.js"
+  },
+  "typesVersions": {
+    "*": {
+      "button": ["dist/button.d.ts"],
+      "tag": ["dist/tag.d.ts"]
+    }
+  },
   "engines": {
     "node": ">=10"
   },
   "scripts": {
-    "postinstall": "npm install --prefix demo",
-    "demo": "npm --prefix demo run start",
     "start": "tsdx watch",
     "build": "npm run build:lib && npm run build:demo && npm run build:storybook",
     "build:lib": "tsdx build",
@@ -21,10 +32,10 @@
     "test": "tsdx test --passWithNoTests",
     "test:watch": "tsdx test --passWithNoTests --watch",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "rollup": "rollup -c"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -40,10 +51,11 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "radius",
+  "name": "radius-limeade",
   "author": "Sumit Arora",
   "module": "dist/radius.esm.js",
-  "size-limit": [{
+  "size-limit": [
+    {
       "path": "dist/radius.cjs.production.min.js",
       "limit": "10 KB"
     },
@@ -114,5 +126,13 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less|scss|sass)$": "<rootDir>/__mocks__/fileMock.js"
     }
+  },
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.2.1",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "rollup": "^2.70.2",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-dts": "^4.2.1"
   }
 }

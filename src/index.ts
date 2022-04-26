@@ -1,3 +1,4 @@
+import './styles/index.scss'
 export * from './components';
 
 export function changeTheme(tokens: any)  {

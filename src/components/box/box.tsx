@@ -5,10 +5,8 @@ export type DsBoxProps = {
   children: JSX.Element | string;
 };
 
-const DsBox = ({ children }: DsBoxProps) => {
+export const DsBox = ({ children }: DsBoxProps) => {
   return <div className={styles.box}>
     {children}
   </div>
 };
-
-export default DsBox;

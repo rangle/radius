@@ -1,0 +1,37 @@
+/* default typography tokens */
+
+:root {
+  --ds-font-scale-xs: 10px;
+  --ds-font-scale-s: 12px;
+  --ds-font-scale-m: 16px;
+  --ds-font-scale-l: 20px;
+  --ds-font-scale-xl: 24px;
+  --ds-font-scale-2xl: 28px;
+  --ds-font-scale-3xl: 32px;
+  --ds-font-scale-4xl: 40px;
+  --ds-font-scale-5xl: 48px;
+  --ds-font-weight-roboto-bold: 700;
+  --ds-font-weight-roboto-medium: 500;
+  --ds-font-weight-roboto-regular: 400;
+  --ds-letter-spacing-4: 0.04em;
+  --ds-letter-spacing-0: 0em;
+  --ds-line-height-150: 150%;
+  --ds-line-height-125: 125%;
+  --ds-line-height-100: 100%;
+}
+
+/* typography tokens for l (1440px) */
+@media screen and (min-width: 1440px) {
+  :root {
+  }
+}
+/* typography tokens for m (768px) */
+@media screen and (min-width: 768px) {
+  :root {
+  }
+}
+/* typography tokens for s (364px) */
+@media screen and (min-width: 364px) {
+  :root {
+  }
+}
