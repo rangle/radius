@@ -28,9 +28,9 @@ jobs:
           name: Install Dependencies
           command: npm install
 
-      - run:
-          name: Build Component Library
-          command: npm run build
+      # - run:
+      #     name: Build Component Library
+      #     command: npm run build
 
       - run:
           name: Build Storybook
