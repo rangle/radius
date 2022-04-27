@@ -1,4 +1,4 @@
-import DsTag, { DsTagProps } from './tag';
+import { DsTag, DsTagProps } from './tag';
 
 import React from 'react'
 import renderer from 'react-test-renderer'

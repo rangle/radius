@@ -1,4 +1,4 @@
-import DsBox, {DsBoxProps} from './box';
+import { DsBox, DsBoxProps} from './box';
 
 import React from 'react'
 import renderer from 'react-test-renderer'
