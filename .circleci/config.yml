@@ -34,7 +34,7 @@ jobs:
 
       - run:
           name: Build Storybook
-          command: npm run build-storybook
+          command: npm run build:storybook
 
       # - save_cache:
       #     paths:
