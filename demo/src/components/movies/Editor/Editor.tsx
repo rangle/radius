@@ -1,5 +1,5 @@
 import * as React from 'react';
-import DsButton from '../../../../../src/components/button/button';
+import { DsButton } from '../../../../../src/components/button/button';
 import EditorRow from '../EditorRow/EditorRow';
 
 import style from "./Editor.module.css";

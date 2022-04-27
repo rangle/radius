@@ -1,5 +1,5 @@
 import * as React from 'react';
-import DsTag from '../../../../../src/components/tag/tag';
+import { DsTag } from '../../../../../src/components/tag/tag';
 import { Movie } from '../../../models/Movie';
 
 import style from "./ListItem.module.css";

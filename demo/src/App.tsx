@@ -4,7 +4,7 @@ import Editor from './components/movies/Editor/Editor';
 import Movies from './components/movies/Movies';
 import { Movie } from './models/Movie';
 
-import DsButton from '../../src/components/button/button';
+import { DsButton } from '../../src/components/button/button';
 import { changeTheme } from '../../src'
 
 import styles from './App.module.css';

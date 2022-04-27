@@ -21,7 +21,7 @@
     }
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=16"
   },
   "scripts": {
     "postinstall": "npm install --prefix demo",
@@ -57,8 +57,7 @@
   "name": "radius-limeade",
   "author": "Sumit Arora",
   "module": "dist/radius.esm.js",
-  "size-limit": [
-    {
+  "size-limit": [{
       "path": "dist/radius.cjs.production.min.js",
       "limit": "10 KB"
     },
