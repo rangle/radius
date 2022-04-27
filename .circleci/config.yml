@@ -29,6 +29,10 @@ jobs:
           command: npm install
 
       - run:
+          name: Install Peer Dependencies
+          command: npm install --legacy-peer-deps
+
+      - run:
           name: Build Component Library
           command: npm run build
 
