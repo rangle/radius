@@ -1,4 +1,4 @@
-import DsButton, { DsButtonProps } from './button';
+import { DsButton, DsButtonProps } from './button';
 
 import React from 'react'
 import renderer from 'react-test-renderer'

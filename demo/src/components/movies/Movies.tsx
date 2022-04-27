@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import style from "./Movies.module.css";
-import DsButton from '../../../../src/components/button/button';
+import { DsButton } from '../../../../src/components/button/button';
 import { Movie } from '../../models/Movie';
 import ListItem from './ListItem/ListItem';
 
