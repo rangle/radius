@@ -1,5 +1,5 @@
 import { addParameters } from '@storybook/react';
-import '../src/styles/index.css';
+import '../src/styles/index.scss';
 
 const tokenContext = require.context(
   '!!raw-loader!../src/styles/',
