@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
-import { theme } from '../../theme'
+import { theme } from '../../theme';
 
 export type DsButtonProps = {
   size: 'small' | 'medium' | 'large';
   variant: 'primary' | 'secondary' | 'chevron' | 'icon';
-}
+  disabled?: boolean;
+};
 
 const COLOR: any = {
   primary: theme.colors.text.inverse,
@@ -28,8 +29,8 @@ const DsButton = styled.button<DsButtonProps>`
   padding-left: ${theme.spacing.space7};
   padding-right: ${theme.spacing.space7};
   border-radius: ${theme.borders.radiusMedium};
-  background-color: ${props => BG_COLOR[props.variant]};
-  color: ${props => COLOR[props.variant]};
+  background-color: ${(props) => BG_COLOR[props.variant]};
+  color: ${(props) => COLOR[props.variant]};
   :hover {
     color: ${theme.colors.text.inverse};
     background-color: ${theme.colors.brand.primaryMain};
@@ -42,6 +43,7 @@ const DsButton = styled.button<DsButtonProps>`
   :disabled {
     background-color: ${theme.colors.ui.disabled};
     color: ${theme.colors.text.inverse};
+    cursor: none;
   }
 `;
 
