@@ -21,8 +21,9 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-a11y",
     "@storybook/addon-storysource",
+    "@storybook/addon-designs",
     "storybook-design-token",
-    "@geometricpanda/storybook-addon-badges"
+    "@geometricpanda/storybook-addon-badges",
   ],
   typescript: {
     check: true,
