@@ -27,7 +27,7 @@
     "storybook": "start-storybook -p 6006"
   },
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=17"
   },
   "husky": {
     "hooks": {
@@ -81,9 +81,12 @@
     "@types/react-test-renderer": "^17.0.1",
     "@types/styled-components": "^5.1.9",
     "@types/styled-system": "^5.1.11",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
     "babel-loader": "^8.2.2",
     "dotenv-webpack": "^7.0.3",
     "eslint": "^8.14.0",
+    "eslint-plugin-react": "^7.29.4",
     "html-webpack-plugin": "^5.3.1",
     "husky": "^6.0.0",
     "jest": "^27.5.1",
