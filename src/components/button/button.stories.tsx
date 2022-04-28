@@ -38,28 +38,27 @@ export default {
 } as ComponentMeta<typeof DsButton>;
 
 const Template: ComponentStory<typeof DsButton> = (args) => (
-  <DsButton {...args}>Hello Button</DsButton>
+  <DsButton {...args}>{args.children}</DsButton>
 );
-
-Template.args = {
-  ...Template.args,
-};
 
 export const Primary = Template.bind({});
 Primary.args = {
   variant: 'primary',
+  children: <span>Primary Button</span>,
   disabled: false,
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   variant: 'secondary',
+  children: <span>Secondary Button</span>,
   disabled: false,
 };
 
 export const Disabled: ComponentStory<typeof DsButton> = Template.bind({});
 Disabled.args = {
   variant: 'primary',
+  children: <span>Disabled Button</span>,
   size: 'large',
   disabled: true,
 };

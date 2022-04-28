@@ -1,4 +1,3 @@
-import { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import { FC } from 'react';
 import { theme } from '../../theme';
@@ -9,6 +8,7 @@ export type DsButtonProps = {
   variant: 'primary' | 'secondary' | 'chevron' | 'icon';
   disabled?: boolean;
   as: 'button';
+  children?: Node | JSX.Element | JSX.Element[];
   onClick: () => void;
 };
 
@@ -52,22 +52,12 @@ const StyledDsButton = styled.button<DsButtonProps>`
   }
 `;
 
-const DsButton: FC<DsButtonProps> = forwardRef(
-  ({ children, variant, size, disabled, as, ...rest }, ref: any) => {
-    return (
-      <StyledDsButton
-        ref={ref}
-        size={size}
-        variant={variant}
-        disabled={disabled}
-        role="button"
-        as={as}
-        {...rest}
-      >
-        {children}
-      </StyledDsButton>
-    );
-  }
-);
+const DsButton: FC<DsButtonProps> = ({ children, ...props }: DsButtonProps) => {
+  return (
+    <StyledDsButton role="button" {...props}>
+      {children}
+    </StyledDsButton>
+  );
+};
 
 export default DsButton;
