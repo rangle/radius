@@ -45,7 +45,7 @@ jobs:
 
       # - run:
       #     name: Lint Component Library
-      #     command: yarn workspace ds lint
+      #     command: yarn workspace ds lint:fix
 
       - run:
           name: Test Component Library

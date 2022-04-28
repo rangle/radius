@@ -20,7 +20,8 @@
     "build:storybook": "build-storybook",
     "test": "tsdx test --passWithNoTests",
     "test:watch": "tsdx test --passWithNoTests --watch",
-    "lint": "tsdx lint",
+    "lint": "eslint --ignore-path .gitignore \"./src/**/*.{js,jsx,ts,tsx}\"",
+    "lint:fix": "npm run lint --fix",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
@@ -31,7 +32,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "eslint --fix"
     }
   },
   "prettier": {
