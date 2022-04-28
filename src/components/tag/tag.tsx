@@ -1,18 +1,18 @@
 import styled from 'styled-components';
-
+import { theme } from '../../theme';
 export interface DsTagProps {
   type: 'primary' | 'secondary' | 'error' | 'success' | 'alert';
   variant: 'solid' | 'outline';
 }
 
-type KEY_VALUE = { [key: string]: string }
-type KEY_VALUE_VALUE = { [key: string]: KEY_VALUE }
+type KEY_VALUE = { [key: string]: string };
+type KEY_VALUE_VALUE = { [key: string]: KEY_VALUE };
 
 enum COLOR_TYPE {
   'color',
   'background_color',
-  'border_color'
-};
+  'border_color',
+}
 
 const COLORS: KEY_VALUE_VALUE = {};
 COLORS[COLOR_TYPE.color] = {
@@ -54,13 +54,17 @@ COLORS[COLOR_TYPE.border_color] = {
   alert_outline: 'var(--ds-color-ui-alert-default)',
 };
 
-const getColor = (props: DsTagProps, colorType: COLOR_TYPE = COLOR_TYPE.background_color) => {
+const getColor = (
+  props: DsTagProps,
+  colorType: COLOR_TYPE = COLOR_TYPE.background_color
+) => {
   const type = props.type || 'primary';
   const variant = props.variant || 'solid';
   return COLORS[colorType][`${type}_${variant}`];
-}
+};
 
 const DsTag = styled.div<DsTagProps>`
+  font-family: ${theme.typography.font_family_secondary};
   height: fit-content;
   display: inline-block;
   padding: 0 var(--ds-space-2);
@@ -70,9 +74,9 @@ const DsTag = styled.div<DsTagProps>`
   border-width: 1px;
   font-size: 11px;
   border-color: transparent;
-  background-color: ${props => getColor(props, COLOR_TYPE.background_color)};
-  border-color: ${props => getColor(props, COLOR_TYPE.border_color)};
-  color: ${props => getColor(props, COLOR_TYPE.color)};
+  background-color: ${(props) => getColor(props, COLOR_TYPE.background_color)};
+  border-color: ${(props) => getColor(props, COLOR_TYPE.border_color)};
+  color: ${(props) => getColor(props, COLOR_TYPE.color)};
 `;
 
 export default DsTag;
