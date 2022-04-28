@@ -1,4 +1,5 @@
 import DsButton, { DsButtonProps } from './button';
+import * as React from 'react';
 import { createSerializer } from '@emotion/jest';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';

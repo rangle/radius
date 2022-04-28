@@ -1,5 +1,6 @@
 import { DsTag, DsTagProps } from './tag';
 import { createSerializer } from '@emotion/jest';
+import * as React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 

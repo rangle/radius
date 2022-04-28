@@ -1,6 +1,6 @@
 {
   "module": "esnext",
-  "target": "es2015",
+  "target": "es2021",
   "strict": true,
   // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
   "include": [
@@ -39,7 +39,6 @@
     "forceConsistentCasingInFileNames": true,
     // `tsdx build` ignores this option, but it is commonly used when type-checking separately with `tsc`
     "noEmit": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "@emotion/react"
+    "jsx": "react",
   }
 }

@@ -1,3 +1,4 @@
+import * as React from 'react';
 import DsBox from './box';
 import { createSerializer } from '@emotion/jest';
 import renderer from 'react-test-renderer';

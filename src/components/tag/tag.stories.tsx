@@ -1,4 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import * as React from 'react';
 import DsTag from './tag';
 
 export default {

@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Description, Title, ArgsTable } from '@storybook/addon-docs';
 import DsBox from './box';
 
