@@ -27,7 +27,7 @@ export const parameters = {
     files: tokenFiles,
   },
 };
-export const globalDecorators = [withDesign];
+export const decorators = [withDesign];
 
 addParameters({
   viewport: {

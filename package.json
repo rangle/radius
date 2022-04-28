@@ -16,8 +16,12 @@
   },
   "typesVersions": {
     "*": {
-      "button": ["dist/button.d.ts"],
-      "tag": ["dist/tag.d.ts"]
+      "button": [
+        "dist/button.d.ts"
+      ],
+      "tag": [
+        "dist/tag.d.ts"
+      ]
     }
   },
   "engines": {
@@ -57,7 +61,8 @@
   "name": "radius-limeade",
   "author": "Sumit Arora",
   "module": "dist/radius.esm.js",
-  "size-limit": [{
+  "size-limit": [
+    {
       "path": "dist/radius.cjs.production.min.js",
       "limit": "10 KB"
     },
@@ -110,6 +115,7 @@
     "sass": "1.49.7",
     "sass-loader": "12.4.0",
     "size-limit": "^5.0.1",
+    "storybook-addon-designs": "^6.2.1",
     "storybook-design-token": "^1.4.0",
     "style-loader": "3.3.1",
     "styled-components": "^5.3.0",
