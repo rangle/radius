@@ -1,13 +1,19 @@
-import styled from 'styled-components';
-
+import styled from '@emotion/styled';
+import * as React from 'react';
+import { FC } from 'react';
 import { theme } from '../../theme';
 
+// Define the options for but button
 export type DsButtonProps = {
   size: 'small' | 'medium' | 'large';
   variant: 'primary' | 'secondary' | 'chevron' | 'icon';
   disabled?: boolean;
+  as: 'button';
+  children?: Node | JSX.Element | JSX.Element[];
+  onClick: () => void;
 };
 
+// create options for color and background based off theme
 const COLOR: any = {
   primary: theme.colors.text.inverse,
   secondary: theme.colors.ui.primary,
@@ -18,7 +24,8 @@ const BG_COLOR: any = {
   secondary: theme.colors.text.inverse,
 };
 
-const DsButton = styled.button<DsButtonProps>`
+// Create the styled element
+const StyledDsButton = styled.button<DsButtonProps>`
   border-style: none;
   position: relative;
   cursor: pointer;
@@ -43,8 +50,15 @@ const DsButton = styled.button<DsButtonProps>`
   :disabled {
     background-color: ${theme.colors.ui.disabled};
     color: ${theme.colors.text.inverse};
-    cursor: none;
   }
 `;
+
+const DsButton: FC<DsButtonProps> = ({ children, ...props }: DsButtonProps) => {
+  return (
+    <StyledDsButton role="button" {...props}>
+      {children}
+    </StyledDsButton>
+  );
+};
 
 export default DsButton;
