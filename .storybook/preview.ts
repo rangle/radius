@@ -1,4 +1,6 @@
 import { addParameters } from '@storybook/react';
+import { withDesign } from 'storybook-addon-designs';
+
 import '../src/styles/index.scss';
 
 const tokenContext = require.context(
@@ -25,6 +27,7 @@ export const parameters = {
     files: tokenFiles,
   },
 };
+export const globalDecorators = [withDesign];
 
 addParameters({
   viewport: {
