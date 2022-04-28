@@ -1,5 +1,7 @@
 import { addParameters } from '@storybook/react';
 import '../src/styles/index.css';
+import { withDesign } from 'storybook-addon-designs';
+import ThemeDecorator from './theme-decorator';
 
 const tokenContext = require.context(
   '!!raw-loader!../src/styles/',
@@ -13,7 +15,7 @@ const tokenFiles = tokenContext.keys().map(function (filename) {
 
 export const parameters = {
   viewMode: 'docs',
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -22,16 +24,15 @@ export const parameters = {
   },
   docs: { inlineStories: true },
   designToken: {
-    files: tokenFiles
-  }
-}
+    files: tokenFiles,
+  },
+};
 
 addParameters({
   options: {
     showRoots: true,
   },
 });
-
 
 addParameters({
   viewport: {
@@ -68,3 +69,5 @@ addParameters({
     defaultViewport: 'Small Mobile',
   },
 });
+
+export const decorators = [withDesign, ThemeDecorator];
