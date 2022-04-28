@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Description, Props, Title } from '@storybook/addon-docs';
+import { ArgsTable, Description, Title } from '@storybook/addon-docs';
 
 import { DsBox } from './box';
 
@@ -15,7 +15,7 @@ export default {
           <Description>
             Building block of layouts. Creates a box-model context
           </Description>
-          <Props of={DsBox} />
+          <ArgsTable of={DsBox} />
         </>
       ),
     },
