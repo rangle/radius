@@ -31,6 +31,7 @@ export default create({
   // inputTextColor: 'black',
   // inputBorderRadius: 4,
 
+  // TODO: Inject company name and brand image
   brandTitle: 'Radius',
   brandUrl: 'https://rangle.io/radius',
   brandImage: 'radius_logo_inverted.png',
