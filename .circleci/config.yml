@@ -55,6 +55,6 @@ jobs:
       #     name: Build Demo App
       #     command: yarn workspace app build
 
-      # - run:
-      #     name: Run Visual Tests
-      #     command: yarn workspace ds run chromatic
+      - run:
+          name: Run Visual Regression Tests
+          command: if [ "${CIRCLE_BRANCH}" != "main" ]; then yarn chromatic --project-token=CHROMATIC_PROJECT_TOKEN; else yarn chromatic --project-token=CHROMATIC_PROJECT_TOKEN --auto-accept-changes; fi
