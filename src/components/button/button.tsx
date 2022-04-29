@@ -48,6 +48,7 @@ const StyledDsButton = styled.button<DsButtonProps>`
     background-color: ${theme.colors.brand.primaryDark};
   }
   :disabled {
+    cursor: not-allowed;
     background-color: ${theme.colors.ui.disabled};
     color: ${theme.colors.text.inverse};
   }

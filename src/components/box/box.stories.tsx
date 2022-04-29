@@ -3,6 +3,7 @@ import React from 'react';
 import { ArgsTable, Description, Title } from '@storybook/addon-docs';
 
 import DsBox from './box';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 export default {
   title: 'Components/Box',
@@ -20,12 +21,13 @@ export default {
       ),
     },
   },
-};
+} as ComponentMeta<typeof DsBox>;
 
-export const Basic = (args: any) => <DsBox {...args} />;
-
-export const Primary = () => (
-  <DsBox>
-    <h1>This is a box</h1>
-  </DsBox>
+const Template: ComponentStory<typeof DsBox> = (args) => (
+  <DsBox {...args}>{args.children}</DsBox>
 );
+
+export const Box = Template.bind({});
+Box.args = {
+  children: <h1>This is a box</h1>,
+};

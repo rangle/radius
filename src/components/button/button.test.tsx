@@ -1,19 +1,14 @@
-import DsButton, { DsButtonProps } from './button';
-import * as React from 'react';
-import { createSerializer } from '@emotion/jest';
-import renderer from 'react-test-renderer';
-import 'jest-styled-components';
+import DsButton, { DsButtonProps } from './button'; //
 
-expect.addSnapshotSerializer(createSerializer());
+import React from 'react';
+import renderer from 'react-test-renderer';
 
 test('test creation', () => {
   const args: DsButtonProps = {
     variant: 'primary',
     size: 'small',
     as: 'button',
-    onClick: function (): void {
-      throw new Error('Function not implemented.');
-    },
+    onClick: () => {},
   };
   const tree = renderer.create(<DsButton {...args} />).toJSON();
 
