@@ -27,7 +27,7 @@
     "storybook": "start-storybook -p 6006"
   },
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=17"
   },
   "husky": {
     "hooks": {
