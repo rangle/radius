@@ -1,11 +1,16 @@
+// Theme Decorator for Storybook
 import React from 'react';
+import { Args, Story, StoryContext } from '@storybook/react';
 import { ThemeProvider } from 'styled-components';
-import theme from './theme';
+import { theme } from '../src/theme';
 
-const ThemeDecorator = (storyFn: any) => (
-  <>
-    <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
-  </>
-);
-
+export const ThemeDecorator = (Story: Story<Args>, context: StoryContext) => {
+  return (
+    <>
+      <ThemeProvider theme={theme}>
+        <Story {...context} />
+      </ThemeProvider>
+    </>
+  );
+};
 export default ThemeDecorator;
