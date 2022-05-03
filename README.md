@@ -41,10 +41,6 @@ To get started you can just clone the repository or install and run the CLI `npx
 
 ---
 
-=======
-
-> > > > > > > 09eebe2 (edit the read me a bit)
-
 # TSDX React w/ Storybook User Guide
 
 Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
@@ -107,29 +103,25 @@ Jest tests are set up to run with `npm test` or `yarn test`.
 
 Calculates the real cost of your library using [size-limit](https://github.com/ai/size-limit) with `npm run size` and visulize it with `npm run analyze`.
 
-#### Setup Files
+#### What's Inside?
 
-This is the folder structure we set up for you:
-
-```txt
-/example
-  index.html
-  index.tsx       # test your component here in a demo app
-  package.json
-  tsconfig.json
-/src
-  index.tsx       # EDIT THIS
-/test
-  blah.test.tsx   # EDIT THIS
-/stories
-  Thing.stories.tsx # EDIT THIS
-/.storybook
-  main.js
-  preview.js
-.gitignore
-package.json
-README.md         # EDIT THIS
-tsconfig.json
+```
+.
+├── .storybook/
+├── .circleci/
+├── README.md
+├── demo/
+├── dist/
+├── package.json
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── docs/
+│   ├── styles/
+│   └── theme.ts
+├── tsconfig.json
+├── .eslintrc.json
+└── typings/
 ```
 
 #### React Testing Library
