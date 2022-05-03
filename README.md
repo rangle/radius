@@ -1,6 +1,6 @@
 # Radius Design System Kit
 
-The Radius is an opinionated assemblage of open-source tools and libraries that allow you to accelerate your design system. The choice of tools, their composition, and a set of foundational components guides you on how to build a constraint-based system.
+This is 1 of 3 repos that is part of an ecosystem of open-source tools and libraries that allow you to accelerate your design system! This repository contains several branches that enable the boilerplate creation of design system instances for React.
 
 [rangle.io/radius](https://rangle.io/radius)
 
@@ -10,6 +10,39 @@ The Radius is an opinionated assemblage of open-source tools and libraries that 
 
 [Chromatic](https://www.chromaticqa.com/library?appId=5e44874935df3b0022b9d890)
 
+See also:
+[Radius Angular](https://github.com/rangle/radius-angular)
+[Radius Workspace](https://github.com/rangle/radius-workspace)
+
+## Contribution
+
+We are currently working to make Radius for React more flexible with regards to accelerating the creation of design systems for integrating with vanilla css, css modules, emotion and styled-components.
+
+Respective versions of such design systems can be found in the following branches:
+
+```
+basic-css     - CSS modules
+basic-emotion - the emotion library, has theme
+basic-styled  - the styled-components library, has theme
+```
+
+Please create pull requests against the branches above to contribute.
+
+## What's Inside
+
+```
+.
+├── README.md
+├── demo/
+├── dist/
+├── docs/
+├── example/
+├── jest.config.js
+├── package.json
+├── src/
+└── tsconfig.json
+```
+
 ### Are you using Radius?
 
 We would love to hear about how you are using Radius or any feedback or feature requests. Open an [issue](https://github.com/rangle/radius/issues/new).
@@ -17,7 +50,8 @@ We would love to hear about how you are using Radius or any feedback or feature 
 ### 🚀 Quick start
 
 To get started you can just clone the repository.
-____
+
+---
 
 # TSDX React w/ Storybook User Guide
 
@@ -80,31 +114,6 @@ Jest tests are set up to run with `npm test` or `yarn test`.
 ### Bundle analysis
 
 Calculates the real cost of your library using [size-limit](https://github.com/ai/size-limit) with `npm run size` and visulize it with `npm run analyze`.
-
-#### Setup Files
-
-This is the folder structure we set up for you:
-
-```txt
-/example
-  index.html
-  index.tsx       # test your component here in a demo app
-  package.json
-  tsconfig.json
-/src
-  index.tsx       # EDIT THIS
-/test
-  blah.test.tsx   # EDIT THIS
-/stories
-  Thing.stories.tsx # EDIT THIS
-/.storybook
-  main.js
-  preview.js
-.gitignore
-package.json
-README.md         # EDIT THIS
-tsconfig.json
-```
 
 #### React Testing Library
 
