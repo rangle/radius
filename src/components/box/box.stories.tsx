@@ -1,8 +1,6 @@
-import React from 'react';
-
-import { Description, Props, Title } from '@storybook/addon-docs/blocks';
-
-import { DsBox } from './box';
+import * as React from 'react';
+import { Description, Title, ArgsTable } from '@storybook/addon-docs';
+import DsBox from './box';
 
 export default {
   title: 'Components/Box',
@@ -12,8 +10,10 @@ export default {
       page: () => (
         <>
           <Title />
-          <Description>Building block of layouts. Creates a box-model context</Description>
-          <Props of={DsBox} />
+          <Description>
+            Building block of layouts. Creates a box-model context
+          </Description>
+          <ArgsTable of={DsBox} />
         </>
       ),
     },
@@ -24,8 +24,6 @@ export const Basic = (args: any) => <DsBox {...args} />;
 
 export const Primary = () => (
   <DsBox>
-    <h1>
-      This is a box
-    </h1>
+    <h1>This is a box</h1>
   </DsBox>
-)
+);

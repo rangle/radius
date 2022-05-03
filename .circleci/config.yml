@@ -34,7 +34,7 @@ jobs:
 
       - run:
           name: Build Storybook
-          command: npm run build-storybook
+          command: npm run build:storybook
 
       # - save_cache:
       #     paths:
@@ -45,7 +45,7 @@ jobs:
 
       # - run:
       #     name: Lint Component Library
-      #     command: yarn workspace ds lint
+      #     command: yarn workspace ds lint:fix
 
       - run:
           name: Test Component Library

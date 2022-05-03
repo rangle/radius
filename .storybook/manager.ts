@@ -1,5 +1,4 @@
 import { addons } from '@storybook/addons';
-
 import radiusTheme from './theme';
 
 addons.setConfig({
@@ -10,4 +9,7 @@ addons.setConfig({
   panelPosition: 'bottom',
   sidebarAnimations: true,
   isToolshown: true,
-})
+  sidebar: {
+    showRoots: false,
+  },
+});

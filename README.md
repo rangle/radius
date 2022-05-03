@@ -10,14 +10,36 @@ The Radius is an opinionated assemblage of open-source tools and libraries that 
 
 [Chromatic](https://www.chromaticqa.com/library?appId=5e44874935df3b0022b9d890)
 
+# Radius - React & Emotion
+
+This repo is one of a few starter design systems that has been created for Radius an assemblage of open-source tools and libraries that allow you to accelerate your design system.
+In collaboration with this repository it is suggested to use the design token generator that is available through Radius script CLI. This will generate a folder of CSS variables (design tokens). To use the token generator use the suggested starter kit for [Figma](https://www.figma.com/file/RqENxZWAzGiEWM7COch1Sc/Radius-Design-Kit).
+
+## Features
+
+This starter repository for Radius uses:
+
+- Webpack 5 + babel
+- React 17 + React Dom
+  - 3 component examples, box, button, tag
+- Emotion 11, with emotion styled + react
+- Jest 27
+  - Some basic unit testing of the components
+- Husky
+- Storyboard
+- Chromatic
+
 ### Are you using Radius?
 
 We would love to hear about how you are using Radius or any feedback or feature requests. Open an [issue](https://github.com/rangle/radius/issues/new).
 
+<<<<<<< HEAD
+
 ### 🚀 Quick start
 
-To get started you can just clone the repository.
-____
+To get started you can just clone the repository or install and run the CLI `npx radius-script` and select react > emotion.
+
+---
 
 # TSDX React w/ Storybook User Guide
 
@@ -81,29 +103,25 @@ Jest tests are set up to run with `npm test` or `yarn test`.
 
 Calculates the real cost of your library using [size-limit](https://github.com/ai/size-limit) with `npm run size` and visulize it with `npm run analyze`.
 
-#### Setup Files
+#### What's Inside?
 
-This is the folder structure we set up for you:
-
-```txt
-/example
-  index.html
-  index.tsx       # test your component here in a demo app
-  package.json
-  tsconfig.json
-/src
-  index.tsx       # EDIT THIS
-/test
-  blah.test.tsx   # EDIT THIS
-/stories
-  Thing.stories.tsx # EDIT THIS
-/.storybook
-  main.js
-  preview.js
-.gitignore
-package.json
-README.md         # EDIT THIS
-tsconfig.json
+```
+.
+├── .storybook/
+├── .circleci/
+├── README.md
+├── demo/
+├── dist/
+├── package.json
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── docs/
+│   ├── styles/
+│   └── theme.ts
+├── tsconfig.json
+├── .eslintrc.json
+└── typings/
 ```
 
 #### React Testing Library
