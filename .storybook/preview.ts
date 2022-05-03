@@ -25,7 +25,7 @@ export const parameters = {
     files: tokenFiles,
     defaultTab: 'colors',
     styleInjection:
-      '@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");',
+      '@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");',
   },
   docs: { inlineStories: true },
   viewport: {
