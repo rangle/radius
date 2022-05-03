@@ -1,4 +1,33 @@
 <style>
-  /* You can add global styles to this file, and also import other style files */
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+  @font-face {
+    font-family: 'Ubuntu Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Ubuntu Regular'),
+      url('/static/media/ubuntu-regular.woff') format('woff');
+    font-display: optional;
+  }
+  @font-face {
+    font-family: 'Ubuntu Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Ubuntu Bold'),
+      url('static/media/ubuntu-bold.woff') format('woff');
+    font-display: optional;
+  }
 </style>
+<link
+  rel="preload"
+  href="static/media/ubuntu-regular.woff"
+  as="font"
+  type="font/woff"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="static/media/ubuntu-bold.woff"
+  as="font"
+  type="font/woff"
+  crossorigin
+/>

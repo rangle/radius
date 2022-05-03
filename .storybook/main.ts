@@ -13,19 +13,22 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
-  staticDirs: [{ from: '../src/imgs', to: '/' }],
+  staticDirs: [
+    { from: '../src/assets/fonts/ubuntu', to: '/static/media' },
+    { from: '../src/assets/imgs', to: '/' },
+  ],
   stories: ['../src/**/*.stories.@(js|tsx|mdx)'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@storybook/addon-docs',
     '@storybook/addon-a11y',
     '@storybook/addon-storysource',
     'storybook-design-token',
-    'storybook-addon-designs',
     '@geometricpanda/storybook-addon-badges',
+    'storybook-addon-designs',
   ],
   typescript: {
     check: true,
   },
+  framework: '@storybook/react',
 };
