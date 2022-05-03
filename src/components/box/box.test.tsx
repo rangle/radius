@@ -1,19 +1,15 @@
-import {DsBox} from './box';
+import DsBox from './box';
 
-import React from 'react'
-import renderer from 'react-test-renderer'
-
+import React from 'react';
+import renderer from 'react-test-renderer';
 
 test('test creation', () => {
-    let args:any = {};
+  let args: any = {};
 
-    const tree = renderer
-        .create(<DsBox {...args}/>)
-        .toJSON()
+  const tree = renderer.create(<DsBox {...args} />).toJSON();
 
-    if(tree === null || Array.isArray(tree)){
-        throw new Error("render didn't work correctly");
-    }
-    expect(tree.type).toBe('div');
-})
-
+  if (tree === null || Array.isArray(tree)) {
+    throw new Error("render didn't work correctly");
+  }
+  expect(tree.type).toBe('div');
+});

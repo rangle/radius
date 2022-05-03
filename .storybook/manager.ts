@@ -10,4 +10,7 @@ addons.setConfig({
   panelPosition: 'bottom',
   sidebarAnimations: true,
   isToolshown: true,
+  sidebar: {
+    showRoot: false
+  }
 })

@@ -1,20 +1,16 @@
+// Theme Decorator for Storybook
 import React from 'react';
+import { Args, Story, StoryContext } from '@storybook/react';
 import { ThemeProvider } from 'styled-components';
-import { theme, Box } from '../src';
+import { theme } from '../src/theme';
 
-const ThemeDecorator = (storyFn: any) => (
-  <>
-    <ThemeProvider theme={theme.light}>
-      <Box bg="bg.primary" px={4} py={5} width="100%" height="100%" mb={4}>
-        {storyFn({ id: (id: any) => 'light-' + id })}
-      </Box>
-    </ThemeProvider>
-    <ThemeProvider theme={theme.dark}>
-      <Box bg="bg.primary" px={4} py={5} width="100%" height="100%">
-        {storyFn({ id: (id: any) => 'dark-' + id })}
-      </Box>
-    </ThemeProvider>
-  </>
-);
-
+export const ThemeDecorator = (Story: Story<Args>, context: StoryContext) => {
+  return (
+    <>
+      <ThemeProvider theme={theme}>
+        <Story {...context} />
+      </ThemeProvider>
+    </>
+  );
+};
 export default ThemeDecorator;

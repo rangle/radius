@@ -1,4 +1,7 @@
-export const theme = {
+import { DefaultTheme } from 'styled-components';
+
+// TODO: dynamically populate token scales in each theme property
+export const theme: DefaultTheme = {
   borders: {
     radiusSmall: 'var(--ds-border-radius-s)',
     radiusMedium: 'var(--ds-border-radius-m)',
@@ -36,6 +39,8 @@ export const theme = {
     scale_3xl: 'var(--ds-typography-scale-3xl)',
     scale_4xl: 'var(--ds-typography-scale-4xl)',
     scale_5xl: 'var(--ds-typography-scale-5xl)',
+    font_family: 'var(--ds-typography-primary)',
+    font_family_secondary: 'var(--ds-typography-secondary)',
   },
   colors: {
     brand: {
@@ -67,13 +72,13 @@ export const theme = {
       background2: 'var(--ds-color-ui-background-2)',
     },
     text: {
-      primary: 'var(--ds-color-text-primary)',
-      secondary: 'var(--ds-color-text-secondary)',
-      disabled: 'var(--ds-color-text-disabled)',
-      inverse: 'var(--ds-color-text-inverse)',
-      error: 'var(--ds-color-text-error)',
-      success: 'var(--ds-color-text-success)',
-      link: 'var(--ds-color-text-link)',
-    }
-  }
+      primary: 'var(--ds-color--text-primary)',
+      secondary: 'var(--ds-color--text-secondary)',
+      disabled: 'var(--ds-color--text-disabled)',
+      inverse: 'var(--ds-color--text-inverse)',
+      error: 'var(--ds-color--text-error)',
+      success: 'var(--ds-color--text-success)',
+      link: 'var(--ds-color--text-link)',
+    },
+  },
 };
