@@ -27,4 +27,3 @@ jobs:
         uses: rangle/radius
         with:
           folder: storybook-static
-          branch: actions/rangle/radius@gh-pages
