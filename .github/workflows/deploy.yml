@@ -24,7 +24,7 @@ jobs:
           npm run build:storybook
 
       - name: Deploy
-        uses: rangle/radius-github-pages
+        uses: rangle/radius
         with:
           folder: storybook-static
-          branch: main
+          branch: gh-pages
