@@ -7,7 +7,7 @@ on:
 
 # List of jobs
 jobs:
-  test:
+  chromatic:
     # Operating System
     runs-on: ubuntu-latest
     # Job steps
@@ -27,6 +27,10 @@ jobs:
         with:
           #👇 Chromatic projectToken, see https://storybook.js.org/tutorials/intro-to-storybook/react/en/deploy/ to obtain it
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+
+  job:
+    needs: chromatic
+    steps:
       - name: Install
         run: |
           npm install
