@@ -4,7 +4,7 @@ name: 'Chromatic Deployment'
 # Event for the workflow
 on: push
   branches: 
-    chromatic-setup
+    - chromatic-setup
 
 # List of jobs
 jobs:
