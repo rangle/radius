@@ -1,6 +1,6 @@
 # Workflow name
 name: 'Chromatic Deployment'
-on: 
+on:
   push:
     branches:
       - chromatic-setup
@@ -28,12 +28,12 @@ jobs:
           #👇 Chromatic projectToken, see https://storybook.js.org/tutorials/intro-to-storybook/react/en/deploy/ to obtain it
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
       - name: Install
-          run: |
-            npm ci
-            npm run 
-            npm run build:storybook
-        - name: Deploy
-          uses: JamesIves/github-pages-deploy-action@3.6.2
-          with:
-            branch: gh-pages
-            folder: storybook-static
+        run: |
+          npm ci
+          npm run 
+          npm run build:storybook
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          branch: gh-pages
+          folder: storybook-static
