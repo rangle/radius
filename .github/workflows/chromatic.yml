@@ -1,8 +1,9 @@
 # Workflow name
 name: 'Chromatic Deployment'
-on: push
-  branches:
-    - chromatic-setup
+on: 
+  push:
+    branches:
+      - chromatic-setup
 
 # List of jobs
 jobs:
