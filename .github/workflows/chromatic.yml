@@ -13,31 +13,26 @@ jobs:
     # Job steps
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # 👈 Required to retrieve git history
+
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: 'npm'
-      # - name: Cache node modules
-      #   id: cache-npm
-      #   uses: actions/cache@v3
-      #   env:
-      #     cache-name: cache-node-modules
-      #   with:
-      #     # npm cache files are stored in `~/.npm` on Linux/macOS
-      #     path: ~/.npm
-      #     key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-build-${{ env.cache-name }}-
-      #       ${{ runner.os }}-build-
-      #       ${{ runner.os }}-
-      # - uses: actions/checkout@v3
+          cache: 'yarn'
+
       - run: yarn
+
         #👇 Adds Chromatic as a step in the workflow
-      - uses: chromaui/action@v1
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
         # Options required for Chromatic's GitHub Action
         with:
-          #👇 Chromatic projectToken, see https://storybook.js.org/tutorials/intro-to-storybook/react/en/deploy/ to obtain it
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          exitZeroOnChanges: true # 👈 Option to prevent the workflow from failing
+          #👇 Chromatic projectToken, see https://storybook.js.org/tutorials/intro-to-storybook/react/en/deploy/ to obtain it
 
   build:
     runs-on: ubuntu-latest
@@ -52,12 +47,10 @@ jobs:
       #       ${{ runner.os }}-build-${{ env.cache-name }}-
       #       ${{ runner.os }}-build-
       #       ${{ runner.os }}-
-      - name: Install modules
-        run: |
-          npm install
-          npm run 
-          npm run build:storybook
-      - name: Deploy
+      - name: Build Storybook
+        run: yarn build:storybook
+
+      - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
           branch: gh-pages
