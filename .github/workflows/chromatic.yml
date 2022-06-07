@@ -39,11 +39,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: chromatic
     steps:
-      - name: Install
+      - name: Get npm modules from cache
         uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+      - name: Install modules
         run: |
           npm install
           npm run 
