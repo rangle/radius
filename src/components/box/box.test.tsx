@@ -3,19 +3,20 @@ import { DsBox, DsBoxProps} from './box';
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-test('test creation', () => {
+describe('<DsBox>', () => {
+    test('test creation', () => {
 
-    const args:DsBoxProps = {
-        children:"Children..."
-    }
+        const args:DsBoxProps = {
+            children:"Children..."
+        }
 
-    const tree = renderer
-        .create(<DsBox {...args} />)
-        .toJSON()
+        const tree = renderer
+            .create(<DsBox {...args} />)
+            .toJSON()
 
-    if(tree === null || Array.isArray(tree)){
-        throw new Error("render didn't work correctly");
-    }
-    expect(tree.type).toBe('div');
-})
-
+        if(tree === null || Array.isArray(tree)){
+            throw new Error("render didn't work correctly");
+        }
+        expect(tree.type).toBe('div');
+    })
+});
