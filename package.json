@@ -8,45 +8,25 @@
     "src"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=16"
   },
   "scripts": {
-    "postinstall": "npm install --prefix demo",
-    "demo": "npm --prefix demo run start",
-    "start": "tsdx watch",
-    "build": "npm run build:lib && npm run build:demo && npm run build:storybook",
-    "build:lib": "tsdx build",
-    "build:demo": "npm run build --prefix demo",
+    "build": "npm run build:lib && npm run build:storybook",
+    "build:lib": "npm run rollup",
     "build:storybook": "build-storybook",
-    "test": "tsdx test --passWithNoTests",
-    "test:watch": "tsdx test --passWithNoTests --watch",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "rollup": "rollup -c",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "peerDependencies": {
-    "react": ">=17",
-    "react-dom": ">=17",
-    "@storybook/addon-a11y": "^6.4.22",
-    "@storybook/addon-controls": "^6.4.22",
-    "@storybook/addon-docs": "^6.4.22",
-    "@storybook/addon-essentials": "^6.4.22",
-    "@storybook/addon-info": "^5.3.21",
-    "@storybook/addon-knobs": "^6.3.0",
-    "@storybook/addon-links": "^6.4.22",
-    "@storybook/addon-storyshots": "^6.4.22",
-    "@storybook/addon-storysource": "^6.4.22",
-    "@storybook/addons": "^6.4.22",
-    "@storybook/builder-webpack5": "^6.4.22",
-    "@storybook/manager-webpack5": "^6.4.22",
-    "@storybook/react": "^6.4.22",
-    "@storybook/testing-react": "1.2.4"
+    "react": ">=16"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "jest"
     }
   },
   "prettier": {
@@ -69,31 +49,39 @@
     }
   ],
   "devDependencies": {
-    "@babel/core": "^7.14.3",
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@babel/preset-typescript": "^7.17.12",
     "@geometricpanda/storybook-addon-badges": "^0.2.1",
-    "@size-limit/preset-small-lib": "^5.0.1",
-    "@storybook/addon-a11y": "^6.4.22",
-    "@storybook/addon-controls": "^6.4.22",
-    "@storybook/addon-docs": "^6.4.22",
-    "@storybook/addon-essentials": "^6.4.22",
+    "@size-limit/preset-small-lib": "^5.0.5",
+    "@storybook/addon-a11y": "^6.5.7",
+    "@storybook/addon-controls": "^6.4.19",
+    "@storybook/addon-docs": "^6.4.19",
+    "@storybook/addon-essentials": "^6.5.7",
     "@storybook/addon-info": "^5.3.21",
-    "@storybook/addon-knobs": "^6.3.0",
-    "@storybook/addon-links": "^6.4.22",
-    "@storybook/addon-storyshots": "^6.4.22",
-    "@storybook/addon-storysource": "^6.4.22",
-    "@storybook/addons": "^6.4.22",
-    "@storybook/builder-webpack5": "^6.4.22",
-    "@storybook/manager-webpack5": "^6.4.22",
-    "@storybook/react": "^6.4.22",
-    "@storybook/testing-react": "1.2.4",
-    "@styled-system/css": "^5.1.5",
-    "@testing-library/react": "^12.0.0",
-    "@types/react": "^17.0.8",
-    "@types/react-dom": "^17.0.5",
-    "@types/react-test-renderer": "^17.0.1",
-    "@types/styled-components": "^5.1.9",
-    "@types/styled-system": "^5.1.11",
+    "@storybook/addon-links": "^6.5.7",
+    "@storybook/addon-storyshots": "^6.5.7",
+    "@storybook/addon-storysource": "^6.5.7",
+    "@storybook/addons": "^6.4.19",
+    "@storybook/builder-webpack5": "^6.5.7",
+    "@storybook/manager-webpack5": "^6.5.7",
+    "@storybook/preset-scss": "1.0.3",
+    "@storybook/react": "^6.5.7",
+    "@storybook/testing-react": "1.2.3",
+    "@storybook/theming": "^6.5.7",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^12.1.5",
+    "@testing-library/user-event": "^14.2.0",
+    "@types/jest": "^28.1.1",
+    "@types/react": "^17.0.45",
+    "@types/react-dom": "^17.0.17",
+    "@types/react-test-renderer": "^17.0.2",
+    "@types/styled-components": "^5.1.25",
+    "jest-environment-jsdom": "^28.1.1",
+    "babel-jest": "^28.1.1",
     "babel-loader": "^8.2.2",
+    "classnames": "^2.3.1",
     "dotenv-webpack": "^7.0.3",
     "html-webpack-plugin": "^5.3.1",
     "husky": "^6.0.0",
@@ -103,17 +91,34 @@
     "react-test-renderer": "^17.0.2",
     "size-limit": "^5.0.1",
     "storybook-addon-designs": "^6.2.1",
-    "storybook-design-token": "^1.4.0",
+    "storybook-addon-pseudo-states": "^1.14.0",
+    "storybook-design-token": "^2.3.0",
     "styled-components": "^5.3.0",
     "styled-system": "^5.1.5",
-    "tsdx": "^0.14.1",
     "tslib": "^2.2.0",
-    "typescript": "4.2.2",
+    "typescript": "^4.7.3",
     "webpack": "^5.38.1"
   },
   "browser": {
     "crypto": false,
     "stream": false
   },
-  "dependencies": {}
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss|sass)$": "<rootDir>/__mocks__/fileMock.js"
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/config/jest/setupTests.ts"
+    ],
+    "testEnvironment": "jsdom"
+  },
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "rollup": "^2.75.6",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-dts": "^4.2.2"
+  }
 }
