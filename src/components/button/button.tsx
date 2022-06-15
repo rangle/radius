@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import * as React from 'react';
 import { FC } from 'react';
 import { theme } from '../../theme';
@@ -15,13 +15,13 @@ export type DsButtonProps = {
 
 // create options for color and background based off theme
 const COLOR: any = {
-  primary: theme.colors.text.inverse,
+  primary: theme.colors.text.secondary,
   secondary: theme.colors.ui.primary,
 };
 
 const BG_COLOR: any = {
   primary: theme.colors.ui.primary,
-  secondary: theme.colors.text.inverse,
+  secondary: theme.colors.text.primary,
 };
 
 // Create the styled element
