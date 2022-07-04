@@ -13,6 +13,8 @@ jobs:
     # Job steps
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       # - name: Cache node modules
       #   id: cache-npm
       #   uses: actions/cache@v3
