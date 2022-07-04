@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - chromatic-setup
+      - chromatic-setup-test
 
 # List of jobs
 jobs:
