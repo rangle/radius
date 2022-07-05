@@ -1,0 +1,36 @@
+# Folder and file naming standard
+#
+# PascalCase - Component folder and component file (ie.: components/Button/Button.tsx)
+# camelCase - used for any other folder and file
+# kebab-case - should be avoided
+
+ls:
+  # global file rules
+  # .js and sub-extensions
+  .js: camelCase
+  .config.js: lowercase
+  # .ts and sub-extensions
+  .ts: camelCase
+  .test.ts: camelCase
+  .mock.ts: camelCase
+  .types.ts: camelCase
+  .utils.ts: camelCase
+  .mapping.ts: camelCase
+  .definition.ts: camelCase
+  .constants.ts: camelCase
+  .d.ts: camelCase | kebab-case
+  # .tsx and sub-extensions
+  .tsx: PascalCase | regex:with([A-Z][a-z]+)+
+  .stories.tsx: PascalCase
+
+  # directory rules
+  ./**/{__tests__,__mocks__}:
+    .dir: lowercase
+
+ignore:
+  - .git
+  - node_modules
+  - dist
+  - .storybook
+  - storybook-static
+  - babel.config.js
