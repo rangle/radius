@@ -19,7 +19,11 @@ export default [
             format: 'esm',
         }],
         external: ['react', 'react-dom'],
-
+        watch: {
+            skipWrite: false,
+            clearScreen: false,
+            include: 'src/**/*'
+        },
         plugins: [
             resolve(),
             commonjs(),
@@ -32,17 +36,22 @@ export default [
             typescript({ tsconfig: './tsconfig.json' })
         ]
     },
-    {
-        input: 'dist/types/index.d.ts',
-        output: [{ file: 'dist/index.d.ts', format: 'esm' }],
-        plugins: [
-            dts(),
-            copy({
-                targets: [
-                    { src: 'dist/types/**/*d.ts', dest: 'dist' }
-                ]
-            })
-        ],
-        external: [/\.scss$/]
-    }
+    // {
+    //     input: 'dist/types/index.d.ts',
+    //     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
+    //     plugins: [
+    //         dts(),
+    //         copy({
+    //             targets: [
+    //                 { src: 'dist/types/**/*d.ts', dest: 'dist' }
+    //             ]
+    //         })
+    //     ],
+    //     external: [/\.scss$/],
+    //     watch: {
+    //         skipWrite: false,
+    //         clearScreen: false,
+    //         include: 'src/**/*'
+    //     }
+    // }
 ];

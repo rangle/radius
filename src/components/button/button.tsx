@@ -15,7 +15,7 @@ export type DsButtonProps = {
 
 // create options for color and background based off theme
 const COLOR: any = {
-  primary: theme.colors.text.secondary,
+  primary: theme.colors.text.primary,
   secondary: theme.colors.ui.primary,
 };
 
