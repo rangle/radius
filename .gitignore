@@ -4,6 +4,7 @@
 .pnp.js
 **/*.cache/
 /dist
+dist
 /storybook-static
 
 # testing

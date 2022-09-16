@@ -1,0 +1,23 @@
+{
+  "name": "@radius/components",
+  "version": "0.0.1",
+  "description": "Some components for the design system",
+  "main": "index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && rollup --config ./rollup.config.js"
+  },
+  "dependencies": {
+    "@radius/styles": "0.0.1",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-typescript": "^8.5.0",
+    "autoprefixer": "^10.4.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^2.79.0",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-postcss": "^4.0.2"
+  }
+}

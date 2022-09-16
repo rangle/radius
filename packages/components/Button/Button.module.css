@@ -1,0 +1,4 @@
+.button{
+  background-color: var(--secondary-dark);
+  color: var(--primary-light);
+}

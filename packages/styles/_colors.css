@@ -1,0 +1,24 @@
+:root {
+  /* Primary */
+  --primary-light: #CFFEF6;
+  --primary-semilight: #80FCDE;
+  --primary-main: #00EEC2;
+  --primary-semidark: #04D7B1;
+  --primary-dark: #0D9D8C;
+
+  /* Secondary */
+  --secondary-light: #E8DAFF;
+  --secondary-semilight: #D0B2FF;
+  --secondary-main: #9F65FF;
+  --secondary-semidark: #7E42DF;
+  --secondary-dark: #6830C2;
+
+  /* Neutral */
+  --n1: #F8F8F8;
+  --n2: #EEF2F3;
+  --n3: #E0E6E8;
+  --n4: #C5D0D3;
+  --n5: #9FA9AC;
+  --n6: #626C70;
+  --n7: #2F3739;
+}
