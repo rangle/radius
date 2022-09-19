@@ -2,7 +2,7 @@
   "name": "@radius/components",
   "version": "0.0.3",
   "description": "Some components for the design system",
-  "main": "index.ts",
+  "main": "dist/index.ts",
   "files": [
     "dist"
   ],
