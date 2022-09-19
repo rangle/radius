@@ -1,6 +1,6 @@
 {
   "name": "@radius/components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Some components for the design system",
   "main": "index.ts",
   "files": [
@@ -10,7 +10,7 @@
     "build": "rm -rf dist && rollup --config ./rollup.config.js"
   },
   "dependencies": {
-    "@radius/styles": "^0.0.1"
+    "@radius/styles": "^0.0.2"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",

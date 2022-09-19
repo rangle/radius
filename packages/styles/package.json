@@ -1,6 +1,6 @@
 {
   "name": "@radius/styles",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Just the tokens for the design system",
   "main": "index.css",
   "files": [
