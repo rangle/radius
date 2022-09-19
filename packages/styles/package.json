@@ -10,7 +10,7 @@
     "build:prefix": "postcss *.css --use autoprefixer -d dist/",
     "build": "npm run build:prefix"
   },
-  "dependencies": {
+  "devDependencies": {
     "autoprefixer": "^10.4.11",
     "components": "^0.1.0",
     "postcss": "^8.4.16",
