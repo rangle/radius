@@ -1,4 +1,3 @@
-// import resolve from '@rollup/plugin-node-resolve'; 
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
@@ -17,7 +16,6 @@ export default [
     ],
     external: ['react', 'react-dom'],
     plugins: [
-      // resolve(),
       commonjs(),
       postcss({
         plugins: [autoprefixer()],
