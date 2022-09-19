@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "add": "lerna add",
-    "publish": "lerna publish from-package --yes --preid next --registry http://localhost:4873/",
+    "version": "lerna version",
+    "publish": "lerna publish from-package --yes --registry http://localhost:4873/",
     "build": "nx run-many --target=build --all --parallel",
     "graph": "npx nx graph"
   },
