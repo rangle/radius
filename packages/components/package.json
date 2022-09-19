@@ -10,7 +10,7 @@
     "build": "rm -rf dist && rollup --config ./rollup.config.js"
   },
   "dependencies": {
-    "@radius/styles": "0.0.1"
+    "@radius/styles": "^0.0.1"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",
