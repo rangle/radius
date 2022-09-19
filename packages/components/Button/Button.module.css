@@ -2,3 +2,6 @@
   background-color: var(--secondary-dark);
   color: var(--primary-light);
 }
+.button:hover{
+  background-color: var(--secondary-main);
+}
