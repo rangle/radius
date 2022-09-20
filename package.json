@@ -9,7 +9,11 @@
     "version": "lerna version",
     "publish": "lerna publish from-package --yes --registry http://localhost:4873/",
     "build": "nx run-many --target=build --all --parallel",
-    "graph": "npx nx graph"
+    "graph": "npx nx graph",
+    "registry": "verdaccio",
+    "local:publish": "lerna publish from-package --yes --registry http://localhost:4873/ ",
+    "local:unpublish": "lerna exec -- npm unpublish --registry http://localhost:4873/  \"\\${LERNA_PACKAGE_NAME}@\\$(npm view \\$LERNA_PACKAGE_NAME version)\"",
+    "local:unpublish-all": "lerna exec -- npm unpublish -f --registry http://localhost:4873/ \"\\${LERNA_PACKAGE_NAME}\""
   },
   "repository": {
     "type": "git",
