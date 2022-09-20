@@ -11,7 +11,7 @@
     "build": "nx run-many --target=build --all --parallel",
     "graph": "npx nx graph",
     "registry": "verdaccio",
-    "local:publish": "lerna publish from-package --yes --registry http://localhost:4873/ ",
+    "local:publish": "lerna publish from-package --yes --no-verify-registry --registry http://localhost:4873/ ",
     "local:unpublish": "lerna exec -- npm unpublish --registry http://localhost:4873/  \"\\${LERNA_PACKAGE_NAME}@\\$(npm view \\$LERNA_PACKAGE_NAME version)\"",
     "local:unpublish-all": "lerna exec -- npm unpublish -f --registry http://localhost:4873/ \"\\${LERNA_PACKAGE_NAME}\""
   },
